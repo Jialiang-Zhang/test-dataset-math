@@ -1,0 +1,7 @@
+{
+  "idx": 54,
+  "problem": "设$\beta>0$，$\alpha\in\mathbb R$，定义$f_n(x)=n^\alpha x^n(1-x)^\beta$，$x\in[0,1]$。关于$f_n\to0$的收敛性质，下列结论正确的是哪一项？ A. 对任意$\alpha$均一致收敛； B. 当且仅当$\alpha<\beta$时一致收敛，而当且仅当$\alpha<\beta+1$时$\|f_n\|_1\to0$； C. 当且仅当$\alpha<\beta/2$时一致收敛； D. $L^1$收敛必推出一致收敛。",
+  "answer": "B",
+  "subject": "数学分析",
+  "source": "generated | trap: convergence-direction"
+}
