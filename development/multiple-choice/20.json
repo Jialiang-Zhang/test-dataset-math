@@ -1,0 +1,7 @@
+{
+  "idx": 20,
+  "problem": "设$f:\mathbb{R}^n\to\mathbb{R}$为凸函数，$x^*$是$f$的一个局部极小点。下列结论正确的是哪一项？ A. $x^*$必为全局极小点；B. $x^*$必为严格全局极小点；C. $f$必严格凸；D. $x^*$必是唯一极小点。",
+  "answer": "A",
+  "subject": "非基础及进阶课程",
+  "source": "generated | trap: local-vs-global"
+}
