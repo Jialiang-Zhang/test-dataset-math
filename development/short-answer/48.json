@@ -3,5 +3,5 @@
   "problem": "设$X_1,\dots,X_n$独立同分布于参数为$\lambda>0$的指数分布，密度$f(x)=\lambda e^{-\lambda x}\mathbf 1_{x>0}$。对固定$t>0$，求$e^{-\lambda t}=P_\lambda(X_1>t)$的UMVU估计量，并严格说明为何它是UMVU。",
   "answer": "令$S=\sum_{i=1}^nX_i$。$S\sim\Gamma(n,\lambda)$且对指数族而言$S$是完备充分统计量。以$\mathbf1_{\{X_1>t\}}$为无偏估计量并Rao-Blackwell化：给定$S=s$时，$(X_1/S,\dots,X_n/S)$在单纯形上服从Dirichlet$(1,\dots,1)$，故$P(X_1>t\mid S=s)=0$（$s\le t$），而$s>t$时等于$(1-t/s)^{n-1}$。因此$\delta(S)=\mathbf1_{\{S>t\}}(1-t/S)^{n-1}$无偏。由Lehmann-Scheffe定理，因$S$完备充分，$\delta(S)$即唯一UMVU估计量。",
   "subject": "统计推断",
-  "source": "generated | theorem-condition"
+  "source": "generated | trap: theorem-condition"
 }
