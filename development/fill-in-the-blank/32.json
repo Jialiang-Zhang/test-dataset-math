@@ -1,0 +1,7 @@
+{
+  "idx": 32,
+  "problem": "在线性回归模型$y=X\beta+\varepsilon$中，若$X\in\mathbb{R}^{n\times p}$满列秩，则残差平方和对应的自由度为____。",
+  "answer": "$n-p$",
+  "subject": "线性回归",
+  "source": "generated | standard"
+}
