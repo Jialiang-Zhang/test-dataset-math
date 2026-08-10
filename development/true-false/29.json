@@ -1,0 +1,7 @@
+{
+  "idx": 29,
+  "problem": "初值问题$y'=\sqrt{|y|},\ y(0)=0$在$t=0$附近有唯一解。判断正误。",
+  "answer": "false",
+  "subject": "常微分方程",
+  "source": "generated | trap: theorem-condition"
+}
