@@ -1,0 +1,7 @@
+{
+  "idx": 22,
+  "problem": "用牛顿法求$\sqrt{2}$，迭代公式为$x_{k+1}=\frac12\left(x_k+\frac{2}{x_k}\right)$。若$x_0=1$，求$x_2$的精确值。",
+  "answer": "$x_1=\frac32$，故$x_2=\frac12\left(\frac32+\frac43\right)=\frac{17}{12}$。",
+  "subject": "数值分析",
+  "source": "generated | standard"
+}
