@@ -1,0 +1,7 @@
+{
+  "idx": 43,
+  "problem": "设$B_t$为标准布朗运动，$\mu>0$，定义$X_t=B_t-\mu t$。对$a>0$，求$\mathbb P(\sup_{t\ge0}X_t\ge a)$的精确值，并要求用指数鞅与可选停止定理严格推导，同时说明停止时间无界时如何截断。",
+  "answer": "令$M_t=\exp(2\mu B_t-2\mu^2t)=\exp(2\mu X_t)$，则$M_t$为正鞅。令$\tau_a=\inf\{t:X_t=a\}$并对$\tau_a\wedge T$应用可选停止：$1=\mathbb E M_{\tau_a\wedge T}$。在$\{\tau_a\le T\}$上$M=e^{2\mu a}$；在$\{\tau_a>T\}$上利用$X_T\to-\infty$几乎处处及Fatou/一致可积截断论证令$T\to\infty$，得到$1=e^{2\mu a}\mathbb P(\tau_a<\infty)$。故$\mathbb P(\sup_{t\ge0}(B_t-\mu t)\ge a)=e^{-2\mu a}$。",
+  "subject": "概率论",
+  "source": "generated | trap: theorem-condition"
+}
