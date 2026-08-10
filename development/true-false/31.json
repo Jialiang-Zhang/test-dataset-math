@@ -1,0 +1,7 @@
+{
+  "idx": 31,
+  "problem": "在Banach空间中，若$x_n$弱收敛于$x$，则序列$\{x_n\}$在范数下必有界。判断正误。",
+  "answer": "true",
+  "subject": "泛函分析",
+  "source": "generated | standard"
+}
