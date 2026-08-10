@@ -1,0 +1,7 @@
+{
+  "idx": 46,
+  "problem": "利用复分析或Beta/Gamma函数的复解析延拓方法计算积分$I=\int_0^\infty\frac{\log x}{1+x^4}\,dx$的精确值。要求先建立参数积分$F(a)=\int_0^\infty\frac{x^{a-1}}{1+x^4}\,dx$在适当条带内的解析表达式，再通过对参数求导得到$I$，并说明换序的合法性。",
+  "answer": "在$0<a<4$时，令$u=x^4$得$F(a)=\frac14\int_0^\infty\frac{u^{a/4-1}}{1+u}du=\frac\pi4\csc\frac{\pi a}{4}$。在任意紧子区间上可用$x^{a-1}(1+|\log x|)/(1+x^4)$控制，故可在积分号下对$a$求导。于是$I=F'(1)=-\frac{\pi^2}{16}\csc\frac\pi4\cot\frac\pi4=-\frac{\pi^2\sqrt2}{16}$。",
+  "subject": "复分析",
+  "source": "generated | trap: theorem-condition"
+}
