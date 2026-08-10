@@ -1,0 +1,7 @@
+{
+  "idx": 19,
+  "problem": "在任意拓扑空间$X$中，关于紧子集下列哪项一定成立？ A. 紧子集一定闭；B. 紧子集一定有界；C. 紧子集在连续映射下的像仍紧；D. 紧子集的任意子集都紧。",
+  "answer": "C",
+  "subject": "拓扑学",
+  "source": "generated | trap: missing-assumption"
+}
