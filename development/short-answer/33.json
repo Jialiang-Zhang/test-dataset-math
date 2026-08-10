@@ -1,0 +1,7 @@
+{
+  "idx": 33,
+  "problem": "设$\Omega\subset\mathbb{R}^n$为有界连通区域，$u\in C^2(\Omega)\cap C(\overline\Omega)$满足$\Delta u=0$且$u|_{\partial\Omega}=0$。证明$u\equiv0$。",
+  "answer": "由调和函数最大值原理，$u$在$\overline\Omega$上的最大值与最小值都在边界取得。边界上$u=0$，故$\max_{\overline\Omega}u\le0$且$\min_{\overline\Omega}u\ge0$，从而$u\equiv0$。",
+  "subject": "偏微分方程",
+  "source": "generated | trap: theorem-condition"
+}
