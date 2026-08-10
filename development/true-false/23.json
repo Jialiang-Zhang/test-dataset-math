@@ -1,0 +1,7 @@
+{
+  "idx": 23,
+  "problem": "在$([0,1],\mathcal{B},m)$上令$f_n(x)=n\mathbf{1}_{(0,1/n)}(x)$。命题：$f_n\to0$几乎处处，因此$f_n\to0$于$L^1$。判断正误。",
+  "answer": "false",
+  "subject": "测度积分",
+  "source": "generated | trap: convergence-direction"
+}
