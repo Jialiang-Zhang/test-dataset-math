@@ -1,0 +1,7 @@
+{
+  "idx": 52,
+  "problem": "设$A\in M_n(\mathbb R)$满足$A^3=A$且$\operatorname{tr}A=0$。证明$A$必可在实数域上对角化，并证明$\operatorname{rank}A$必为偶数；进一步给出$A$的相似标准形。",
+  "answer": "由$A^3-A=0$知极小多项式$m_A(x)$整除$x(x-1)(x+1)$。该多项式在$\mathbb R$上分裂且无重根，因此$A$可对角化，全部特征值只可能为$0,1,-1$。设$1,-1$的代数重数分别为$r_+,r_-$，则$\operatorname{tr}A=r_+-r_-=0$，故$r_+=r_-=:r$。于是$\operatorname{rank}A=r_++r_-=2r$为偶数，并且$A\sim\operatorname{diag}(I_r,-I_r,0_{n-2r})$。",
+  "subject": "高等代数",
+  "source": "generated | trap: theorem-condition"
+}
