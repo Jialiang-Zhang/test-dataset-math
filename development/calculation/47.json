@@ -1,0 +1,7 @@
+{
+  "idx": 47,
+  "problem": "设$\omega>0,c>0,a>0$，求Ermakov-Pinney方程$y''+\omega^2y=c/y^3$满足$y(0)=a,y'(0)=0$的正解，并验证所得闭式解在其定义域内满足方程。要求使用守恒量或Pinney结构而非数值积分。",
+  "answer": "解为$y(x)=\sqrt{a^2\cos^2(\omega x)+\frac{c}{a^2\omega^2}\sin^2(\omega x)}$。可由能量守恒$\frac12y'^2+\frac12\omega^2y^2+\frac{c}{2y^2}=\frac12\omega^2a^2+\frac{c}{2a^2}$降阶并积分得到；也可利用Pinney公式，以$u=\cos\omega x,v=\sin\omega x/\omega$及Wronskian $W=1$构造$y^2=Au^2+Cv^2$，取$A=a^2,C=c/a^2$。直接求导代回可验证$y''+\omega^2y=c/y^3$，且初值成立。",
+  "subject": "常微分方程",
+  "source": "generated | standard"
+}
