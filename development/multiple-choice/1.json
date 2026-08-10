@@ -1,0 +1,7 @@
+{
+  "idx": 1,
+  "problem": "设随机变量$X_n$依分布收敛于$X$。下列结论中必然成立的是（ ）\nA. $X_n$依概率收敛于$X$\nB. 对每个有界连续函数$f$，有$\\mathbb{E}[f(X_n)]\\to\\mathbb{E}[f(X)]$\nC. $\\mathbb{E}[X_n]\\to\\mathbb{E}[X]$\nD. $X_n$几乎处处收敛于$X$",
+  "answer": "B",
+  "subject": "概率论",
+  "source": "generated | trap: convergence-direction"
+}
