@@ -1,0 +1,7 @@
+{
+  "idx": 16,
+  "problem": "判断：若实对称矩阵$A$的所有特征值都非负，则$A$一定可逆。",
+  "answer": "false",
+  "subject": "高等代数",
+  "source": "generated | trap: boundary-case"
+}
