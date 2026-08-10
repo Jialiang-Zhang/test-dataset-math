@@ -1,0 +1,7 @@
+{
+  "idx": 51,
+  "problem": "求解热方程$u_t=u_{xx}$（$0<x<\pi,t>0$），边界条件为$u_x(0,t)=0,\ u(\pi,t)=0$，初值$u(x,0)=1$。要求通过Sturm-Liouville谱问题严格推导特征值、归一化展开系数及最终级数解，并说明为何不能使用整数频率的普通正弦级数。",
+  "answer": "分离变量$u=X(x)T(t)$得到$X''+\lambda X=0$，$X'(0)=0,X(\pi)=0$。非零解要求$X_k(x)=\cos((k+\tfrac12)x)$，$\lambda_k=(k+\tfrac12)^2$。这些函数在$L^2(0,\pi)$中正交且$\int_0^\pi X_k^2dx=\pi/2$。初值1的系数为$a_k=\frac{2}{\pi}\int_0^\pi\cos((k+\tfrac12)x)dx=\frac{2(-1)^k}{\pi(k+\tfrac12)}$。因此$u(x,t)=\sum_{k=0}^\infty\frac{2(-1)^k}{\pi(k+\tfrac12)}e^{-(k+1/2)^2t}\cos((k+\tfrac12)x)$。半整数频率来自Neumann-Dirichlet混合边界；整数正弦系不满足$x=0$处的Neumann条件。",
+  "subject": "偏微分方程",
+  "source": "generated | trap: boundary-case"
+}
