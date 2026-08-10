@@ -1,0 +1,7 @@
+{
+  "idx": 2,
+  "problem": "设$(f_n)$是$[0,1]$上的可测函数列，且$f_n\\to f$几乎处处。若对每个$n$都有$\\int_0^1|f_n|<\\infty$，则必有$\\int_0^1 f_n\\to\\int_0^1 f$。判断该命题真假。",
+  "answer": "false",
+  "subject": "测度积分",
+  "source": "generated | trap: missing-assumption"
+}
