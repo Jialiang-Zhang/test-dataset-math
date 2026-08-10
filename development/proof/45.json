@@ -1,0 +1,7 @@
+{
+  "idx": 45,
+  "problem": "设$B^0_t=B_t-tB_1$为$[0,1]$上的标准布朗桥，其协方差核为$K(s,t)=\min(s,t)-st$。证明对应协方差算子$Tf(s)=\int_0^1K(s,t)f(t)dt$的全部非零特征值与归一化特征函数，并写出Karhunen-Loève展开。要求把积分特征值问题严格转化为边值问题。",
+  "answer": "若$Tf=\lambda f$且$\lambda\ne0$，由核的分段表达式对$s$求两次导数得$\lambda f''(s)=-f(s)$；又因$K(0,t)=K(1,t)=0$，故$f(0)=f(1)=0$。于是$f''+\lambda^{-1}f=0$的非零解要求$\lambda_n=(n\pi)^{-2}$，对应归一化特征函数$e_n(t)=\sqrt2\sin(n\pi t)$。因此$B^0_t=\sum_{n\ge1}Z_n\sqrt{\lambda_n}e_n(t)=\sqrt2\sum_{n\ge1}\frac{Z_n}{n\pi}\sin(n\pi t)$，其中$Z_n$独立且服从$N(0,1)$，级数在$L^2(\Omega\times[0,1])$意义下收敛。",
+  "subject": "随机过程",
+  "source": "generated | standard"
+}
