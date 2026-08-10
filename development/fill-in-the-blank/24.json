@@ -1,0 +1,7 @@
+{
+  "idx": 24,
+  "problem": "半径为$R>0$的二维球面$S^2_R$的高斯曲率为____。",
+  "answer": "$\frac{1}{R^2}$",
+  "subject": "微分几何",
+  "source": "generated | standard"
+}
