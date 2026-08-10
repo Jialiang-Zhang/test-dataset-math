@@ -1,0 +1,7 @@
+{
+  "idx": 9,
+  "problem": "设$(X_n)_{n\\ge0}$是离散时间马尔可夫链。若给定当前状态$X_n$后，未来$X_{n+1}$与整个过去$(X_0,\\ldots,X_{n-1})$条件独立，则这正是马尔可夫性质的一种表述。判断该命题真假。",
+  "answer": "true",
+  "subject": "随机过程",
+  "source": "generated | standard"
+}
