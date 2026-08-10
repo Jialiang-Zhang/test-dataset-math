@@ -1,0 +1,7 @@
+{
+  "idx": 5,
+  "problem": "设$f_n,f$为测度空间上的可测函数，且$f_n\\to f$几乎处处。下列哪个附加条件可直接由控制收敛定理推出$\\int f_n\\to\\int f$？（ ）\nA. 每个$f_n$都可积\nB. 存在可积函数$g$使得对所有$n$均有$|f_n|\\le g$几乎处处\nC. $\\int|f_n|$均有限但无统一上界\nD. $f_n$依测度收敛于$f$",
+  "answer": "B",
+  "subject": "测度积分",
+  "source": "generated | trap: theorem-condition"
+}
