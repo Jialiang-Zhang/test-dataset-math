@@ -1,0 +1,7 @@
+{
+  "idx": 3,
+  "problem": "设简单无向图$G$有$n\ge 2$个顶点，且每个顶点的度数都至少为$n/2$。下列结论必然成立的是（ ）\nA. $G$是完全图\nB. $G$连通\nC. $G$是二分图\nD. $G$中每个顶点度数都相同",
+  "answer": "B",
+  "subject": "离散数学",
+  "source": "generated | trap: theorem-condition"
+}
