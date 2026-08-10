@@ -1,0 +1,7 @@
+{
+  "idx": 36,
+  "problem": "在区间$[0,1]$上令$f_n(x)=x^n$。下列结论正确的是哪一项？ A. $f_n$一致收敛到0；B. $f_n$逐点收敛到连续函数；C. $f_n$逐点收敛，但不一致收敛；D. $f_n$在$[0,1]$上没有逐点极限。",
+  "answer": "C",
+  "subject": "数学分析",
+  "source": "generated | trap: convergence-direction"
+}
