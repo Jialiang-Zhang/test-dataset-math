@@ -1,0 +1,7 @@
+{
+  "idx": 30,
+  "problem": "设$X_1,\dots,X_n$独立同分布于$N(\mu,\sigma^2)$，$S^2=\frac{1}{n-1}\sum_{i=1}^n(X_i-\bar X)^2$。则$\frac{(n-1)S^2}{\sigma^2}$服从自由度为____的卡方分布。",
+  "answer": "$n-1$",
+  "subject": "统计推断",
+  "source": "generated | standard"
+}
