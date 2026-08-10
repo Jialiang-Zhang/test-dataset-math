@@ -1,0 +1,7 @@
+{
+  "idx": 42,
+  "problem": "设$S\subset\mathbb R^3$为紧致、连通、无边界的正则曲面。证明不存在处处平均曲率$H\equiv0$的这种曲面。要求使用Laplace-Beltrami算子与极值原理，而不是仅作几何直观说明。",
+  "answer": "若$H\equiv0$，则浸入映射$X:S\to\mathbb R^3$满足$\Delta_S X=2HN=0$（符号约定不同只差整体符号），故三个坐标函数$x_1,x_2,x_3$都是$S$上的调和函数。由于$S$紧致且无边界，每个调和函数由强极值原理必为常数，因此$X$为常值映射。这与$X$是正则浸入矛盾。故不存在紧致无边界的极小曲面嵌入于$\mathbb R^3$。",
+  "subject": "微分几何",
+  "source": "generated | trap: local-vs-global"
+}
