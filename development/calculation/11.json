@@ -1,0 +1,7 @@
+{
+  "idx": 11,
+  "problem": "求初值问题$y'=2y,\ y(0)=3$的解。",
+  "answer": "由$y'=2y$得$y=Ce^{2x}$，代入$y(0)=3$得$C=3$，故唯一解为$y(x)=3e^{2x}$。",
+  "subject": "常微分方程",
+  "source": "generated | standard"
+}
