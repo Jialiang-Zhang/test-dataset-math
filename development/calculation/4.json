@@ -1,0 +1,7 @@
+{
+  "idx": 4,
+  "problem": "用牛顿法求方程$x^2-2=0$的正根，取初值$x_0=1$。计算一次迭代所得$x_1$。",
+  "answer": "牛顿迭代为$x_{k+1}=x_k-\\frac{x_k^2-2}{2x_k}=\\frac12(x_k+2/x_k)$，故$x_1=\\frac12(1+2)=\\frac32$。",
+  "subject": "数值分析",
+  "source": "generated | standard"
+}
