@@ -1,0 +1,7 @@
+{
+  "idx": 37,
+  "problem": "拓扑空间的连续像保持连通性：若$X$连通且$f:X\to Y$连续，则$f(X)$必连通。判断正误。",
+  "answer": "true",
+  "subject": "拓扑学",
+  "source": "generated | standard"
+}
