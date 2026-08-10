@@ -1,0 +1,7 @@
+{
+  "idx": 34,
+  "problem": "设实矩阵$A$满足$A^2=A$。下列结论正确的是哪一项？ A. $A$一定可对角化，且特征值只可能为0或1；B. $A$一定可逆；C. $A$一定正定；D. $A$的最小多项式必为$x(x-1)$。",
+  "answer": "A",
+  "subject": "高等代数",
+  "source": "generated | trap: theorem-condition"
+}
