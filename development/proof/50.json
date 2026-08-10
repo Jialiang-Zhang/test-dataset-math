@@ -1,0 +1,7 @@
+{
+  "idx": 50,
+  "problem": "在线性模型$Y=X\beta+\varepsilon$中，$\varepsilon\sim N(0,\sigma^2I_n)$，允许$X\in\mathbb R^{n\times p}$秩亏，记$r=\operatorname{rank}(X)<p$，$P_X$为$\mathcal C(X)$上的正交投影。证明残差平方和$\mathrm{SSE}=\|(I-P_X)Y\|^2$满足$\mathrm{SSE}/\sigma^2\sim\chi^2_{n-r}$，且与$P_XY$独立；并说明为什么此结论不要求$X^TX$可逆。",
+  "answer": "取正交矩阵$Q=[Q_1,Q_2]$使$Q_1$的$r$列张成$\mathcal C(X)$，$Q_2$张成其正交补，则$P_X=Q_1Q_1^T$且$I-P_X=Q_2Q_2^T$。因为$X\beta\in\mathcal C(X)$，有$Q_2^TY=Q_2^T\varepsilon\sim N(0,\sigma^2I_{n-r})$，故$\mathrm{SSE}=\|Q_2^TY\|^2$并有$\mathrm{SSE}/\sigma^2\sim\chi^2_{n-r}$。同时$Q_1^TY$与$Q_2^TY$是联合高斯且协方差为$\sigma^2Q_1^TQ_2=0$，故独立，从而$P_XY$与SSE独立。全过程只依赖列空间投影与正交分解，不需要$(X^TX)^{-1}$存在。",
+  "subject": "线性回归",
+  "source": "generated | trap: finite-vs-infinite-dimensional"
+}
