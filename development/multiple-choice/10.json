@@ -1,0 +1,7 @@
+{
+  "idx": 10,
+  "problem": "设$f$在单位圆盘$D$内全纯且$|f(z)|$在$D$内某点取得全局最大值。则下列结论正确的是（ ）\nA. $f$必为常数\nB. $f$必为一次多项式\nC. 仅能推出该点是$f$的零点\nD. 只有当最大值为$0$时$f$才为常数",
+  "answer": "A",
+  "subject": "复分析",
+  "source": "generated | trap: theorem-condition"
+}
