@@ -1,0 +1,7 @@
+{
+  "idx": 44,
+  "problem": "设$\mathbb F_{64}$为$64$元有限域。求其中恰好在$\mathbb F_2$上次数为$6$的元素个数，并据此求$\mathbb F_2[x]$中首一不可约六次多项式的个数。要求使用子域结构与Möbius反演，而不是直接引用最终计数公式。",
+  "answer": "$\mathbb F_{64}$的真子域对应于$6$的真因子：$\mathbb F_2,\mathbb F_4,\mathbb F_8$。设$N_d$为次数恰为$d$的元素数，则$2^6=\sum_{d\mid6}N_d$，并由Möbius反演$N_6=\sum_{d\mid6}\mu(d)2^{6/d}=64-8-4+2=54$。每个首一不可约六次多项式有恰好6个互为Frobenius共轭的根，且不同不可约多项式根集不交，因此不可约首一六次多项式共有$54/6=9$个。",
+  "subject": "抽象代数",
+  "source": "generated | standard"
+}
