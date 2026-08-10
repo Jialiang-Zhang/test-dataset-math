@@ -1,0 +1,7 @@
+{
+  "idx": 28,
+  "problem": "求函数$f(z)=\frac{e^z}{z^3}$在$z=0$处的留数。",
+  "answer": "由$e^z=1+z+\frac{z^2}{2}+\cdots$，故$\frac{e^z}{z^3}=z^{-3}+z^{-2}+\frac12z^{-1}+\cdots$，所以留数为$\frac12$。",
+  "subject": "复分析",
+  "source": "generated | standard"
+}
