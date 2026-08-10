@@ -1,0 +1,7 @@
+{
+  "idx": 13,
+  "problem": "判断：任意无限维赋范线性空间的闭单位球都是紧集。",
+  "answer": "false",
+  "subject": "泛函分析",
+  "source": "generated | trap: finite-vs-infinite-dimensional"
+}
