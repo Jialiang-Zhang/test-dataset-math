@@ -1,0 +1,7 @@
+{
+  "idx": 56,
+  "problem": "设$H$为实Hilbert空间，$f:H\to(-\infty,+\infty]$为适当、下半连续凸函数，$f^*$为Fenchel共轭。证明Moreau分解$\operatorname{prox}_f(x)+\operatorname{prox}_{f^*}(x)=x$对任意$x\in H$成立，并从次微分最优性条件推出$\operatorname{prox}_f$的firm nonexpansiveness。",
+  "answer": "令$p=\operatorname{prox}_f(x)$。由最优性条件$0\in\partial f(p)+p-x$，即$q:=x-p\in\partial f(p)$。由Fenchel共轭的次微分互逆关系$q\in\partial f(p)\iff p\in\partial f^*(q)$，故$0\in\partial f^*(q)+q-x$，从而$q=\operatorname{prox}_{f^*}(x)$，于是$p+q=x$。再取$p_i=\operatorname{prox}_f(x_i)$，有$x_i-p_i\in\partial f(p_i)$。次微分的单调性给出$\langle (x_1-p_1)-(x_2-p_2),p_1-p_2\rangle\ge0$，即$\|p_1-p_2\|^2\le\langle p_1-p_2,x_1-x_2\rangle$，这正是firm nonexpansiveness。",
+  "subject": "非基础及进阶课程",
+  "source": "generated | standard"
+}
