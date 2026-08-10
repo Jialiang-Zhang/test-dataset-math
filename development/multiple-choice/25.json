@@ -1,0 +1,7 @@
+{
+  "idx": 25,
+  "problem": "设$X,Y$为相互独立的Bernoulli$(1/2)$随机变量，并令$Z=X\oplus Y$（模2和）。关于$X,Y,Z$，下列说法正确的是哪一项？ A. 三者相互独立；B. 三者两两独立但不相互独立；C. 任意两者都不独立；D. $Z$与$(X,Y)$独立。",
+  "answer": "B",
+  "subject": "概率论",
+  "source": "generated | trap: independence"
+}
