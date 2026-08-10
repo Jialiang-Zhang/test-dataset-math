@@ -1,0 +1,7 @@
+{
+  "idx": 26,
+  "problem": "群同态$\varphi:\mathbb{Z}_{12}\to\mathbb{Z}_{18}$的总数为____。",
+  "answer": "6",
+  "subject": "抽象代数",
+  "source": "generated | standard"
+}
