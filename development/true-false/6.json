@@ -1,0 +1,7 @@
+{
+  "idx": 6,
+  "problem": "设$S\\subset\\mathbb{R}^3$是正则曲面。若$S$在每一点的高斯曲率都为零，则$S$必为某个平面的一部分。判断该命题真假。",
+  "answer": "false",
+  "subject": "微分几何",
+  "source": "generated | trap: local-vs-global"
+}
