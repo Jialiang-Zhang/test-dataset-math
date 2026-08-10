@@ -1,0 +1,7 @@
+{
+  "idx": 12,
+  "problem": "设$X_1,\dots,X_n\overset{iid}{\sim}N(\mu,\sigma^2)$，其中$\sigma^2$未知。关于统计量$T=\frac{\bar X-\mu}{S/\sqrt n}$，下列结论正确的是哪一项？ A. $T\sim N(0,1)$；B. $T\sim t_{n-1}$；C. $T\sim \chi^2_{n-1}$；D. 只有当$\sigma^2$已知时$T\sim t_{n-1}$。",
+  "answer": "B",
+  "subject": "统计推断",
+  "source": "generated | trap: theorem-condition"
+}
