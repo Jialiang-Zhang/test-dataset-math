@@ -3,5 +3,5 @@
   "problem": "设$\{N(t)\}_{t\ge0}$为泊松过程。已知$N(2)=4$，求$P(N(1)=1\mid N(2)=4)$。",
   "answer": "由泊松过程条件分布，$N(1)\mid N(2)=4\sim\mathrm{Bin}(4,1/2)$，故$P=\binom41(1/2)^4=\frac14$。",
   "subject": "随机过程",
-  "source": "generated | theorem-condition"
+  "source": "generated | trap: theorem-condition"
 }
