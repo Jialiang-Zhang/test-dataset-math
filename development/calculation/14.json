@@ -1,0 +1,7 @@
+{
+  "idx": 14,
+  "problem": "在线性回归模型$y_i=\beta_0+\beta_1x_i+\varepsilon_i$中，给定$\bar x=2,\ \bar y=5,\ S_{xx}=\sum_i(x_i-\bar x)^2=10,\ S_{xy}=\sum_i(x_i-\bar x)(y_i-\bar y)=20$。求最小二乘估计$\hat\beta_0,\hat\beta_1$。",
+  "answer": "由$\hat\beta_1=S_{xy}/S_{xx}=20/10=2$，再由$\hat\beta_0=\bar y-\hat\beta_1\bar x=5-2\times2=1$，故$\hat\beta_0=1,\hat\beta_1=2$。",
+  "subject": "线性回归",
+  "source": "generated | standard"
+}
