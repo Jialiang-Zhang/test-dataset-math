@@ -1,0 +1,7 @@
+{
+  "idx": 15,
+  "problem": "设$u\in C^2(\Omega)\cap C(\overline\Omega)$在有界连通区域$\Omega$内满足$\Delta u=0$。若$u$在$\Omega$内部某点取得全局最大值，则下列结论正确的是哪一项？ A. $u$必为常数；B. $u$必严格为正；C. $u$只在该点局部为常数；D. 无法推出任何结论。",
+  "answer": "A",
+  "subject": "偏微分方程",
+  "source": "generated | trap: theorem-condition"
+}
