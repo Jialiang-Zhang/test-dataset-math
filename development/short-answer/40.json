@@ -1,0 +1,7 @@
+{
+  "idx": 40,
+  "problem": "设$A$为实对称正定矩阵，谱包含于$[a,b]$，$0<a<b$。考虑仅由矩阵向量乘法构成的多项式迭代，使误差满足$e_m=p_m(A)e_0$，其中$p_m(0)=1$且$\deg p_m\le m$。求使$\max_{\lambda\in[a,b]}|p_m(\lambda)|$最小的多项式，并给出最优最坏情形误差上界的闭式表达式。",
+  "answer": "把$[a,b]$仿射映射到$[-1,1]$：$t(\lambda)=\frac{a+b-2\lambda}{b-a}$。由Chebyshev极小极大性质，最优多项式为$p_m(\lambda)=\frac{T_m(t(\lambda))}{T_m(\frac{a+b}{b-a})}$。因此$\max_{\lambda\in[a,b]}|p_m(\lambda)|=\big|T_m(\frac{a+b}{b-a})\big|^{-1}$。令$\kappa=b/a$，利用$T_m(x)=\frac{1}{2}[(x+\sqrt{x^2-1})^m+(x-\sqrt{x^2-1})^m]$，得到常用界$\|e_m\|_A\le 2\left(\frac{\sqrt\kappa-1}{\sqrt\kappa+1}\right)^m\|e_0\|_A$。该界在只利用谱区间信息的多项式方法中是极小极大意义下最优的。",
+  "subject": "数值分析",
+  "source": "generated | trap: theorem-condition"
+}
