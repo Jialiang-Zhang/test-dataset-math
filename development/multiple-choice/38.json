@@ -1,0 +1,7 @@
+{
+  "idx": 38,
+  "problem": "设$f$为适当、下半连续凸函数，$f^*$为其Fenchel共轭。关于Fenchel-Young不等式$f(x)+f^*(y)\ge \langle x,y\rangle$，下列关于等号成立条件的说法正确的是哪一项？ A. 当且仅当$y\in\partial f(x)$；B. 当且仅当$x=0$；C. 当且仅当$f$严格凸；D. 对任意$x,y$都取等号。",
+  "answer": "A",
+  "subject": "非基础及进阶课程",
+  "source": "generated | trap: theorem-condition"
+}
