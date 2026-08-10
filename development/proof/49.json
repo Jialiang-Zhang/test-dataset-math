@@ -1,0 +1,7 @@
+{
+  "idx": 49,
+  "problem": "设$S:\ell^2(\mathbb N)\to\ell^2(\mathbb N)$为单边移位$S(x_1,x_2,\dots)=(0,x_1,x_2,\dots)$。严格求$\sigma(S)$、点谱$\sigma_p(S)$以及$S^*$的点谱，并解释为何$|\lambda|=1$上的谱点虽不是特征值仍属于谱。",
+  "answer": "$\|S\|=1$，故$\sigma(S)\subset\{|\lambda|\le1\}$。若$|\lambda|>1$，Neumann级数给出$(\lambda I-S)^{-1}$。若$|\lambda|<1$，则$S^*(1,\bar\lambda,\bar\lambda^2,\dots)=\bar\lambda(1,\bar\lambda,\dots)$，所以$\bar\lambda\in\sigma_p(S^*)$，从而$\lambda I-S$的值域不稠密，故$\lambda\in\sigma(S)$。由谱的闭性，单位圆也包含于$\sigma(S)$，于是$\sigma(S)=\{|\lambda|\le1\}$。直接解$Sx=\lambda x$得$x=0$，故$\sigma_p(S)=\varnothing$；而$\sigma_p(S^*)=\{|\lambda|<1\}$。单位圆上的点可由截断的近似特征向量构造，属于近似点谱。",
+  "subject": "泛函分析",
+  "source": "generated | trap: finite-vs-infinite-dimensional"
+}
