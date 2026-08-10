@@ -1,0 +1,7 @@
+{
+  "idx": 8,
+  "problem": "设$G$为有限群，$H$为$G$的子群。下列命题必然成立的是（ ）\nA. $H$一定是正规子群\nB. $|H|$整除$|G|$\nC. $G/H$一定构成群\nD. 若$|H|$为素数，则$H$在$G$中唯一",
+  "answer": "B",
+  "subject": "抽象代数",
+  "source": "generated | trap: theorem-condition"
+}
