@@ -1,0 +1,7 @@
+{
+  "idx": 18,
+  "problem": "判断：若函数列$f_n$在$[0,1]$上一致收敛到$f$，且每个$f_n$都连续，则$f$连续。",
+  "answer": "true",
+  "subject": "数学分析",
+  "source": "generated | trap: convergence-direction"
+}
