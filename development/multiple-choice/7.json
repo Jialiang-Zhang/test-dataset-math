@@ -1,0 +1,7 @@
+{
+  "idx": 7,
+  "problem": "设随机变量$X,Y$的方差均有限且非零。若$\\operatorname{Cov}(X,Y)=0$，下列说法必然正确的是（ ）\nA. $X,Y$独立\nB. $X,Y$不相关\nC. $X,Y$同分布\nD. $X+Y$与$X-Y$独立",
+  "answer": "B",
+  "subject": "概率论",
+  "source": "generated | trap: independence"
+}
