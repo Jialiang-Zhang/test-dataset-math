@@ -1,0 +1,7 @@
+{
+  "idx": 347,
+  "problem": "设$0<a<b$，在二维圆环$\\Omega=\\{a<|x|<b\\}$上求解Dirichlet问题\\n\\[\\n\\Delta u=0,\\qquad u|_{|x|=a}=1,\\qquad u|_{|x|=b}=0.\\n\\]\\n除求出$u$外，还要求计算Dirichlet能量$\\int_\\Omega|\\nabla u|^2dx$，并由Green公式证明该能量等于内边界上的总通量，从而给出圆环电容（按该归一化）的精确值。最后说明为什么二维答案是对数型而不是幂函数型。",
+  "answer": "由边界数据与唯一性，解必为径向函数$u(r)$。二维径向Laplace方程为$u''+(1/r)u'=0$，故$u=A\\log r+B$。代入边界值得\\n\\[\\nu(r)=\\frac{\\log(b/r)}{\\log(b/a)}.\\n\\]\\n于是$u_r=-1/[r\\log(b/a)]$，\\n\\[\\n\\int_\\Omega|\\nabla u|^2dx=\\int_a^b\\frac1{r^2\\log^2(b/a)}2\\pi r\\,dr=\\frac{2\\pi}{\\log(b/a)}.\\n\\]\\nGreen第一恒等式且$\\Delta u=0$给$\\int_\\Omega|\\nabla u|^2=\\int_{\\partial\\Omega}u\\,\\partial_nu\\,ds$。外边界$u=0$无贡献；在内边界，区域外法向为$-e_r$，故$\\partial_nu=-u_r=1/[a\\log(b/a)]$，乘周长$2\\pi a$得同样的$2\\pi/\\log(b/a)$。因此该归一化下电容为$2\\pi/\\log(b/a)$。二维径向基本方程积分的是$(ru')'=0$，故$u'\\propto1/r$并产生$\\log r$；只有维数$d\\ge3$时才出现$r^{2-d}$幂函数。",
+  "subject": "偏微分方程",
+  "source": "generated | standard"
+}
