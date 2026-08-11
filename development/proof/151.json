@@ -1,0 +1,7 @@
+{
+  "idx": 151,
+  "problem": "设$B_t$为标准布朗运动，$M_t=\max_{0\le s\le t}B_s$。请利用反射原理严格推导$(M_t,B_t)$的联合密度，并进一步证明$M_t\overset d=|B_t|$以及$M_t-B_t\overset d=|B_t|$。要求明确给出联合密度的支撑区域，并说明最后一个分布恒等式中时间反演的合法性。",
+  "answer": "记$\phi_t(x)=(2\pi t)^{-1/2}e^{-x^2/(2t)}$。对$m\ge0$且$x\le m$，反射原理给出$\mathbb P(M_t\le m,B_t\in dx)=[\phi_t(x)-\phi_t(2m-x)]dx$；若$x>m$则概率为$0$。对$m$求导得到联合密度$$f_{M_t,B_t}(m,x)=\frac{2(2m-x)}{t}\phi_t(2m-x),\qquad m\ge\max\{x,0\}.$$积分掉$x$或直接用反射原理，$\mathbb P(M_t\ge m)=2\mathbb P(B_t\ge m)$，故$\mathbb P(M_t\le m)=2\Phi(m/\sqrt t)-1$，与$|N(0,t)|$相同，即$M_t\overset d=|B_t|$。又$$M_t-B_t=\max_{0\le s\le t}(B_s-B_t)=\max_{0\le u\le t}\bigl(-(B_t-B_{t-u})\bigr).$$过程$W_u=B_t-B_{t-u}$在$0\le u\le t$上具有连续路径、独立平稳高斯增量且协方差$\min(u,v)$，因此本身是标准布朗运动；$-W$亦然。故$M_t-B_t\overset d=\max_{0\le u\le t}(-W_u)\overset d=M_t\overset d=|B_t|$。",
+  "subject": "随机过程",
+  "source": "generated | standard"
+}
