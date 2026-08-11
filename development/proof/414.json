@@ -1,0 +1,7 @@
+{
+  "idx": 414,
+  "problem": "设$f$在单位圆盘$\mathbb D$内全纯并连续到闭圆盘，且$|f(e^{it})|=1$对所有$t$成立。若$f$在$\mathbb D$内恰有$m$个零点（计重数），证明$f$必为常数模为1的有限Blaschke乘积：$f(z)=e^{i\theta}\prod_{j=1}^m\frac{z-a_j}{1-\overline{a_j}z}$。要求说明商函数为何既无零点也无极点，并同时使用最大模原理于商及其倒数。",
+  "answer": "设零点为$a_j$并令$B(z)=\prod_j(z-a_j)/(1-\overline{a_j}z)$。每个因子在$|z|=1$上模为1，故$|B|=1$于边界。商$g=f/B$在每个$a_j$处因零点重数完全抵消而为可去奇点，延拓后全纯且无零点；边界上$|g|=1$。最大模原理给$|g|\le1$。又$1/g$全纯，边界同样模1，所以$|1/g|\le1$，即$|g|\ge1$。故$|g|\equiv1$，由开映射定理$g$为常数$e^{i\theta}$。",
+  "subject": "复分析",
+  "source": "generated | standard"
+}
