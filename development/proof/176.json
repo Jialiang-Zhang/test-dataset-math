@@ -1,0 +1,7 @@
+{
+  "idx": 176,
+  "problem": "设$X:M^2\to\mathbb R^3$是连通、紧致、无边界的光滑浸入。记$H$为平均曲率向量约定下的标量平均曲率，使得$\Delta_M X=-2HN$。请严格证明不存在处处满足$H\equiv0$的此类浸入。要求至少给出两条彼此独立的证明思路：一条利用坐标函数与最大值原理，另一条利用$\Delta_M|X|^2$并结合无边界紧流形上的积分恒等式。",
+  "answer": "若$H\equiv0$，则$\Delta_MX=0$，故三个欧氏坐标函数$X_1,X_2,X_3$都是$M$上的调和函数。由于$M$紧致且无边界，调和函数由最大值原理必为常数，于是$X$为常值映射，与浸入矛盾。另一证明中，利用$\Delta|X|^2=2\langle\Delta X,X\rangle+2|\nabla X|^2$。对二维等距浸入有$|\nabla X|^2=2$，而最小时$\Delta X=0$，因此$$\Delta_M|X|^2=4.$$在紧致无边界流形上积分并用散度定理，$$0=\int_M\Delta_M|X|^2\,dA=4\operatorname{Area}(M),$$矛盾。故不存在紧致无边界的最小曲面浸入到$\mathbb R^3$。",
+  "subject": "微分几何",
+  "source": "generated | standard"
+}
