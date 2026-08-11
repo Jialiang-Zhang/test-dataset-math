@@ -1,0 +1,7 @@
+{
+  "idx": 95,
+  "problem": "Galton-Watson分枝过程从单个祖先开始，后代分布为$\mathrm{Poisson}(\lambda)$，其中$\lambda>0$。严格求最终灭绝概率$q(\lambda)$：证明$\lambda\le1$时$q=1$，$\lambda>1$时$q$是$(0,1)$内唯一根并写成Lambert $W$函数闭式；进一步求$\lambda=1+\varepsilon$、$\varepsilon\downarrow0$时存活概率$1-q$到二阶的渐近展开。",
+  "answer": "后代生成函数为$\phi(s)=e^{\lambda(s-1)}$，灭绝概率是$[0,1]$内最小不动点$q=\phi(q)$。令$h(s)=\phi(s)-s$。若$\lambda\le1$，$h(1)=0$且$\phi'(1)=\lambda\le1$，由生成函数凸性可知不存在小于1的不动点，故$q=1$。若$\lambda>1$，$h(0)=e^{-\lambda}>0$，$h(1)=0$且$h'(1)=\lambda-1>0$，凸性给出唯一的$q\in(0,1)$。由$q=e^{\lambda(q-1)}$得$(-\lambda q)e^{-\lambda q}=-\lambda e^{-\lambda}$，故$q=-\lambda^{-1}W_0(-\lambda e^{-\lambda})$；另一实支$W_{-1}$给$W_{-1}(-\lambda e^{-\lambda})=-\lambda$，对应平凡根$q=1$，而最小根取主支$W_0$。令$s=1-q$，则$1-s=e^{-\lambda s}$，取对数得$-\log(1-s)=\lambda s$，即$s+s^2/2+s^3/3+\cdots=(1+\varepsilon)s$。除以$s$并设$s=2\varepsilon+a\varepsilon^2+O(\varepsilon^3)$，比较$\varepsilon^2$系数得$a/2+4/3=0$，故$1-q=2\varepsilon-\frac83\varepsilon^2+O(\varepsilon^3)$。",
+  "subject": "概率论",
+  "source": "generated | trap: boundary-case"
+}
