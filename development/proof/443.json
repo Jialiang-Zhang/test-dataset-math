@@ -1,0 +1,7 @@
+{
+  "idx": 443,
+  "problem": "设$X$为$v$元集合，$\mathcal F=\{A_1,\dots,A_m\}$满足对某个固定整数$\lambda\ge0$，任意$i\ne j$都有$|A_i\cap A_j|=\lambda$，且每个$|A_i|>\lambda$。证明$m\le v$。要求使用关联矩阵与秩论证，并明确说明为什么对应Gram矩阵正定；不得直接引用Fisher不等式。",
+  "answer": "令$B$为$m\times v$关联矩阵，第$i$行是$A_i$的示性向量。则$G=BB^T$满足$G_{ii}=|A_i|$、$G_{ij}=\lambda(i\ne j)$，故$G=D+\lambda J$，其中$D=\operatorname{diag}(|A_i|-\lambda)$正定而$\lambda J$半正定。对任意$0\ne c\in\mathbb R^m$，$c^TGc=\sum_i(|A_i|-\lambda)c_i^2+\lambda(\sum_i c_i)^2>0$，所以$G$正定，$\operatorname{rank}G=m$。又$G=BB^T$，故$m=\operatorname{rank}G\le\operatorname{rank}B\le v$。",
+  "subject": "离散数学",
+  "source": "generated | trap: theorem-condition"
+}

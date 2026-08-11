@@ -1,0 +1,7 @@
+{
+  "idx": 449,
+  "problem": "设$B$为标准Brown运动，$S_t=\sup_{0\le s\le t}B_s$，$L_t^0$为按Tanaka公式$|B_t|=\int_0^t\operatorname{sgn}(B_s)dB_s+L_t^0$归一化的0点局部时。求$(|B_t|,L_t^0)$在$(0,\infty)^2$上的联合密度，并据此核验$\mathbb E L_t^0=\sqrt{2t/\pi}$。要求使用反射原理与Lévy恒等式。",
+  "answer": "反射原理给$(S_t,B_t)$在$s\ge\max(b,0)$上的联合密度$\frac{2(2s-b)}{\sqrt{2\pi t^3}}e^{-(2s-b)^2/(2t)}$。Lévy恒等式$(S_t-B_t,S_t)\overset d=(|B_t|,L_t^0)$，令$x=s-b,l=s$，Jacobian为1，故联合密度为$\frac{2(x+l)}{\sqrt{2\pi t^3}}e^{-(x+l)^2/(2t)}\mathbf1_{x,l>0}$。再积分得$\mathbb E L_t^0=\sqrt{2t/\pi}$；也可由Tanaka公式取期望并用$\mathbb E|B_t|=\sqrt{2t/\pi}$核验。",
+  "subject": "随机过程",
+  "source": "generated | standard"
+}

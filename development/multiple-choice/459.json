@@ -1,0 +1,7 @@
+{
+  "idx": 459,
+  "problem": "设$n\ge2$。关于实射影空间$\mathbb{RP}^n$，下列哪些结论正确？A. 其基本群同构于$\mathbb Z/2\mathbb Z$；B. 它可定向当且仅当$n$为奇数；C. $S^n\to\mathbb{RP}^n$是其通用覆盖；D. 对所有$n\ge2$都有$H_n(\mathbb{RP}^n;\mathbb Z)=0$。要求综合覆盖空间、甲板变换和反足映射的度数判断，而不是只背诵同调群表。",
+  "answer": "A,B,C",
+  "subject": "拓扑学",
+  "source": "generated | trap: local-vs-global"
+}

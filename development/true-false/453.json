@@ -1,0 +1,7 @@
+{
+  "idx": 453,
+  "problem": "判断命题真伪：若一族连续线性泛函$\{T_n\}\subset X^*$在Banach空间$X$的某个稠密线性子空间$D$上逐点有界，即对每个$x\in D$都有$\sup_n|T_nx|<\infty$，则必有$\sup_n\|T_n\|<\infty$。作答时应检验$X=\ell^2$、$T_n(x)=nx_n$与$D=c_{00}$这一候选反例，并说明Banach-Steinhaus定理的量词缺口。",
+  "answer": "false",
+  "subject": "泛函分析",
+  "source": "generated | trap: quantifier-swap"
+}

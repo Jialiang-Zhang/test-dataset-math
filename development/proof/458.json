@@ -1,0 +1,7 @@
+{
+  "idx": 458,
+  "problem": "设$p>1$，$q=p/(p-1)$，$f\in C_c^\infty(0,\infty)$且$f\ge0$，$F(x)=\int_0^x f(t)dt$。证明Hardy不等式$\|F/x\|_{L^p(0,\infty)}\le q\|f\|_{L^p(0,\infty)}$，并证明常数$q$最优。要求给出分部积分与Hölder步骤，并构造一族近极值函数说明任何更小常数均不成立。",
+  "answer": "记$I=\int_0^\infty F(x)^px^{-p}dx$。边界项消失，分部积分得$I=q\int_0^\infty(F/x)^{p-1}f\,dx$。Hölder给$I\le q I^{(p-1)/p}\|f\|_p$，所以$I^{1/p}\le q\|f\|_p$。为证尖锐性，可先取$f_R(x)=x^{-1/p}\mathbf1_{(1,R)}$并用光滑截断逼近。其$\|f_R\|_p^p=\log R$；在$1\ll x<R$上，$F_R(x)=q(x^{1/q}-1)$，故$F_R(x)/x=q x^{-1/p}(1-x^{-1/q})$。因此$\|F_R/x\|_p^p=q^p\log R+O(1)$，而尾部$x>R$只贡献$O(1)$。于是范数比趋于$q$，故常数不可减小。",
+  "subject": "数学分析",
+  "source": "generated | trap: boundary-case"
+}
