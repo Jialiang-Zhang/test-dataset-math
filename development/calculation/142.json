@@ -1,0 +1,7 @@
+{
+  "idx": 142,
+  "problem": "对参数$a>0$定义$I(a)=\int_0^\infty\frac{\log(1+a^2x^2)}{1+x^2}\,dx$。请严格证明$I(a)$关于$a$可微，计算$I(a)$的精确解析式，并说明在把导数移入积分号时需要怎样构造与$a$局部无关的可积控制函数。",
+  "answer": "固定$a_0>0$并取$a\in[a_0/2,2a_0]$。有$\partial_a\log(1+a^2x^2)=\frac{2ax^2}{1+a^2x^2}$，故$\left|\frac{\partial}{\partial a}\frac{\log(1+a^2x^2)}{1+x^2}\right|\le \frac{C x^2}{(1+c x^2)(1+x^2)}$，右侧在$(0,\infty)$可积，因此可由控制收敛定理在积分号下求导。于是$I'(a)=\int_0^\infty\frac{2ax^2}{(1+a^2x^2)(1+x^2)}dx$。利用$\frac{x^2}{(1+x^2)(1+a^2x^2)}=\frac1{1-a^2}\left(\frac1{1+a^2x^2}-\frac1{1+x^2}\right)$（$a\ne1$），并连续延拓到$a=1$，得$I'(a)=\frac\pi{1+a}$。又$I(0^+)=0$，故$I(a)=\pi\log(1+a)$。",
+  "subject": "数学分析",
+  "source": "generated | trap: theorem-condition"
+}
