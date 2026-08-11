@@ -1,0 +1,7 @@
+{
+  "idx": 421,
+  "problem": "考虑凸优化$\min_x f(x)$，约束$g_i(x)\le0$与$Ax=b$，其中$f,g_i$均凸且可微，并满足Slater条件：存在$\bar x$使$g_i(\bar x)<0, A\bar x=b$。证明KKT条件对最优性既必要又充分；并指出若删除Slater条件，为什么‘任一最优解必存在KKT乘子’这一必要性结论一般不能保证。",
+  "answer": "凸性给出任意KKT点满足原始可行、对偶可行、互补松弛和驻点。由凸函数一阶下界，结合驻点与$\lambda_i^*\ge0$可得任意可行$x$均有$f(x)\ge f(x^*)$，故KKT充分。必要性方面，Slater条件保证强对偶及对偶最优乘子的存在，再由零对偶间隙得到互补松弛与驻点，因此KKT成立。若无约束资格条件，分离定理可能产生异常乘子，标准Lagrange乘子未必存在，所以必要性可失效。",
+  "subject": "运筹学",
+  "source": "generated | trap: theorem-condition"
+}
