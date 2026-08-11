@@ -1,0 +1,7 @@
+{
+  "idx": 179,
+  "problem": "设$Z_t$为Yule纯出生过程，$Z_0=1$，且在状态$n$时以速率$\lambda n$跳到$n+1$。请严格证明：$(1)$ $P(Z_t=k)=e^{-\lambda t}(1-e^{-\lambda t})^{k-1}$；$(2)$ $M_t=e^{-\lambda t}Z_t$是非负鞅并几乎处处收敛；$(3)$ 其极限$W$服从参数为1的指数分布。不得仅引用Yule过程极限定理。",
+  "answer": "Kolmogorov前向方程为$p_1'=-\lambda p_1$，$p_k'=-\lambda k p_k+\lambda(k-1)p_{k-1}$。代入可验证唯一解$$p_k(t)=q(1-q)^{k-1},\qquad q=e^{-\lambda t}.$$由分枝性质或生成元计算，$E[Z_t\mid\mathcal F_s]=Z_s e^{\lambda(t-s)}$，故$M_t=e^{-\lambda t}Z_t$为非负鞅，于是由鞅收敛定理存在有限$W$使$M_t\to W$几乎处处。对$\theta\ge0$，利用几何分布，$$E[e^{-\theta M_t}]=\sum_{k\ge1}q(1-q)^{k-1}e^{-\theta qk}=\frac{q e^{-\theta q}}{1-(1-q)e^{-\theta q}}.$$令$q\downarrow0$，分母展开为$q(1+\theta)+o(q)$，分子为$q+o(q)$，故极限为$(1+\theta)^{-1}$。另一方面$M_t\to W$几乎处处且$0\le e^{-\theta M_t}\le1$，由控制收敛定理该极限等于$E[e^{-\theta W}]$。因此$W$的Laplace变换为$(1+\theta)^{-1}$，即$$W\sim\operatorname{Exp}(1).$$",
+  "subject": "随机过程",
+  "source": "generated | standard"
+}
