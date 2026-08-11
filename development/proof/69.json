@@ -1,0 +1,7 @@
+{
+  "idx": 69,
+  "problem": "设$\Omega\subset\mathbb R^d$为有界光滑区域，$p>1$。考虑$u_t=\Delta u+u^p$，$u|_{\partial\Omega}=0$，$u(x,0)=u_0(x)\ge0$。设$\phi_1>0$为Dirichlet Laplace算子第一特征函数，$-\Delta\phi_1=\lambda_1\phi_1$，并归一化$\int_\Omega\phi_1dx=1$。证明若$Y_0:=\int_\Omega u_0\phi_1dx>\lambda_1^{1/(p-1)}$，则经典非负解必在有限时间爆破，并给出由比较微分不等式得到的显式爆破时间上界。",
+  "answer": "令$Y(t)=\int_\Omega u\phi_1dx$。分部积分并用边界条件得$Y'=-\lambda_1Y+\int u^p\phi_1dx$。由于$\phi_1dx$是概率测度，Jensen不等式给出$\int u^p\phi_1dx\ge Y^p$，故$Y'\ge Y^p-\lambda_1Y=Y(Y^{p-1}-\lambda_1)$。若$Y_0>\lambda_1^{1/(p-1)}$，则右端正且$Y$递增。令$Z=Y^{-(p-1)}$，则$Z'=-(p-1)Y^{-p}Y'\le-(p-1)(1-\lambda_1Y^{1-p})=-(p-1)(1-\lambda_1Z)$。解比较线性方程可得$Z(t)\le\lambda_1^{-1}+(Z_0-\lambda_1^{-1})e^{(p-1)\lambda_1t}$。右侧首次降至0的时间为$T_*\le\frac1{(p-1)\lambda_1}\log\frac1{1-\lambda_1Y_0^{1-p}}$。因此$Y$在不晚于该时刻趋于无穷，经典解不能全局存在。",
+  "subject": "偏微分方程",
+  "source": "generated | theorem-condition"
+}
