@@ -1,0 +1,7 @@
+{
+  "idx": 136,
+  "problem": "设$X_1,\dots,X_n\overset{iid}\sim N_p(\mu,\Sigma)$，$n>p$，$\Sigma$未知正定。记$\bar X$为样本均值，$S=\frac1{n-1}\sum_{i=1}^n(X_i-\bar X)(X_i-\bar X)^T$。在$H_0:\mu=\mu_0$下定义Hotelling统计量$T^2=n(\bar X-\mu_0)^TS^{-1}(\bar X-\mu_0)$。请严格推导其精确分布，并说明为何不能把$S$简单替换为$\Sigma$后直接称其服从$\chi_p^2$。",
+  "answer": "在$H_0$下，$Z=\sqrt n\,\Sigma^{-1/2}(\bar X-\mu_0)\sim N_p(0,I)$；同时$W=(n-1)\Sigma^{-1/2}S\Sigma^{-1/2}\sim W_p(I,n-1)$，且由正态样本均值与样本协方差独立性知$Z\perp W$。于是$T^2=(n-1)Z^TW^{-1}Z$。标准Wishart-逆Wishart二次型结论给出$\frac{n-p}{p}Z^TW^{-1}Z\sim F_{p,n-p}$，故$\frac{n-p}{p(n-1)}T^2\sim F_{p,n-p}$。若$\Sigma$已知，则$n(\bar X-\mu_0)^T\Sigma^{-1}(\bar X-\mu_0)=Z^TZ\sim\chi_p^2$；但未知$\Sigma$时以随机矩阵$S$替换会引入Wishart分母随机性，因此精确分布变为缩放的$F$分布，而非$\chi_p^2$。",
+  "subject": "统计推断",
+  "source": "generated | trap: theorem-condition"
+}
