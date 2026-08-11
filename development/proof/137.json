@@ -1,0 +1,7 @@
+{
+  "idx": 137,
+  "problem": "在复Hilbert空间$H=L^2[0,1]$上定义乘法算子$(Mf)(x)=xf(x)$。请严格确定$M$的谱、点谱、连续谱与剩余谱，并证明$\|M\|=1$。要求论证中明确使用本质值域、乘法算子的值域稠密性以及当$\lambda\in[0,1]$时$(M-\lambda I)$为何不是满射。",
+  "answer": "乘法算子的谱等于乘子$x$的本质值域，因此$\sigma(M)=[0,1]$，且$\|M\|=\operatorname*{ess\,sup}_{x\in[0,1]}|x|=1$。若$(M-\lambda I)f=0$，则$(x-\lambda)f(x)=0$几乎处处；单点$\{\lambda\}$测度为0，故$f=0$，所以点谱为空。对$\lambda\in[0,1]$，$M-\lambda I$单射。其值域稠密，因为若$g\perp\operatorname{Ran}(M-\lambda I)$，则$(M-\lambda I)^*g=(M-\lambda I)g=0$，从点谱为空得$g=0$。但它不满射：例如常数函数$1$不在值域中，因为若$(x-\lambda)f=1$，则$f=1/(x-\lambda)$，该函数在$\lambda$邻域不属于$L^2$。因此$[0,1]$全部属于连续谱。剩余谱为空。若$\lambda\notin[0,1]$，则$1/(x-\lambda)\in L^\infty$，故$(M-\lambda I)^{-1}$为有界乘法算子，属于预解集。",
+  "subject": "泛函分析",
+  "source": "generated | trap: finite-vs-infinite-dimensional"
+}
