@@ -3,5 +3,5 @@
   "problem": "在单位圆盘$D=\{(r,\theta):0<r<1\}$上考虑热方程$u_t=\Delta u$，Dirichlet边界$u(1,\theta,t)=0$，初值$u(r,\theta,0)=1$。证明解保持径向对称，并利用Bessel型Sturm-Liouville理论写出其完整特征函数展开。若$j_{0,n}$表示$J_0$的第$n$个正零点，要求精确求出展开系数，并给出$u(0,t)$的级数表达式。",
   "answer": "由圆盘、边界条件和初值的旋转不变性以及解的唯一性，$u=u(r,t)$。径向拉普拉斯为$u_{rr}+r^{-1}u_r$。分离变量得到$R''+r^{-1}R'+\lambda R=0$，在$r=0$有界且$R(1)=0$，故$R_n(r)=J_0(j_{0,n}r)$、$\lambda_n=j_{0,n}^2$。按权$r\,dr$正交展开$1=\sum a_nJ_0(j_{0,n}r)$。利用$\int_0^1rJ_0(jr)dr=J_1(j)/j$以及$\int_0^1rJ_0(j_{0,n}r)^2dr=\frac12J_1(j_{0,n})^2$，得$a_n=2/[j_{0,n}J_1(j_{0,n})]$。因此$u(r,t)=\sum_{n\ge1}\frac{2}{j_{0,n}J_1(j_{0,n})}J_0(j_{0,n}r)e^{-j_{0,n}^2t}$。由于$J_0(0)=1$，$u(0,t)=\sum_{n\ge1}\frac{2e^{-j_{0,n}^2t}}{j_{0,n}J_1(j_{0,n})}$。",
   "subject": "偏微分方程",
-  "source": "generated | theorem-condition"
+  "source": "generated | trap: theorem-condition"
 }
