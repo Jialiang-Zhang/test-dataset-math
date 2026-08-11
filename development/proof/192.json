@@ -1,0 +1,7 @@
+{
+  "idx": 192,
+  "problem": "设$w(x)>0$几乎处处定义于$[a,b]$，且所有矩有限。令$p_n$为关于内积$\langle f,g\rangle=\int_a^b f(x)g(x)w(x)\,dx$的首一$n$次正交多项式，其$n$个零点为$x_1,\dots,x_n$。高斯求积公式取节点$x_i$并选择权重使其对次数$\le 2n-1$的多项式精确。请严格证明：对任意$f\in C^{2n}[a,b]$，存在$\xi\in(a,b)$使求积误差满足$$\int_a^b f(x)w(x)\,dx-\sum_{i=1}^nA_if(x_i)=\frac{f^{(2n)}(\xi)}{(2n)!}\int_a^b p_n(x)^2w(x)\,dx.$$要求同时说明为何精确度恰可达到$2n-1$以及误差常数为正。",
+  "answer": "先证精确性。任取$\deg q\le2n-1$，作除法$q=p_ns+r$，其中$\deg s\le n-1,\deg r\le n-1$。由$p_n$与所有次数$<n$多项式正交，$\int p_nsw=0$；而在节点$x_i$处$p_n(x_i)=0$，故$q(x_i)=r(x_i)$。求积权重按对次数$\le n-1$的插值多项式精确选择，因此$\sum A_iq(x_i)=\sum A_ir(x_i)=\int rw=\int qw$，故次数$\le2n-1$全部精确。对一般$f\in C^{2n}$，令$H$为在每个$x_i$同时插值$f(x_i)$与$f'(x_i)$的Hermite插值多项式，$\deg H\le2n-1$。Hermite余项给出对每个$x$存在$\xi_x$使$$f(x)-H(x)=\frac{f^{(2n)}(\xi_x)}{(2n)!}\prod_{i=1}^n(x-x_i)^2=\frac{f^{(2n)}(\xi_x)}{(2n)!}p_n(x)^2.$$由于求积在节点上有$f(x_i)=H(x_i)$且对$H$精确，误差等于$\int(f-H)w$。函数$p_n^2w\ge0$且非零，利用积分中值定理得到某$\xi\in(a,b)$使$$E_n(f)=\frac{f^{(2n)}(\xi)}{(2n)!}\int_a^bp_n^2w.$$积分因$w>0$几乎处处且$p_n\not\equiv0$而严格为正。若对所有次数$2n$多项式也精确，取$q=p_n^2$将得到$0=\sum A_iq(x_i)=\int p_n^2w>0$的矛盾，所以一般不能超过$2n-1$次精确度。",
+  "subject": "数值分析",
+  "source": "generated | trap: theorem-condition"
+}
