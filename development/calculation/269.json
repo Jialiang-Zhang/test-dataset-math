@@ -1,0 +1,7 @@
+{
+  "idx": 269,
+  "problem": "设几何布朗运动$dX_t=\\mu X_tdt+\\sigma X_tdW_t$，$X_0=x\\in(0,b)$，$\\sigma>0$，并令$\\tau_b=\\inf\\{t\\ge0:X_t=b\\}$。对$\\lambda>0$求$u_\\lambda(x)=\\mathbb E_x[e^{-\\lambda\\tau_b};\\tau_b<\\infty]$，并令$\\lambda\\downarrow0$得到命中概率$\\mathbb P_x(\\tau_b<\\infty)$。答案必须区分$\\mu-\\sigma^2/2$的符号。",
+  "answer": "生成元为$\\mathcal Lf(x)=\\mu xf'(x)+\\frac12\\sigma^2x^2f''(x)$。边值问题为$\\mathcal Lu=\\lambda u$，$u(b)=1$。设$u=x^r$，得$\\frac12\\sigma^2r(r-1)+\\mu r-\\lambda=0$。记$\\nu=\\mu-\\sigma^2/2$，根为$r_\\pm=(-\\nu\\pm\\sqrt{\\nu^2+2\\lambda\\sigma^2})/\\sigma^2$。当$\\lambda>0$时$r_+>0>r_-$，排除$x^{r_-}$的爆炸项，故$u_\\lambda(x)=(x/b)^{r_+}$。令$\\lambda\\downarrow0$：若$\\nu\\ge0$，则$r_+\\to0$，命中概率为1；若$\\nu<0$，则$r_+\\to-2\\nu/\\sigma^2$，故$\\mathbb P_x(\\tau_b<\\infty)=(x/b)^{-2\\nu/\\sigma^2}$。临界情形$\\nu=0$仍为1。",
+  "subject": "随机过程",
+  "source": "generated | standard"
+}
