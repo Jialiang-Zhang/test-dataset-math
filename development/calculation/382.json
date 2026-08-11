@@ -1,0 +1,7 @@
+{
+  "idx": 382,
+  "problem": "考虑时间序列回归$y_t=x_t^T\beta+\varepsilon_t,\ t=1,\dots,n$，其中设计矩阵$X$满列秩，误差满足平稳AR(1)：$\varepsilon_t=\rho\varepsilon_{t-1}+u_t$，$|\rho|<1$，$u_t\overset{iid}\sim(0,\sigma_u^2)$，且$\varepsilon_1\sim(0,\sigma_u^2/(1-\rho^2))$并与$u_2,\dots,u_n$独立。在$\rho$已知时，推导精确GLS的Prais–Winsten白化变换，写出变换后的首行和其余各行，并证明所得误差协方差为$\sigma_u^2I_n$。最后写出$\hat\beta_{GLS}$。",
+  "answer": "定义下三角白化矩阵$P$：第一行为$(\sqrt{1-\rho^2},0,\dots,0)$，对$t\ge2$第$t$行在第$t-1,t$列分别为$-\rho,1$。于是变换后\n$y_1^*=\sqrt{1-\rho^2}\,y_1,\ x_1^*=\sqrt{1-\rho^2}\,x_1$；\n对$t\ge2$，\n$y_t^*=y_t-\rho y_{t-1},\ x_t^*=x_t-\rho x_{t-1}$。\n误差方面，$\varepsilon_1^*=\sqrt{1-\rho^2}\varepsilon_1$，方差为$\sigma_u^2$；而$t\ge2$时$\varepsilon_t^*=\varepsilon_t-\rho\varepsilon_{t-1}=u_t$。由平稳AR(1)的创新表示，$\varepsilon_1$与未来创新$u_2,\dots,u_n$不相关（高斯情形更为独立），且各$u_t$互不相关，因此$\operatorname{Cov}(P\varepsilon)=\sigma_u^2I_n$。故精确GLS等价于变换数据上的OLS：\n$\hat\beta_{GLS}=(X^{*T}X^*)^{-1}X^{*T}y^*=(X^TP^TPX)^{-1}X^TP^TPy$。若省略首行的$\sqrt{1-\rho^2}$则是Cochrane–Orcutt式条件变换，不是这里的精确平稳GLS。",
+  "subject": "线性回归",
+  "source": "generated | trap: theorem-condition"
+}

@@ -1,0 +1,7 @@
+{
+  "idx": 387,
+  "problem": "对$n\ge2$，把$S^n$按反点关系$x\sim-x$取商得到实射影空间$\mathbb{RP}^n$。证明：$\pi_1(\mathbb{RP}^n)\cong\mathbb Z/2\mathbb Z$；并利用标准CW分解（每个维数$0,1,\dots,n$各一个胞腔）计算其整数顶维同调，说明$\mathbb{RP}^n$何时可定向。要求明确写出胞腔边界映射的奇偶规律。",
+  "answer": "反点映射给出二重覆盖$p:S^n\to\mathbb{RP}^n$。当$n\ge2$时$S^n$单连通，因此这是万有覆盖，其甲板变换群由恒等与反点映射组成，故$\pi_1(\mathbb{RP}^n)\cong\mathbb Z/2\mathbb Z$。标准CW分解中$C_k\cong\mathbb Z$（$0\le k\le n$）。附着映射的度计算给出胞腔边界\n$d_k=1+(-1)^k$：当$k$奇时$d_k=0$，当$k$偶时$d_k=2$。因此顶维同调\n$H_n=\ker d_n$（因无$C_{n+1}$）。若$n$奇，则$d_n=0$，故$H_n\cong\mathbb Z$；若$n$偶，则$d_n$为乘2映射，核为0，故$H_n=0$。闭连通$n$维流形可定向当且仅当其整数顶维同调为$\mathbb Z$，所以$\mathbb{RP}^n$当且仅当$n$为奇数时可定向。",
+  "subject": "拓扑学",
+  "source": "generated | standard"
+}

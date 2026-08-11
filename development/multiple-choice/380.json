@@ -1,0 +1,7 @@
+{
+  "idx": 380,
+  "problem": "设$X_1,\dots,X_n\overset{iid}\sim\mathrm{Unif}(0,\theta)$，$\theta>0$，记$M_n=X_{(n)}$。下列哪些结论正确？\nA. $\hat\theta_{MLE}=M_n$\nB. $\sqrt n(M_n-\theta)$渐近正态\nC. $n(\theta-M_n)/\theta\Rightarrow\mathrm{Exp}(1)$\nD. $\tilde\theta_n=(n+1)M_n/n$是无偏估计，且$n(\tilde\theta_n-\theta)/\theta\Rightarrow 1-E$，其中$E\sim\mathrm{Exp}(1)$\nE. 可直接用常规Cramér–Rao正则条件推出所有无偏估计的方差下界，因为该模型的对数似然关于$\theta$几乎处处可微",
+  "answer": "A,C,D。似然为$L(\theta)=\theta^{-n}{\bf1}\{\theta\ge M_n\}$，故MLE为$M_n$，A真。对$x\ge0$，\n$P(n(\theta-M_n)/\theta>x)=P(M_n<\theta(1-x/n))=(1-x/n)^n\to e^{-x}$，故C真而B假（误差尺度为$n^{-1}$而非$n^{-1/2}$）。又$E M_n=n\theta/(n+1)$，所以$\tilde\theta_n$无偏；并且\n$n(\tilde\theta_n-\theta)/\theta=(n+1)M_n/\theta-n\n=1-(n+1)(\theta-M_n)/\theta\Rightarrow1-E$，D真。E假，因为支持集依赖参数$\theta$，常规交换求导与积分、得分均值为0等Cramér–Rao正则条件失效。",
+  "subject": "统计推断",
+  "source": "generated | trap: theorem-condition"
+}

@@ -1,0 +1,7 @@
+{
+  "idx": 383,
+  "problem": "设$\Omega\subset\mathbb R^n$（$n\ge3$）为有界光滑严格星形域，即$x\cdot\nu(x)\ge c_0>0$于$\partial\Omega$。设$u\in C^2(\Omega)\cap C^1(\bar\Omega)$满足\n$-\Delta u=|u|^{p-1}u$于$\Omega$，$u=0$于$\partial\Omega$。\n利用Pohozaev恒等式证明：若$p\ge (n+2)/(n-2)$，则不存在非零解。要求推导恒等式中的边界项符号，并处理临界指数等号情形。",
+  "answer": "先乘方程以$u$积分，得\n$\int_\Omega|\nabla u|^2=\int_\Omega|u|^{p+1}$。\n再以$x\cdot\nabla u$为乘子。利用\n$\operatorname{div}[(x\cdot\nabla u)\nabla u-\tfrac12x|\nabla u|^2]\n=(x\cdot\nabla u)\Delta u+(1-\tfrac n2)|\nabla u|^2$\n及\n$x\cdot\nabla(|u|^{p+1}/(p+1))\n=\operatorname{div}(x|u|^{p+1}/(p+1))-n|u|^{p+1}/(p+1)$，\n并用边界上$u=0$、$\nabla u=(\partial_\nu u)\nu$，得到\n$\frac{n-2}{2}\int_\Omega|\nabla u|^2-\frac{n}{p+1}\int_\Omega|u|^{p+1}\n+\frac12\int_{\partial\Omega}(x\cdot\nu)(\partial_\nu u)^2\,dS=0$。\n代入能量恒等式：\n$\left(\frac{n-2}{2}-\frac{n}{p+1}\right)\int_\Omega|\nabla u|^2\n+\frac12\int_{\partial\Omega}(x\cdot\nu)(\partial_\nu u)^2=0$。\n当$p\ge(n+2)/(n-2)$时第一系数非负，严格星形使边界项非负，故两项均为0。若$p$严格超临界，第一系数正，立刻得$\nabla u=0$，故$u=0$。临界时系数为0，严格星形给$\partial_\nu u=0$于整个边界；与$u=0$形成零Cauchy数据。把方程写为$-\Delta u=V(x)u$，其中$V=|u|^{p-1}$有界；由边界唯一延拓（可将$u$零延拓至边界外后用唯一延拓）得$u\equiv0$。",
+  "subject": "偏微分方程",
+  "source": "generated | trap: boundary-case"
+}

@@ -1,0 +1,7 @@
+{
+  "idx": 379,
+  "problem": "设$p>1$，考虑初值问题$y''=y^p,\ y(0)=a>0,\ y'(0)=0$。证明正向解在有限时间爆破，并求最大正向存在时间$T_+(a,p)$的精确Beta函数表达式。还需指出$a$的缩放指数。",
+  "answer": "乘以$y'$积分得\n$\frac12(y')^2=\frac1{p+1}(y^{p+1}-a^{p+1})$。\n正向上$y'\ge0$，故\n$dt=\sqrt{\frac{p+1}{2}}\,\frac{dy}{\sqrt{y^{p+1}-a^{p+1}}}$。\n因此\n$T_+=\sqrt{\frac{p+1}{2}}\int_a^\infty\frac{dy}{\sqrt{y^{p+1}-a^{p+1}}}\n=\sqrt{\frac{p+1}{2}}\,a^{-(p-1)/2}\int_1^\infty\frac{du}{\sqrt{u^{p+1}-1}}$。\n令$t=u^{-(p+1)}$，则\n$\int_1^\infty( u^{p+1}-1)^{-1/2}du\n=\frac1{p+1}B\!\left(\frac{p-1}{2(p+1)},\frac12\right)$。\n故\n$T_+(a,p)=\dfrac{1}{\sqrt{2(p+1)}}B\!\left(\dfrac{p-1}{2(p+1)},\dfrac12\right)a^{-(p-1)/2}$。\n因$p>1$时Beta参数为正，积分有限，故确有有限时爆破；缩放指数为$-(p-1)/2$。",
+  "subject": "常微分方程",
+  "source": "generated | trap: boundary-case"
+}

@@ -1,0 +1,7 @@
+{
+  "idx": 384,
+  "problem": "设$A,B\in\mathbb C^{n\times n}$均Hermitian，且$A$正定。考虑广义特征值问题$Bv=\lambda Av$。下列哪些结论必然成立？\nA. 所有广义特征值$\lambda$均为实数\nB. 存在一组基$v_1,\dots,v_n$满足$v_i^*Av_j=\delta_{ij}$且$Bv_i=\lambda_iAv_i$\nC. $A^{-1}B$必为Hermitian矩阵（关于标准内积）\nD. $A^{-1}B$必可对角化，且与Hermitian矩阵$A^{-1/2}BA^{-1/2}$相似\nE. 总存在标准酉矩阵$U$使$U^*AU=I$且$U^*BU$为实对角阵",
+  "answer": "A,B,D。令$C=A^{-1/2}BA^{-1/2}$，则$C$为Hermitian，故有实谱和标准正交特征基$w_i$。取$v_i=A^{-1/2}w_i$，则$Bv_i=\lambda_iAv_i$且$v_i^*Av_j=w_i^*w_j=\delta_{ij}$，故A、B成立。又\n$A^{-1}B=A^{-1/2}CA^{1/2}$，故与$C$相似，因而可对角化且谱实，D真。C一般假，因为$(A^{-1}B)^*=BA^{-1}$不必等于$A^{-1}B$，除非有额外交换条件。E也假：标准酉相似保持$A$的特征值，若$U^*AU=I$则必有$A=I$；一般只能用非酉合同变换$A^{-1/2}$把$A$化为$I$。",
+  "subject": "高等代数",
+  "source": "generated | trap: necessary-vs-sufficient"
+}

@@ -1,0 +1,7 @@
+{
+  "idx": 381,
+  "problem": "判断并证明或反驳：若$H$是无限维Hilbert空间，$T\in\mathcal B(H)$满足存在$c>0$使$\|Tx\|\ge c\|x\|$对所有$x\in H$成立，则$T$必可逆。要求你的论证同时说明$\operatorname{Ran}T$是否闭、$T^*$是否满射，并给出一个标准反例。",
+  "answer": "false。下界估计先推出$T$单射；若$Tx_n\to y$，则$\|x_n-x_m\|\le c^{-1}\|Tx_n-Tx_m\|$，故$x_n$收敛到某$x$且$Tx=y$，于是$\operatorname{Ran}T$闭。又$\ker T=\{0\}$，所以$\overline{\operatorname{Ran}T^*}=(\ker T)^\perp=H$；由闭值域定理，$\operatorname{Ran}T^*$也闭，因此$T^*$满射。但$T$未必满射。取$H=\ell^2(\mathbb N)$上的单边移位$S(x_1,x_2,\dots)=(0,x_1,x_2,\dots)$，则$\|Sx\|=\|x\|$，满足$c=1$，但$\operatorname{Ran}S=\{y:y_1=0\}\ne H$，故$S$不可逆。",
+  "subject": "泛函分析",
+  "source": "generated | trap: finite-vs-infinite-dimensional"
+}
