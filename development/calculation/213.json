@@ -1,0 +1,7 @@
+{
+  "idx": 213,
+  "problem": "设$\{B_t^{\circ}:0\le t\le1\}$为标准Brownian bridge，即可视为在条件$W_1=0$下的标准Brownian运动轨道。对$a>0$，严格推导$$\mathbb P\!\left(\max_{0\le t\le1}B_t^{\circ}\le a\right),$$要求从Brownian运动吸收壁的反射原理或Dirichlet热核出发，而不是直接引用Brownian bridge最大值分布。",
+  "answer": "对标准Brownian运动$W$，记自由热核$p_t(x,y)=(2\pi t)^{-1/2}e^{-(y-x)^2/(2t)}$。在上壁$a$处吸收且从$0<a$出发的Dirichlet热核由反射原理给出$$p_t^{(-\infty,a)}(0,y)=p_t(0,y)-p_t(0,2a-y),\qquad y<a.$$Brownian bridge可由条件密度极限定义，因此$$\mathbb P\!\left(\max_{0\le s\le1}B_s^{\circ}<a\right)=\frac{p_1^{(-\infty,a)}(0,0)}{p_1(0,0)}.$$代入$y=0$得$$p_1^{(-\infty,a)}(0,0)=p_1(0,0)-p_1(0,2a)=\frac1{\sqrt{2\pi}}\left(1-e^{-2a^2}\right).$$故$$\mathbb P\!\left(\max_{0\le t\le1}B_t^{\circ}\le a\right)=1-e^{-2a^2}.$$由于最大值分布连续，$<$与$\le$无差别。",
+  "subject": "概率论",
+  "source": "generated | standard"
+}
