@@ -1,0 +1,7 @@
+{
+  "idx": 225,
+  "problem": "令$X$由楔和$S^1\vee S^1$在两个基本回路$a,b$上再沿附着映射词$[a^2,b^3]=a^2b^3a^{-2}b^{-3}$粘接一个2-胞腔得到。请计算$\pi_1(X)$与$H_1(X;\mathbb Z)$，并判断$\pi_1(X)$是否为阿贝尔群。要求同时用van Kampen定理与胞腔同调说明答案。",
+  "answer": "由Seifert-van Kampen定理，$$\pi_1(X)\cong\langle a,b\mid [a^2,b^3]=1\rangle.$$其阿贝尔化中任何交换子自动消失，因此附着词在$H_1$中给出的关系为0，故$$H_1(X;\mathbb Z)\cong\mathbb Z^2.$$胞腔链复形也给出同样结论：$C_2\cong\mathbb Z$、$C_1\cong\mathbb Z^2$，2-胞腔边界映射由附着词中$a,b$的总指数和决定；该词两者指数和均为0，所以$\partial_2=0$，从而$H_1\cong C_1/\operatorname{im}\partial_2\cong\mathbb Z^2$。最后$\pi_1(X)$不是阿贝尔群：令$a$映到$C_2*C_3$中的二阶生成元$s$，令$b$映到三阶生成元$t$，则$a^2$与$b^3$都映为1，因此关系$[a^2,b^3]=1$自动满足，故存在满同态$$\pi_1(X)\twoheadrightarrow C_2*C_3.$$后者非阿贝尔，所以$\pi_1(X)$不可能阿贝尔。",
+  "subject": "拓扑学",
+  "source": "generated | trap: converse-error"
+}
