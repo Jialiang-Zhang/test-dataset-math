@@ -1,0 +1,7 @@
+{
+  "idx": 163,
+  "problem": "设图$G=C_m\\square C_n$为两个循环图的笛卡尔积，其中$m,n\\ge3$。请利用拉普拉斯谱与矩阵树定理严格证明$G$的生成树数为$$\\tau(G)=\\frac1{mn}\\prod_{\\substack{0\\le j<m,\\ 0\\le k<n\\\\(j,k)\\ne(0,0)}}\\left(4-2\\cos\\frac{2\\pi j}{m}-2\\cos\\frac{2\\pi k}{n}\\right).$$要求先从$C_m,C_n$的傅里叶特征向量推出笛卡尔积的全部拉普拉斯特征值，并解释为什么唯一的零特征值对应常数向量。",
+  "answer": "$C_m$的拉普拉斯特征向量为$u_j(r)=e^{2\\pi ijr/m}$，对应特征值$\\lambda_j=2-2\\cos(2\\pi j/m)$；同理$C_n$的特征值为$\\mu_k=2-2\\cos(2\\pi k/n)$。笛卡尔积满足$L_G=L_{C_m}\\otimes I_n+I_m\\otimes L_{C_n}$，故$u_j\\otimes v_k$为特征向量，特征值为$$\\lambda_j+\\mu_k=4-2\\cos\\frac{2\\pi j}{m}-2\\cos\\frac{2\\pi k}{n}.$$由于循环图连通，$\\lambda_j=0$仅当$j=0$，$\\mu_k=0$仅当$k=0$，故$G$连通且唯一零特征值对应$(j,k)=(0,0)$的常数向量。对含$N=mn$个顶点的连通图，矩阵树定理的谱形式为$\\tau(G)=N^{-1}\\prod_{r=2}^N\\nu_r$，其中$\\nu_r$为非零拉普拉斯特征值。代入上述谱即得到题设乘积公式。",
+  "subject": "离散数学",
+  "source": "generated | standard"
+}
