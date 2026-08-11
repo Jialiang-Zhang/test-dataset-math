@@ -1,0 +1,7 @@
+{
+  "idx": 64,
+  "problem": "设$f$在单位圆盘邻域解析，$f(0)=1$，且在$|z|=1$上无零点并满足$|f(e^{it})|=|2+e^{3it}|$。利用Jensen公式严格求$f$在单位圆盘内零点总数（按重数计）。不得直接猜测$f$的具体表达式。",
+  "answer": "Jensen公式给出$\sum_{|a_k|<1}\log\frac1{|a_k|}=\frac1{2\pi}\int_0^{2\pi}\log|f(e^{it})|dt-\log|f(0)|$。右端第二项为0。又$|2+e^{3it}|=2|1+\frac12e^{3it}|$，而$z\mapsto1+\frac12z^3$在单位圆盘内无零点，因此由调和平均值性质，$\frac1{2\pi}\int_0^{2\pi}\log|1+\frac12e^{3it}|dt=0$，故Jensen右端为$\log2$。这只能确定零点模长乘积而不能唯一确定零点个数，因此题设信息不足以确定零点总数。事实上可构造不同Blaschke因子乘积保持边界模长不变且$f(0)=1$经常数归一化后改变零点数。故“由这些条件可唯一求零点数”的命题为假。",
+  "subject": "复分析",
+  "source": "generated | trap: missing-assumption"
+}
