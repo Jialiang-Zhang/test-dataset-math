@@ -1,7 +1,7 @@
 {
   "idx": 210,
   "problem": "两阶段Gauss-Legendre Runge-Kutta方法的稳定函数为$$R(z)=\frac{1+z/2+z^2/12}{1-z/2+z^2/12}.$$请不引用现成的A稳定性结论，直接从该有理函数证明：对所有$\operatorname{Re}z\le0$均有$|R(z)|\le1$，从而该方法A稳定；并证明它不是L稳定。要求给出一个只依赖$z$及$\bar z$的模平方恒等式，而不是只检查虚轴。",
-  "answer": "记$a=1+z^2/12$，$b=z/2$，则分母为$a-b$、分子为$a+b$。利用$$|a-b|^2-|a+b|^2=-4\operatorname{Re}(a\bar b),$$得到$$|1-z/2+z^2/12|^2-|1+z/2+z^2/12|^2=-2\operatorname{Re}\!\left(\bar z+\frac{z^2\bar z}{12}\right).$$因$z^2\bar z=z|z|^2$，故右端化为$$-2(\operatorname{Re}z)\left(1+\frac{|z|^2}{12}\right).$$当$\operatorname{Re}z\le0$时该量非负，因此分母模不小于分子模，即$|R(z)|\le1$。分母在闭左半平面无零点，否则上式与分子同时为零只能导致矛盾，所以该方法A稳定。另一方面，当$|z|\to\infty$时分子与分母最高次项同为$z^2/12$，故$$\lim_{|z|\to\infty}R(z)=1\ne0.$$L稳定要求A稳定且沿左半平面无穷远处$R(z)\to0$，故该方法不是L稳定。",
+  "answer": "记$a=1+z^2/12$，$b=z/2$，则分母为$a-b$、分子为$a+b$。利用$$|a-b|^2-|a+b|^2=-4\operatorname{Re}(a\bar b),$$得到$$|1-z/2+z^2/12|^2-|1+z/2+z^2/12|^2=-2\operatorname{Re}\!\left(\bar z+\frac{z^2\bar z}{12}\right).$$因$z^2\bar z=z|z|^2$，右端化为$$-2(\operatorname{Re}z)\left(1+\frac{|z|^2}{12}\right).$$当$\operatorname{Re}z\le0$时该量非负，因此分母模不小于分子模。还需检查稳定函数在闭左半平面无极点：分母方程$1-z/2+z^2/12=0$等价于$z^2-6z+12=0$，两根为$3\pm i\sqrt3$，均位于右半平面。故对所有$\operatorname{Re}z\le0$确有$|R(z)|\le1$，方法A稳定。另一方面，当$|z|\to\infty$时分子与分母最高次项同为$z^2/12$，故$R(z)\to1\ne0$。L稳定要求A稳定且沿左半平面无穷远处$R(z)\to0$，所以该方法不是L稳定。",
   "subject": "数值分析",
   "source": "generated | trap: theorem-condition"
 }
