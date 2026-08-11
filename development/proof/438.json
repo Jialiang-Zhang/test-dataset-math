@@ -1,0 +1,7 @@
+{
+  "idx": 438,
+  "problem": "在特征为0的代数闭域上，令$N=J_m(0)\otimes I_n+I_m\otimes J_n(0)$，其中$m\le n$。证明$N$的Jordan块大小恰为$m+n-1,m+n-3,\dots,n-m+1$，每种大小各出现一次。可使用$\mathfrak{sl}_2$表示论或等价的核维数计算，但必须解释为何这些块总维数为$mn$。",
+  "answer": "把$J_m(0)$视为不可约$\mathfrak{sl}_2$模$V_{m-1}$上升算子$e$的矩阵，同理$J_n(0)$对应$V_{n-1}$。在张量积上$e$作用正是$N=e\otimes I+I\otimes e$。Clebsch-Gordan分解给$V_{m-1}\otimes V_{n-1}\cong\bigoplus_{k=0}^{m-1}V_{m+n-2-2k}$。在不可约模$V_d$上，上升算子是一个大小$d+1$的单Jordan块，故块大小依次为$m+n-1,m+n-3,\ldots,n-m+1$。维数校验：$\sum_{k=0}^{m-1}(m+n-1-2k)=m(m+n-1)-m(m-1)=mn$，故没有遗漏其他Jordan块。",
+  "subject": "高等代数",
+  "source": "generated | standard"
+}

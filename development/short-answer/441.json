@@ -1,0 +1,7 @@
+{
+  "idx": 441,
+  "problem": "透镜空间$L(p,q)$（$p>1,\gcd(p,q)=1$）具有每个维数$0,1,2,3$各一个胞腔的CW分解。写出其整数系数胞腔链复形的边界算子，并据此求$H_k(L(p,q);\mathbb Z)$；同时给出$\pi_1(L(p,q))$。说明结果为何与$q$无关，但不能据此断言所有$L(p,q)$同胚。",
+  "answer": "可取胞腔链群$C_k\cong\mathbb Z$（$0\le k\le3$），边界为$d_3=0,d_2=p,d_1=0$。因此$H_3\cong\mathbb Z$，$H_2=0$，$H_1\cong\mathbb Z/p\mathbb Z$，$H_0\cong\mathbb Z$，其余为0。由标准Heegaard分解或万有覆盖$S^3\to L(p,q)$，$\pi_1(L(p,q))\cong\mathbb Z/p\mathbb Z$。这些粗不变量只依赖$p$；不同$q$仍可能由Reidemeister扭结等更精细不变量区分，所以不能推出同胚。",
+  "subject": "拓扑学",
+  "source": "generated | trap: necessary-vs-sufficient"
+}

@@ -1,0 +1,7 @@
+{
+  "idx": 435,
+  "problem": "设$T:H_1\to H_2$为Hilbert空间之间的有界线性算子。证明以下三条等价：$(i)\ \operatorname{Ran}T$闭；$(ii)$存在$c>0$使$\|Tx\|\ge c\|x\|$对所有$x\perp\ker T$成立；$(iii)\ \operatorname{Ran}T^*$闭。并说明闭值域条件不可由“$T$单射”替代。",
+  "answer": "令$M=(\ker T)^\perp$。若Ran$T$闭，则限制$T|_M:M\to\operatorname{Ran}T$为双射；由有界逆定理其逆有界，故得(ii)。反之(ii)若$Tx_n$为Cauchy，可取$x_n\in M$，则$x_n$为Cauchy并收敛到$x\in M$，故$Tx_n\to Tx$，像闭。又$(\operatorname{Ran}T)^{\perp}=\ker T^*$与$(\operatorname{Ran}T^*)^{\perp}=\ker T$。由(ii)可证明$T^*$在$(\ker T^*)^\perp=\overline{\operatorname{Ran}T}$上同样有下界（等价地使用极分解$T=U|T|$，$|T|$在$M$上的谱离0有正距离），故Ran$T^*$闭；交换$T,T^*$得逆向，因此(i)$\Leftrightarrow$(iii)。单射不足，例如$T:\ell^2\to\ell^2$, $T(x_n)=(x_n/n)$单射但像不闭，因为$\|Te_n\|=1/n\to0$，不满足(ii)。",
+  "subject": "泛函分析",
+  "source": "generated | trap: necessary-vs-sufficient"
+}

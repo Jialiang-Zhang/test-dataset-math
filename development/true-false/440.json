@@ -1,0 +1,7 @@
+{
+  "idx": 440,
+  "problem": "判断：若$f_n\in C^1([-1,1])$，$f_n\to f$一致收敛，$f_n'(x)\to g(x)$对每个$x$逐点收敛，并且$\sup_n\|f_n'\|_{L^1}<\infty$，则$f$必在$[-1,1]$可微且$f'=g$。",
+  "answer": "false",
+  "subject": "数学分析",
+  "source": "generated | trap: interchange-limit-derivative"
+}

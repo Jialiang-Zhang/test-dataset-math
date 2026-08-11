@@ -1,0 +1,7 @@
+{
+  "idx": 442,
+  "problem": "定义Jacobi theta函数$\theta(t)=\sum_{n\in\mathbb Z}e^{-\pi n^2t}$，$t>0$。利用Poisson求和证明$\theta(t)=t^{-1/2}\theta(1/t)$，并由Mellin变换推导Riemann zeta函数的对称函数方程$\pi^{-s/2}\Gamma(s/2)\zeta(s)=\pi^{-(1-s)/2}\Gamma((1-s)/2)\zeta(1-s)$（先在收敛区域推导，再说明解析延拓）。",
+  "answer": "对$f_t(x)=e^{-\pi t x^2}$，Fourier变换为$\widehat f_t(\xi)=t^{-1/2}e^{-\pi\xi^2/t}$。Poisson求和给$\theta(t)=\sum_nf_t(n)=\sum_n\widehat f_t(n)=t^{-1/2}\theta(1/t)$。当$\Re s>1$时，逐项积分得$\int_0^\infty(\theta(t)-1)t^{s/2-1}dt=2\pi^{-s/2}\Gamma(s/2)\zeta(s)$。把积分分成$(0,1)$和$(1,\infty)$，在$(0,1)$中用$\theta(t)=t^{-1/2}\theta(1/t)$并令$u=1/t$，得到右端可写成一个在$s\leftrightarrow1-s$下对称的亚纯表达式（显式极点项来自$t^{-1/2}-1$）。因此完成函数$\Lambda(s)=\pi^{-s/2}\Gamma(s/2)\zeta(s)$解析延拓后满足$\Lambda(s)=\Lambda(1-s)$，即题述函数方程。",
+  "subject": "非基础及进阶课程",
+  "source": "generated | standard"
+}
