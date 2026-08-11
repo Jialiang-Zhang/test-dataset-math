@@ -1,0 +1,7 @@
+{
+  "idx": 57,
+  "problem": "设$G$是$n$个顶点的$d$-正则简单图，邻接矩阵为$A$，最小特征值为$\lambda_{\min}<0$。证明Hoffman界$\alpha(G)\le n\frac{-\lambda_{\min}}{d-\lambda_{\min}}$。进一步证明：若独立集$S$达到等号，则其示性向量$\mathbf 1_S$满足$\mathbf 1_S-\frac{|S|}{n}\mathbf 1$属于$A$的$\lambda_{\min}$-特征空间，并推出每个$V\setminus S$中的顶点在$S$中恰有$-\lambda_{\min}$个邻点。",
+  "answer": "令$s=|S|$，$x=\mathbf 1_S-\frac{s}{n}\mathbf 1$，则$x\perp\mathbf 1$。因$S$独立，$\mathbf 1_S^TA\mathbf 1_S=0$；又$A\mathbf 1=d\mathbf 1$，故$x^TAx=-d s^2/n$，而$\|x\|^2=s-s^2/n=s(n-s)/n$。Rayleigh商给出$-ds/(n-s)\ge\lambda_{\min}$，整理得$s\le n\frac{-\lambda_{\min}}{d-\lambda_{\min}}$。若等号成立，则Rayleigh商达到最小值，故$Ax=\lambda_{\min}x$。于是$A\mathbf 1_S=\lambda_{\min}\mathbf 1_S+\frac{s}{n}(d-\lambda_{\min})\mathbf 1$。由等号关系$\frac{s}{n}(d-\lambda_{\min})=-\lambda_{\min}$，故$A\mathbf 1_S=\lambda_{\min}\mathbf 1_S-\lambda_{\min}\mathbf 1$。对$v\notin S$，左侧分量等于$v$在$S$中的邻点数，右侧为$-\lambda_{\min}$。",
+  "subject": "离散数学",
+  "source": "generated | trap: theorem-condition"
+}
