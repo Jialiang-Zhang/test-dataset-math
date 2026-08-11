@@ -1,0 +1,7 @@
+{
+  "idx": 326,
+  "problem": "设$X_1,\dots,X_n$独立同分布于参数为速率$\theta>0$的指数分布，$n\ge2$，给定常数$c>0$。求$e^{-c\theta}$的UMVU估计量，并严格说明其无偏性与UMVU性。",
+  "answer": "令$T=\sum_{i=1}^nX_i$，则$T\sim\Gamma(n,\theta)$（速率参数），且$T$对$\theta$完全充分。取$\delta(T)=\mathbf1_{\{T>c\}}(1-c/T)^{n-1}$。则$\mathbb E_\theta\delta(T)=\frac{\theta^n}{(n-1)!}\int_c^\infty (1-c/t)^{n-1}t^{n-1}e^{-\theta t}dt=\frac{\theta^n}{(n-1)!}\int_c^\infty(t-c)^{n-1}e^{-\theta t}dt=e^{-c\theta}$。因此$\delta(T)$无偏；由Lehmann--Scheffe定理，作为完全充分统计量$T$的函数，它是唯一（几乎处处）UMVU估计量。",
+  "subject": "统计推断",
+  "source": "generated | standard"
+}
