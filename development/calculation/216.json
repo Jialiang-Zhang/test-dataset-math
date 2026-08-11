@@ -1,7 +1,7 @@
 {
   "idx": 216,
-  "problem": "利用复变函数的钥匙孔围道与参数化分支方法，计算$$I=\int_0^\infty\frac{\log x}{1+x^4}\,dx.$$要求先构造$$F(a)=\int_0^\infty\frac{x^{a-1}}{1+x^4}\,dx$$并通过围道积分得到其解析表达式，再对参数求导获得$I$；不得直接引用Beta函数积分公式。",
-  "answer": "取$0<a<4$并在正实轴作割线，令$z^{a-1}=e^{(a-1)\Log z}$，其中$\arg z\in(0,2\pi)$。钥匙孔围道上下沿的积分相差因子$e^{2\pi i(a-1)}=e^{2\pi ia}$，由留数定理可求得标准结果$$F(a)=\int_0^\infty\frac{x^{a-1}}{1+x^4}\,dx=\frac\pi4\csc\frac{\pi a}{4},\qquad0<a<4.$$（留数来自四个四次单位根中与所选围道/分支对应的相位求和；端点圆弧因$0<a<4$消失。）在$a=1$附近可由支配收敛对参数求导，故$$I=F'(1)=-\frac{\pi^2}{16}\csc\frac\pi4\cot\frac\pi4=-\frac{\pi^2\sqrt2}{16}.$$",
+  "problem": "利用复变函数的扇形围道与参数化分支方法，计算$$I=\int_0^\infty\frac{\log x}{1+x^4}\,dx.$$要求先构造$$F(a)=\int_0^\infty\frac{x^{a-1}}{1+x^4}\,dx$$并通过围道积分得到其解析表达式，再对参数求导获得$I$；不得直接引用Beta函数积分公式。",
+  "answer": "取$0<a<4$，在第一象限取半径$\varepsilon,R$的四分之一扇形围道，并令$z^{a-1}$取主支。对$$f_a(z)=\frac{z^{a-1}}{1+z^4}$$积分。实轴边趋于$F(a)$；虚轴边令$z=ir$且方向由$iR$到$i\varepsilon$，其贡献趋于$-e^{i\pi a/2}F(a)$。两段圆弧在$\varepsilon\downarrow0,R\uparrow\infty$时因$0<a<4$消失。第一象限唯一极点为$\zeta=e^{i\pi/4}$，且$$\operatorname{Res}(f_a,\zeta)=\frac{\zeta^{a-1}}{4\zeta^3}=\frac14e^{i\pi(a-4)/4}=-\frac14e^{i\pi a/4}.$$故留数定理给出$$(1-e^{i\pi a/2})F(a)=-\frac{\pi i}{2}e^{i\pi a/4}.$$利用$1-e^{2iu}=-2ie^{iu}\sin u$，取$u=\pi a/4$，得到$$F(a)=\frac\pi4\csc\frac{\pi a}{4}.$$在$a=1$附近，$x^{a-1}|\log x|/(1+x^4)$可被一个可积函数控制，因此可对参数求导：$$I=F'(1)=-\frac{\pi^2}{16}\csc\frac\pi4\cot\frac\pi4=-\frac{\pi^2\sqrt2}{16}.$$",
   "subject": "复分析",
   "source": "generated | standard"
 }
