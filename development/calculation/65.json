@@ -1,0 +1,7 @@
+{
+  "idx": 65,
+  "problem": "考虑Duffing方程$y''+y+y^3=0$，初值$y(0)=A>0,y'(0)=0$。证明解为周期解，并将最小正周期$T(A)$严格化为第一类完全椭圆积分$K$的闭式；要求从能量守恒出发推导，不得直接引用已知Duffing周期公式。",
+  "answer": "能量$E=\frac12(y')^2+\frac12y^2+\frac14y^4$守恒，初值得$E=\frac12A^2+\frac14A^4$，故$(y')^2=(A^2-y^2)\left(1+\frac{A^2+y^2}{2}\right)$。势能偶、严格增且趋于无穷，轨道在$[-A,A]$间闭合，故解周期。四分之一周期为$T/4=\int_0^A\frac{dy}{\sqrt{(A^2-y^2)(1+(A^2+y^2)/2)}}$。令$y=A\sin\theta$，再令$\phi=\pi/2-\theta$，得$T/4=\frac1{\sqrt{1+A^2}}\int_0^{\pi/2}\frac{d\phi}{\sqrt{1-k^2\sin^2\phi}}$，其中$k^2=\frac{A^2}{2(1+A^2)}$。因此$T(A)=\frac{4}{\sqrt{1+A^2}}K\!\left(\frac{A}{\sqrt{2(1+A^2)}}\right)$。",
+  "subject": "常微分方程",
+  "source": "generated | standard"
+}
