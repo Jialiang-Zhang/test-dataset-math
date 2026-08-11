@@ -1,0 +1,7 @@
+{
+  "idx": 316,
+  "problem": "设$p$为奇素数，$\zeta=e^{2\pi i/p}$，二次Gauss和$\tau=\sum_{a=0}^{p-1}\left(\frac ap\right)\zeta^a$，其中$\left(\frac ap\right)$为Legendre符号且约定$\left(\frac0p\right)=0$。证明$|\tau|=\sqrt p$且$\tau^2=\left(\frac{-1}{p}\right)p$。要求使用乘法变量代换证明$\sum_a\left(\frac ap\right)\zeta^{ta}=\left(\frac tp\right)\tau$（$t\ne0$），并由此完成平方计算；不得直接引用Gauss和标准结论。",
+  "answer": "对$t\ne0$，令$b=ta$，则$\sum_a(\frac ap)\zeta^{ta}=\sum_b(\frac{t^{-1}b}{p})\zeta^b=(\frac tp)\tau$。于是$\tau^2=\sum_a(\frac ap)\zeta^a\tau=\sum_a(\frac ap)\sum_b(\frac bp)\zeta^b\zeta^a$不便直接化简；改写$\tau^2=\sum_{a,b}(\frac{ab}{p})\zeta^{a+b}$。令$a\ne0$并置$b=at$，得$\tau^2=\sum_t(\frac tp)\sum_{a\ne0}\zeta^{a(1+t)}$。当$t=-1$时内和为$p-1$；当$t\ne-1$时内和为$-1$。因此$\tau^2=(\frac{-1}{p})(p-1)-\sum_{t\ne-1}(\frac tp)=(\frac{-1}{p})p$，因为$\sum_t(\frac tp)=0$。又$\overline\tau=\sum_a(\frac ap)\zeta^{-a}=(\frac{-1}{p})\tau$，故$|\tau|^2=\tau\overline\tau=(\frac{-1}{p})\tau^2=p$，所以$|\tau|=\sqrt p$。",
+  "subject": "非基础及进阶课程",
+  "source": "generated | standard"
+}
