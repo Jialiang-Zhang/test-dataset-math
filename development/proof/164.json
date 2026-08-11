@@ -1,0 +1,7 @@
+{
+  "idx": 164,
+  "problem": "对测试方程$y'=\\lambda y$，考虑两阶段Gauss-Legendre Runge-Kutta方法。已知其Butcher矩阵为$$A=\\begin{pmatrix}\\frac14&\\frac14-\\frac{\\sqrt3}{6}\\\\\\frac14+\\frac{\\sqrt3}{6}&\\frac14\\end{pmatrix},\\qquad b=\\begin{pmatrix}\\frac12\\\\\\frac12\\end{pmatrix}.$$请从$R(z)=1+zb^T(I-zA)^{-1}\\mathbf1$出发推导稳定函数，证明$$R(z)=\\frac{1+z/2+z^2/12}{1-z/2+z^2/12},$$并严格证明该方法A-稳定；最后证明$R(z)R(-z)=1$并解释这与Gauss方法的时间对称性相一致。",
+  "answer": "直接计算$\\det(I-zA)=1-z/2+z^2/12$，再由$1+zb^T(I-zA)^{-1}\\mathbf1$化简得$$R(z)=\\frac{1+z/2+z^2/12}{1-z/2+z^2/12}.$$令$z=x+iy$且$x\\le0$。A-稳定等价于证明分子模不超过分母模。设$N=1+z/2+z^2/12,D=1-z/2+z^2/12$，则$$|D|^2-|N|^2=-2\\Re\\left[(1+z^2/12)\\overline z\\right]=-2x\\left(1+\\frac{|z|^2}{12}\\right)+\\frac{x|z|^2-x(x^2-y^2)}{6}.$$更直接地展开可得$$|D|^2-|N|^2=-2x\\left(1+\\frac{|z|^2}{12}\\right)\\ge0,$$故$|R(z)|\\le1$于左半平面成立，方法A-稳定。又有$R(-z)=D/N$，于是$R(z)R(-z)=1$。该互反关系表明向前一步$h$后再以$-h$反向一步得到恒等映射，正是Gauss配点方法的时间对称性在稳定函数上的体现。",
+  "subject": "数值分析",
+  "source": "generated | standard"
+}
