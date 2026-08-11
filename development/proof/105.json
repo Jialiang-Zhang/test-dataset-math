@@ -1,0 +1,7 @@
+{
+  "idx": 105,
+  "problem": "设$a\in\mathbb R_{++}^m,b\in\mathbb R_{++}^n$且$\sum_i a_i=\sum_j b_j=1$，成本矩阵$C\in\mathbb R^{m\times n}$，$\varepsilon>0$。考虑熵正则最优传输问题$\min_{P\ge0}\{\langle C,P\rangle+\varepsilon\sum_{ij}P_{ij}(\log P_{ij}-1):P\mathbf1=a,P^T\mathbf1=b\}$。严格证明最优解唯一且严格正，并由KKT条件推出$P^*=\mathrm{diag}(u)K\mathrm{diag}(v)$，其中$K_{ij}=e^{-C_{ij}/\varepsilon}$；证明$(u,v)$只在变换$(cu,c^{-1}v)$下不唯一。",
+  "answer": "目标函数在$P_{ij}>0$上严格凸，约束集非空且凸；因$a,b$严格正，可取正的可行矩阵$ab^T$。函数$x(\log x-1)$在$x\downarrow0$时导数趋于$-\infty$，故若最优解某分量为0，可沿保持边际的可行方向从正可行点向该分量增加少量质量并使目标一阶下降，因此最优解位于相对内部并严格正。严格凸性于是给唯一最优解。引入乘子$\alpha_i,\beta_j$，拉格朗日函数的一阶条件为$C_{ij}+\varepsilon\log P_{ij}-\alpha_i-\beta_j=0$，故$P_{ij}=e^{\alpha_i/\varepsilon}e^{-C_{ij}/\varepsilon}e^{\beta_j/\varepsilon}=u_iK_{ij}v_j$，其中$u_i,v_j>0$。边际条件给$u\odot(Kv)=a$、$v\odot(K^Tu)=b$。若另有$\tilde u,\tilde v>0$产生同一$P^*$，则对所有$i,j$，$(\tilde u_i/u_i)(\tilde v_j/v_j)=1$。固定$j$可知$\tilde u_i/u_i$与$i$无关，等于某$c>0$，进而$\tilde v_j/v_j=c^{-1}$。反之该缩放显然不改变$P^*$。",
+  "subject": "运筹学",
+  "source": "generated | trap: necessary-vs-sufficient"
+}
