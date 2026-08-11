@@ -1,0 +1,7 @@
+{
+  "idx": 332,
+  "problem": "求$n\to\infty$时积分$I_n=\int_0^1\exp[-n(x^4+x^6)]\,dx$的前两项渐近展开，并给出误差阶。",
+  "answer": "令$x=n^{-1/4}t$，则$I_n=n^{-1/4}\int_0^{n^{1/4}}e^{-t^4}e^{-n^{-1/2}t^6}dt$。在主贡献区展开$e^{-n^{-1/2}t^6}=1-n^{-1/2}t^6+O(n^{-1}t^{12})$，并用指数衰减控制尾部，可将上限延至$\infty$且余项为$O(n^{-5/4})$。于是$I_n=n^{-1/4}\int_0^\infty e^{-t^4}dt-n^{-3/4}\int_0^\infty t^6e^{-t^4}dt+O(n^{-5/4})=\frac14\Gamma(1/4)n^{-1/4}-\frac14\Gamma(7/4)n^{-3/4}+O(n^{-5/4})$。",
+  "subject": "数学分析",
+  "source": "generated | standard"
+}
