@@ -1,0 +1,7 @@
+{
+  "idx": 244,
+  "problem": "设$f\\in\\mathcal S(\\mathbb R)$，Fourier变换约定为$$\\widehat f(\\xi)=\\int_{\\mathbb R}f(x)e^{-2\\pi ix\\xi}\\,dx.$$证明Heisenberg不确定性不等式$$\\left(\\int x^2|f(x)|^2dx\\right)\\left(\\int \\xi^2|\\widehat f(\\xi)|^2d\\xi\\right)\\ge \\frac1{16\\pi^2}\\|f\\|_2^4,$$并刻画等号情形。",
+  "answer": "Plancherel及$\\widehat{f'}=2\\pi i\\xi\\widehat f$给$$\\int \\xi^2|\\widehat f|^2=\\frac1{4\\pi^2}\\int|f'|^2.$$Schwartz衰减使边界项消失：$$\\|f\\|_2^2=-\\int x(|f|^2)'=-2\\Re\\int xf'\\overline f\\le2\\|xf\\|_2\\|f'\\|_2.$$平方并代入即得所需常数。等号要求Cauchy–Schwarz等号且相位匹配，即$f'(x)=-cxf(x)$，$c>0$，故$f(x)=Ce^{-cx^2/2}$。由于本式未做中心化，等号情形正是以0为中心、无频率调制的Gaussian乘复常数。",
+  "subject": "非基础及进阶课程",
+  "source": "generated | standard"
+}
