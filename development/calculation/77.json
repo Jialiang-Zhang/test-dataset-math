@@ -1,0 +1,7 @@
+{
+  "idx": 77,
+  "problem": "设$B_t$为从0出发的一维标准布朗运动，$a,b>0$，$\tau=\inf\{t\ge0:B_t\notin(-b,a)\}$。对$\lambda>0$，严格求$\mathbb E[e^{-\lambda\tau}\mathbf1_{\{B_\tau=a\}}]$的精确表达式，并说明可选停止或Feynman-Kac论证中所需的有界性条件。",
+  "answer": "令$u(x)=\mathbb E_x[e^{-\lambda\tau}\mathbf1_{\{B_\tau=a\}}]$。由Feynman-Kac（亦可对指数鞅作可选停止）得$\frac12u''=\lambda u$于$(-b,a)$，边界条件$u(-b)=0,u(a)=1$。令$k=\sqrt{2\lambda}$，通解满足边界后为$u(x)=\sinh(k(x+b))/\sinh(k(a+b))$。因此从0出发时$\mathbb E[e^{-\lambda\tau}\mathbf1_{\{B_\tau=a\}}]=\dfrac{\sinh(b\sqrt{2\lambda})}{\sinh((a+b)\sqrt{2\lambda})}$。严格性上，$0\le e^{-\lambda(t\wedge\tau)}u(B_{t\wedge\tau})\le\|u\|_\infty$，故停止后的鞅一致可积，可令$t\to\infty$；同时有界区间退出时间几乎处处有限。",
+  "subject": "概率论",
+  "source": "generated | standard"
+}
