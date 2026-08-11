@@ -1,0 +1,7 @@
+{
+  "idx": 307,
+  "problem": "求非线性方程$x''=x-2x^3$满足$x(t)\to0$（$t\to\pm\infty$）且$x(0)>0,x'(0)=0$的非平凡同宿轨道。要求先由能量积分确定轨道所在能级，再求出精确解析式并说明平移与符号给出的全部非平凡同宿解。",
+  "answer": "乘以$x'$得$\frac12(x')^2-\frac12x^2+\frac12x^4=E$。同宿于$(0,0)$要求$t\to\pm\infty$时$x,x'\to0$，故$E=0$，于是$(x')^2=x^2(1-x^2)$。由$x'(0)=0$且$x(0)>0$得$x(0)=1$。分离变量或直接验证$\operatorname{sech}$恒等式可得$x(t)=\operatorname{sech}t$。更一般地，由时间平移不变性与奇偶对称，所有非平凡同宿轨道为$x(t)=\pm\operatorname{sech}(t-t_0)$，$t_0\in\mathbb R$。",
+  "subject": "常微分方程",
+  "source": "generated | standard"
+}
