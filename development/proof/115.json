@@ -1,0 +1,7 @@
+{
+  "idx": 115,
+  "problem": "考虑Cox-Ingersoll-Ross扩散$dX_t=\kappa(\theta-X_t)dt+\sigma\sqrt{X_t}\,dB_t$，其中$\kappa,\theta,\sigma>0$，并假设$2\kappa\theta\ge\sigma^2$以避免$0$成为可达吸收边界。严格从平稳Fokker-Planck方程出发求出其不变概率分布，写出精确密度及其Gamma参数，并说明为何零概率流边界条件决定积分常数。",
+  "answer": "漂移$b(x)=\kappa(\theta-x)$，扩散平方$a(x)=\sigma^2x$。平稳密度$p$满足$0=-\frac d{dx}(bp)+\frac12\frac{d^2}{dx^2}(ap)$。积分一次得到概率流$J=bp-\frac12(ap)'$为常数；对正再生扩散的不变概率密度，自然边界处无净流，故$J=0$。于是$(\sigma^2xp)'=2\kappa(\theta-x)p$，即$p'/p=(2\kappa\theta/\sigma^2-1)x^{-1}-2\kappa/\sigma^2$。积分得$p(x)=Cx^{\nu-1}e^{-\lambda x}$，其中$\nu=2\kappa\theta/\sigma^2$、$\lambda=2\kappa/\sigma^2$。归一化给$C=\lambda^\nu/\Gamma(\nu)$。故不变分布为Gamma(shape $\nu=2\kappa\theta/\sigma^2$, rate $\lambda=2\kappa/\sigma^2$)，即尺度$\sigma^2/(2\kappa)$。",
+  "subject": "随机过程",
+  "source": "generated | trap: theorem-condition"
+}
