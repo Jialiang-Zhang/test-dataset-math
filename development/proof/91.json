@@ -1,0 +1,7 @@
+{
+  "idx": 91,
+  "problem": "设$G$是一个$d$-正则简单图，邻接矩阵为$A$，顶点数为$n$，最小特征值为$\tau<0$。严格证明Hoffman独立数上界$\alpha(G)\le n\frac{-\tau}{d-\tau}$；并证明若某独立集$S$达到等号，则其示性向量$\mathbf 1_S$满足$\mathbf 1_S-\frac{|S|}{n}\mathbf 1\in E_\tau$，进而每个$V\setminus S$中的顶点与$S$恰有$-\tau$条邻边。",
+  "answer": "令$s=|S|$，$x=\mathbf1_S-\frac{s}{n}\mathbf1$，则$x\perp\mathbf1$且$\|x\|^2=s-s^2/n$。因$S$独立，$\mathbf1_S^TA\mathbf1_S=0$，而$A\mathbf1=d\mathbf1$，故$x^TAx=-ds^2/n$。Rayleigh商在$\mathbf1^\perp$上不小于$\tau$，于是$-ds^2/n\ge\tau(s-s^2/n)$，化简得$s\le n(-\tau)/(d-\tau)$。若等号成立，则Rayleigh商取到最小值，故$x\in E_\tau$，即$Ax=\tau x$。于是$A\mathbf1_S=\tau\mathbf1_S+\frac{s}{n}(d-\tau)\mathbf1=\tau\mathbf1_S-\tau\mathbf1$，其中用了等号时$s(d-\tau)/n=-\tau$。故对$v\in S$，邻接数为0；对$v\notin S$，$(A\mathbf1_S)_v=-\tau$，即其与$S$恰有$-\tau$条邻边。",
+  "subject": "离散数学",
+  "source": "generated | trap: theorem-condition"
+}
