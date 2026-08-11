@@ -1,0 +1,7 @@
+{
+  "idx": 202,
+  "problem": "在线性模型$y=X\beta+\varepsilon$中，设$X\in\mathbb R^{n\times p}$满列秩，$\operatorname{Cov}(\varepsilon)=\Sigma\succ0$已知，并额外知道参数满足满行秩线性约束$R\beta=r$，其中$R\in\mathbb R^{q\times p}$。请从带约束二次型最小化出发，推导受约束GLS估计量$\widehat\beta_R$及其协方差矩阵，并严格证明它可视为把无约束GLS估计量沿$C^{-1}$度量投影到仿射空间$\{\beta:R\beta=r\}$，其中$C=(X^T\Sigma^{-1}X)^{-1}$。",
+  "answer": "无约束GLS为$$\widehat\beta=CX^T\Sigma^{-1}y,\qquad C=(X^T\Sigma^{-1}X)^{-1}.$$受约束问题等价于最小化$Q(\beta)=(y-X\beta)^T\Sigma^{-1}(y-X\beta)$并满足$R\beta=r$。因$$Q(\beta)=Q(\widehat\beta)+(\beta-\widehat\beta)^TC^{-1}(\beta-\widehat\beta),$$只需把$\widehat\beta$投影到约束仿射空间。Lagrange方程为$$C^{-1}(\beta-\widehat\beta)+R^T\lambda=0,\qquad R\beta=r.$$故$$\widehat\beta_R=\widehat\beta-CR^T(RCR^T)^{-1}(R\widehat\beta-r).$$由于$R$满行秩且$C\succ0$，$RCR^T\succ0$可逆。令$A=I-CR^T(RCR^T)^{-1}R$，则随机部分为$A(\widehat\beta-\beta)$，而$\operatorname{Cov}(\widehat\beta)=C$，故$$\operatorname{Cov}(\widehat\beta_R)=ACA^T=C-CR^T(RCR^T)^{-1}RC.$$投影解释来自正交性：修正向量$\widehat\beta-\widehat\beta_R$属于$C R^T$张成的法空间，而对任意满足$Rh=0$的切向量$h$，$$h^TC^{-1}(\widehat\beta-\widehat\beta_R)=h^TR^T(RCR^T)^{-1}(R\widehat\beta-r)=0.$$因此$\widehat\beta_R$正是$C^{-1}$内积下到约束仿射空间的正交投影。",
+  "subject": "线性回归",
+  "source": "generated | trap: theorem-condition"
+}
