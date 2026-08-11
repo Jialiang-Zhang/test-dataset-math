@@ -1,0 +1,7 @@
+{
+  "idx": 285,
+  "problem": "设$X\\sim N(0,\\Sigma)$，其中$\\Sigma$正定，$A,B$为实对称矩阵。关于二次型$Q_A=X^TAX,Q_B=X^TBX$，下列说法正确的是哪些？\nA. 若$A\\Sigma B=0$，则$Q_A,Q_B$独立。\nB. 若$Q_A,Q_B$独立，则必有$AB=0$。\nC. 独立性的正确判据可写成$\\Sigma^{1/2}A\\Sigma B\\Sigma^{1/2}=0$，等价于$A\\Sigma B=0$。\nD. 仅有$\\operatorname{Cov}(Q_A,Q_B)=0$总能推出独立。",
+  "answer": "A,C",
+  "subject": "概率论",
+  "source": "generated | trap: independence"
+}
