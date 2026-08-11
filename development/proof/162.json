@@ -1,0 +1,7 @@
+{
+  "idx": 162,
+  "problem": "设$N_q(n)$表示有限域$\mathbb F_q$上次数恰为$n$的首一不可约多项式个数。请利用$x^{q^n}-x$在$\mathbb F_q[x]$中的分解结构与Möbius反演，严格证明$$N_q(n)=\frac1n\sum_{d\mid n}\mu(d)q^{n/d}.$$要求先证明$x^{q^n}-x$恰好是所有次数整除$n$的首一不可约多项式之积且无重因子，再由次数比较得到卷积恒等式；最后推出固定$q$时的渐近式$N_q(n)=q^n/n+O(q^{n/2})$。",
+  "answer": "有限域扩张$\mathbb F_{q^n}$中的每个元素都满足$x^{q^n}-x=0$，且该多项式导数为$q^nx^{q^n-1}-1=-1$，故无重根。一个首一不可约多项式$f\in\mathbb F_q[x]$的次数为$d$时，其根位于$\mathbb F_{q^d}$，并且$f\mid x^{q^n}-x$当且仅当$\mathbb F_{q^d}\subseteq\mathbb F_{q^n}$，亦即$d\mid n$。因此$$x^{q^n}-x=\prod_{d\mid n}\ \prod_{\substack{f\text{首一不可约}\\ \deg f=d}}f(x).$$比较次数得到$$q^n=\sum_{d\mid n}dN_q(d).$$令$F(n)=nN_q(n)$，则$q^n=\sum_{d\mid n}F(d)$。Möbius反演给出$$nN_q(n)=\sum_{d\mid n}\mu(d)q^{n/d},$$即所求公式。对$d>1$的约数，有$n/d\le n/2$，故$$\left|N_q(n)-\frac{q^n}{n}\right|\le\frac1n\sum_{\substack{d\mid n\\d>1}}q^{n/d}\le\frac{\tau(n)}n q^{n/2}.$$由于$\tau(n)\le n$，固定$q$时即得$N_q(n)=q^n/n+O(q^{n/2})$。",
+  "subject": "非基础及进阶课程",
+  "source": "generated | standard"
+}
