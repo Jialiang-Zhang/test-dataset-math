@@ -1,0 +1,7 @@
+{
+  "idx": 170,
+  "problem": "对$a>0$，利用留数定理严格证明经典求和公式$$\\sum_{n=-\\infty}^{\\infty}\\frac1{n^2+a^2}=\\frac{\\pi}{a}\\coth(\\pi a).$$要求构造$F(z)=\\pi\\cot(\\pi z)/(z^2+a^2)$，选择避开整数极点的矩形围道，证明围道积分在极限中趋于0，并同时计算整数点及$z=\\pm ia$处的留数。",
+  "answer": "取边界为$\\Re z=\\pm(N+1/2)$、$\\Im z=\\pm(N+1/2)$的正方形围道。由于离整数点有统一正距离，$\\cot(\\pi z)$在围道上有统一界，而分母为$O(N^2)$、周长为$O(N)$，故围道积分为$O(N^{-1})\\to0$。在整数$n$处，$\\pi\\cot(\\pi z)$留数为1，因此$\\operatorname{Res}(F,n)=1/(n^2+a^2)$。在$z=ia$处，$$\\operatorname{Res}(F,ia)=\\frac{\\pi\\cot(\\pi ia)}{2ia}=-\\frac{\\pi}{2a}\\coth(\\pi a),$$其中$\\cot(iu)=-i\\coth u$；在$z=-ia$处同样得到$-\\frac{\\pi}{2a}\\coth(\\pi a)$。留数定理给出$$0=\\lim_{N\\to\\infty}2\\pi i\\left(\\sum_{|n|\\le N}\\frac1{n^2+a^2}-\\frac{\\pi}{a}\\coth(\\pi a)\\right),$$于是得到所求公式。",
+  "subject": "复分析",
+  "source": "generated | standard"
+}
