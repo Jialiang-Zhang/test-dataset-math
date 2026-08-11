@@ -1,0 +1,7 @@
+{
+  "idx": 233,
+  "problem": "设$(B_t)_{t\\ge0}$为标准Brownian运动。对$\\lambda>0,T>0$，求$$E\\exp\\!\\left(-\\lambda\\int_0^T B_t^2\\,dt\\right).$$要求利用Feynman–Kac公式建立抛物型方程，并通过Gaussian Ansatz求得闭式。",
+  "answer": "令$u(t,x)=E_x\\exp(-\\lambda\\int_0^t B_s^2ds)$。Feynman–Kac给$$u_t=\\tfrac12u_{xx}-\\lambda x^2u,\\qquad u(0,x)=1.$$设$u=a(t)e^{-b(t)x^2}$，得到$$b'=\\lambda-2b^2,\\qquad a'/a=-b,\\qquad b(0)=0,a(0)=1.$$故$$b(t)=\\sqrt{\\lambda/2}\\tanh(\\sqrt{2\\lambda}t),\\quad a(t)=\\{\\cosh(\\sqrt{2\\lambda}t)\\}^{-1/2}.$$从$B_0=0$出发，所求为$$\\boxed{\\{\\cosh(\\sqrt{2\\lambda}T)\\}^{-1/2}}.$$",
+  "subject": "随机过程",
+  "source": "generated | standard"
+}
