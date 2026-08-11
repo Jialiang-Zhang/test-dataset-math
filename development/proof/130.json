@@ -1,7 +1,7 @@
 {
   "idx": 130,
-  "problem": "设$M$为紧致定向二维黎曼流形，$\gamma$是一条将$M$分成两个区域$D_1,D_2$的简单闭测地线。假设高斯曲率$K>0$处处成立。利用Gauss-Bonnet定理证明$\chi(D_1)>0$且$\chi(D_2)>0$，并据此证明$\gamma$必为分离曲线且每个$D_i$都同胚于圆盘；进一步说明为什么结论若仅假设$K\ge0$则可能失效。",
-  "answer": "因$\gamma$为测地线，其测地曲率$k_g\equiv0$。对每个带边界区域$D_i$应用Gauss-Bonnet：$\int_{D_i}K\,dA+\int_{\partial D_i}k_g\,ds=2\pi\chi(D_i)$，故$2\pi\chi(D_i)=\int_{D_i}K\,dA>0$，于是$\chi(D_i)>0$。紧致定向连通带一个边界分量的曲面满足$\chi=1-2g$，因此$\chi>0$迫使$g=0$，故每个$D_i$同胚于圆盘。若$K\ge0$而不严格为正，可能出现$\int_{D_i}K=0$，从而$\chi(D_i)=0$；例如平坦圆柱型区域可由闭测地线围成而不具有圆盘拓扑，因此严格正曲率是推出正Euler示性的关键。",
+  "problem": "设$M$为紧致、连通、定向的二维黎曼流形，且高斯曲率$K>0$处处成立。设$\gamma\subset M$为一条简单闭测地线。请利用沿$\gamma$切开曲面后的拓扑类型与带边界Gauss-Bonnet定理，严格证明$\gamma$必为分离曲线，并证明分离后的两个连通分支都同胚于圆盘；最后说明若把$K>0$削弱为$K\ge0$，上述结论为何可能失效。",
+  "answer": "若$\gamma$不分离，则沿$\gamma$切开得到连通定向曲面$N$，其有两个边界分量，且两条边界都是测地线。设$N$属为$g$，则$\chi(N)=2-2g-2=-2g\le0$。但Gauss-Bonnet给出$2\pi\chi(N)=\int_NK\,dA+\int_{\partial N}k_g\,ds=\int_NK\,dA>0$，矛盾。因此$\gamma$分离。设两侧为$D_1,D_2$；每个$D_i$连通、定向且只有一个边界分量$\gamma$。同理$2\pi\chi(D_i)=\int_{D_i}K\,dA>0$。若$D_i$属为$g_i$，则$\chi(D_i)=2-2g_i-1=1-2g_i>0$，故$g_i=0$，所以$D_i$均同胚于圆盘。若仅有$K\ge0$，上述严格不等式可退化为等号；平坦二维环面$T^2$上存在非分离的简单闭测地线，沿其切开得到平坦圆柱，$K\equiv0$且$\chi=0$，故结论确会失效。",
   "subject": "微分几何",
   "source": "generated | trap: theorem-condition"
 }
