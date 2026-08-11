@@ -1,0 +1,7 @@
+{
+  "idx": 159,
+  "problem": "设$A=(a_{ij})\in\mathbb R^{n\times n}$为双随机矩阵，即$a_{ij}\ge0$且每行、每列元素和均为$1$。请用Hall婚配定理严格证明Birkhoff-von Neumann定理：$A$必可表示为有限个置换矩阵的凸组合。要求从$A$的正支撑构造二分图，证明Hall条件，说明如何通过减去一条完美匹配对应的最小正权重进行有限递归；最后推出赋值问题线性规划$$\min\sum_{ij}c_{ij}x_{ij}$$在双随机约束下总存在置换矩阵最优解。",
+  "answer": "以行顶点$R_i$和列顶点$C_j$构造二分图，并在$a_{ij}>0$时连边。对任意行集$S$，其所有行总质量为$|S|$，且只能流入邻集$N(S)$中的列；每列总质量为$1$，所以$|S|=\sum_{i\in S,j\in N(S)}a_{ij}\le|N(S)|$。Hall定理给出完美匹配，对应置换矩阵$P$且匹配位置均有$a_{i,\pi(i)}>0$。令$\delta=\min_i a_{i,\pi(i)}>0$。若$\delta=1$则$A=P$。否则$A-\delta P$非负且每行每列和为$1-\delta$，故$B=(A-\delta P)/(1-\delta)$仍双随机，并且至少一个原正元素变为$0$，所以正支撑边数严格减少。对正支撑边数归纳，$B$是置换矩阵凸组合，于是$A=\delta P+(1-\delta)B$也是。递归有限终止，因为每步至少删除一个正支撑边。对赋值LP，任意可行$X$均写成$X=\sum_r\lambda_rP_r$，故目标值$\langle C,X\rangle=\sum_r\lambda_r\langle C,P_r\rangle\ge\min_r\langle C,P_r\rangle$；因此至少一个置换矩阵$P_r$的目标值不高于$X$。取全局最优$X$即知存在置换矩阵最优解。",
+  "subject": "运筹学",
+  "source": "generated | standard"
+}
