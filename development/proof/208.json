@@ -1,0 +1,7 @@
+{
+  "idx": 208,
+  "problem": "设$q=(q_1,\dots,q_m)$满足$q_i>0,\ \sum_iq_i=1$，且$f=(f_1,\dots,f_m)\in\mathbb R^m$。请严格证明有限状态空间上的Gibbs/Donsker-Varadhan变分公式$$\log\sum_{i=1}^m q_ie^{f_i}=\sup_{p\in\Delta_m}\left\{\sum_{i=1}^mp_if_i-D_{\mathrm{KL}}(p\|q)\right\},$$求出唯一最优分布$p^*$，并进一步计算左端关于$f$的梯度和Hessian，证明Hessian半正定且其零空间恰为常数向量张成的子空间。",
+  "answer": "记$$Z=\sum_iq_ie^{f_i},\qquad p_i^*=\frac{q_ie^{f_i}}Z.$$则$p^*\in\Delta_m$且各分量严格为正。对任意$p\in\Delta_m$，约定$0\log0=0$，有$$D_{\mathrm{KL}}(p\|p^*)=\sum_ip_i\log\frac{p_i}{p_i^*}=\sum_ip_i\log\frac{p_i}{q_i}-\sum_ip_if_i+\log Z.$$重排得$$\sum_ip_if_i-D_{\mathrm{KL}}(p\|q)=\log Z-D_{\mathrm{KL}}(p\|p^*)\le\log Z.$$由KL非负性，等号当且仅当$p=p^*$，故变分公式成立且最优解唯一。令$F(f)=\log Z$，直接求导得$$\frac{\partial F}{\partial f_i}=p_i^*,$$以及$$\frac{\partial^2F}{\partial f_i\partial f_j}=p_i^*(\delta_{ij}-p_j^*).$$因此$$\nabla^2F=\operatorname{Diag}(p^*)-p^*(p^*)^T.$$对任意$v\in\mathbb R^m$，$$v^T\nabla^2Fv=\sum_ip_i^*v_i^2-\left(\sum_ip_i^*v_i\right)^2=\operatorname{Var}_{p^*}(v_i)\ge0,$$故Hessian半正定。由于$p_i^*>0$全部成立，方差为零当且仅当所有$v_i$相等，所以零空间恰为$\operatorname{span}\{(1,\dots,1)\}$。",
+  "subject": "非基础及进阶课程",
+  "source": "generated | standard"
+}
