@@ -1,0 +1,7 @@
+{
+  "idx": 106,
+  "problem": "对$a>0$定义$I(a)=\int_0^\infty\frac{\log(1+a^2x^2)}{x^2(1+x^2)}\,dx$。严格证明可对参数$a$求导，求出$I(a)$的精确闭式，并分析$a\downarrow0$与$a\to\infty$时的主渐近项。要求不能直接查表积分。",
+  "answer": "固定紧区间$a\in[\delta,M]\subset(0,\infty)$，有$\partial_a\frac{\log(1+a^2x^2)}{x^2(1+x^2)}=\frac{2a}{(1+x^2)(1+a^2x^2)}$，其绝对值被$2M/[(1+x^2)(1+\delta^2x^2)]$控制，后者可积，故由控制收敛可逐参数求导。于是$I'(a)=2a\int_0^\infty\frac{dx}{(1+x^2)(1+a^2x^2)}$。当$a\ne1$，部分分式给$\frac1{(1+x^2)(1+a^2x^2)}=\frac1{1-a^2}\left(\frac1{1+x^2}-\frac{a^2}{1+a^2x^2}\right)$，故积分为$\frac\pi{2(1+a)}$；$a=1$由连续性同样成立。因此$I'(a)=\pi a/(1+a)$。又$I(0)=0$（由单调/控制极限），故$I(a)=\pi\int_0^a\frac{s}{1+s}ds=\pi(a-\log(1+a))$。当$a\downarrow0$，$a-\log(1+a)=a^2/2-a^3/3+O(a^4)$，所以$I(a)=\frac\pi2a^2-\frac\pi3a^3+O(a^4)$；当$a\to\infty$，$\log(1+a)=\log a+1/a+O(a^{-2})$，故$I(a)=\pi a-\pi\log a-\pi/a+O(a^{-2})$。",
+  "subject": "数学分析",
+  "source": "generated | trap: theorem-condition"
+}
