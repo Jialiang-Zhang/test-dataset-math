@@ -1,0 +1,7 @@
+{
+  "idx": 107,
+  "problem": "设$L(p,q)$为三维透镜空间，其中$p\ge2$且$\gcd(p,q)=1$。利用其标准CW分解（每个维数$0,1,2,3$各一个胞腔）严格计算整数同调群$H_k(L(p,q);\mathbb Z)$，并说明为什么同调群与$q$无关；进一步由覆盖空间或胞腔结构说明$\pi_1(L(p,q))\cong\mathbb Z/p\mathbb Z$。",
+  "answer": "标准CW结构的胞腔链群在$0\le k\le3$均为$C_k\cong\mathbb Z$。边界映射为$\partial_1=0$；二维胞腔的附着映射在一维骨架$S^1$上绕行$p$次，所以$\partial_2$是乘$p$；三维胞腔的边界映射$\partial_3=0$（也可由闭定向三流形必须有$H_3\cong\mathbb Z$推出，并与标准胞腔附着计算一致）。因此链复形为$0\to\mathbb Z\xrightarrow{0}\mathbb Z\xrightarrow{p}\mathbb Z\xrightarrow{0}\mathbb Z\to0$。于是$H_3\cong\mathbb Z$，$H_2=\ker(p)/0=0$，$H_1=\ker0/\mathrm{im}(p)\cong\mathbb Z/p\mathbb Z$，$H_0\cong\mathbb Z$，其余为0。参数$q$影响三维胞腔附着的细致同伦型/扭结数据，但不改变上述胞腔边界映射的整数度数，因此整数同调只依赖$p$。另一方面$L(p,q)=S^3/(\mathbb Z/p)$，群作用自由，$S^3$单连通，所以$S^3\to L(p,q)$是普适覆盖，其甲板变换群为$\mathbb Z/p$，故$\pi_1(L(p,q))\cong\mathbb Z/p\mathbb Z$。",
+  "subject": "拓扑学",
+  "source": "generated | trap: local-vs-global"
+}
