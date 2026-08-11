@@ -1,0 +1,7 @@
+{
+  "idx": 333,
+  "problem": "从环面$T^2$出发，沿表示基本群元素$a^pb^q$的闭路附着一个$2$-胞腔，其中$(p,q)\ne(0,0)$，记所得CW复形为$X_{p,q}$。计算$\pi_1(X_{p,q})$、$H_1(X_{p,q};\mathbb Z)$与$H_2(X_{p,q};\mathbb Z)$，并明确答案如何依赖$d=\gcd(p,q)$。",
+  "answer": "由van Kampen，$\pi_1(X_{p,q})=\langle a,b\mid [a,b],a^pb^q\rangle\cong\mathbb Z^2/\langle(p,q)\rangle\cong\mathbb Z\oplus\mathbb Z/d\mathbb Z$。同样$H_1$是该群的阿贝尔化，仍为$\mathbb Z\oplus\mathbb Z/d\mathbb Z$。胞腔链群为$C_2\cong\mathbb Z^2$（原环面的2-胞腔与新附着的2-胞腔）、$C_1\cong\mathbb Z^2$。在标准基下$\partial_2$的两列分别为$(0,0)^T$与$(p,q)^T$；因$(p,q)\ne0$，其核由原环面2-胞腔生成，故$H_2(X_{p,q};\mathbb Z)\cong\mathbb Z$。特别地$d=1$时$\pi_1\cong H_1\cong\mathbb Z$；$d>1$时出现$\mathbb Z/d$扭结。",
+  "subject": "拓扑学",
+  "source": "generated | trap: boundary-case"
+}
