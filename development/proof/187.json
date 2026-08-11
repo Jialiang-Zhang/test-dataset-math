@@ -1,0 +1,7 @@
+{
+  "idx": 187,
+  "problem": "给定$a_i>0,u_i>0$和总资源$B$满足$0<B<\sum_{i=1}^n u_i$。考虑严格凹优化问题$$\max_{x\in\mathbb R^n}\sum_{i=1}^n\log(1+a_i x_i)$$满足$$0\le x_i\le u_i,\qquad \sum_{i=1}^n x_i=B.$$请利用KKT条件严格推导唯一最优解的截断水位表达式，并证明决定水位的拉格朗日乘子唯一。",
+  "answer": "目标函数严格凹，可行集为非空紧凸集，因此最优解存在且唯一，KKT条件亦充分。令等式约束乘子为$\lambda$，下、上界乘子分别为$\alpha_i,\beta_i\ge0$，驻点条件为$$\frac{a_i}{1+a_i x_i}-\lambda+\alpha_i-\beta_i=0.$$若$0<x_i<u_i$，互补松弛给出$\alpha_i=\beta_i=0$，于是$x_i=1/\lambda-1/a_i$；若该值小于0，则最优点钉在0；若大于$u_i$，则钉在$u_i$。故$$x_i^*(\lambda)=\min\left\{u_i,\max\left\{0,\frac1\lambda-\frac1{a_i}\right\}\right\}.$$定义$F(\lambda)=\sum_i x_i^*(\lambda)$。在$\lambda>0$上$F$连续、单调不增，并在任何满足$0<F(\lambda)<\sum u_i$的有效区间严格下降；且$F(\lambda)\to\sum u_i$当$\lambda\downarrow0$，$F(\lambda)\to0$当$\lambda\to\infty$。由$0<B<\sum u_i$存在唯一$\lambda^*>0$使$F(\lambda^*)=B$，对应的$x^*(\lambda^*)$即唯一全局最优解。",
+  "subject": "运筹学",
+  "source": "generated | standard"
+}
