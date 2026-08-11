@@ -1,0 +1,7 @@
+{
+  "idx": 167,
+  "problem": "设$X\\sim N_p(0,I_p)$，$A,B$为实对称幂等矩阵。令$Q_A=X^TAX,Q_B=X^TBX$。证明：$Q_A$与$Q_B$独立当且仅当$AB=0$。要求充分性部分利用正交分解解释两个二次型为何依赖于互相正交的高斯分量；必要性部分不得仅引用Craig定理结论，而应利用联合矩母函数或协方差结构推出$\\operatorname{tr}(AB)=0$，再结合投影矩阵性质推出$AB=0$。",
+  "answer": "因$A,B$为对称幂等矩阵，它们分别是到子空间$U=\\operatorname{Im}A,V=\\operatorname{Im}B$的正交投影。若$AB=0$，则$U\\perp V$，并可将$X$正交分解为$X_U+X_V+X_0$；高斯向量在互相正交子空间上的投影相互独立，而$Q_A=\\|X_U\\|^2,Q_B=\\|X_V\\|^2$，故独立。反之，若$Q_A,Q_B$独立，则协方差为0。标准高斯二次型公式给出$$\\operatorname{Cov}(X^TAX,X^TBX)=2\\operatorname{tr}(AB),$$故$\\operatorname{tr}(AB)=0$。又由于$A,B$为正交投影，$$\\operatorname{tr}(AB)=\\operatorname{tr}(ABA)=\\operatorname{tr}((BA)^TBA)=\\|BA\\|_F^2\\ge0.$$于是$BA=0$，取转置即$AB=0$。因此独立性与$AB=0$等价。",
+  "subject": "概率论",
+  "source": "generated | trap: independence"
+}
