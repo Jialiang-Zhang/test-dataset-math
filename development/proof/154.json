@@ -1,0 +1,7 @@
+{
+  "idx": 154,
+  "problem": "设$X\sim\mathrm{Pois}(m\lambda_1)$、$Y\sim\mathrm{Pois}(n\lambda_2)$相互独立，其中$m,n$为已知正整数。考虑检验$H_0:\lambda_1=\lambda_2$对$H_1:\lambda_1>\lambda_2$，共同强度在$H_0$下为未知干扰参数。请通过对$T=X+Y$条件化，构造一个精确水平$\alpha$的检验，并证明在所有对$T$条件相似（conditional similar）的检验中它是一致最强的。要求给出条件分布、拒绝域结构以及边界随机化方式。",
+  "answer": "在给定$T=t$时，由独立Poisson分裂性质，$$X\mid T=t\sim\mathrm{Bin}\left(t,p\right),\qquad p=\frac{m\lambda_1}{m\lambda_1+n\lambda_2}.$$在$H_0$下$p=p_0=m/(m+n)$，故条件分布完全不含未知共同强度；在$H_1$下$p>p_0$。对每个固定$t$，二项族关于统计量$X$具有单调似然比，因此由Neyman-Pearson/Karlin-Rubin原理，检验$p=p_0$对$p>p_0$的最强水平$\alpha$检验为“$X$足够大时拒绝”。具体取整数$c_t$使$$\Pr_{p_0}(X>c_t\mid T=t)\le\alpha\le\Pr_{p_0}(X\ge c_t\mid T=t),$$并在$X=c_t$时以概率$$\gamma_t=\frac{\alpha-\Pr_{p_0}(X>c_t\mid T=t)}{\Pr_{p_0}(X=c_t\mid T=t)}$$随机拒绝。于是对每个$t$条件拒绝概率恰为$\alpha$，所以无条件尺寸也恰为$\alpha$，且对所有$H_0$参数值相似。若另一检验也要求对每个$T=t$条件尺寸为$\alpha$，则逐个$t$应用二项族的最强性可知本检验的条件功效对任意$p>p_0$均不低于它；再对$T$取期望即得无条件功效也不低。因此该检验在所有条件相似检验中一致最强。",
+  "subject": "统计推断",
+  "source": "generated | trap: theorem-condition"
+}
