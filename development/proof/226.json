@@ -1,0 +1,7 @@
+{
+  "idx": 226,
+  "problem": "设Jacobi theta函数$$\Theta(t)=\sum_{n\in\mathbb Z}e^{-\pi t n^2},\qquad t>0.$$请利用Poisson求和公式严格证明函数方程$$\Theta(t)=t^{-1/2}\Theta(1/t),$$并由此推出$t\downarrow0$时的精确主渐近$$\Theta(t)=t^{-1/2}+O\!\left(t^{-1/2}e^{-\pi/t}\right).$$要求明确计算Gaussian函数的Fourier变换，并说明Poisson求和可合法应用的正则性条件。",
+  "answer": "取$f_t(x)=e^{-\pi tx^2}$。在Fourier变换约定$$\widehat f(\xi)=\int_{\mathbb R}f(x)e^{-2\pi ix\xi}\,dx$$下，完成平方或利用Gaussian积分可得$$\widehat f_t(\xi)=t^{-1/2}e^{-\pi\xi^2/t}.$$由于$f_t$及其Fourier变换均为Schwartz函数，Poisson求和公式可直接应用：$$\sum_{n\in\mathbb Z}f_t(n)=\sum_{k\in\mathbb Z}\widehat f_t(k).$$于是$$\Theta(t)=t^{-1/2}\sum_{k\in\mathbb Z}e^{-\pi k^2/t}=t^{-1/2}\Theta(1/t).$$当$t\downarrow0$时，$$\Theta(1/t)=1+2\sum_{k\ge1}e^{-\pi k^2/t}.$$因为$k^2\ge k$，$$0\le\sum_{k\ge1}e^{-\pi k^2/t}\le\frac{e^{-\pi/t}}{1-e^{-\pi/t}}=O(e^{-\pi/t}),$$故$$\Theta(t)=t^{-1/2}\left(1+O(e^{-\pi/t})\right)=t^{-1/2}+O\!\left(t^{-1/2}e^{-\pi/t}\right).$$",
+  "subject": "非基础及进阶课程",
+  "source": "generated | standard"
+}
