@@ -1,0 +1,7 @@
+{
+  "idx": 237,
+  "problem": "在$L^2[0,1]$上定义Volterra算子$$(Vf)(x)=\\int_0^x f(t)\\,dt.$$证明$\\sigma(V)=\\{0\\}$，但$V$并非幂零算子。要求给出$V^n$的积分核公式、范数估计并使用谱半径公式。",
+  "answer": "迭代积分得$$(V^nf)(x)=\\frac1{(n-1)!}\\int_0^x(x-t)^{n-1}f(t)\\,dt.$$Hilbert–Schmidt估计给$$\\|V^n\\|\\le\\frac1{(n-1)!\\sqrt{(2n-1)(2n)}}.$$故$\\limsup\\|V^n\\|^{1/n}=0$，于是$r(V)=0$，即$\\sigma(V)\\subseteq\\{0\\}$。另一方面$V$不满射，例如常数函数1不可能是$Vf$，因为$Vf$有绝对连续代表且在0取0，所以$0\\in\\sigma(V)$。因此$\\sigma(V)=\\{0\\}$。但$V^n1=x^n/n!\\ne0$，故$V$不幂零。",
+  "subject": "泛函分析",
+  "source": "generated | trap: finite-vs-infinite-dimensional"
+}
