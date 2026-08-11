@@ -1,0 +1,7 @@
+{
+  "idx": 369,
+  "problem": "设Klein瓶$K$的基本群表示为$\pi_1(K)=\langle a,b\mid aba^{-1}=b^{-1}\rangle$。求其Abel化$H_1(K;\mathbb Z)$，并找出对应于可定向二重覆盖的指数2子群，证明该子群同构于$\mathbb Z^2$，从而说明该二重覆盖同胚于二维环面。",
+  "answer": "Abel化时关系$aba^{-1}=b^{-1}$变成$a+b-a=-b$，故$2b=0$而$a$保持无限阶，所以$H_1(K;\mathbb Z)\cong\mathbb Z\oplus\mathbb Z/2\mathbb Z$。取方向特征同态$w:\pi_1(K)\to\mathbb Z/2$，令$w(a)=1,w(b)=0$；其核$H$对应可定向二重覆盖。由关系$a^2ba^{-2}=b$，可知$a^2$与$b$交换。任意$H$中元素经关系正规化可写成$a^{2m}b^n$，故$H=\langle a^2,b\rangle$。若$(a^2)^mb^n=1$，投影到Abel化的无限循环因子得$m=0$，再由Klein瓶群中$b$无限阶得$n=0$，所以$H\cong\mathbb Z^2$。指数2覆盖是闭连通可定向曲面，其基本群为$\mathbb Z^2$；由闭可定向曲面分类定理，它必为亏格1曲面，即二维环面$T^2$。",
+  "subject": "拓扑学",
+  "source": "generated | trap: local-vs-global"
+}
