@@ -1,0 +1,7 @@
+{
+  "idx": 232,
+  "problem": "设$Q_8=\\{\\pm1,\\pm i,\\pm j,\\pm k\\}$为四元数群。证明$\\operatorname{Aut}(Q_8)\\cong S_4$。要求先确定自同构个数，再通过群作用与半直积分解识别其结构，不能仅凭阶数相同断言同构。",
+  "answer": "自同构由$i,j$的像决定。$i$可映到6个阶4元素之一；选定$\\varphi(i)$后，$\\varphi(j)$有4个不在$\\langle\\varphi(i)\\rangle$中的阶4元素可选，因此$|\\operatorname{Aut}(Q_8)|=24$。其对三个循环子群$\\langle i\\rangle,\\langle j\\rangle,\\langle k\\rangle$的作用给出满同态到$S_3$，核为分别保持三个子群的4个符号变换，构成$V_4$。因此$\\operatorname{Aut}(Q_8)\\cong V_4\\rtimes S_3$，其中$S_3$以置换$V_4$三个非单位元的标准方式作用。这与$S_4$中正规Klein四群和点稳定子$S_3$的半直积分解一致，故$\\operatorname{Aut}(Q_8)\\cong S_4$。",
+  "subject": "抽象代数",
+  "source": "generated | standard"
+}
