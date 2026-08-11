@@ -1,0 +1,7 @@
+{
+  "idx": 309,
+  "problem": "设$H$为无限维Hilbert空间，$T:H\to H$为紧、自伴、单射算子。判断下列说法哪些正确：A. 若$\operatorname{Ran}T=H$，则$T^{-1}$必有界；B. $0\in\sigma(T)$；C. $0$一定是$T$的特征值；D. 若$T$还有稠密像，则$T^{-1}$可在$\operatorname{Ran}T$上定义，但一般无界。",
+  "answer": "B,D",
+  "subject": "泛函分析",
+  "source": "generated | trap: finite-vs-infinite-dimensional"
+}
