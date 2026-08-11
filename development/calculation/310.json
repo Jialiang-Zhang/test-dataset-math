@@ -1,0 +1,7 @@
+{
+  "idx": 310,
+  "problem": "真实模型为$Y=\beta_0+\beta_1X+\beta_2Z+\varepsilon$，满足$E(\varepsilon\mid X,Z)=0$，但研究者遗漏$Z$而回归$Y$对$(1,X)$。假设二阶矩存在且$\operatorname{Var}(X)>0$。求OLS斜率概率极限，并给出它等于$\beta_1$的充要条件。再说明$X$与$Z$不独立是否一定导致不一致。",
+  "answer": "由总体线性投影，$\operatorname{plim}\hat\beta_1=\operatorname{Cov}(X,Y)/\operatorname{Var}(X)=\beta_1+\beta_2\operatorname{Cov}(X,Z)/\operatorname{Var}(X)$，因为$E[X\varepsilon]=0$。故其等于$\beta_1$当且仅当$\beta_2\operatorname{Cov}(X,Z)=0$。因此即使$X,Z$不独立，也可能因$\operatorname{Cov}(X,Z)=0$或$\beta_2=0$而仍一致；不独立本身不是不一致的充分条件。",
+  "subject": "线性回归",
+  "source": "generated | trap: necessary-vs-sufficient"
+}
