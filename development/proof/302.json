@@ -1,0 +1,7 @@
+{
+  "idx": 302,
+  "problem": "设连通定向曲面$M\subset\mathbb R^3$的形算子处处满足$S=\lambda I$，其中$\lambda$先验可随点变化。证明：$\lambda$实际上为常数；若$\lambda=0$则$M$局部包含在一个平面中，若$\lambda\ne0$则$M$局部包含在半径$1/|\lambda|$的球面中。要求从Codazzi方程推出$\lambda$常数，并构造在$M$上导数为零的向量场来得到球心。",
+  "answer": "Codazzi给出$(\nabla_XS)Y=(\nabla_YS)X$。因$S=\lambda I$，故$X(\lambda)Y=Y(\lambda)X$。在任一点取线性无关切向量$X,Y$，可得$X(\lambda)=Y(\lambda)=0$，故$d\lambda=0$，连通性推出$\lambda$为常数。若$\lambda=0$，Weingarten公式$D_XN=-SX=0$说明单位法向$N$常值，于是$M$局部位于与$N$垂直的平面。若$\lambda\ne0$，令$c=x+(1/\lambda)N$，则对任意切向量$X$，$D_Xc=X+(1/\lambda)D_XN=X-(1/\lambda)SX=0$，故$c$常值，且$|x-c|=1/|\lambda|$，所以$M$局部位于以$c$为球心、半径$1/|\lambda|$的球面。",
+  "subject": "微分几何",
+  "source": "generated | standard"
+}
