@@ -1,0 +1,7 @@
+{
+  "idx": 275,
+  "problem": "在一维环面上考虑Hamilton–Jacobi方程$u_t+\\frac12(u_x)^2=0$，$u(x,0)=\\cos x$。用特征线法求首次形成经典解奇性的时间$t_*$，并在$0\\le t<t_*$时给出参数形式的经典解。要求同时给出$u_x$、$u_{xx}$沿特征线的表达式，并说明$t=t_*$时究竟是哪一个量首先失去有界性。",
+  "answer": "令$p=u_x$，则$p_t+pp_x=0$，初值$p_0(\\xi)=-\\sin\\xi$。特征为$x=\\xi-t\\sin\\xi$，且$p(x,t)=-\\sin\\xi$。Jacobian为$x_\\xi=1-t\\cos\\xi$，因此映射在所有$\\xi$上可逆当且仅当$t<1$，首次退化发生于$t_*=1$、$\\xi=0\\pmod{2\\pi}$。沿Hamilton特征，$du/dt=p\\dot x-H(p)=p^2/2$，故$u(x,t)=\\cos\\xi+\\frac t2\\sin^2\\xi$，其中$x=\\xi-t\\sin\\xi$。并且$u_x=-\\sin\\xi$仍有界，而$u_{xx}=p_x=-\\cos\\xi/(1-t\\cos\\xi)$。当$t\\uparrow1$且$\\xi\\to0$时分母趋于0，$u_{xx}\\to-\\infty$。故首次奇性是$u_x$的空间导数爆破，即经典$C^2$结构失效，而$u_x$本身仍有界。",
+  "subject": "偏微分方程",
+  "source": "generated | trap: local-vs-global"
+}
