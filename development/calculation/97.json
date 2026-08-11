@@ -1,0 +1,7 @@
+{
+  "idx": 97,
+  "problem": "考虑二维Ornstein-Uhlenbeck过程$dX_t=-AX_t\,dt+dW_t$，其中$A=\begin{pmatrix}2&-1\\-1&2\end{pmatrix}$，$W_t$为二维标准布朗运动。证明存在唯一平稳高斯分布，求其协方差矩阵$\Sigma$；并求平稳状态下$\mathrm{Cov}(X_t,X_{t+s})$的显式矩阵表达式以及条件分布$X_{t+s}\mid X_t=x$。",
+  "answer": "$A$对称正定，特征值为$1,3$，故$e^{-At}$指数衰减，存在唯一平稳高斯分布。平稳协方差满足Lyapunov方程$A\Sigma+\Sigma A^T=I$；因$A=A^T$且与其逆可交换，$\Sigma=\frac12A^{-1}=\frac16\begin{pmatrix}2&1\\1&2\end{pmatrix}$。又$X_{t+s}=e^{-As}X_t+\int_t^{t+s}e^{-A(t+s-r)}dW_r$，后项与$X_t$独立，因此$\mathrm{Cov}(X_t,X_{t+s})=\Sigma e^{-As}$。令$P=\frac12\begin{pmatrix}1&1\\1&1\end{pmatrix}$、$Q=\frac12\begin{pmatrix}1&-1\\-1&1\end{pmatrix}$为$A$对应特征值$1,3$的谱投影，则$e^{-As}=e^{-s}P+e^{-3s}Q$，从而协方差显式为$\Sigma(e^{-s}P+e^{-3s}Q)$。条件分布为高斯$N(e^{-As}x,\,\Sigma-e^{-As}\Sigma e^{-As})$；由于$A$与$\Sigma$可交换，也可写协方差$\Sigma(I-e^{-2As})$。",
+  "subject": "随机过程",
+  "source": "generated | standard"
+}
