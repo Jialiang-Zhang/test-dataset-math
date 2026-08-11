@@ -1,0 +1,7 @@
+{
+  "idx": 222,
+  "problem": "设$A,B\in M_n(F)$。对每个首一不可约多项式$p\in F[t]$及每个$j\ge1$，记$d_{A,p}(j)=\dim_F\ker p(A)^j$。下列说法哪些正确？（多选）\nA. 若对所有$p,j$都有$d_{A,p}(j)=d_{B,p}(j)$，则$A$与$B$相似。\nB. 只比较各不可约$p$对应的$\dim\ker p(A)$一般不足以判定相似。\nC. 对固定$p$，序列$d_{A,p}(j)-d_{A,p}(j-1)$可恢复$p$-primary部分中Jordan/初等因子块长度分布。\nD. 只要$A,B$具有相同特征多项式和最小多项式，就必相似。",
+  "answer": "A,B,C",
+  "subject": "高等代数",
+  "source": "generated | trap: necessary-vs-sufficient"
+}
