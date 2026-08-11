@@ -1,0 +1,7 @@
+{
+  "idx": 251,
+  "problem": "设$(X_t)_{t\\ge0}$为连续时间分枝型出生死亡过程，状态空间$\\mathbb Z_{\\ge0}$，从$X_0=i\\ge1$出发；在状态$n\\ge1$时，以速率$\\lambda n$跳到$n+1$，以速率$\\mu n$跳到$n-1$，$0$为吸收态。用生成元调和函数与停时论证求最终灭绝概率$\\mathbb P_i(\\tau_0<\\infty)$，并严格区分$\\lambda\\le\\mu$与$\\lambda>\\mu$两种情形。",
+  "answer": "对$r>0$令$h(n)=r^n$。生成元作用为$Lh(n)=n r^{n-1}[\\lambda r^2-(\\lambda+\\mu)r+\\mu]$，方程$Lh=0$的根为$r=1$及$r=\\mu/\\lambda$。先停在$\\tau_0\\wedge\\tau_N$。若$\\lambda\\ne\\mu$，取$r=\\mu/\\lambda$，则$h(X_{t\\wedge\\tau_0\\wedge\\tau_N})$为有界鞅，从而$$r^i=\\mathbb P_i(\\tau_0<\\tau_N)+r^N\\mathbb P_i(\\tau_N<\\tau_0).$$故$$\\mathbb P_i(\\tau_0<\\tau_N)=\\frac{r^i-r^N}{1-r^N}.$$当$\\lambda>\\mu$时$r<1$，令$N\\to\\infty$得$\\mathbb P_i(\\tau_0<\\infty)=r^i=(\\mu/\\lambda)^i$。当$\\lambda<\\mu$时$r>1$，上式令$N\\to\\infty$得到概率趋于1。临界情形$\\lambda=\\mu$时取调和函数$h(n)=n$，有$\\mathbb P_i(\\tau_N<\\tau_0)=i/N$，故$\\mathbb P_i(\\tau_0<\\tau_N)=1-i/N\\to1$。因此最终灭绝概率为$$q_i=\\begin{cases}1,&\\lambda\\le\\mu,\\\\(\\mu/\\lambda)^i,&\\lambda>\\mu.\\end{cases}$$",
+  "subject": "随机过程",
+  "source": "generated | trap: boundary-case"
+}
