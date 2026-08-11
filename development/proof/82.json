@@ -1,0 +1,7 @@
+{
+  "idx": 82,
+  "problem": "设$X_1,\dots,X_n\overset{iid}\sim N(\mu,\sigma^2)$，其中$\mu\in\mathbb R,\sigma^2>0$均未知且$n\ge2$。证明$T=(\sum_iX_i,\sum_iX_i^2)$是完全充分统计量，并利用Lehmann-Scheffe定理求$\mu^2$的UMVU估计量。",
+  "answer": "联合密度可写为$\exp\{\eta_1\sum X_i+\eta_2\sum X_i^2-A(\eta)\}$乘与参数无关项，其中$\eta_1=\mu/\sigma^2$、$\eta_2=-1/(2\sigma^2)$，自然参数空间$\{(\eta_1,\eta_2):\eta_1\in\mathbb R,\eta_2<0\}$含非空开集，因此该满秩指数族的自然统计量$T$完全；由因子分解定理亦充分。又$E(\bar X^2)=\mu^2+\sigma^2/n$且$E(S^2)=\sigma^2$，其中$S^2=(n-1)^{-1}\sum(X_i-\bar X)^2$。故$\delta=\bar X^2-S^2/n$无偏估计$\mu^2$，且$\delta$是$T$的函数。由Lehmann-Scheffe定理，UMVU估计量为$\boxed{\bar X^2-S^2/n}$。",
+  "subject": "统计推断",
+  "source": "generated | standard"
+}
