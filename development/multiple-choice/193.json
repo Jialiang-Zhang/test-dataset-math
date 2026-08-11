@@ -1,7 +1,7 @@
 {
   "idx": 193,
   "problem": "在$((0,1),\mathcal B,m)$上，给定参数$\alpha,\beta>0$与$0\le\gamma<1$，定义$$f_n(x)=n^\alpha x^{-\gamma}\mathbf 1_{(0,n^{-\beta})}(x).$$关于$\{f_n\}$的几乎处处收敛、$L^1$收敛与一致可积性，下列说法中哪些正确？\nA. 对任意参数都有$f_n(x)\to0$几乎处处。\nB. $f_n\to0$于$L^1$当且仅当$\alpha<\beta(1-\gamma)$。\nC. 当$\alpha=\beta(1-\gamma)$时，虽然$\sup_n\|f_n\|_1<\infty$且$f_n\to0$几乎处处，但$\{f_n\}$不是一致可积族。\nD. 若$\alpha<\beta(1-\gamma)$，则存在单个$F\in L^1(0,1)$使$|f_n|\le F$对所有$n$几乎处处成立。",
-  "answer": "A,B,C。A：固定$x>0$后，当$n$充分大有$x>n^{-\beta}$，故$f_n(x)=0$。B：直接积分得$$\|f_n\|_1=n^\alpha\int_0^{n^{-\beta}}x^{-\gamma}dx=\frac1{1-\gamma}n^{\alpha-\beta(1-\gamma)},$$故趋于$0$当且仅当$\alpha<\beta(1-\gamma)$。C：临界情形下$\|f_n\|_1\equiv(1-\gamma)^{-1}$，但其质量全部集中到长度$n^{-\beta}\to0$的区间。若族一致可积，则由绝对连续性，对充分小测度集合$E$应有$\sup_n\int_E|f_n|$很小；取$E_n=(0,n^{-\beta})$却有$m(E_n)\to0$而$\int_{E_n}f_n=(1-\gamma)^{-1}$，矛盾。D错误：若存在统一可积控制函数，则结合$f_n\to0$几乎处处由控制收敛可得$L^1$收敛，这虽与本参数区间相容，但并不能由$L^1$收敛推出存在逐点统一控制函数。具体取例如$\gamma=0,\alpha=1,\beta=2$，则$f_n=n\mathbf1_{(0,n^{-2})}$有$L^1$范数$1/n\to0$；若$F\ge f_n$所有$n$，则在区间$( (n+1)^{-2},n^{-2})$上$F\ge n$，从而$\int_0^1F\ge\sum_n n(n^{-2}-(n+1)^{-2})=\infty$，不可能。",
+  "answer": "A,B,C,D。A：固定$x>0$后，当$n$充分大有$x>n^{-\beta}$，故$f_n(x)=0$。B：$$\|f_n\|_1=n^\alpha\int_0^{n^{-\beta}}x^{-\gamma}dx=\frac1{1-\gamma}n^{\alpha-\beta(1-\gamma)},$$故$L^1$收敛到$0$当且仅当$\alpha<\beta(1-\gamma)$。C：临界情形下$\|f_n\|_1\equiv(1-\gamma)^{-1}$，但质量集中到$E_n=(0,n^{-\beta})$；有$m(E_n)\to0$而$\int_{E_n}f_n=(1-\gamma)^{-1}$，故违反一致可积性的绝对连续性判据。D：固定$x\in(0,1)$，若$f_n(x)\ne0$则$n<x^{-1/\beta}$，于是$n^\alpha\le x^{-\alpha/\beta}$，从而$$f_n(x)\le x^{-(\gamma+\alpha/\beta)}=:F(x).$$条件$\alpha<\beta(1-\gamma)$恰等价于$\gamma+\alpha/\beta<1$，因此$F\in L^1(0,1)$。",
   "subject": "测度积分",
   "source": "generated | trap: convergence-direction"
 }
