@@ -3,5 +3,5 @@
   "problem": "设$G=(V,E)$为有限连通简单图，每条边电导均为$1$。从$G$的所有生成树中等概率随机选取一棵$T$。对任意边$e=\{u,v\}$，严格证明$\mathbb P(e\in T)=R_{\mathrm{eff}}(u,v)$，其中$R_{\mathrm{eff}}(u,v)$是在$G$中$u,v$之间的有效电阻。要求至少给出一种把矩阵树定理与拉普拉斯矩阵的行列式/伪逆联系起来的完整证明，并解释为何该概率也等于$\tau(G/e)/\tau(G)$。",
   "answer": "记$\tau(G)$为生成树数。包含$e$的生成树与收缩$e$后图$G/e$的生成树一一对应，故$\mathbb P(e\in T)=\tau(G/e)/\tau(G)$。另一方面给$e$的电导引入参数$t$，其余边电导仍为1。加权矩阵树定理给出$\tau(t)=\det L_t^{(r)}$，且$L_t^{(r)}=L_0^{(r)}+tbb^T$，其中$b$是边$e$的删去根坐标后的关联向量。矩阵行列式引理得$\tau(t)=\tau(0)(1+t\,b^T(L_0^{(r)})^{-1}b)$；等价地，在$t=1$处对$\log\tau$关于$\log t$求导，得到边$e$出现在随机生成树中的概率。该导数为$b^T(L^{(r)})^{-1}b$，而电网络理论表明这正是$(\mathbf e_u-\mathbf e_v)^TL^+(\mathbf e_u-\mathbf e_v)=R_{\mathrm{eff}}(u,v)$。因此$\mathbb P(e\in T)=R_{\mathrm{eff}}(u,v)=\tau(G/e)/\tau(G)$。",
   "subject": "离散数学",
-  "source": "generated | theorem-condition"
+  "source": "generated | trap: theorem-condition"
 }
