@@ -1,0 +1,7 @@
+{
+  "idx": 183,
+  "problem": "在$H=L^2(0,1)$上定义算子$K$：对$f\in H$，令$u=Kf$为边值问题$$-u''=f,\qquad u(0)=u(1)=0$$的弱解。请严格证明$K$是正的紧自伴算子，求出其全部非零特征值与一组标准正交特征函数，并由此计算$\|K\|$、$\operatorname{tr}K$以及Hilbert-Schmidt范数$\|K\|_{HS}$。",
+  "answer": "由Lax-Milgram定理，$K:L^2\to H_0^1\cap H^2$有界；嵌入$H_0^1(0,1)\hookrightarrow L^2(0,1)$紧，故$K$紧。若$u=Kf,v=Kg$，分部积分给出$$\langle Kf,g\rangle=\int_0^1u(-v'')dx=\int_0^1u'v'dx=\langle f,Kg\rangle,$$故$K$自伴；并且$\langle Kf,f\rangle=\int|u'|^2dx\ge0$，故为正算子。特征方程$Kf=\lambda f$等价于$-f''=\lambda^{-1}f$及Dirichlet边界条件，因此$$e_n(x)=\sqrt2\sin(n\pi x),\qquad \lambda_n=\frac1{n^2\pi^2},\quad n\ge1.$$它们构成$L^2(0,1)$的标准正交基。于是$$\|K\|=\lambda_1=\frac1{\pi^2},\qquad \operatorname{tr}K=\sum_{n\ge1}\lambda_n=\frac1{\pi^2}\sum_{n\ge1}\frac1{n^2}=\frac16,$$且$$\|K\|_{HS}^2=\sum_{n\ge1}\lambda_n^2=\frac1{\pi^4}\sum_{n\ge1}\frac1{n^4}=\frac1{90},$$从而$\|K\|_{HS}=1/(3\sqrt{10})$。",
+  "subject": "泛函分析",
+  "source": "generated | standard"
+}
