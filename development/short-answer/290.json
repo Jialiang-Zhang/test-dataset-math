@@ -1,0 +1,7 @@
+{
+  "idx": 290,
+  "problem": "设$X_1,\\dots,X_n$独立同分布于$U(0,\\theta)$，$\\theta>0$。证明$T=X_{(n)}$是完全充分统计量，并分别求$\\theta^k(k>0)$与$\\log\\theta$的UMVU估计。",
+  "answer": "联合密度为$\\theta^{-n}\\mathbf1\\{0<T<\\theta\\}$，由因子分解定理$T$充分。若$E_\\theta[g(T)]=0$对所有$\\theta>0$，则$n\\theta^{-n}\\int_0^\\theta g(t)t^{n-1}dt=0$；故对所有$\\theta$有$\\int_0^\\theta g(t)t^{n-1}dt=0$，几乎处处求导得$g(\\theta)\\theta^{n-1}=0$，从而$g=0$几乎处处，故完全。又$E[T^k]=\\frac n{n+k}\\theta^k$，所以$\\frac{n+k}{n}T^k$无偏估计$\\theta^k$；且$T/\\theta\\sim\\mathrm{Beta}(n,1)$，$E\\log(T/\\theta)=-1/n$，故$\\log T+1/n$无偏估计$\\log\\theta$。由Lehmann--Scheffé定理二者均为唯一UMVU估计。",
+  "subject": "统计推断",
+  "source": "generated | standard"
+}
