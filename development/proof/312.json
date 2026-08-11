@@ -1,0 +1,7 @@
+{
+  "idx": 312,
+  "problem": "设$J_m(\alpha)$与$J_n(\beta)$分别为$m,n$阶Jordan块。证明Kronecker和$A=J_m(\alpha)\otimes I_n+I_m\otimes J_n(\beta)$的唯一特征值为$\alpha+\beta$，并在复数域上求其最大Jordan块大小。要求不能只由特征值相加得到结论，还需分析幂零部分$N_m\otimes I+I\otimes N_n$的幂零指数。",
+  "answer": "写$J_m(\alpha)=\alpha I+N_m$、$J_n(\beta)=\beta I+N_n$，则$A=(\alpha+\beta)I+N$，其中$N=N_m\otimes I+I\otimes N_n$。两项可交换。由二项式展开，$N^{m+n-1}=0$，因为每一项$(N_m)^k\otimes(N_n)^{m+n-1-k}$中必有$k\ge m$或$m+n-1-k\ge n$。另一方面$N^{m+n-2}$中只有$k=m-1$的项可能非零，且该项系数为$\binom{m+n-2}{m-1}(N_m)^{m-1}\otimes(N_n)^{n-1}\ne0$（复数域特征0），故幂零指数恰为$m+n-1$。因此$A$唯一特征值为$\alpha+\beta$，最大Jordan块大小恰为$m+n-1$。",
+  "subject": "高等代数",
+  "source": "generated | standard"
+}
