@@ -1,0 +1,7 @@
+{
+  "idx": 63,
+  "problem": "设$\{\beta_t\}_{0\le t\le1}$为标准布朗桥，协方差核$K(s,t)=\min(s,t)-st$。证明积分算子$(Tf)(s)=\int_0^1K(s,t)f(t)dt$在$L^2[0,1]$上的非零特征值为$\lambda_n=(n^2\pi^2)^{-1}$，对应标准正交特征函数$e_n(t)=\sqrt2\sin(n\pi t)$；并据此写出布朗桥的Karhunen--Loève展开。",
+  "answer": "若$Tf=\lambda f$且$\lambda\ne0$，由核的Green函数性质可对$s$求导两次得到$(Tf)''(s)=-f(s)$，同时$Tf(0)=Tf(1)=0$。因此$\lambda f''=-f$，即$f''+\lambda^{-1}f=0$，边界条件$f(0)=f(1)=0$。非零解要求$\lambda^{-1/2}=n\pi$，故$\lambda_n=1/(n^2\pi^2)$，特征函数可规范化为$e_n=\sqrt2\sin(n\pi t)$。由于$T$为正、紧、自伴，谱定理给出协方差算子的完备本征展开。于是存在独立标准正态变量$Z_n$使$\beta_t=\sum_{n\ge1}Z_n\sqrt{\lambda_n}e_n(t)=\sqrt2\sum_{n\ge1}\frac{Z_n}{n\pi}\sin(n\pi t)$，级数在$L^2(\Omega\times[0,1])$意义收敛，并给出相同协方差核。",
+  "subject": "随机过程",
+  "source": "generated | standard"
+}
