@@ -1,0 +1,7 @@
+{
+  "idx": 89,
+  "problem": "设$T^2=S^1\times S^1$，取一点$p\in T^2$。利用CW分解与Seifert-van Kampen定理严格计算穿孔环面$T^2\setminus\{p\}$的基本群，并解释为什么把缺失点填回去恰好引入交换子关系$[a,b]=1$，从而恢复$\pi_1(T^2)\cong\mathbb Z^2$。",
+  "answer": "标准环面有CW结构：一个0-胞腔、两个1-胞腔$a,b$和一个2-胞腔，其附着映射代表词$aba^{-1}b^{-1}=[a,b]$。若从2-胞腔内部删去一点，则剩余空间形变收缩到其1-骨架（可将穿孔的2-圆盘沿径向收缩到边界并保留附着），而1-骨架是两个圆的楔和$S^1\vee S^1$。因此$\pi_1(T^2\setminus\{p\})\cong F(a,b)$，即秩2自由群。把点填回相当于重新粘上整个2-胞腔；由van Kampen，附着2-胞腔会把其边界回路对应的正规闭包杀掉，所以$\pi_1(T^2)\cong F(a,b)/\langle\!\langle[a,b]\rangle\!\rangle\cong\langle a,b\mid [a,b]=1\rangle\cong\mathbb Z^2$。关键区别在于穿孔后2-胞腔不再提供交换子关系。",
+  "subject": "拓扑学",
+  "source": "generated | trap: local-vs-global"
+}
