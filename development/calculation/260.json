@@ -1,0 +1,7 @@
+{
+  "idx": 260,
+  "problem": "对$a\\ge0$定义参数反常积分$$F(a)=\\int_0^\\infty\\frac{\\log(1+a^2x^2)}{x^2(1+x^2)}\\,dx.$$证明$F$在$(0,\\infty)$可微，严格论证积分号下求导的合法性，并求出$F(a)$的闭式；最后求$a\\to0^+$与$a\\to\\infty$时的首两项渐近展开。",
+  "answer": "对固定$a_0>0$，在其紧邻域$a\\in[a_0/2,2a_0]$内，导数被积函数为$$\\frac{2a}{(1+a^2x^2)(1+x^2)},$$它在$x\\in(0,1]$上一致有界，在$x\\ge1$上由$C/x^4$控制，故可由控制收敛定理交换求导与积分。于是$$F'(a)=2a\\int_0^\\infty\\frac{dx}{(1+a^2x^2)(1+x^2)}.$$部分分式或标准积分给$$\\int_0^\\infty\\frac{dx}{(1+a^2x^2)(1+x^2)}=\\frac{\\pi}{2(1+a)},$$所以$F'(a)=\\pi a/(1+a)$。又$F(0)=0$（可直接由单调/控制估计得到连续延拓），故$$F(a)=\\pi[a-\\log(1+a)].$$当$a\\to0^+$，$\\log(1+a)=a-a^2/2+a^3/3+O(a^4)$，故$$F(a)=\\frac\\pi2a^2-\\frac\\pi3a^3+O(a^4).$$当$a\\to\\infty$，$\\log(1+a)=\\log a+1/a-1/(2a^2)+O(a^{-3})$，故$$F(a)=\\pi a-\\pi\\log a-\\frac\\pi a+O(a^{-2}).$$",
+  "subject": "数学分析",
+  "source": "generated | trap: differentiate-under-integral"
+}
