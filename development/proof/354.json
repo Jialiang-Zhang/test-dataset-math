@@ -1,0 +1,7 @@
+{
+  "idx": 354,
+  "problem": "设$A\in\mathbb R^{n\times n}$为实对称矩阵，$\lambda_1$为其单特征值，$q_1$为对应单位特征向量。Rayleigh商迭代定义为$\rho_k=x_k^TAx_k$，解$(A-\rho_k I)y_k=x_k$，再令$x_{k+1}=y_k/\|y_k\|_2$。证明：若$x_k$充分接近$q_1$且与$q_1$夹角为$\theta_k$，则$\theta_{k+1}=O(\theta_k^3)$。要求同时说明Rayleigh商误差为何是二阶，以及逆迭代一步如何把该二阶误差再乘上一个角度因子。",
+  "answer": "取$A$的正交特征基$q_1,\dots,q_n$，写$x_k=c_1q_1+\sum_{j\ge2}c_jq_j$，其中$|c_1|=\cos\theta_k$且$(\sum_{j\ge2}c_j^2)^{1/2}=\sin\theta_k$。Rayleigh商满足$\rho_k-\lambda_1=\sum_{j\ge2}(\lambda_j-\lambda_1)c_j^2=O(\sin^2\theta_k)$，这是第一处二阶性。设谱隙$\gamma=\min_{j\ge2}|\lambda_j-\lambda_1|>0$。迭代解为$y_k=\frac{c_1}{\lambda_1-\rho_k}q_1+\sum_{j\ge2}\frac{c_j}{\lambda_j-\rho_k}q_j$。当$\theta_k$足够小时，$|\lambda_j-\rho_k|\ge\gamma/2$。因此新向量非$q_1$分量与$q_1$分量之比满足$\tan\theta_{k+1}\le C|\lambda_1-\rho_k|\tan\theta_k=O(\theta_k^2)O(\theta_k)=O(\theta_k^3)$。因小角度下$\tan\theta\asymp\theta$，故$\theta_{k+1}=O(\theta_k^3)$。",
+  "subject": "数值分析",
+  "source": "generated | standard"
+}
