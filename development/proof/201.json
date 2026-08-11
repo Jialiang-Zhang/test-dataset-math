@@ -1,0 +1,7 @@
+{
+  "idx": 201,
+  "problem": "在$H=L^2([-1,1])$上定义自伴算子$$Tf(x)=x f(x)+\alpha\left(\int_{-1}^1 f(t)\,dt\right),\qquad \alpha>0.$$请严格确定$T$的完整谱集，并分类指出哪些点属于本征谱、哪些属于本质谱；最后给出$\|T\|$。要求利用乘法算子的谱、有限秩扰动对本质谱的不变性，以及秩一扰动的特征值方程，不能只给出最终超越方程。",
+  "answer": "记$M f(x)=xf(x)$，$Kf=\alpha\langle f,1\rangle 1$，则$T=M+K$且$K$为秩一自伴算子。$M$的谱及本质谱均为$[-1,1]$，有限秩紧扰动不改变本质谱，所以$$\sigma_{\mathrm{ess}}(T)=[-1,1].$$若$\lambda\notin[-1,1]$是特征值，设$c=\int_{-1}^1f(t)dt$。方程$Tf=\lambda f$给出$$(\lambda-x)f(x)=\alpha c.$$若$c=0$则$f=0$，故$c\ne0$，于是$$f(x)=\frac{\alpha c}{\lambda-x},\qquad 1=\alpha\int_{-1}^1\frac{dx}{\lambda-x}.$$当$\lambda>1$时积分为$\log\frac{\lambda+1}{\lambda-1}$，故唯一离散特征值$\lambda_\alpha>1$满足$$1=\alpha\log\frac{\lambda_\alpha+1}{\lambda_\alpha-1}.$$左端对应函数从$+\infty$严格降到$0$，故解唯一；等价地$$\lambda_\alpha=\coth\frac1{2\alpha}.$$当$\lambda<-1$时该积分为负，不可能满足$1=\alpha(\cdots)$。若$\lambda\in(-1,1)$，形式解$1/(\lambda-x)$不属$L^2$；端点$\lambda=\pm1$同样不属$L^2$，且$c=0$时又只能有零解，所以$[-1,1]$中无特征值。综上$$\sigma(T)=[-1,1]\cup\{\lambda_\alpha\},$$其中$[-1,1]$为本质谱，$\lambda_\alpha$为单重离散本征值。因$T$自伴，$$\|T\|=\max_{\lambda\in\sigma(T)}|\lambda|=\lambda_\alpha=\coth\frac1{2\alpha}.$$",
+  "subject": "泛函分析",
+  "source": "generated | trap: finite-vs-infinite-dimensional"
+}
