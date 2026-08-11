@@ -1,0 +1,7 @@
+{
+  "idx": 96,
+  "problem": "设$G$为有限阿贝尔$p$-群，且$G\cong \mathbb Z/p^{a_1}\mathbb Z\oplus\cdots\oplus\mathbb Z/p^{a_r}\mathbb Z$，其中$a_1\ge\cdots\ge a_r\ge1$。证明$G/pG$与$G[p]=\{x:px=0\}$都同构于$\mathbb F_p^r$；进而证明一个自同态$\varphi\in\mathrm{End}(G)$可逆当且仅当其诱导映射$\bar\varphi:G/pG\to G/pG$可逆。要求不能直接引用Nakayama引理，而要在有限$p$-群结构上给出完整证明。",
+  "answer": "每个循环因子$C_{p^{a_i}}$模去$pC_{p^{a_i}}$后得到$C_p$，故$G/pG\cong(\mathbb F_p)^r$；而每个因子的$p$-挠元恰为$p^{a_i-1}C_{p^{a_i}}\cong C_p$，故$G[p]\cong(\mathbb F_p)^r$。若$\varphi$可逆，则显然$\bar\varphi$可逆。反之设$\bar\varphi$可逆。若$\varphi$非单射，取$0\ne x\in\ker\varphi$并令$x$的阶为$p^m$。则$y=p^{m-1}x\ne0$且$py=0$，所以$y\in G[p]\cap\ker\varphi$。需要证明$G[p]\cap\ker\varphi=0$：若$0\ne y\in G[p]$且$\varphi(y)=0$，由于$\bar\varphi$单射，$y\in pG$；写$y=pz_1$。又$0=py=p^2z_1$，若$z_1$阶大于$p$，可继续利用$\bar\varphi$单射对适当的$p$-阶元向下提升。更直接地，用$\bar\varphi$满射得$G=\varphi(G)+pG$，迭代得到$G=\varphi(G)+p^kG$对所有$k$。当$k\ge a_1$时$p^kG=0$，故$\varphi$满射。有限群上的满射必为单射，因此$\varphi$可逆。该证明只用了有限指数终止的迭代。",
+  "subject": "抽象代数",
+  "source": "generated | trap: finite-vs-infinite-dimensional"
+}
