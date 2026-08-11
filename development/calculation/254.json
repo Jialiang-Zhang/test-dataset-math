@@ -1,0 +1,7 @@
+{
+  "idx": 254,
+  "problem": "在线性模型$Y\\sim N(X\\beta,\\sigma^2I_n)$中，设零假设对应均值子空间$\\mathcal M_0\\subset\\mathcal M_1=\\operatorname{col}(X)$，维数分别为$p_0<p_1<n$，$\\sigma^2$未知。推导检验$H_0:\\mu\\in\\mathcal M_0$对$H_1:\\mu\\in\\mathcal M_1$的广义似然比检验，并证明它等价于基于$$F=\\frac{(RSS_0-RSS_1)/(p_1-p_0)}{RSS_1/(n-p_1)}$$的检验；给出$H_0$下$F$的精确分布及关键独立性理由。",
+  "answer": "在固定均值子空间$\\mathcal M_j$下，MLE均值为正交投影$P_jY$，残差平方和$RSS_j=\\|(I-P_j)Y\\|^2$；对$\\sigma^2$极大化得$\\hat\\sigma_j^2=RSS_j/n$，故广义似然比$\\Lambda=(RSS_1/RSS_0)^{n/2}$，因此拒绝域等价于$RSS_0-RSS_1$相对$RSS_1$足够大。因$P_1-P_0$与$I-P_1$是互相正交的对称幂等投影，且在$H_0$下二者作用于均值均为0，Cochran定理给出$$\\frac{RSS_0-RSS_1}{\\sigma^2}=\\frac{Y^T(P_1-P_0)Y}{\\sigma^2}\\sim\\chi^2_{p_1-p_0},$$ $$\\frac{RSS_1}{\\sigma^2}=\\frac{Y^T(I-P_1)Y}{\\sigma^2}\\sim\\chi^2_{n-p_1},$$且二者独立。因此$$F\\sim F_{p_1-p_0,n-p_1}.$$又$RSS_0=RSS_1+(RSS_0-RSS_1)$，所以$\\Lambda$是$F$的严格单调函数，GLRT与通常的嵌套模型$F$检验完全等价。",
+  "subject": "统计推断",
+  "source": "generated | standard"
+}
