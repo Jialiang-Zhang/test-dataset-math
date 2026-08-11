@@ -1,0 +1,7 @@
+{
+  "idx": 325,
+  "problem": "判断：对Duffing方程$x''+x+x^3=0$，以$x(0)=A>0,x'(0)=0$定义的非平凡周期解，其最小周期$T(A)$关于$A>0$严格递减，且$A\,T(A)$在$A\to\infty$时收敛到有限正数。",
+  "answer": "true",
+  "subject": "常微分方程",
+  "source": "generated | trap: boundary-case"
+}
