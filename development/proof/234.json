@@ -1,0 +1,7 @@
+{
+  "idx": 234,
+  "problem": "设$f$在闭圆盘$\\overline{D(0,R)}$的邻域解析，$f(0)\\ne0$，且在$|z|<R$内零点（计重数）为$a_1,\\dots,a_m$，边界上无零点。证明Jensen公式$$\\log|f(0)|+\\sum_{j=1}^m\\log\\frac{R}{|a_j|}=\\frac1{2\\pi}\\int_0^{2\\pi}\\log|f(Re^{i\\theta})|\\,d\\theta.$$要求不能直接引用Jensen公式本身。",
+  "answer": "定义$$g(z)=f(z)\\prod_{j=1}^m\\frac{R^2-\\overline{a_j}z}{R(z-a_j)}.$$在$z=a_j$处零极相消，故$g$在圆盘内解析且无零点；在$|z|=R$上每个因子模为1，因此$|g|=|f|$。于是$\\log|g|$调和，平均值性质给$$\\log|g(0)|=\\frac1{2\\pi}\\int_0^{2\\pi}\\log|g(Re^{i\\theta})|d\\theta.$$而$|g(0)|=|f(0)|\\prod_j R/|a_j|$，取对数即得公式。",
+  "subject": "复分析",
+  "source": "generated | standard"
+}
