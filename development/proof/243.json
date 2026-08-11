@@ -1,0 +1,7 @@
+{
+  "idx": 243,
+  "problem": "分类二维环面$T^2=\\mathbb R^2/\\mathbb Z^2$的连通$n$层覆盖（按覆盖等价）。证明它们与指数为$n$的子格$L\\le\\mathbb Z^2$一一对应，并求此类覆盖的个数为$$\\sum_{d\\mid n}d.$$要求使用覆盖空间分类定理与Hermite正规形完成计数。",
+  "answer": "覆盖空间分类定理给出连通覆盖与$\\pi_1(T^2)\\cong\\mathbb Z^2$的子群对应；因群阿贝尔，共轭不改变子群。$n$层覆盖对应指数$n$子格。每个有限指数子格有唯一Hermite正规形$$\\begin{pmatrix}a&b\\\\0&d\\end{pmatrix},\\qquad a,d>0,\\ 0\\le b<a,$$其指数为$ad=n$。对每个分解$ad=n$，$b$有$a$种选择，因此总数$$\\sum_{ad=n}a=\\sum_{d\\mid n}d.$$相应覆盖为$\\mathbb R^2/L\\to\\mathbb R^2/\\mathbb Z^2$。",
+  "subject": "拓扑学",
+  "source": "generated | standard"
+}
