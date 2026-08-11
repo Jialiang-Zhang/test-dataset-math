@@ -1,0 +1,7 @@
+{
+  "idx": 185,
+  "problem": "设$f\in\mathcal S(\mathbb R)$，在上半平面定义Poisson延拓$$u(x,y)=(P_y*f)(x),\qquad P_y(x)=\frac1\pi\frac{y}{x^2+y^2},\quad y>0.$$请利用Fourier变换严格证明：$u$调和，$u(\cdot,y)\to f$于$L^2(\mathbb R)$，并建立Dirichlet能量恒等式$$\int_0^\infty\int_{\mathbb R}(|u_x|^2+|u_y|^2)\,dx\,dy=\int_{\mathbb R}|\xi|\,|\widehat f(\xi)|^2\,d\xi,$$其中采用单位酉Fourier变换约定。解释该恒等式为何把边界的$H^{1/2}$正则性与内部调和能量联系起来。",
+  "answer": "Poisson核的Fourier变换为$\widehat{P_y}(\xi)=e^{-y|\xi|}$，故$$\widehat u(\xi,y)=e^{-y|\xi|}\widehat f(\xi).$$因此$\partial_{yy}\widehat u=|\xi|^2e^{-y|\xi|}\widehat f$而$\widehat{u_{xx}}=-\xi^2e^{-y|\xi|}\widehat f$，故$u_{xx}+u_{yy}=0$。又$e^{-y|\xi|}\to1$且被1控制，由Plancherel与控制收敛，$\|u(\cdot,y)-f\|_2\to0$。对能量，Plancherel给出$$\int_{\mathbb R}|u_x|^2dx=\int\xi^2e^{-2y|\xi|}|\widehat f|^2d\xi,$$以及$$\int|u_y|^2dx=\int|\xi|^2e^{-2y|\xi|}|\widehat f|^2d\xi.$$两项相加并对$y$积分，Tonelli定理得到$$\int\!2|\xi|^2|\widehat f|^2\left(\int_0^\infty e^{-2y|\xi|}dy\right)d\xi=\int|\xi||\widehat f|^2d\xi.$$右端正是齐次$H^{1/2}$半范数平方，因此Poisson延拓把边界的半阶Sobolev正则性等距编码为上半平面的Dirichlet能量。",
+  "subject": "偏微分方程",
+  "source": "generated | standard"
+}
