@@ -1,0 +1,7 @@
+{
+  "idx": 352,
+  "problem": "设$\\mu(n)$为Möbius函数。证明\\n\\[\\n\\sum_{n\\le x}\\varphi(n)=\\frac{3}{\\pi^2}x^2+O(x\\log x).\\n\\]\\n要求从恒等式$\\varphi(n)=n\\sum_{d\\mid n}\\mu(d)/d$出发完成双重求和，并明确指出主项常数如何由$\\sum_{d\\ge1}\\mu(d)/d^2=1/\\zeta(2)$产生；不得直接引用该渐近式。",
+  "answer": "由$\\varphi(n)=n\\sum_{d\\mid n}\\mu(d)/d$，\\n\\[\\nS(x)=\\sum_{n\\le x}\\varphi(n)=\\sum_{d\\le x}\\frac{\\mu(d)}d\\sum_{m\\le x/d}dm=\\sum_{d\\le x}\\mu(d)\\sum_{m\\le x/d}m.\\n\\]\\n令$y=x/d$，有$\\sum_{m\\le y}m=\\frac12y^2+O(y)$，故\\n\\[\\nS(x)=\\frac{x^2}{2}\\sum_{d\\le x}\\frac{\\mu(d)}{d^2}+O\\left(x\\sum_{d\\le x}\\frac1d\\right).\\n\\]\\n第二项为$O(x\\log x)$。又$\\sum_{d\\le x}\\mu(d)/d^2=\\sum_{d\\ge1}\\mu(d)/d^2+O(\\sum_{d>x}d^{-2})=1/\\zeta(2)+O(1/x)$。由于$\\zeta(2)=\\pi^2/6$，主项为$x^2/(2\\zeta(2))=3x^2/\\pi^2$，截断尾项贡献$O(x)$，并入$O(x\\log x)$。因此$S(x)=3x^2/\\pi^2+O(x\\log x)$。",
+  "subject": "非基础及进阶课程",
+  "source": "generated | standard"
+}
