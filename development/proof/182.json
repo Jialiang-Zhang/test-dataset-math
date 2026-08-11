@@ -1,0 +1,7 @@
+{
+  "idx": 182,
+  "problem": "设$X_1,\dots,X_n$独立同分布于参数为$\lambda>0$的指数分布，密度$f(x;\lambda)=\lambda e^{-\lambda x}\mathbf 1_{x>0}$。固定$c>0$，目标参数为$\theta(\lambda)=P_\lambda(X_1>c)=e^{-\lambda c}$。请构造$\theta(\lambda)$的UMVU估计量，并严格证明其无偏性与最优性。要求使用充分完备统计量、条件分布和Lehmann-Scheffe定理，而不能只猜测答案。",
+  "answer": "统计量$S=\sum_{i=1}^nX_i\sim\Gamma(n,\lambda)$是$\lambda$的充分统计量；其族密度$\lambda^n s^{n-1}e^{-\lambda s}/\Gamma(n)$构成满秩单参数指数族，亦可由Laplace变换唯一性证明$S$完备。朴素估计量$U=\mathbf1_{\{X_1>c\}}$满足$E_\lambda U=e^{-\lambda c}$。因此Rao-Blackwell化$E(U\mid S)$即为UMVU。条件于$S=s$，比例$X_1/S\sim\operatorname{Beta}(1,n-1)$，与$S$无关，所以当$s>c$时$$P(X_1>c\mid S=s)=P\left(\frac{X_1}{S}>\frac cs\right)=\left(1-\frac cs\right)^{n-1},$$而$s\le c$时该概率为0。故UMVU估计量为$$\widehat\theta_{UMVU}=\mathbf1_{\{S>c\}}\left(1-\frac cS\right)^{n-1}.$$其无偏性由塔式法则直接得到；由于它是完备充分统计量$S$的函数，Lehmann-Scheffe定理保证其在所有无偏估计量中方差唯一最小。",
+  "subject": "统计推断",
+  "source": "generated | standard"
+}
