@@ -1,0 +1,7 @@
+{
+  "idx": 286,
+  "problem": "分类所有$21$阶群到同构。要求从Sylow子群数目出发，说明正规Sylow $7$-子群的存在、半直积分解的来源，并证明非阿贝尔情形在同构意义下只有一种；同时给出两类群的中心与换位子群。",
+  "answer": "设$|G|=21=3\\cdot7$。Sylow定理给$n_7\\equiv1\\pmod7$且$n_7\\mid3$，故$n_7=1$，于是$N\\cong C_7\\triangleleft G$。取Sylow $3$-子群$H\\cong C_3$，由$N\\cap H=1,|NH|=21$得$G\\cong C_7\\rtimes_\\varphi C_3$。因$\\operatorname{Aut}(C_7)\\cong C_6$，同态$\\varphi:C_3\\to C_6$要么平凡，要么像为唯一的3阶子群。平凡时$G\\cong C_{21}$。非平凡时作用必忠实，而$C_6$中3阶子群唯一，两个非平凡作用仅差生成元选择，所得半直积同构，因此仅有一个非阿贝尔同构类型，可表示$\\langle a,b\\mid a^7=b^3=1,bab^{-1}=a^2\\rangle$。阿贝尔情形中心为全群、换位子群为1；非阿贝尔情形$Z(G)=1$，且$[G,G]=\\langle a\\rangle\\cong C_7$。",
+  "subject": "抽象代数",
+  "source": "generated | standard"
+}
