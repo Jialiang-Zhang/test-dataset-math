@@ -1,0 +1,7 @@
+{
+  "idx": 174,
+  "problem": "考虑两级Radau IIA Runge-Kutta方法，其Butcher系数为$$A=\begin{pmatrix}5/12&-1/12\\3/4&1/4\end{pmatrix},\qquad b=\begin{pmatrix}3/4\\1/4\end{pmatrix}.$$对测试方程$y'=\lambda y$令$z=h\lambda$。请从$R(z)=1+zb^T(I-zA)^{-1}\mathbf 1$出发推导稳定函数的闭式表达式，并严格证明该方法既A-稳定又L-稳定；证明中不得只引用“Radau IIA已知A-稳定”的结论。",
+  "answer": "直接计算可得$$R(z)=\frac{1+z/3}{1-2z/3+z^2/6}.$$分母零点满足$z^2-4z+6=0$，即$z=2\pm i\sqrt2$，故$R$在闭左半平面无极点。对$z=iy$，有$$|1+iy/3|^2=1+y^2/9,$$而$$|1-2iy/3-y^2/6|^2=(1-y^2/6)^2+4y^2/9=1+y^2/9+y^4/36,$$因此$|R(iy)|\le1$。由于$R$在左半平面解析、在无穷远处有界且边界虚轴上模不超过1，由最大模原理作用于截断左半圆并令半径趋于无穷，得到$|R(z)|\le1$对所有$\Re z\le0$成立，故A-稳定。又因分子一次、分母二次，$$\lim_{|z|\to\infty,\ \Re z<0}R(z)=0,$$故方法还是L-稳定的。",
+  "subject": "数值分析",
+  "source": "generated | standard"
+}
