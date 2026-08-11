@@ -1,0 +1,7 @@
+{
+  "idx": 323,
+  "problem": "设$(B_t)_{t\ge0}$为标准Brown运动，$\lambda>0$。求精确值$u(t)=\mathbb E\exp\{-\lambda\int_0^t B_s^2\,ds\}$。要求从Feynman--Kac方程出发，通过高斯型试探函数求解，不得直接引用已知公式。",
+  "answer": "令$U(t,x)=\mathbb E_x\exp\{-\lambda\int_0^t B_s^2ds\}$，则$U_t=\frac12U_{xx}-\lambda x^2U$，$U(0,x)=1$。设$U(t,x)=a(t)e^{-b(t)x^2}$，代入得$b'=\lambda-2b^2$，$a'/a=-b$，且$b(0)=0,a(0)=1$。故$b(t)=\sqrt{\lambda/2}\tanh(\sqrt{2\lambda}\,t)$，从而$a(t)=\exp(-\int_0^t b)=\cosh(\sqrt{2\lambda}\,t)^{-1/2}$。取$x=0$得$u(t)=\cosh(\sqrt{2\lambda}\,t)^{-1/2}$。",
+  "subject": "随机过程",
+  "source": "generated | standard"
+}
