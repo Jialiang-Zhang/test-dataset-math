@@ -1,0 +1,7 @@
+{
+  "idx": 139,
+  "problem": "考虑区间$(0,\pi)$上的热方程$u_t=u_{xx}$，配Dirichlet边界$u(0,t)=u(\pi,t)=0$。固定$T>0$。证明从终值$u(\cdot,T)$恢复初值$u(\cdot,0)$的反问题在$L^2(0,\pi)$中Hadamard意义下不适定：虽然在适当像空间中解唯一，但逆映射不是连续的。要求使用Laplace算子特征函数展开构造一个终值范数趋于0而对应初值范数不趋于0的显式序列。",
+  "answer": "Dirichlet特征函数为$\sin(nx)$，特征值为$n^2$。若$u_0=\sum_{n\ge1}a_n\sin(nx)$，则$u(x,T)=\sum a_ne^{-n^2T}\sin(nx)$。由于每个因子$e^{-n^2T}>0$，在热半群的值域上终值唯一决定系数$a_n$，故逆问题具有唯一性。取$u_0^{(n)}(x)=\sin(nx)$，则$\|u_0^{(n)}\|_{L^2}=\sqrt{\pi/2}$恒定，而对应终值$g_n(x)=e^{-n^2T}\sin(nx)$满足$\|g_n\|_{L^2}=e^{-n^2T}\sqrt{\pi/2}\to0$。若逆映射连续于0，则$g_n\to0$应推出$u_0^{(n)}\to0$，矛盾。因此$e^{T\Delta}$的逆在其值域上非有界，终值问题对高频噪声呈指数放大，故Hadamard不适定。",
+  "subject": "偏微分方程",
+  "source": "generated | trap: theorem-condition"
+}
