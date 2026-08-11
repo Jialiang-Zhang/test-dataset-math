@@ -3,5 +3,5 @@
   "problem": "设$(M^{2n},\omega)$为辛流形，$H\in C^\infty(M)$，Hamilton向量场由$\iota_{X_H}\omega=dH$定义，$\phi_t$为其局部流。证明$\phi_t$保持辛形式与Liouville体积$\omega^n/n!$，并证明$H$沿轨道守恒。进一步说明：若$M$紧致，则Hamilton流不可能存在一个具有非空开吸引域的渐近稳定平衡点。",
   "answer": "由Cartan公式，\n$\mathcal L_{X_H}\omega=d(\iota_{X_H}\omega)+\iota_{X_H}d\omega=d(dH)+0=0$，\n故$\frac d{dt}\phi_t^*\omega=\phi_t^*(\mathcal L_{X_H}\omega)=0$，于是$\phi_t^*\omega=\omega$。因此\n$\phi_t^*(\omega^n/n!)=(\phi_t^*\omega)^n/n!=\omega^n/n!$，即Liouville体积保持。又\n$\frac d{dt}H(\phi_t(x))=dH(X_H)=\omega(X_H,X_H)=0$，所以$H$守恒。若紧致$M$上某平衡点$p$有非空开吸引域$U$，取其中一个体积正的相对紧开集$V$。渐近稳定性意味着对任意足够小邻域$W$（可取Liouville体积严格小于$\operatorname{vol}(V)$），存在足够大的$t$使$\phi_t(V)\subset W$。但体积保持给出$\operatorname{vol}(\phi_t(V))=\operatorname{vol}(V)>\operatorname{vol}(W)$，矛盾。因此不存在具有非空开吸引域的渐近稳定平衡点。",
   "subject": "非基础及进阶课程",
-  "source": "generated | trap: local-vs-global"
+  "source": "generated | standard"
 }
