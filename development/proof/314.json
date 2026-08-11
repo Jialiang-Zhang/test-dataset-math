@@ -1,0 +1,7 @@
+{
+  "idx": 314,
+  "problem": "设$\mathcal F\subset C(\mathbb R)$在每个有界区间上一致有界且等度连续。证明任意序列$(f_n)\subset\mathcal F$都存在子列在$\mathbb R$上局部一致收敛；并构造一个满足这些条件但在$\|\cdot\|_\infty$意义下没有任何收敛子列的具体族，从而说明非紧定义域上不能把局部Arzela--Ascoli误用为全局一致紧性。",
+  "answer": "对区间$[-1,1]$用Arzela--Ascoli取一致收敛子列；再在$[-2,2]$上从该子列取一致收敛子列，依次进行。取对角子列，则对每个$k$都在$[-k,k]$上一致收敛，因此在$\mathbb R$上局部一致收敛。反例取$f_n(x)=\tanh(x-n)$。由于$|f_n|\le1$且$|f_n'|\le1$，该族在每个有界区间上一致有界且全局等度连续；任意固定紧集上$f_n\to-1$一致。然而若$m\ne n$且令间距趋大，在两平移中心之间可找到点使两函数值分别接近$1$与$-1$，故$\|f_n-f_m\|_\infty$可任意接近2；事实上对$n\ne m$其sup距离为正且当$|n-m|\to\infty$趋于2，所以原序列不存在sup范数Cauchy子列。",
+  "subject": "数学分析",
+  "source": "generated | trap: local-vs-global"
+}
