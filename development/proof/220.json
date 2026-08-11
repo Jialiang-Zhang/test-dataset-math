@@ -1,0 +1,7 @@
+{
+  "idx": 220,
+  "problem": "考虑线性模型$y=X_1\beta_1+X_2\beta_2+\varepsilon$，其中$W\succ0$，且$X_1$满列秩。定义加权部分岭估计为$$\min_{\beta_1,\beta_2}(y-X_1\beta_1-X_2\beta_2)^TW(y-X_1\beta_1-X_2\beta_2)+\lambda\|\beta_2\|_2^2,\quad\lambda>0.$$请严格推导加权Frisch-Waugh-Lovell型公式：先消去$\beta_1$，再写出$\hat\beta_2$的闭式表达式；并在$\operatorname{Cov}(\varepsilon)=\sigma^2W^{-1}$下给出其协方差矩阵。",
+  "answer": "对固定$\beta_2$，令$r=y-X_2\beta_2$。关于$\beta_1$的一阶条件为$$X_1^TW(r-X_1\beta_1)=0,$$故$$\hat\beta_1(\beta_2)=(X_1^TWX_1)^{-1}X_1^TWr.$$定义加权残差算子$$M_1=I-X_1(X_1^TWX_1)^{-1}X_1^TW.$$代回目标函数得$$Q(\beta_2)=(y-X_2\beta_2)^TWM_1(y-X_2\beta_2)+\lambda\beta_2^T\beta_2,$$其中$WM_1=M_1^TW$。因此$$\hat\beta_2=(X_2^TWM_1X_2+\lambda I)^{-1}X_2^TWM_1y.$$若真实模型成立，则随机部分为$A\varepsilon$，其中$$A=(X_2^TWM_1X_2+\lambda I)^{-1}X_2^TWM_1.$$利用$M_1^TW=WM_1$、$M_1^2=M_1$及$\operatorname{Cov}(\varepsilon)=\sigma^2W^{-1}$，有$$\operatorname{Cov}(\hat\beta_2)=\sigma^2(X_2^TWM_1X_2+\lambda I)^{-1}(X_2^TWM_1X_2)(X_2^TWM_1X_2+\lambda I)^{-1}.$$注意岭惩罚使估计有偏，因此该协方差不能与MSE混为一谈。",
+  "subject": "线性回归",
+  "source": "generated | trap: theorem-condition"
+}
