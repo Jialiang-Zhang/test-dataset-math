@@ -1,0 +1,7 @@
+{
+  "idx": 127,
+  "problem": "设$G$是一个$d$-正则图，顶点数为$n$，邻接矩阵特征值满足$d=\lambda_1\ge \lambda_2\ge\cdots\ge\lambda_n$。设$S\subseteq V(G)$为独立集。请利用Rayleigh商与正交分解严格证明Hoffman界：若$\lambda_n<0$，则$|S|\le \frac{-\lambda_n}{d-\lambda_n}n$；并证明等号成立时，独立集示性向量在去掉常数分量后必属于$\lambda_n$对应特征子空间。",
+  "answer": "令$\mathbf 1_S$为$S$的示性向量，写$\mathbf 1_S=\frac{|S|}{n}\mathbf 1+z$，其中$z\perp\mathbf 1$。因$G$为$d$-正则，$A\mathbf 1=d\mathbf 1$；又$S$独立，故$\mathbf 1_S^TA\mathbf 1_S=0$。于是$0=d|S|^2/n+z^TAz\ge d|S|^2/n+\lambda_n\|z\|^2$。而$\|z\|^2=|S|-|S|^2/n$。代入得$0\ge d|S|^2/n+\lambda_n(|S|-|S|^2/n)=\frac{d-\lambda_n}{n}|S|^2+\lambda_n|S|$。因$|S|>0$，得到$|S|\le \frac{-\lambda_n}{d-\lambda_n}n$。若等号成立，则Rayleigh下界也必须取等，即$z^TAz=\lambda_n\|z\|^2$。对实对称矩阵这当且仅当$z$完全落在$\lambda_n$特征子空间中。",
+  "subject": "离散数学",
+  "source": "generated | trap: theorem-condition"
+}
