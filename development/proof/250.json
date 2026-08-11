@@ -1,0 +1,7 @@
+{
+  "idx": 250,
+  "problem": "设$k$为代数闭域，$R=k[x,y]/(xy)$。完整描述$\\operatorname{Spec}R$中的素理想和极大理想；求$R$的极小素理想、nilradical与全部零因子，并证明你的结论。要求特别说明为什么$R$虽然有零因子却是约化环。",
+  "answer": "由商环素理想对应，$\\operatorname{Spec}R$与$k[x,y]$中包含$(xy)$的素理想对应。若$\\mathfrak p$为素且$xy\\in\\mathfrak p$，则$x\\in\\mathfrak p$或$y\\in\\mathfrak p$。故所有素理想恰为两类：含$(x)$的素理想以及含$(y)$的素理想；几何上是两条坐标轴的并。极小素理想为$\\bar{(x)}$与$\\bar{(y)}$。因$k$代数闭，极大理想恰为$\\bar{(x,y-a)}$($a\\in k$)及$\\bar{(x-b,y)}$($b\\in k$)，其中原点$\\bar{(x,y)}$重复一次。又$(x)\\cap(y)=(xy)$于$k[x,y]$中成立，因此$\\sqrt{(xy)}=(x)\\cap(y)=(xy)$，故商环$R$的nilradical为0，$R$是约化环。设$\\bar f\\in R$。若$\\bar f$既不在$\\bar{(x)}$也不在$\\bar{(y)}$，其像在两个整环$R/\\bar{(x)}\\cong k[y]$与$R/\\bar{(y)}\\cong k[x]$中均非零；若$\\bar f\\bar g=0$，则$\\bar g$在两个商环中的像都为0，所以$\\bar g\\in\\bar{(x)}\\cap\\bar{(y)}=0$。故此时$\\bar f$不是零因子。反之，$\\bar{(x)}$中的任意非零元都被$\\bar y$消去，$\\bar{(y)}$中的任意非零元都被$\\bar x$消去。因此零因子集合恰为$\\bar{(x)}\\cup\\bar{(y)}$。",
+  "subject": "抽象代数",
+  "source": "generated | trap: zero-divisor-vs-nilpotent"
+}
