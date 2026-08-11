@@ -1,0 +1,7 @@
+{
+  "idx": 78,
+  "problem": "设$q$为素数幂，$n\ge2$。记$N_n$为有限域$\mathbb F_{q^n}$中满足$\mathbb F_q(\alpha)=\mathbb F_{q^n}$的元素个数。请从子域格结构出发，用Möbius反演严格求$N_n$，并进一步推出$\mathbb F_q[x]$中次数恰为$n$的首一不可约多项式个数。",
+  "answer": "$\mathbb F_{q^n}$的子域恰为$\mathbb F_{q^d}$（$d\mid n$）。设$N_d$表示在$\mathbb F_{q^d}$中对$\mathbb F_q$次数恰为$d$的元素数，则每个$\alpha\in\mathbb F_{q^n}$的生成子域次数唯一整除$n$，故$q^n=\sum_{d\mid n}N_d$。对除数格作Möbius反演得$N_n=\sum_{d\mid n}\mu(d)q^{n/d}$。每个次数$n$的首一不可约多项式在$\mathbb F_{q^n}$中有恰好$n$个互异根，且这些根正是次数恰为$n$的元素；不同不可约多项式根集不交。因此首一不可约多项式个数为$\frac1n\sum_{d\mid n}\mu(d)q^{n/d}$。",
+  "subject": "抽象代数",
+  "source": "generated | standard"
+}
