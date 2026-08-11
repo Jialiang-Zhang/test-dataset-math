@@ -1,0 +1,7 @@
+{
+  "idx": 113,
+  "problem": "设$X_t=B_t+\mu t$，其中$B_t$为标准布朗运动、$\mu\ne0$。给定$a,b>0$，令$\tau=\inf\{t\ge0:X_t\notin(-a,b)\}$。利用指数鞅与可选停止定理严格求出$p=\mathbb P(X_\tau=b)$以及$\mathbb E\tau$的精确表达式，并验证$\mu\to0$时分别退化为无漂移布朗运动的经典结果。",
+  "answer": "指数过程$M_t=e^{-2\mu X_t}$是鞅。对$\tau\wedge n$应用可选停止并利用$X_\tau\in\{-a,b\}$及有界收敛，得$1=p e^{-2\mu b}+(1-p)e^{2\mu a}$，故$p=(e^{2\mu a}-1)/(e^{2\mu a}-e^{-2\mu b})$。再对鞅$B_t=X_t-\mu t$停止，得$0=\mathbb E X_\tau-\mu\mathbb E\tau$，于是$\mathbb E\tau=[pb-(1-p)a]/\mu$。将$p$代入即可得到闭式。令$\mu\to0$，用指数展开得$p\to a/(a+b)$；进一步展开到一阶可得$\mathbb E\tau\to ab$，与无漂移情形一致。",
+  "subject": "概率论",
+  "source": "generated | trap: theorem-condition"
+}
