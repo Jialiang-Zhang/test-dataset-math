@@ -1,0 +1,7 @@
+{
+  "idx": 365,
+  "problem": "设上半平面$\mathbb H=\{(x_1,x_2):x_2>0\}$。从二维基本解出发构造$-\Delta$在$\mathbb H$上的Dirichlet Green函数，并由法向导数推导Poisson核。若$f\in C_b(\mathbb R)$且一致连续，证明由Poisson积分得到的调和函数在$x_2\downarrow0$时一致收敛到$f$。",
+  "answer": "对$y=(y_1,y_2)\in\mathbb H$令反射点$y^*=(y_1,-y_2)$。因$-\Delta[-(2\pi)^{-1}\log|x-y|]=\delta_y$，可取$G(x,y)=\frac1{2\pi}\log\frac{|x-y^*|}{|x-y|}$；当$x_2=0$时两距离相等，故$G=0$。在边界变量$y=(\xi,0)$处取外法向$n_y=-e_2$，计算得到Poisson核$P_{x_2}(x_1-\xi)=\frac1\pi\frac{x_2}{(x_1-\xi)^2+x_2^2}$。因此$u(x_1,x_2)=\int_{\mathbb R}P_{x_2}(x_1-\xi)f(\xi)d\xi$调和，且$\int_{\mathbb R}P_t(s)ds=1$。于是$u(x,t)-f(x)=\int P_t(s)[f(x-s)-f(x)]ds$。给定$\varepsilon>0$，由一致连续性取$\delta$使$|s|<\delta$时差值小于$\varepsilon$；近区积分至多$\varepsilon$。远区由$|f(x-s)-f(x)|\le2\|f\|_\infty$及$\int_{|s|\ge\delta}P_t(s)ds\to0$且与$x$无关，得到$\sup_x|u(x,t)-f(x)|\to0$。",
+  "subject": "偏微分方程",
+  "source": "generated | trap: theorem-condition"
+}
