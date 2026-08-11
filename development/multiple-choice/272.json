@@ -1,0 +1,7 @@
+{
+  "idx": 272,
+  "problem": "设$X_1,\\dots,X_n\\overset{iid}\\sim\\mathrm{Unif}(0,\\theta)$，$n\\ge2$，$\\theta>0$，记$T=X_{(n)}$。下列哪些说法正确？A. $T$是$\\theta$的最小充分且完全统计量。B. $U=X_{(1)}/X_{(n)}$的分布与$\\theta$无关，并且$U$与$T$独立。C. $\\frac{n+1}{n}T$是$\\theta$的UMVU估计。D. 样本均值$\\bar X$与$T$独立。请选择所有正确选项。",
+  "answer": "A,B,C",
+  "subject": "统计推断",
+  "source": "generated | trap: independence"
+}
