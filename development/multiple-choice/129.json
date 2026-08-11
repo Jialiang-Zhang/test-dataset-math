@@ -1,0 +1,7 @@
+{
+  "idx": 129,
+  "problem": "在$([0,1],\mathcal B,m)$上定义$f_n(x)=n^\alpha\mathbf 1_{(0,n^{-\beta})}(x)$，其中$\alpha,\beta>0$。关于$f_n\to0$的各种收敛性质，下列哪些结论正确？A. $f_n\to0$几乎处处对所有$\alpha,\beta>0$成立；B. $f_n\to0$于$L^1$当且仅当$\alpha<\beta$；C. $\{f_n\}$一致可积当且仅当$\alpha<\beta$；D. 若$\alpha=\beta$，则$f_n\to0$依测度成立但不在$L^1$中收敛于0；E. 若$\alpha>\beta$，则存在$L^1$控制函数$F$使$|f_n|\le F$几乎处处。",
+  "answer": "A,B,D",
+  "subject": "测度积分",
+  "source": "generated | trap: convergence-direction"
+}
