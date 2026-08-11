@@ -1,0 +1,7 @@
+{
+  "idx": 368,
+  "problem": "求$t\to\infty$时积分\n\[\nI(t)=\int_0^\infty e^{-tx^4-x^2}\,dx\n\]\n的前两项渐近展开，并给出误差阶。要求通过缩放与可积支配严格说明展开合法，而不是仅写形式Taylor展开。",
+  "answer": "令$x=t^{-1/4}y$，则$I(t)=t^{-1/4}\int_0^\infty e^{-y^4}e^{-t^{-1/2}y^2}dy$。对$u\ge0$，$e^{-u}=1-u+R(u)$且$|R(u)|\le u^2/2$。取$u=t^{-1/2}y^2$，得到$e^{-t^{-1/2}y^2}=1-t^{-1/2}y^2+R_t(y)$，并有$|R_t(y)|\le\frac12t^{-1}y^4$。因$y^4e^{-y^4}$可积，可在积分号内控制余项。于是$I(t)=t^{-1/4}[\int_0^\infty e^{-y^4}dy-t^{-1/2}\int_0^\infty y^2e^{-y^4}dy+O(t^{-1})]$。利用$\int_0^\infty y^m e^{-y^4}dy=\frac14\Gamma((m+1)/4)$，得\n\[\nI(t)=\frac14\Gamma(1/4)t^{-1/4}-\frac14\Gamma(3/4)t^{-3/4}+O(t^{-5/4}).\n\]",
+  "subject": "数学分析",
+  "source": "generated | standard"
+}
