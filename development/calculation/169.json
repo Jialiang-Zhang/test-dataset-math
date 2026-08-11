@@ -1,0 +1,7 @@
+{
+  "idx": 169,
+  "problem": "设$B_t$为标准布朗运动，$M_t=\\max_{0\\le s\\le t}B_s$。利用反射原理严格推导$(M_t,B_t)$的联合密度，并进一步证明固定$t>0$时$M_t-B_t$与$|B_t|$同分布。不得直接引用Lévy定理。",
+  "answer": "对$m>0$且$b<m$，反射原理给出$$P(M_t\\ge m,B_t\\le b)=P(B_t\\ge2m-b).$$因此$$P(M_t<m,B_t\\in db)=\\bigl[\\phi_t(b)-\\phi_t(2m-b)\\bigr]db,$$其中$\\phi_t(x)=(2\\pi t)^{-1/2}e^{-x^2/(2t)}$。对$m$求导得到联合密度$$f_{M_t,B_t}(m,b)=\\frac{2(2m-b)}{t\\sqrt{2\\pi t}}e^{-(2m-b)^2/(2t)},\\qquad m\\ge\\max\\{b,0\\}.$$令$D=M_t-B_t\\ge0$。对$d>0$，置$b=m-d$并沿$m\\ge\\max(m-d,0)$积分，即$m\\ge0$且$m\\le d$，故$$f_D(d)=\\int_0^d\\frac{2(m+d)}{t\\sqrt{2\\pi t}}e^{-(m+d)^2/(2t)}dm.$$令$u=m+d$，积分区间为$[d,2d]$；但这一步若只积分$m\\le d$会遗漏$b<0$时$m>d$允许的区域。正确条件仅为$m\\ge0$且$b=m-d\\le m$，因此$m\\in[0,\\infty)$。于是$$f_D(d)=\\int_0^\\infty\\frac{2(m+d)}{t\\sqrt{2\\pi t}}e^{-(m+d)^2/(2t)}dm=\\sqrt{\\frac{2}{\\pi t}}e^{-d^2/(2t)},$$这正是$|N(0,t)|$的密度，所以$M_t-B_t\\overset d=|B_t|$。",
+  "subject": "随机过程",
+  "source": "generated | trap: boundary-case"
+}
