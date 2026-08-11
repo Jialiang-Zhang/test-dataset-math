@@ -1,0 +1,7 @@
+{
+  "idx": 229,
+  "problem": "在有限测度空间$(X,\\mathcal A,\\mu)$上，设$p>1$且$f_n\\rightharpoonup f$于$L^p$。若再有$\\|f_n\\|_p\\to\\|f\\|_p$，则必有$f_n\\to f$于$L^p$。判断真伪，并给出严格理由；同时说明为何$p=1$时该命题一般失效。",
+  "answer": "true。$L^p(1<p<\\infty)$一致凸，具有Radon–Riesz性质，所以弱收敛加范数收敛推出强收敛。$p=1$一般失效：在$[0,1]$上取Rademacher函数$r_n$，令$f_n=1+r_n,f=1$。则$f_n\\rightharpoonup1$于$L^1$，且$\\|f_n\\|_1=\\|f\\|_1=1$，但$\\|f_n-f\\|_1=1$。",
+  "subject": "测度积分",
+  "source": "generated | trap: finite-vs-infinite-dimensional"
+}
