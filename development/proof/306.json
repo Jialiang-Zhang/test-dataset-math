@@ -1,0 +1,7 @@
+{
+  "idx": 306,
+  "problem": "设$f$在闭带状区域$0\le \operatorname{Re}z\le1$上连续、内部全纯，并满足$|f(z)|\le C e^{A|\operatorname{Im}z|}$。若边界上$|f(iy)|\le M_0$、$|f(1+iy)|\le M_1$，证明对$0\le x\le1$有$|f(x+iy)|\le M_0^{1-x}M_1^x$。要求处理无界带状区域，不能直接对整个带应用最大模原理；需引入衰减因子后在有限矩形上取极限。",
+  "answer": "先假设$M_0,M_1>0$。令$g(z)=f(z)M_0^{z-1}M_1^{-z}$，则两条竖边上$|g|\le1$。为控制水平边，对任意$\varepsilon>0$取$g_\varepsilon(z)=g(z)e^{\varepsilon z^2}$。因$\operatorname{Re}(z^2)=x^2-y^2$，在$|y|=R$时有$|e^{\varepsilon z^2}|\le e^{\varepsilon}e^{-\varepsilon R^2}$，结合$f$至多指数增长可令$R\to\infty$使水平边模小于1。于是对足够大矩形由最大模原理得内部$|g_\varepsilon|\le1$。先令$R\to\infty$，再令$\varepsilon\downarrow0$，得$|g(z)|\le1$，即$|f(x+iy)|\le M_0^{1-x}M_1^x$。若某个$M_j=0$，用$M_j+\eta$代替并令$\eta\downarrow0$。",
+  "subject": "复分析",
+  "source": "generated | trap: theorem-condition"
+}
