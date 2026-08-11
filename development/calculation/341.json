@@ -1,7 +1,7 @@
 {
   "idx": 341,
   "problem": "设$X_t$满足平方Bessel型SDE\n\[\ndX_t=\delta\,dt+2\sqrt{X_t}\,dW_t,\qquad X_0=x>0,\n\]\n其中$\delta\in(0,2)$，令$\tau_0=\inf\{t\ge0:X_t=0\}$。求$u_\lambda(x)=\mathbb E_x[e^{-\lambda\tau_0}]$（$\lambda>0$）满足的边值问题，并给出其用修正Bessel函数$K_\nu$表示的显式解；同时说明为何$\delta\ge2$时同一个“在0取值1”的边界条件不再对应实际命中时间。",
-  "answer": "生成元为$Lf=\delta f'+2x f''$，故对$0<\delta<2$，$u=u_\lambda$满足$2xu''+\delta u'=\lambda u$，$u(0+)=1$，$u(\infty)=0$。令$\nu=1-\delta/2\in(0,1)$，$z=\sqrt{2\lambda x}$。标准化后衰减解为$x^{\nu/2}K_\nu(\sqrt{2\lambda x})$。利用$K_\nu(z)\sim2^{\nu-1}\Gamma(\nu)z^{-\nu}$（$z\downarrow0$），归一化得\n\[\nu_\lambda(x)=\frac{2}{\Gamma(\nu)}\left(\frac{\lambda x}{2}\right)^{\nu/2}K_\nu(\sqrt{2\lambda x}),\qquad \nu=1-\delta/2.\n\]\n它在0趋1、无穷远趋0。若$\delta\ge2$，0是不可达边界，$\mathbb P_x(\tau_0<\infty)=0$；因此$\tau_0=\infty$几乎处处且$\mathbb E[e^{-\lambda\tau_0}]=0$。此时强行施加$u(0)=1$只是形式ODE边界值条件，而不是实际命中时间Laplace变换的概率边界条件。",
+  "answer": "生成元为$Lf=\delta f'+2x f''$，故对$0<\delta<2$，$u=u_\lambda$满足$2xu''+\delta u'=\lambda u$，$u(0+)=1$，$u(\infty)=0$。令$\nu=1-\delta/2\in(0,1)$，$z=\sqrt{2\lambda x}$。标准化后衰减解为$x^{\nu/2}K_\nu(\sqrt{2\lambda x})$。利用$K_\nu(z)\sim2^{\nu-1}\Gamma(\nu)z^{-\nu}$（$z\downarrow0$），归一化得\n\[u_\lambda(x)=\frac{2}{\Gamma(\nu)}\left(\frac{\lambda x}{2}\right)^{\nu/2}K_\nu(\sqrt{2\lambda x}),\qquad \nu=1-\delta/2.\n\]\n它在0趋1、无穷远趋0。若$\delta\ge2$，0是不可达边界，$\mathbb P_x(\tau_0<\infty)=0$；因此$\tau_0=\infty$几乎处处且$\mathbb E[e^{-\lambda\tau_0}]=0$。此时强行施加$u(0)=1$只是形式ODE边界值条件，而不是实际命中时间Laplace变换的概率边界条件。",
   "subject": "随机过程",
   "source": "generated | trap: boundary-case"
 }
