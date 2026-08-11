@@ -1,0 +1,7 @@
+{
+  "idx": 231,
+  "problem": "设$X=(X_1,X_2,X_3)^T\\sim N(0,\\Sigma)$，其中$$\\Sigma=\\begin{pmatrix}2&1&1\\\\1&2&0\\\\1&0&2\\end{pmatrix}.$$求条件分布$\\mathcal L(X_1\\mid X_2+X_3=s,\\ X_2-X_3=t)$，并由此判断$X_1$在给定$X_2+X_3$后是否与$X_2-X_3$条件独立。",
+  "answer": "令$Y=X_2+X_3,Z=X_2-X_3$。有$\\operatorname{Var}(Y)=4,\\operatorname{Var}(Z)=4,\\operatorname{Cov}(Y,Z)=0$，且$\\operatorname{Cov}(X_1,Y)=2,\\operatorname{Cov}(X_1,Z)=0$。故$$E[X_1\\mid Y=s,Z=t]=s/2,$$且$$\\operatorname{Var}(X_1\\mid Y,Z)=2-2^2/4=1.$$因此$X_1\\mid(Y=s,Z=t)\\sim N(s/2,1)$。该条件分布与$t$无关，所以$X_1\\perp Z\\mid Y$。",
+  "subject": "概率论",
+  "source": "generated | trap: independence"
+}
