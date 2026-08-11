@@ -1,0 +1,7 @@
+{
+  "idx": 289,
+  "problem": "求解Ermakov--Pinney初值问题$y''+\\omega^2y=\\frac{c}{y^3}$，$y(0)=a>0,y'(0)=0$，其中$\\omega>0,c>0$。要求给出保持正值的显式解，并用能量积分或直接代入验证；同时求其最小值和最大值。",
+  "answer": "取线性方程$u''+\\omega^2u=0$的基本解$u=\\cos\\omega t,v=\\sin(\\omega t)/\\omega$，其Wronskian为1。Pinney公式给$y^2=A u^2+2Buv+Dv^2$且$AD-B^2=c$。由初值得$A=a^2,B=0,D=c/a^2$，故$y(t)=\\sqrt{a^2\\cos^2(\\omega t)+\\frac{c}{a^2\\omega^2}\\sin^2(\\omega t)}$。括号内恒正，故这是全局正解。其平方在两个常数$a^2$与$c/(a^2\\omega^2)$之间振荡，因此$y_{\\min}=\\min\\{a,\\sqrt c/(a\\omega)\\}$，$y_{\\max}=\\max\\{a,\\sqrt c/(a\\omega)\\}$。亦可由能量$E=\\frac12y'^2+\\frac12\\omega^2y^2+\\frac{c}{2y^2}$守恒验证转向点。",
+  "subject": "常微分方程",
+  "source": "generated | standard"
+}
