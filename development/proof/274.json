@@ -1,0 +1,7 @@
+{
+  "idx": 274,
+  "problem": "在线性模型$y=X\\beta+\\varepsilon$中，$X=[\\mathbf1,Z]$满列秩，误差满足$\\operatorname{Cov}(\\varepsilon)=\\Sigma=\\sigma^2((1-\\rho)I_n+\\rho\\mathbf1\\mathbf1^T)$，其中$-1/(n-1)<\\rho<1$。证明：尽管误差相关，只要模型包含截距，GLS对斜率参数的估计与OLS斜率完全相同。进一步给出斜率估计协方差与通常独立同方差OLS公式相比发生的变化，并判断“GLS与OLS全部参数估计都相同”在此模型中是否正确。",
+  "answer": "令$M=I_n-\\mathbf1\\mathbf1^T/n$。在$\\operatorname{span}(\\mathbf1)$上，$\\Sigma$的特征值为$\\sigma^2(1+(n-1)\\rho)$；在$\\mathbf1^\\perp$上为$\\sigma^2(1-\\rho)$。故$\\Sigma^{-1}=aM+b\\mathbf1\\mathbf1^T/n$，其中$a=[\\sigma^2(1-\\rho)]^{-1}$、$b=[\\sigma^2(1+(n-1)\\rho)]^{-1}$。含截距时消去截距后的OLS斜率正规方程为$Z^TMZ\\hat\\gamma=Z^TMy$。又$M\\Sigma^{-1}M=aM$，故GLS残差化后的方程为$aZ^TMZ\\hat\\gamma_{GLS}=aZ^TMy$，从而$\\hat\\gamma_{GLS}=\\hat\\gamma_{OLS}$。协方差为$\\operatorname{Cov}(\\hat\\gamma)=\\sigma^2(1-\\rho)(Z^TMZ)^{-1}$，与把误差误当独立且方差$\\sigma^2$时相比多出因子$1-\\rho$。截距均为$\\bar y-\\bar Z^T\\hat\\gamma$，故在该复合对称协方差结构下全部系数点估计确实相同；但协方差公式不同，而且该结论依赖$\\mathbf1$为特征向量且其正交补上$\\Sigma$为标量，不能推广到一般相关误差。",
+  "subject": "线性回归",
+  "source": "generated | trap: theorem-condition"
+}
