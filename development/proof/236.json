@@ -1,0 +1,7 @@
+{
+  "idx": 236,
+  "problem": "设$X_1,\\dots,X_n\\overset{iid}\\sim\\operatorname{Exp}(\\theta)$，密度$f_\\theta(x)=\\theta e^{-\\theta x}\\mathbf1_{x>0}$。证明$T=\\sum_iX_i$是完备充分统计量，并证明$W=X_1/T$与$T$独立；最后用Basu定理解释该独立性。",
+  "answer": "联合密度为$\\theta^ne^{-\\theta T}\\mathbf1_{x_i>0}$，故$T$充分，且$T\\sim\\Gamma(n,\\text{rate }\\theta)$。若$E_\\theta g(T)=0$对所有$\\theta>0$，则$$\\int_0^\\infty g(t)t^{n-1}e^{-\\theta t}dt=0$$对所有$\\theta>0$，由Laplace变换唯一性得$g=0$几乎处处，故$T$完备。变量变换$U_i=X_i/T$的Jacobian为$T^{n-1}$，联合密度分解为只依赖$T$与只依赖$U$的乘积，因此$W=U_1$与$T$独立。又$W$分布不依赖$\\theta$，是辅助统计量；Basu定理同样推出其与完备充分统计量$T$独立。",
+  "subject": "统计推断",
+  "source": "generated | standard"
+}
