@@ -1,0 +1,7 @@
+{
+  "idx": 81,
+  "problem": "设$\omega>0,c>0,a>0$。求解Ermakov-Pinney初值问题$x''+\omega^2x=cx^{-3}$，$x(0)=a$，$x'(0)=0$。要求从守恒量或Pinney结构严格推出全局正解的显式表达式，并验证其不会在有限时间碰到$x=0$。",
+  "answer": "乘以$x'$得能量守恒$\frac12x'^2+\frac12\omega^2x^2+\frac{c}{2x^2}=\frac12\omega^2a^2+\frac{c}{2a^2}$。Pinney公式取线性方程$y''+\omega^2y=0$的基解$u=\cos\omega t$、$v=\omega^{-1}\sin\omega t$，Wronskian为1。满足初值的正解为$x(t)=\sqrt{a^2u(t)^2+(c/a^2)v(t)^2}=\sqrt{a^2\cos^2(\omega t)+\frac{c}{a^2\omega^2}\sin^2(\omega t)}$。直接求导代回可验证方程与初值。因括号中是两个正系数乘$\cos^2$与$\sin^2$之和，其下界为$\min\{a^2,c/(a^2\omega^2)\}>0$，故$x(t)$对所有$t\in\mathbb R$均保持正值，从而不存在有限时间碰撞奇点。",
+  "subject": "常微分方程",
+  "source": "generated | standard"
+}
