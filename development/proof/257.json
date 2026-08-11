@@ -1,0 +1,7 @@
+{
+  "idx": 257,
+  "problem": "设$u\\in C^2(\\mathbb R^n\\times[0,T])$满足波动方程$u_{tt}-c^2\\Delta u=0$。若初值$u(\\cdot,0),u_t(\\cdot,0)$均在球$B_R(0)$外为0，证明有限传播速度：对任意$t\\in[0,T]$，$u(x,t)=0$当$|x|>R+ct$。要求使用截断能量/后向光锥方法证明，而不是直接引用显式解公式。",
+  "answer": "固定$(x_0,t_0)$满足$|x_0|>R+ct_0$，考虑后向圆锥截面$B_{c(t_0-t)}(x_0)$并定义局部能量$$E(t)=\\frac12\\int_{B_{c(t_0-t)}(x_0)}(u_t^2+c^2|\\nabla u|^2)dx.$$对移动区域用Reynolds公式，并利用$u_{tt}=c^2\\Delta u$分部积分，得到$$E'(t)=c^2\\int_{\\partial B}u_t\\partial_\\nu u\,dS-\\frac c2\\int_{\\partial B}(u_t^2+c^2|\\nabla u|^2)dS\\le0,$$因为$2c|u_t\\partial_\\nu u|\\le u_t^2+c^2|\\nabla u|^2$。在$t=0$时，该球完全落在$B_R(0)$外：对其中$x$有$|x|\\ge|x_0|-ct_0>R$，故$E(0)=0$。因此$E(t)=0$于$[0,t_0]$，从而在圆锥内部$u_t=\\nabla u=0$。特别在顶点附近$u$为常数，而沿$t=0$底面该常数为0，所以$u(x_0,t_0)=0$。任取这样的$(x_0,t_0)$即得$\\operatorname{supp}u(\\cdot,t)\\subset B_{R+ct}(0)$。",
+  "subject": "偏微分方程",
+  "source": "generated | standard"
+}
