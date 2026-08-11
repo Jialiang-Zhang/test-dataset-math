@@ -1,0 +1,7 @@
+{
+  "idx": 190,
+  "problem": "设$p$为满足$p\equiv1\pmod4$的奇素数。请利用Wilson定理与高斯整数环$\mathbb Z[i]$的欧几里得整环结构，严格证明存在整数$a,b$使$$p=a^2+b^2,$$并进一步证明这种表示在忽略$a,b$的次序与符号后唯一。要求完整说明为何可由模$p$的$-1$平方根构造出范数恰为$p$的高斯整数因子。",
+  "answer": "由Wilson定理$(p-1)!\equiv-1\pmod p$。因$p\equiv1\pmod4$，配对$k$与$p-k$得$$\left(\left(\frac{p-1}{2}\right)!\right)^2\equiv-1\pmod p.$$故存在整数$x$满足$x^2\equiv-1\pmod p$，于是$p\mid(x+i)(x-i)$于$\mathbb Z[i]$中。若$p$在$\mathbb Z[i]$中仍不可约，则因$\mathbb Z[i]$是UFD而不可约即素，从$p\mid(x+i)(x-i)$可推出$p\mid x+i$或$p\mid x-i$，这要求$p$同时整除实部$x$与虚部$1$，不可能。因此$p$在$\mathbb Z[i]$中可约。取非平凡因子$p=\alpha\beta$，取范数得$p^2=N(\alpha)N(\beta)$。非单位且均非与$p$伴随，故两个正整数范数都严格介于$1$与$p^2$之间，并且其素因子只能来自$p$，于是必有$N(\alpha)=N(\beta)=p$。写$\alpha=a+bi$即得$p=a^2+b^2$。唯一性方面，若$p=(a+bi)(a-bi)=(c+di)(c-di)$，在UFD $\mathbb Z[i]$中$p$的不可约分解唯一，故$c+di$必与$a+bi$或$a-bi$相伴；乘以单位$\{\pm1,\pm i\}$恰对应于改变符号或交换$a,b$。因此表示在忽略次序与符号后唯一。",
+  "subject": "非基础及进阶课程",
+  "source": "generated | standard"
+}
