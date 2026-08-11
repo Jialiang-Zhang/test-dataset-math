@@ -1,0 +1,7 @@
+{
+  "idx": 144,
+  "problem": "设$\Phi(N)=\sum_{n\le N}\varphi(n)$。请利用恒等式$\varphi(n)=n\sum_{d\mid n}\mu(d)/d$、Möbius反演与$\zeta(2)$的Euler乘积，严格证明渐近公式$\Phi(N)=\frac{3}{\pi^2}N^2+O(N\log N)$。要求清楚处理求和次序交换以及误差项。",
+  "answer": "由$\varphi(n)=n\sum_{d\mid n}\mu(d)/d$，交换有限求和得$\Phi(N)=\sum_{d\le N}\mu(d)\sum_{m\le N/d}m$。设$M_d=\lfloor N/d\rfloor$，则$\sum_{m\le M_d}m=\frac12M_d^2+O(M_d)$，且$M_d=N/d+O(1)$，因此$\Phi(N)=\frac{N^2}{2}\sum_{d\le N}\frac{\mu(d)}{d^2}+O\!\left(N\sum_{d\le N}\frac1d\right)+O\!\left(\sum_{d\le N}1\right)$。后两项均为$O(N\log N)$。又$\sum_{d=1}^\infty\mu(d)/d^2=1/\zeta(2)=6/\pi^2$，而尾项绝对值$\le\sum_{d>N}d^{-2}=O(1/N)$，故截断主项误差为$O(N)$。于是$\Phi(N)=\frac{N^2}{2}\cdot\frac{6}{\pi^2}+O(N\log N)=\frac{3}{\pi^2}N^2+O(N\log N)$。",
+  "subject": "非基础及进阶课程",
+  "source": "generated | standard"
+}
