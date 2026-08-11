@@ -1,0 +1,7 @@
+{
+  "idx": 215,
+  "problem": "考虑稳定的$M/M/1$排队系统，顾客到达率$\lambda$、服务率$\mu$满足$0<\lambda<\mu$。系统从恰有1名顾客开始，定义忙期$T$为系统首次回到0的时间。请用首次跃迁分析严格推导$\phi(s)=\mathbb E(e^{-sT})$的闭式表达式，并由此求$\mathbb E[T]$。要求说明二次方程的两个根中为何只能选择其中一个。",
+  "answer": "从状态1开始，首次事件时间$E\sim\operatorname{Exp}(\lambda+\mu)$。若首次为服务完成（概率$\mu/(\lambda+\mu)$），忙期结束；若首次为到达（概率$\lambda/(\lambda+\mu)$），系统到2。利用出生死亡过程的分枝/更新结构，从2降到0的时间可分解为两个独立同分布于$T$的忙期之和，因此$$\phi(s)=\mathbb E(e^{-sE})\left[\frac{\mu}{\lambda+\mu}+\frac{\lambda}{\lambda+\mu}\phi(s)^2\right].$$又$\mathbb E(e^{-sE})=(\lambda+\mu)/(\lambda+\mu+s)$，故$$\lambda\phi(s)^2-(\lambda+\mu+s)\phi(s)+\mu=0.$$解得$$\phi(s)=\frac{\lambda+\mu+s\pm\sqrt{(\lambda+\mu+s)^2-4\lambda\mu}}{2\lambda}.$$Laplace变换必须满足$0\le\phi(s)\le1$且$\phi(0)=1$；正号根在$s=0$等于$\mu/\lambda>1$，故舍去。于是$$\phi(s)=\frac{\lambda+\mu+s-\sqrt{(\lambda+\mu+s)^2-4\lambda\mu}}{2\lambda}.$$由$\mathbb E[T]=-\phi'(0)$，计算得$$\mathbb E[T]=\frac1{\mu-\lambda}.$$",
+  "subject": "随机过程",
+  "source": "generated | trap: boundary-case"
+}
