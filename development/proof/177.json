@@ -1,0 +1,7 @@
+{
+  "idx": 177,
+  "problem": "设$B$为标准布朗运动，固定$T>0$，定义最后一次过零时刻$$g_T=\sup\{0\le s\le T:B_s=0\}.$$请不直接引用反正弦律，利用Markov性质、反射原理与高斯积分严格推导$g_T$的分布函数，并给出其密度。",
+  "answer": "对$0<t<T$，事件$\{g_T\le t\}$表示从时刻$t$之后布朗运动不再击中0。条件于$B_t=x$，由平移后的Markov性质与反射原理，长度$T-t$内从$x$出发不击中0的概率为$$2\Phi\!\left(\frac{|x|}{\sqrt{T-t}}\right)-1.$$因此$$P(g_T\le t)=\int_{\mathbb R}\left[2\Phi\!\left(\frac{|x|}{\sqrt{T-t}}\right)-1\right]\frac{e^{-x^2/(2t)}}{\sqrt{2\pi t}}dx.$$利用对称性并作二维标准正态的极坐标解释，等价于计算独立标准正态$(Z_1,Z_2)$落入楔形区域$0<Z_2<\sqrt{t/(T-t)}|Z_1|$的角度比例，得到$$P(g_T\le t)=\frac2\pi\arctan\sqrt{\frac{t}{T-t}}=\frac2\pi\arcsin\sqrt{\frac tT}.$$求导得密度$$f_{g_T}(t)=\frac1{\pi\sqrt{t(T-t)}},\qquad0<t<T.$$这就是第一反正弦律。",
+  "subject": "概率论",
+  "source": "generated | standard"
+}
