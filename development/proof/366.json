@@ -1,0 +1,7 @@
+{
+  "idx": 366,
+  "problem": "证明每个可逆复矩阵$A\in GL_n(\mathbb C)$都存在矩阵对数，即存在$B\in M_n(\mathbb C)$使$e^B=A$。要求从Jordan标准形出发，对每个Jordan块显式构造有限多项式形式的对数；并证明不可逆矩阵不可能是某个矩阵指数。",
+  "answer": "将$A=PJP^{-1}$，其中每个Jordan块可写成$J_\lambda=\lambda(I+N)$，$\lambda\ne0$且$N$幂零。任取复数$l_\lambda$满足$e^{l_\lambda}=\lambda$。若$N^m=0$，定义$L_\lambda=l_\lambda I+\sum_{k=1}^{m-1}(-1)^{k+1}N^k/k$。由于$N$幂零，$\log(I+N)$级数在此处有限终止，而形式幂级数恒等式$\exp(\log(I+N))=I+N$成为有限多项式恒等式，所以$e^{L_\lambda}=\lambda(I+N)=J_\lambda$。把各块的$L_\lambda$作直和得$L$，再令$B=PLP^{-1}$，则$e^B=Pe^LP^{-1}=A$。反之，对任意$B$，$e^B$恒可逆且逆为$e^{-B}$；因此不可逆矩阵绝不可能写成矩阵指数。",
+  "subject": "高等代数",
+  "source": "generated | trap: necessary-vs-sufficient"
+}
