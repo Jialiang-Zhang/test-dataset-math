@@ -1,0 +1,7 @@
+{
+  "idx": 321,
+  "problem": "判断：若$X,Y,Z$联合高斯且$X$与$Y$不相关、$X$与$Z$不相关，则$X$与$(Y,Z)$独立；进一步，若$X$与$Y$在给定$Z$条件下协方差为零，则$X$与$Y$条件独立。",
+  "answer": "true",
+  "subject": "概率论",
+  "source": "generated | trap: independence"
+}
