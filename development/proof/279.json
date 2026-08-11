@@ -1,0 +1,7 @@
+{
+  "idx": 279,
+  "problem": "设$f_m:S^1\\to S^1$为度数$m\\ne0$的映射，$T_m$为其映射环$T_m=(S^1\\times[0,1])/(z,1)\\sim(f_m(z),0)$。用van Kampen定理求$\\pi_1(T_m)$的群表示，并求其阿贝尔化$H_1(T_m;\\mathbb Z)$。特别比较$m=1$、$m=-1$与$|m|\\ge2$三种情形，指出为什么$|m|\\ge2$时不能把$T_m$误认为通常意义上的纤维丛映射环。",
+  "answer": "取$a$为$S^1$方向生成元，$t$为稳定字母。van Kampen给出上升HNN扩张$\\pi_1(T_m)=\\langle a,t\\mid tat^{-1}=a^m\\rangle$。阿贝尔化后关系变为$(m-1)a=0$，故$H_1(T_m;\\mathbb Z)\\cong\\mathbb Z\\langle t\\rangle\\oplus\\mathbb Z/(m-1)\\mathbb Z\\langle a\\rangle$。当$m=1$时为$\\mathbb Z^2$；$m=-1$时为$\\mathbb Z\\oplus\\mathbb Z/2$，与Klein瓶一致；$|m|\\ge2$时为$\\mathbb Z\\oplus\\mathbb Z/|m-1|$。当$m=\\pm1$时$f_m$可取为圆周自同胚，映射环是以$S^1$为纤维的真正纤维丛；若$|m|\\ge2$，度$m$映射不是同胚，粘合不能由纤维自同胚作为monodromy，因而虽仍是mapping torus，却不是通常的$S^1$纤维丛。",
+  "subject": "拓扑学",
+  "source": "generated | standard"
+}
