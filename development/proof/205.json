@@ -1,0 +1,7 @@
+{
+  "idx": 205,
+  "problem": "考虑有向网络上的最小费用流问题$$\min c^Tx\quad\text{s.t. }Bx=b,\;0\le x\le u,$$其中$B$为节点-弧关联矩阵，约定每条弧$e=(i,j)$对应列在尾点$i$取$-1$、头点$j$取$+1$，且可行域非空。请从线性规划Lagrange对偶出发推导节点势$\pi$与约化费用$$r_e=c_e+\pi_j-\pi_i$$的最优性条件，并严格证明：一个可行流$x$最优，当且仅当存在势$\pi$使每条弧满足$$x_e=0\Rightarrow r_e\ge0,\qquad 0<x_e<u_e\Rightarrow r_e=0,\qquad x_e=u_e\Rightarrow r_e\le0.$$要求解释这些条件与互补松弛及残量网络中不存在负费用回路的关系。",
+  "answer": "对约束$Bx=b$引入自由乘子$\pi$，对$-x\le0$与$x-u\le0$分别引入$\alpha,\beta\ge0$。Lagrangian为$$L=c^Tx+\pi^T(Bx-b)-\alpha^Tx+\beta^T(x-u).$$站立条件给出$$c+B^T\pi-\alpha+\beta=0,$$即$r=\alpha-\beta$，其中$r_e=c_e+\pi_j-\pi_i$。互补松弛为$\alpha_ex_e=0$与$\beta_e(x_e-u_e)=0$。若$x_e=0$且$u_e>0$，则$\beta_e=0$，故$r_e=\alpha_e\ge0$；若$0<x_e<u_e$，则$\alpha_e=\beta_e=0$，故$r_e=0$；若$x_e=u_e>0$，则$\alpha_e=0$，故$r_e=-\beta_e\le0$。反之，若存在$\pi$满足这些符号条件，可令$\alpha_e=\max(r_e,0)$、$\beta_e=\max(-r_e,0)$，按三种流量状态验证站立性与互补松弛，从而由LP强对偶得到$x$最优。残量网络中，原向弧在$x_e<u_e$时可增流，其约化费用必须非负；反向弧在$x_e>0$时存在，其约化费用为$-r_e$也必须非负。于是上述条件等价于所有残量弧约化费用非负，因环上势差望远镜相消，任一残量回路的原费用等于其约化费用之和，故不存在负费用回路。反之若存在负费用残量回路，沿其增广即可降低总费用，当前流不可能最优。",
+  "subject": "运筹学",
+  "source": "generated | trap: necessary-vs-sufficient"
+}
