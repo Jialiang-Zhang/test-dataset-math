@@ -1,0 +1,7 @@
+{
+  "idx": 150,
+  "problem": "严格分类所有阶数为$45=3^2\cdot5$的有限群（精确到同构）。要求不能仅列出候选答案；必须用Sylow定理证明Sylow $3$-子群与Sylow $5$-子群均正规，再证明群分解为它们的内部直积，并利用阶为$p^2$的群必为阿贝尔群完成同构分类。",
+  "answer": "设$|G|=45$。Sylow $5$-子群个数$n_5$满足$n_5\equiv1\pmod5$且$n_5\mid9$，故$n_5=1$，于是唯一的Sylow $5$-子群$Q\triangleleft G$，且$Q\cong C_5$。Sylow $3$-子群个数$n_3$满足$n_3\equiv1\pmod3$且$n_3\mid5$；$5\equiv2\pmod3$，故只能$n_3=1$，于是Sylow $3$-子群$P\triangleleft G$。因$|P|=9$，有限$p^2$阶群必阿贝尔，故$P\cong C_9$或$C_3\times C_3$。又$P,Q$均正规且$P\cap Q=1$（交集阶同时整除$9$与$5$），故对$p\in P,q\in Q$，交换子$[p,q]\in P\cap Q=1$，所以$P,Q$逐元素交换。并且$|PQ|=|P||Q|=45$，故$G=PQ\cong P\times Q$。因此仅有两种同构类型：$C_9\times C_5\cong C_{45}$，以及$(C_3\times C_3)\times C_5\cong C_{15}\times C_3$。二者不互同构，因为前者含有阶$45$元素而后者最大元素阶为$15$。",
+  "subject": "抽象代数",
+  "source": "generated | standard"
+}
