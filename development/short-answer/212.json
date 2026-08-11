@@ -1,0 +1,7 @@
+{
+  "idx": 212,
+  "problem": "在单位球面$S^2$上取余纬为$\theta\in(0,\pi)$的纬圈$C_\theta$，按正向绕行一周。将一个切向量沿$C_\theta$作Levi-Civita平行移动。请计算其返回起点后的holonomy旋转角（模$2\pi$），并用Gauss-Bonnet定理解释为何该结果与纬圈所围球冠面积严格一致。要求同时指出常见表达$2\pi\cos\theta$与球冠面积$2\pi(1-\cos\theta)$为何并不矛盾。",
+  "answer": "单位球面高斯曲率$K\equiv1$。纬圈围成的北球冠面积为$A=2\pi(1-\cos\theta)$。对定向闭曲线，平行移动holonomy角满足$$\Omega\equiv\int_DK\,dA\equiv2\pi(1-\cos\theta)\pmod{2\pi},$$符号取决于曲线和法向的定向约定。另一方面直接用球面正交标架计算连接1-形式可得沿纬圈的总连接积分为$-2\pi\cos\theta$，故返回后的向量相对初始标架旋转$2\pi\cos\theta$（差一个定向符号）。二者之差为$2\pi$：$$2\pi(1-\cos\theta)\equiv-2\pi\cos\theta\pmod{2\pi}.$$因此“$2\pi\cos\theta$”与“球冠面积”描述的是同一holonomy类，只是代表元和定向约定不同。",
+  "subject": "微分几何",
+  "source": "generated | trap: local-vs-global"
+}
