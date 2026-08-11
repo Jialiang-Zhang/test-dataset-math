@@ -1,0 +1,7 @@
+{
+  "idx": 102,
+  "problem": "在线性模型$y=X\beta+\varepsilon$中，允许$X\in\mathbb R^{n\times p}$秩亏。给定$L\in\mathbb R^{m\times p}$，假设$\ker X\cap\ker L=\{0\}$。定义广义岭估计$\hat\beta_\lambda=(X^TX+\lambda L^TL)^{-1}X^Ty$。证明对每个$\lambda>0$逆矩阵存在；并证明当$\lambda\downarrow0$时，$\hat\beta_\lambda$收敛到所有最小二乘解中使$\|L\beta\|_2$最小的唯一解。",
+  "answer": "对任意$v\ne0$，$v^T(X^TX+\lambda L^TL)v=\|Xv\|^2+\lambda\|Lv\|^2>0$，因为若为0则$v\in\ker X\cap\ker L$，与假设矛盾，所以矩阵正定可逆。令$\beta_\lambda$最小化$F_\lambda(\beta)=\|y-X\beta\|^2+\lambda\|L\beta\|^2$。设$\mathcal S=\arg\min\|y-X\beta\|^2$，并令$\beta_*$是$\mathcal S$上$\|L\beta\|$的唯一最小者；唯一性来自若$\beta_1,\beta_2\in\mathcal S$且$L\beta_1=L\beta_2$，则$X(\beta_1-\beta_2)=0$且$L(\beta_1-\beta_2)=0$，故二者相等。由最优性$F_\lambda(\beta_\lambda)\le F_\lambda(\beta_*)$，得残差$\|y-X\beta_\lambda\|^2$趋向最小二乘最小值，且$\|L\beta_\lambda\|\le\|L\beta_*\|$。再由映射$\beta\mapsto(X\beta,L\beta)$在有限维且核为0，存在$c>0$使$\|\beta\|\le c(\|X\beta\|+\|L\beta\|)$，故$\{\beta_\lambda\}$有界。任意聚点$\bar\beta$属于$\mathcal S$，且由下半连续性$\|L\bar\beta\|\le\|L\beta_*\|$，故唯一性迫使$\bar\beta=\beta_*$。所有聚点相同，所以全族收敛到$\beta_*。$",
+  "subject": "线性回归",
+  "source": "generated | trap: missing-assumption"
+}
