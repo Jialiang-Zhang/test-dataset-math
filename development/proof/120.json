@@ -1,0 +1,7 @@
+{
+  "idx": 120,
+  "problem": "在线性模型$y=X\beta+\varepsilon$中，设误差满足平稳AR(1)协方差$\operatorname{Cov}(\varepsilon_i,\varepsilon_j)=\frac{\sigma^2}{1-\rho^2}\rho^{|i-j|}$，其中$|\rho|<1$已知、$X$满列秩。严格推导一个下三角白化变换$P$使$P\varepsilon\sim(0,\sigma^2I)$，并证明GLS估计量等价于对白化后的模型做OLS。要求给出首行与后续各行的精确变换，并说明为什么不能把首行也简单写成$y_1-\rho y_0$。",
+  "answer": "取$P$为下三角矩阵，使第一行仅在第1列取$\sqrt{1-\rho^2}$，对$t\ge2$第$t$行在第$t$列取1、在第$t-1$列取$-\rho$。于是$(P\varepsilon)_1=\sqrt{1-\rho^2}\,\varepsilon_1$，而$(P\varepsilon)_t=\varepsilon_t-\rho\varepsilon_{t-1}$。由平稳AR(1)协方差直接计算可得各分量方差均为$\sigma^2$且互不相关，因此$P\Sigma P^T=\sigma^2I$。从而$\Sigma^{-1}=\sigma^{-2}P^TP$。GLS为$\hat\beta_{GLS}=(X^T\Sigma^{-1}X)^{-1}X^T\Sigma^{-1}y=[(PX)^T(PX)]^{-1}(PX)^T(Py)$，恰为变换后模型$Py=PX\beta+P\varepsilon$的OLS。首行的$\sqrt{1-\rho^2}$来自初始平稳方差$\operatorname{Var}(\varepsilon_1)=\sigma^2/(1-\rho^2)$；不存在观测到的$\varepsilon_0$，若忽略该首行修正就不会得到正确的$\Sigma^{-1}$。",
+  "subject": "线性回归",
+  "source": "generated | trap: boundary-case"
+}
