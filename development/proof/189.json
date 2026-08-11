@@ -1,0 +1,7 @@
+{
+  "idx": 189,
+  "problem": "利用$\mathbb{RP}^n$的标准CW分解（每一维恰有一个胞腔），严格计算其整系数奇异同调群。要求说明胞腔边界算子为什么满足$$d_k=1+(-1)^k,$$并据此给出所有$H_k(\mathbb{RP}^n;\mathbb Z)$。最后由顶维同调判断$\mathbb{RP}^n$何时可定向。",
+  "answer": "$\mathbb{RP}^n$由$\mathbb{RP}^{k-1}$逐级附加一个$k$胞腔得到。标准附着映射由$S^{k-1}\to\mathbb{RP}^{k-1}$的二重覆盖给出；在计算相邻胞腔的胞腔边界时，两张半球对目标$(k-1)$胞腔的次数分别为$1$与$(-1)^k$，故$$d_k=1+(-1)^k=\begin{cases}0,&k\text{奇},\\2,&k\text{偶}.\end{cases}$$胞腔链群$C_k\cong\mathbb Z$。因此$H_0\cong\mathbb Z$；对$0<k<n$，若$k$奇，则$\ker d_k=\mathbb Z$而$\operatorname{im}d_{k+1}=2\mathbb Z$，故$H_k\cong\mathbb Z/2$；若$k$偶，则$\ker d_k=0$，故$H_k=0$。顶维中，若$n$奇，则$d_n=0$且没有更高边界，故$H_n\cong\mathbb Z$；若$n$偶，则$d_n=2$为单射，故$H_n=0$。综上$$H_k(\mathbb{RP}^n;\mathbb Z)=\begin{cases}\mathbb Z,&k=0,\\\mathbb Z/2,&0<k<n\text{且}k\text{奇},\\\mathbb Z,&k=n\text{且}n\text{奇},\\0,&\text{其余}.\end{cases}$$闭连通$n$维流形可定向当且仅当顶维整系数同调为$\mathbb Z$，因此$\mathbb{RP}^n$恰在$n$为奇数时可定向。",
+  "subject": "拓扑学",
+  "source": "generated | standard"
+}
