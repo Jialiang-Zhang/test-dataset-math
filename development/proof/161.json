@@ -1,0 +1,7 @@
+{
+  "idx": 161,
+  "problem": "设$N_g=\#^g\mathbb{RP}^2$为闭连通非定向曲面（$g\ge1$）。请从标准$2g$边多边形表示与van Kampen定理出发证明$$\pi_1(N_g)\cong\langle a_1,\dots,a_g\mid a_1^2a_2^2\cdots a_g^2=1\rangle.$$随后计算其第一同调群$H_1(N_g;\mathbb Z)$，并利用定向双覆盖与Euler示性数证明该双覆盖同胚于 genus $g-1$ 的闭可定向曲面。要求解释$\mathbb Z/2$挠元从何而来。",
+  "answer": "标准多边形模型的边识别字为$a_1a_1a_2a_2\cdots a_ga_g$。把唯一$0$-胞腔与$g$条$1$-胞腔作为$1$-骨架，其基本群为自由群$F_g$；附着$2$-胞腔的边界词为$a_1^2\cdots a_g^2$，van Kampen给出$$\pi_1(N_g)=\langle a_1,\ldots,a_g\mid a_1^2\cdots a_g^2=1\rangle.$$第一同调是基本群的阿贝尔化，因此$$H_1(N_g;\mathbb Z)\cong\mathbb Z^g/\langle2(e_1+\cdots+e_g)\rangle\cong\mathbb Z^{g-1}\oplus\mathbb Z/2.$$最后一个同构可由把向量$e_1+\cdots+e_g$补成$\mathbb Z^g$的一组整基后做Smith标准形得到；唯一关系是该原始向量的$2$倍，故产生一个$2$阶挠元。由于$N_g$非定向，其定向双覆盖连通且可定向。$\chi(N_g)=2-g$，二重覆盖使Euler示性数乘$2$，故覆盖曲面$\widetilde N_g$满足$\chi(\widetilde N_g)=4-2g$。若其可定向genus为$h$，则$2-2h=4-2g$，故$h=g-1$。由闭可定向曲面分类定理，$\widetilde N_g\cong\Sigma_{g-1}$。",
+  "subject": "拓扑学",
+  "source": "generated | standard"
+}
