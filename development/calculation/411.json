@@ -1,0 +1,7 @@
+{
+  "idx": 411,
+  "problem": "设$X_t=\mu t+\sigma B_t$，$\sigma>0$，从$X_0=x\in(a,b)$出发，$\tau=\inf\{t\ge0:X_t\notin(a,b)\}$。当$\mu\ne0$时，利用指数鞅或生成元边值问题求$\mathbb P_x(X_\tau=b)$；并给出$\mu\to0$的极限，说明为什么直接把有漂移公式中的分子分母分别令$\mu=0$会形成$0/0$而必须取极限。",
+  "answer": "命中概率$u(x)$满足$(\sigma^2/2)u''+\mu u'=0$，$u(a)=0,u(b)=1$。积分得$u(x)=\frac{1-e^{-2\mu(x-a)/\sigma^2}}{1-e^{-2\mu(b-a)/\sigma^2}}$。亦可对适当指数鞅在$\tau\wedge n$停时后取极限得到同式。令$\mu\to0$，用$1-e^{-cy}\sim cy$，得到$u(x)=(x-a)/(b-a)$。漂移为零是可去奇点而非直接代入。",
+  "subject": "概率论",
+  "source": "generated | trap: boundary-case"
+}
