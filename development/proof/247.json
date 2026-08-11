@@ -1,0 +1,7 @@
+{
+  "idx": 247,
+  "problem": "设$(\\Omega,\\mathcal F,\\mathbb P)$为概率空间，$\\mathcal F_n\\uparrow\\mathcal F_\\infty:=\\sigma(\\cup_n\\mathcal F_n)$，且$X\\in L^1$。证明$M_n=\\mathbb E[X\\mid\\mathcal F_n]$几乎处处且在$L^1$中收敛到$\\mathbb E[X\\mid\\mathcal F_\\infty]$。随后构造一个非负、$L^1$有界但非一致可积的鞅$(N_n)$，使$N_n\\to0$几乎处处而$\\|N_n\\|_1\\equiv1$，从而说明仅有$L^1$有界不能推出$L^1$收敛。",
+  "answer": "第一部分是Lévy向上定理。先由鞅收敛定理及条件期望族的一致可积性得到$M_n\\to M_\\infty$几乎处处和$L^1$；对任意$A\\in\\cup_n\\mathcal F_n$，当$n$足够大时$A\\in\\mathcal F_n$，故$\\int_A M_n=\\int_A X$。令$n\\to\\infty$并用$L^1$收敛，得$\\int_A M_\\infty=\\int_A X$。再由单调类定理推广到全部$A\\in\\mathcal F_\\infty$，故$M_\\infty=\\mathbb E[X\\mid\\mathcal F_\\infty]$。反例取$\\Omega=(0,1]$配Lebesgue测度，$\\mathcal F_n$为前$n$层二进分割生成的$\\sigma$代数，令$N_n=2^n\\mathbf1_{(0,2^{-n}]}$。在原子$(0,2^{-n}]$上，下一步有一半概率取$2^{n+1}$、一半取0，因此$\\mathbb E[N_{n+1}\\mid\\mathcal F_n]=N_n$；故$(N_n)$为非负鞅。对每个$x>0$，最终$x>2^{-n}$，所以$N_n(x)\\to0$，但$\\mathbb E N_n=1$恒成立，故不可能在$L^1$收敛到0。若其一致可积，则几乎处处收敛结合一致可积会推出$L^1$收敛，矛盾，所以该鞅非一致可积。",
+  "subject": "测度积分",
+  "source": "generated | trap: missing-assumption"
+}
