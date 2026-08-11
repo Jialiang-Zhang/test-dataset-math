@@ -1,0 +1,7 @@
+{
+  "idx": 238,
+  "problem": "考虑线性模型$y=X\\beta+\\varepsilon$，$E\\varepsilon=0$，$\\operatorname{Cov}(\\varepsilon)=\\sigma^2\\Omega$，其中$\\Omega\\succ0$已知，$X=[X_1\\ X_2]$满列秩。证明广义Frisch–Waugh–Lovell定理，并给出$\\hat\\beta_2$的精确矩阵公式。",
+  "answer": "令$W=\\Omega^{-1}$，$$P_1=X_1(X_1^TWX_1)^{-1}X_1^TW,\\qquad M_1=I-P_1.$$GLS正规方程为$X^TW(y-X\\hat\\beta)=0$。消去$\\hat\\beta_1$得到$$X_2^TWM_1(y-X_2\\hat\\beta_2)=0,$$因此$$\\boxed{\\hat\\beta_2=(X_2^TWM_1X_2)^{-1}X_2^TWM_1y}.$$又$M_1^TW=WM_1$且$M_1^2=M_1$，所以这正是对残差化后的$M_1y$和$M_1X_2$做$W$加权回归所得系数。",
+  "subject": "线性回归",
+  "source": "generated | standard"
+}
