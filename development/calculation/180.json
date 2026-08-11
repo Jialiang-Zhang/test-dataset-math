@@ -1,0 +1,7 @@
+{
+  "idx": 180,
+  "problem": "设$m>0$且$0<a<m$。必须使用复分析中的钥匙孔围道与多值函数分支，严格计算参数积分$$I(a)=\int_0^\infty\frac{x^{a-1}}{1+x^m}\,dx,$$并在证明可对参数$a$求导的前提下进一步求出$$J(a)=\int_0^\infty\frac{x^{a-1}\log x}{1+x^m}\,dx.$$要求明确分支、围道上下沿的相位差以及留数。",
+  "answer": "取$z^{a-1}=e^{(a-1)\Log z}$，规定$0<\arg z<2\pi$，沿正实轴作钥匙孔围道。函数$F(z)=z^{a-1}/(1+z^m)$在扇形分支中对$1+z^m=0$的根求留数；等价地先作代换$u=x^m$可将围道计算归结为标准函数$z^{a/m-1}/(1+z)$。上下沿贡献相差因子$e^{2\pi i a/m}$，围道只包围$z=-1$，从而$$\bigl(1-e^{2\pi i a/m}\bigr)\int_0^\infty\frac{u^{a/m-1}}{1+u}\,du=-2\pi i e^{\pi i a/m}.$$化简并乘以$1/m$得$$I(a)=\frac\pi m\csc\frac{\pi a}{m}.$$对任意紧子区间$[\varepsilon,m-\varepsilon]$，$x^{a-1}|\log x|/(1+x^m)$可由分别在$(0,1)$和$(1,\infty)$上的可积幂函数控制，故可在积分号下对$a$求导。于是$$J(a)=I'(a)=-\frac{\pi^2}{m^2}\csc\frac{\pi a}{m}\cot\frac{\pi a}{m}.$$",
+  "subject": "复分析",
+  "source": "generated | standard"
+}
