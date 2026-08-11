@@ -1,0 +1,7 @@
+{
+  "idx": 112,
+  "problem": "在单位球面$S^2\subset\mathbb R^3$上，取余纬为$\vartheta\in(0,\pi)$的纬线闭曲线$C_\vartheta$，按正向绕行一周。将一个切向量沿$C_\vartheta$作Levi-Civita平行移动。严格求出返回起点后该向量相对于初始方向的净旋转角（模$2\pi$），并分别用局部正交标架的联络形式与Gauss-Bonnet/曲率面积公式说明结果为何一致。",
+  "answer": "取球坐标正交标架$e_\vartheta=\partial_\vartheta$、$e_\varphi=(\sin\vartheta)^{-1}\partial_\varphi$。沿$\vartheta$常数的纬线有联络形式$\omega_{12}(\partial_\varphi)=\cos\vartheta$，平行移动角度函数$\psi$满足$d\psi/d\varphi=-\cos\vartheta$，绕一周得到$\Delta\psi=-2\pi\cos\vartheta$。作为模$2\pi$的几何旋转角，这等价于$2\pi(1-\cos\vartheta)$。另一方面$C_\vartheta$围成北极球冠，单位球面$K\equiv1$，球冠面积为$2\pi(1-\cos\vartheta)$；曲率二形式的holonomy公式给出平行移动旋转角等于$\int_DK\,dA$模$2\pi$，正好得到同一结果。",
+  "subject": "微分几何",
+  "source": "generated | trap: local-vs-global"
+}
