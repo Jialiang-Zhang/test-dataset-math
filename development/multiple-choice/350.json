@@ -1,0 +1,7 @@
+{
+  "idx": 350,
+  "problem": "对参数$a>0$定义\\n\\[\\nF(a)=\\int_0^\\infty \\frac{\\sin(ax)}{x(1+x^2)}\\,dx.\\n\\]\\n以下哪些命题正确？（多选）\nA. 对每个$a>0$积分绝对收敛；\nB. 可证明$F'(a)=\\int_0^\\infty\\frac{\\cos(ax)}{1+x^2}\\,dx$；\nC. $F'(a)=\\frac\\pi2e^{-a}$；\nD. $F(a)=\\frac\\pi2(1-e^{-a})$；\nE. 由于原被积函数含有$1/x$因子，$F$不可能连续延拓到$a=0$。",
+  "answer": "A,B,C,D。原积分在无穷远处绝对值由$1/x^3$型函数控制，在0附近$\\sin(ax)/x\\to a$，故对每个$a>0$绝对收敛，A真。形式求导得到$\\cos(ax)/(1+x^2)$，其绝对值被$1/(1+x^2)$统一控制，因此可由控制收敛交换求导与积分，B真。经典Fourier积分$\\int_0^\\infty\\cos(ax)/(1+x^2)\\,dx=(\\pi/2)e^{-a}$（$a>0$），故C真。又由$|\\sin(ax)|\\le ax$得$|F(a)|\\le a\\int_0^\\infty(1+x^2)^{-1}dx=\\pi a/2$，所以$F(a)\\to0$当$a\\downarrow0$，可令$F(0)=0$连续延拓。于是$F(a)=\\int_0^a(\\pi/2)e^{-t}dt=(\\pi/2)(1-e^{-a})$，D真而E假。",
+  "subject": "数学分析",
+  "source": "generated | trap: theorem-condition"
+}
