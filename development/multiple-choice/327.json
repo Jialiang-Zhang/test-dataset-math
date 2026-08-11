@@ -1,0 +1,7 @@
+{
+  "idx": 327,
+  "problem": "设$H$为无限维Hilbert空间，$T:H\to H$为紧、自伴、正且无限秩算子，其正特征值按重数记为$\lambda_1\ge\lambda_2\ge\cdots>0$。下列哪些结论必然成立？A. $\lambda_k=\max_{\dim E=k}\min_{0\ne x\in E}\frac{\langle Tx,x\rangle}{\|x\|^2}$；B. 在约束$x\perp\operatorname{span}\{e_1,\dots,e_{k-1}\}$下达到Rayleigh商最大值的单位向量必属于$\lambda_k$特征空间；C. $0$必为$T$的特征值；D. $T$的非零谱只能由有限重数特征值组成，且唯一可能的谱聚点为$0$。",
+  "answer": "A,B,D",
+  "subject": "泛函分析",
+  "source": "generated | trap: finite-vs-infinite-dimensional"
+}
