@@ -1,0 +1,7 @@
+{
+  "idx": 60,
+  "problem": "设$S\subset\mathbb R^3$为紧致、连通、定向、无边界的正则曲面，平均曲率$H$为正常数，并假设存在单位向量$a$使支撑函数$u(p)=\langle X(p),a\rangle$在$S$上恰有两个临界点。证明$S$拓扑上同胚于$S^2$，并利用Morse理论与Gauss-Bonnet公式推出$\int_S K\,dA=4\pi$。说明为什么仅有$H$为常数并不能直接推出$S$是圆球。",
+  "answer": "函数$u$的临界点满足$a$垂直于切平面，即Gauss映射$N(p)=\pm a$。假设恰有两个临界点且均非退化，则Morse不等式给出闭连通曲面的Morse数满足$m_0=1,m_2=1,m_1=0$，故Euler示性数$\chi(S)=m_0-m_1+m_2=2$，从闭可定向曲面分类得$S\cong S^2$。Gauss-Bonnet于是给出$\int_S K\,dA=2\pi\chi(S)=4\pi$。常平均曲率本身只给出局部曲率组合$(k_1+k_2)/2$恒定，不能直接控制$k_1-k_2$；要推出圆球需要额外的全局刚性定理（如Alexandrov定理）及嵌入/紧致等条件，因此不能仅由$H\equiv\text{常数}$作局部代数推断得到全脐。",
+  "subject": "微分几何",
+  "source": "generated | trap: local-vs-global"
+}
