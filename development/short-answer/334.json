@@ -1,0 +1,7 @@
+{
+  "idx": 334,
+  "problem": "设$f(x)=x^5-2\in\mathbb Q[x]$，令$\alpha=2^{1/5}>0$，$\zeta=\zeta_5$为本原五次单位根。求$f$的分裂域$K$、扩张次数$[K:\mathbb Q]$及Galois群的同构类型，并给出生成元之间的共轭关系。",
+  "answer": "$f$由Eisenstein判别在$\mathbb Q$上不可约，故$[\mathbb Q(\alpha):\mathbb Q]=5$。分裂域为$K=\mathbb Q(\alpha,\zeta)$。因$[\mathbb Q(\zeta):\mathbb Q]=4$，而两个子扩张次数$5$与$4$互素，交只能为$\mathbb Q$，故$[K:\mathbb Q]=20$。定义$\sigma(\alpha)=\zeta\alpha,\sigma(\zeta)=\zeta$，则$\sigma^5=1$；定义$\tau(\alpha)=\alpha,\tau(\zeta)=\zeta^2$，则$\tau^4=1$。计算$\tau\sigma\tau^{-1}(\alpha)=\zeta^2\alpha=\sigma^2(\alpha)$，故$\tau\sigma\tau^{-1}=\sigma^2$。因此$\operatorname{Gal}(K/\mathbb Q)\cong C_5\rtimes C_4$，其中$C_4$通过$2\in(\mathbb Z/5\mathbb Z)^\times$作用；这是阶20的Frobenius群$\mathrm{AGL}(1,5)$。",
+  "subject": "非基础及进阶课程",
+  "source": "generated | standard"
+}
