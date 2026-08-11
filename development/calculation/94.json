@@ -1,0 +1,7 @@
+{
+  "idx": 94,
+  "problem": "设旋转环面$T\subset\mathbb R^3$由参数方程$X(u,v)=((R+r\cos v)\cos u,(R+r\cos v)\sin u,r\sin v)$给出，其中$R>r>0$。严格计算其高斯曲率$K(u,v)$，确定曲率变号的全部位置，并利用Gauss-Bonnet定理独立验证$\int_TK\,dA=0$；解释为何$K$在外侧为正、内侧为负并不与紧致曲面的整体拓扑结论矛盾。",
+  "answer": "有$X_u=(-(R+r\cos v)\sin u,(R+r\cos v)\cos u,0)$，$X_v=(-r\sin v\cos u,-r\sin v\sin u,r\cos v)$，故$E=(R+r\cos v)^2,F=0,G=r^2$。取单位法向$N=(\cos u\cos v,\sin u\cos v,\sin v)$，得$e=N\cdot X_{uu}=-(R+r\cos v)\cos v$，$f=0$，$g=N\cdot X_{vv}=-r$（改变法向只同时改变主曲率符号，不改变$K$）。因此$K=(eg-f^2)/(EG-F^2)=\cos v/[r(R+r\cos v)]$。分母恒正，所以$K>0$当$\cos v>0$，$K<0$当$\cos v<0$，且在$v=\pi/2,3\pi/2$两条纬圆上为0。面积元$dA=r(R+r\cos v)dudv$，故$\int_TK\,dA=\int_0^{2\pi}\int_0^{2\pi}\cos v\,dvdu=0$。另一方面$T$同胚于二维环面，Euler示性数$\chi(T)=0$，Gauss-Bonnet给$\int_TK\,dA=2\pi\chi(T)=0$，与直接积分一致。局部曲率可正可负，只要求总曲率由拓扑不变量控制，因此不存在矛盾。",
+  "subject": "微分几何",
+  "source": "generated | trap: local-vs-global"
+}
