@@ -1,0 +1,7 @@
+{
+  "idx": 114,
+  "problem": "设$n\ge3$，二面体群$D_{2n}=\langle r,s\mid r^n=s^2=1,\ srs=r^{-1}\rangle$。严格分类$D_{2n}$的全部自同构，并求$|\operatorname{Aut}(D_{2n})|$。要求证明任意自同构都必须把$\langle r\rangle$保持为自身，说明$r$与$s$像的所有可能形式，并验证这些候选确实给出自同构。",
+  "answer": "$\langle r\rangle$是$D_{2n}$中唯一的阶$n$循环子群（亦即全部旋转组成的特征子群），故任意$\varphi\in\operatorname{Aut}(D_{2n})$满足$\varphi(r)=r^a$，其中$a\in(\mathbb Z/n\mathbb Z)^\times$。群外的每个元素都形如$r^bs$且阶为2，所以$\varphi(s)=r^bs$，$b\in\mathbb Z/n\mathbb Z$。反之，对任意这样的$a,b$，映射$r\mapsto r^a$、$s\mapsto r^bs$满足$(r^a)^n=1$、$(r^bs)^2=1$以及$(r^bs)r^a(r^bs)^{-1}=r^{-a}$，故由表示关系诱导同态；因$r^a$仍生成$\langle r\rangle$且$r^bs$在其外，像生成整个$D_{2n}$，有限群上该同态为自同构。因此全部自同构恰为$\varphi_{a,b}$，总数$n\varphi(n)$。",
+  "subject": "抽象代数",
+  "source": "generated | standard"
+}
