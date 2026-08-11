@@ -1,0 +1,7 @@
+{
+  "idx": 118,
+  "problem": "设$X_1,\dots,X_n$独立同分布于$\operatorname{Poisson}(\lambda)$，$n\ge2$，$\lambda>0$未知。构造参数$g(\lambda)=e^{-\lambda}$的UMVU估计量，并严格证明其UMVU性。要求识别完备充分统计量、构造无偏函数，并用Lehmann-Scheffe定理闭合论证。",
+  "answer": "统计量$T=\sum_{i=1}^nX_i\sim\operatorname{Poisson}(n\lambda)$。Poisson单参数满指数族中$T$对$\lambda$充分且完备：若$\mathbb E_\lambda h(T)=0$对所有$\lambda>0$成立，则$e^{-n\lambda}\sum_{t\ge0}h(t)(n\lambda)^t/t!=0$，解析函数恒等定理迫使每个系数$h(t)=0$。利用Poisson概率母函数，$\mathbb E_\lambda[a^T]=\exp(n\lambda(a-1))$。取$a=1-1/n$即有$\mathbb E[(1-1/n)^T]=e^{-\lambda}$。因此$\delta(T)=(1-1/n)^T$是$g(\lambda)$的无偏估计，且为完备充分统计量$T$的函数；由Lehmann-Scheffe定理，它是唯一几乎处处的UMVU估计量。",
+  "subject": "统计推断",
+  "source": "generated | theorem-condition"
+}
