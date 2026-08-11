@@ -1,0 +1,7 @@
+{
+  "idx": 277,
+  "problem": "设$f:2^{[n]}\\to\\mathbb R_+$满足$f(\\varnothing)=0$、单调且次模，定义多面体$P(f)=\\{x\\in\\mathbb R_+^n:x(S)\\le f(S),\\forall S\\subseteq[n]\\}$。给定非负权重$c\\ge0$，将指标重排为$c_{\\pi(1)}\\ge\\cdots\\ge c_{\\pi(n)}\\ge0$，令$S_k=\\{\\pi(1),\\ldots,\\pi(k)\\}$并定义$x^*_{\\pi(k)}=f(S_k)-f(S_{k-1})$。证明$x^*\\in P(f)$且它最大化$c^Tx$。再说明若允许$c$含负分量，为何“仍无条件使用同一公式并令$x^*([n])=f([n])$”可能错误。",
+  "answer": "单调性给$x^*\\ge0$。对任意$A\\subseteq[n]$，设其中元素按$\\pi$次序出现为$\\pi(i_1),\\dots,\\pi(i_r)$。次模性的边际收益递减给$f(S_{i_j})-f(S_{i_j-1})\\le f(A\\cap S_{i_j})-f(A\\cap S_{i_j-1})$，求和得$x^*(A)\\le f(A)$，故$x^*\\in P(f)$。令$c_{\\pi(n+1)}=0$。对任意$x\\in P(f)$，Abel求和给$c^Tx=\\sum_{k=1}^n(c_{\\pi(k)}-c_{\\pi(k+1)})x(S_k)\\le\\sum_{k=1}^n(c_{\\pi(k)}-c_{\\pi(k+1)})f(S_k)$。而$x^*(S_k)=f(S_k)$，所以$x^*$达到上界。若某些$c_i<0$，最优解常把负权坐标压到0；此时最后的差分系数可能为负，不能再由$x(S_n)\\le f(S_n)$推出同方向上界，因此不能无条件强迫$x([n])=f([n])$。",
+  "subject": "运筹学",
+  "source": "generated | standard"
+}
