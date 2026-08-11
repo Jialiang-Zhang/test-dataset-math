@@ -1,0 +1,7 @@
+{
+  "idx": 273,
+  "problem": "设$H$为无限维Hilbert空间，$K:H\\to H$为紧算子，$\\lambda\\ne0$。证明Fredholm备择中以下三点：(1) $\\ker(\\lambda I-K)$有限维；(2) $\\operatorname{Ran}(\\lambda I-K)$闭；(3) $\\operatorname{Ran}(\\lambda I-K)^\\perp=\\ker(\\bar\\lambda I-K^*)$。并据此说明：若$\\lambda I-K$单射，则它为何必为满射。最后指出“把$\\lambda=0$也直接代入”会在哪一步失效。",
+  "answer": "令$T=\\lambda I-K$。(1) 若$\\ker T$无限维，可在其中取标准正交列$e_n$。由$Ke_n=\\lambda e_n$，$Ke_n$两两距离为$|\\lambda|\\sqrt2$，与$K$紧矛盾，故核有限维。(2) 令$M=(\\ker T)^\\perp$。若不存在$c>0$使$\\|Tx\\|\\ge c\\|x\\|$（$x\\in M$），可取$\\|x_n\\|=1$、$x_n\\in M$且$Tx_n\\to0$。紧性给$Kx_{n_j}$收敛，而$\\lambda x_{n_j}=Tx_{n_j}+Kx_{n_j}$，故$x_{n_j}\\to x\\in M$，且$\\|x\\|=1,Tx=0$，矛盾。因此像闭。(3) 一般恒等式$(\\operatorname{Ran}T)^\\perp=\\ker T^*$给出结论。若$T$单射但不满射，则$R_n=\\operatorname{Ran}T^n$均闭，因为$T^n=\\lambda^nI-K_n$且$K_n$仍紧；并且$H=R_0\\supsetneq R_1\\supsetneq R_2\\supsetneq\\cdots$。否则某步相等会由单射性逐级推出$H=R_1$。由Riesz引理可取$x_n\\in R_n$、$\\|x_n\\|=1$且$\\operatorname{dist}(x_n,R_{n+1})>1/2$。当$n>m$时，$x_n,Tx_m,Tx_n\\in R_{m+1}$，故$Kx_m-Kx_n=\\lambda x_m+(Tx_n-Tx_m-\\lambda x_n)$，括号内属于$R_{m+1}$，从而$\\|Kx_m-Kx_n\\|\\ge|\\lambda|/2$，与紧性矛盾。因此$T$满射。$\\lambda=0$时例如$Ke_n=0$不会与紧性矛盾，紧算子的核可无限维，且$T^n$不再具有“非零标量倍恒等减紧算子”的结构。",
+  "subject": "泛函分析",
+  "source": "generated | standard"
+}
