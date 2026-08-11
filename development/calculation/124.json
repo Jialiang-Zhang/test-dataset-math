@@ -1,0 +1,7 @@
+{
+  "idx": 124,
+  "problem": "对$a>0$，严格计算参数反常积分$I(a)=\int_0^\infty\frac{\log(1+x^2)}{x^2+a^2}\,dx$。要求引入辅助参数$F(a,b)=\int_0^\infty\frac{\log(x^2+b^2)}{x^2+a^2}\,dx$，证明可对$b$求导，完成有理积分后再由$b\downarrow0$的基准值确定积分常数，最终给出$I(a)$的闭式。",
+  "answer": "固定$a>0$。对$b>0$，在紧的$b$参数区间上可用可积函数控制$\partial_b\log(x^2+b^2)=2b/(x^2+b^2)$，故可交换微分与积分。于是$\partial_bF(a,b)=2b\int_0^\infty[(x^2+a^2)(x^2+b^2)]^{-1}dx$。利用部分分式或标准积分得$\int_0^\infty\frac{dx}{(x^2+a^2)(x^2+b^2)}=\frac{\pi}{2ab(a+b)}$，故$\partial_bF=\pi/[a(a+b)]$。另一方面$F(a,0)=\int_0^\infty\frac{2\log x}{x^2+a^2}dx$；令$x=at$并用$\int_0^\infty\frac{\log t}{1+t^2}dt=0$，得$F(a,0)=\pi\log a/a$。积分$b$从0到1：$I(a)=F(a,1)=\frac\pi a\log a+\frac\pi a\log\frac{a+1}{a}=\frac\pi a\log(a+1)$。",
+  "subject": "数学分析",
+  "source": "generated | trap: theorem-condition"
+}
