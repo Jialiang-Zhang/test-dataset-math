@@ -1,0 +1,7 @@
+{
+  "idx": 157,
+  "problem": "设$D=\{z\in\mathbb C:|z|<1\}$。请从二维Laplace算子的基本解与Kelvin/反演思想出发，严格构造单位圆盘上Dirichlet问题的Green函数$G(z,\zeta)$，证明其满足$-\Delta_zG(z,\zeta)=\delta_\zeta$、$G(\cdot,\zeta)|_{\partial D}=0$，并由边界法向导数推出Poisson核$$P(z,e^{i\theta})=\frac{1-|z|^2}{2\pi|e^{i\theta}-z|^2}.$$最后写出$-\Delta u=f$、$u|_{\partial D}=g$的Green表示公式并说明唯一性来自何种最大值原理。",
+  "answer": "二维中$\Delta_z\log|z-\zeta|=2\pi\delta_\zeta$，故对$-\Delta$的基本奇性应取$-(2\pi)^{-1}\log|z-\zeta|$。令$$G(z,\zeta)=\frac1{2\pi}\log\left|\frac{1-\bar\zeta z}{z-\zeta}\right|.$$第一项关于$z$在$D$内调和（$1-\bar\zeta z\ne0$），因此$-\Delta_zG=\delta_\zeta$。若$|z|=1$，则$|1-\bar\zeta z|=|z-\zeta|$，故$G=0$。对Green第二恒等式，Poisson核等于边界变量$\xi=e^{i\theta}$处的外法向导数$-\partial_{n_\xi}G(z,\xi)$；直接对径向变量求导并在$|\xi|=1$代入得到$$P(z,\xi)=\frac{1-|z|^2}{2\pi|\xi-z|^2}.$$因此若$f$充分可积、$g$连续，则$$u(z)=\int_DG(z,\zeta)f(\zeta)\,dA(\zeta)+\int_0^{2\pi}P(z,e^{i\theta})g(e^{i\theta})\,d\theta.$$第一项给出$-\Delta u=f$且边界为$0$，第二项调和且取边值$g$。若有两个解，其差为边界为$0$的调和函数，由强最大值原理（或最大最小原理）恒为$0$，故解唯一。",
+  "subject": "偏微分方程",
+  "source": "generated | standard"
+}
