@@ -1,0 +1,7 @@
+{
+  "idx": 296,
+  "problem": "对$a>0$定义$I(a)=\\int_0^\\infty\\frac{\\arctan(ax)}{x(1+x^2)}\\,dx$。证明可以对参数$a$求导，求出$I'(a)$并据$I(0^+)=0$计算$I(a)$的闭式；要求特别处理$a=1$处由部分分式公式表面产生的可去奇点。",
+  "answer": "对固定$a>0$，形式求导得$I'(a)=\\int_0^\\infty\\frac{1}{(1+a^2x^2)(1+x^2)}\\,dx$。在任意紧参数区间$a\\in[\\alpha,\\beta]\\subset(0,\\infty)$上导数被可积函数控制，故可由控制收敛交换导数与积分。若$a\\ne1$，$\\frac1{(1+x^2)(1+a^2x^2)}=\\frac1{1-a^2}\\left(\\frac1{1+x^2}-\\frac{a^2}{1+a^2x^2}\\right)$，积分得$I'(a)=\\frac{\\pi}{2(1+a)}$；该表达式在$a=1$连续延拓为$\\pi/4$，与直接积分$\\int_0^\\infty(1+x^2)^{-2}dx$一致。又$\\arctan(ax)\\le ax$给出$I(0^+)=0$，所以$I(a)=\\int_0^a\\frac{\\pi}{2(1+s)}ds=\\frac\\pi2\\log(1+a)$。",
+  "subject": "数学分析",
+  "source": "generated | trap: boundary-case"
+}
