@@ -1,7 +1,7 @@
 {
   "idx": 160,
   "problem": "记调和数$H_n=\sum_{k=1}^n1/k$。请利用Euler-Maclaurin公式而非积分夹逼，严格证明存在Euler常数$\gamma$使得$$H_n=\log n+\gamma+\frac1{2n}-\frac1{12n^2}+O(n^{-4}).$$要求说明常数项为何收敛、Bernoulli数$B_2,B_4$如何进入展开，并给出足以保证$O(n^{-4})$余项的估计；不能仅引用该渐近式。",
-  "answer": "对$f(x)=1/x$在$[1,n]$应用Euler-Maclaurin到$B_4$项：$$\sum_{k=1}^nf(k)=\int_1^nf(x)dx+\frac{f(1)+f(n)}2+\frac{B_2}{2!}(f'(n)-f'(1))+\frac{B_4}{4!}(f^{(3)}(n)-f^{(3)}(1))+R_n,$$其中$B_2=1/6,B_4=-1/30$，余项可写为含周期Bernoulli函数与$f^{(4)}$的积分；由于$|f^{(4)}(x)|=24x^{-5}$可积，$R_n$趋于有限极限，且其从$n$到$\infty$的尾差为$O(n^{-4})$。把所有只依赖下端点$1$及$R_\infty$的常数合并为$\gamma$，并代入$f(n)=n^{-1},f'(n)=-n^{-2},f^{(3)}(n)=-6n^{-4}$，得$$H_n=\log n+\gamma+\frac1{2n}-\frac1{12n^2}+\frac1{120n^4}+O(n^{-5})$$（采用再多一阶余项也可得$O(n^{-6})$）。因此特别有题目要求的$$H_n=\log n+\gamma+\frac1{2n}-\frac1{12n^2}+O(n^{-4}).$$常数$\gamma$的存在同时由上述“常数部分+收敛余项”得到，而非预先假设。",
+  "answer": "对$f(x)=1/x$在$[1,n]$应用Euler-Maclaurin公式并保留到$B_4$层次。由于$B_2=1/6,B_4=-1/30$，可写成$$H_n=\log n+C+\frac1{2n}-\frac1{12n^2}+\frac1{120n^4}+R_n,$$其中$C$由下端点贡献与固定常数项组成，而余项可表示为周期Bernoulli函数乘$f^{(4)}$（或继续展开一阶后用更高导数）的积分。因为$|f^{(4)}(x)|=24x^{-5}$，相应无穷尾积分收敛，且从$n$到$\infty$的尾差为$O(n^{-4})$。因此$R_n$趋于某个有限极限$R_\infty$；把$C+R_\infty$记为$\gamma$，得到$$H_n=\log n+\gamma+\frac1{2n}-\frac1{12n^2}+O(n^{-4}),$$其中显式的$1/(120n^4)$也被允许吸收到$O(n^{-4})$中。若继续使用下一Bernoulli项，则可进一步得到经典更精细展开$H_n=\log n+\gamma+\frac1{2n}-\frac1{12n^2}+\frac1{120n^4}+O(n^{-6})$。因此常数$\gamma$的存在也由Euler-Maclaurin余项的收敛性直接推出。",
   "subject": "数学分析",
   "source": "generated | standard"
 }
