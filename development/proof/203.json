@@ -1,0 +1,7 @@
+{
+  "idx": 203,
+  "problem": "考虑$L^2(0,\pi)$上的Sturm-Liouville算子$$Au=-u'',\qquad D(A)=\{u\in H^2(0,\pi):u(0)=0,\ u'(\pi)+h\,u(\pi)=0\},$$其中$h\in\mathbb R$。请严格分析其谱随参数$h$的变化：证明谱离散且实；给出正特征值的超越方程；判断何时存在零特征值；并证明当且仅当$h<-1/\pi$时存在且仅存在一个负特征值。要求把二次型判据与负特征值方程结合起来，而不能只凭图像判断。",
+  "answer": "该正则Sturm-Liouville问题具有自伴边界条件，因此$A$自伴且紧预解，谱为离散实特征值并只能在$+\infty$累积。对$\lambda=k^2>0$，满足$u(0)=0$的解为$u(x)=C\sin(kx)$，另一边界条件给出$$k\cos(k\pi)+h\sin(k\pi)=0.$$对$\lambda=0$，解为$u(x)=Cx$，故边界条件变为$C(1+h\pi)=0$，所以零特征值存在当且仅当$h=-1/\pi$，且为单重。二次型为$$q[u]=\langle Au,u\rangle=\int_0^\pi|u'|^2dx+h|u(\pi)|^2.$$由$u(0)=0$及Cauchy-Schwarz，$|u(\pi)|^2\le\pi\int_0^\pi|u'|^2dx$。若$h\ge-1/\pi$，则$q[u]\ge(1+h\pi)\int|u'|^2\ge0$，故无负谱；在临界值仅有上述零模态。若$h<-1/\pi$，取$u(x)=x$即有$q[u]=\pi+h\pi^2<0$，由Rayleigh极小原理至少存在一个负特征值。令$\lambda=-\kappa^2<0$，则$u=C\sinh(\kappa x)$，边界条件为$$\kappa\cosh(\kappa\pi)+h\sinh(\kappa\pi)=0,$$即$$-h=\kappa\coth(\kappa\pi).$$函数$\kappa\coth(\kappa\pi)$在$\kappa>0$上严格递增，从$1/\pi$增至$+\infty$，因此当且仅当$-h>1/\pi$即$h<-1/\pi$时恰有唯一正根$\kappa$，故恰有一个负特征值。",
+  "subject": "偏微分方程",
+  "source": "generated | trap: boundary-case"
+}
