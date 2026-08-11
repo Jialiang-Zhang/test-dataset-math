@@ -1,0 +1,7 @@
+{
+  "idx": 345,
+  "problem": "在$H=L^2([0,1])$上定义乘法算子$(Mf)(x)=x f(x)$。以下哪些命题正确？（多选）\nA. $M$是有界自伴算子，且$\\|M\\|=1$；\nB. $\\sigma(M)=[0,1]$；\nC. 每个$\\lambda\\in[0,1]$都是特征值；\nD. $M$没有特征值；\nE. 对$\\lambda\\in(0,1)$，$M-\\lambda I$的像稠密但不是整个$H$；\nF. $M$是紧算子。",
+  "answer": "A,B,D,E。乘法函数$x$实值且本质上界为1，所以$M$有界自伴且范数1。乘法算子的谱等于乘子$x$的本质值域，即$[0,1]$。若$Mf=\\lambda f$，则$(x-\\lambda)f(x)=0$几乎处处，而单点集合$\\{\\lambda\\}$测度0，故$f=0$，所以无特征值，D真、C假。对$\\lambda\\in(0,1)$，$M-\\lambda I$自伴且核为0，因此像的闭包为$(\\ker(M-\\lambda I))^\\perp=H$；但其逆乘子$1/(x-\\lambda)$无界，故不可能满射，所以E真。F假：取支集落在$[1/2,1]$的标准正交列$e_n$，则$\\|Me_n-Me_m\\|\\ge\\frac12\\|e_n-e_m\\|$，像序列无收敛子列，故不紧。",
+  "subject": "泛函分析",
+  "source": "generated | trap: finite-vs-infinite-dimensional"
+}
