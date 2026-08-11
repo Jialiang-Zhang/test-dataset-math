@@ -1,0 +1,7 @@
+{
+  "idx": 294,
+  "problem": "设$V$为有限维复内积空间，$A,B\\in\\operatorname{End}(V)$均为正规算子且$AB=BA$。下列说法正确的是哪些？\nA. $A,B$必可同时酉对角化。\nB. 只要$A,B$各自可对角化，即使不交换，也必可同时对角化。\nC. 若$A$正规且$AB=BA$，则$B$必保持$A$的每个特征子空间；若$B$也正规，可在这些子空间内继续酉对角化。\nD. 把“复内积空间”改成一般实内积空间后，结论A仍对任意正规实算子按实正交对角化成立。",
+  "answer": "A,C",
+  "subject": "高等代数",
+  "source": "generated | trap: theorem-condition"
+}
