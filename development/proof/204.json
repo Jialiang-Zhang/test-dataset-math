@@ -1,0 +1,7 @@
+{
+  "idx": 204,
+  "problem": "设$N\in M_n(\mathbb C)$为幂零矩阵，其Jordan块大小构成分拆$\lambda=(\lambda_1\ge\cdots\ge\lambda_r)$，共轭分拆记为$\lambda'$。定义中心化子空间$$Z(N)=\{X\in M_n(\mathbb C):XN=NX\}.$$请严格证明$$\dim Z(N)=\sum_{i,j=1}^r\min(\lambda_i,\lambda_j)=\sum_{k\ge1}(\lambda_k')^2.$$要求从两个Jordan块之间的交换矩阵方程出发计算自由参数数目，并解释两个公式为何等价。",
+  "answer": "把$N$写成Jordan直和$N=\bigoplus_{i=1}^rJ_{\lambda_i}(0)$，并将$X$分块为$X_{ij}$。方程$XN=NX$等价于每个矩形块满足$$X_{ij}J_{\lambda_j}=J_{\lambda_i}X_{ij}.$$设块尺寸为$a\times b$。逐坐标比较可知矩阵元素沿适当的东北-西南对角线保持常值，并且边界条件迫使只有前$\min(a,b)$条这样的对角线可自由指定；等价地，$\operatorname{Hom}_{\mathbb C[t]}(\mathbb C[t]/(t^b),\mathbb C[t]/(t^a))$由像$1$决定，而该像必须被$t^b$杀死，其维数为$\min(a,b)$。因此每个$X_{ij}$贡献$\min(\lambda_i,\lambda_j)$个自由参数，故$$\dim Z(N)=\sum_{i,j}\min(\lambda_i,\lambda_j).$$再用恒等式$$\min(a,b)=\sum_{k\ge1}\mathbf1_{k\le a}\mathbf1_{k\le b}.$$交换求和得$$\sum_{i,j}\min(\lambda_i,\lambda_j)=\sum_{k\ge1}\left(\sum_i\mathbf1_{\lambda_i\ge k}\right)^2.$$而$\sum_i\mathbf1_{\lambda_i\ge k}=\lambda_k'$，故$$\dim Z(N)=\sum_{k\ge1}(\lambda_k')^2.$$",
+  "subject": "高等代数",
+  "source": "generated | standard"
+}
