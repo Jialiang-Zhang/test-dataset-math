@@ -1,0 +1,7 @@
+{
+  "idx": 74,
+  "problem": "设$A$为实对称正定矩阵，谱包含于$[a,b]$，其中$0<a<b$。考虑所有次数不超过$k$且满足$p(0)=1$的实多项式$p$，用于误差传播$e_k=p(A)e_0$。严格求解极小极大问题$\min_{\deg p\le k,\,p(0)=1}\max_{\lambda\in[a,b]}|p(\lambda)|$，给出最优多项式及最小值，并由此推出Chebyshev半迭代的最坏情形收敛界。",
+  "answer": "作仿射变换$t=(2\lambda-a-b)/(b-a)$，则$[a,b]$映到$[-1,1]$，而$\lambda=0$映到$t_0=-(a+b)/(b-a)<-1$。令$q(t)=p(\lambda(t))$，约束为$q(t_0)=1$。Chebyshev多项式$T_k$在$[-1,1]$上满足$|T_k|\le1$并具有交错极值。由Chebyshev交错极小极大定理，唯一最优解为$q_*(t)=T_k(t)/T_k(t_0)$，故$p_*(\lambda)=T_k((2\lambda-a-b)/(b-a))/T_k(-(a+b)/(b-a))$，最小值为$1/|T_k(t_0)|$。设$\kappa=b/a$，令$\rho=(\sqrt\kappa-1)/(\sqrt\kappa+1)$。利用$T_k(x)=((x+\sqrt{x^2-1})^k+(x-\sqrt{x^2-1})^k)/2$可得$1/|T_k(t_0)|=2\rho^k/(1+\rho^{2k})\le2\rho^k$。因此$\|e_k\|_A\le2\rho^k\|e_0\|_A$。",
+  "subject": "数值分析",
+  "source": "generated | standard"
+}
