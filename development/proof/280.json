@@ -1,0 +1,7 @@
+{
+  "idx": 280,
+  "problem": "在$L^2(\\mathbb R)$上按Fourier变换$\\widehat f(\\xi)=\\int_{\\mathbb R}f(x)e^{-ix\\xi}\\,dx$定义Hilbert变换$Hf(x)=\\frac1\\pi\\operatorname{p.v.}\\int_{\\mathbb R}\\frac{f(y)}{x-y}\\,dy$（先对Schwartz函数定义）。证明其Fourier乘子为$-i\\,\\operatorname{sgn}\\xi$，并由此证明$H$可唯一延拓为$L^2$上的等距算子且$H^2=-I$。进一步解释为什么“$H^2=-I$对所有分布逐点成立”这种说法需要额外限定。",
+  "answer": "核$K(x)=\\operatorname{p.v.}(1/(\\pi x))$作为温和分布满足$\\widehat K(\\xi)=-i\\,\\operatorname{sgn}\\xi$。因此对$f\\in\\mathcal S(\\mathbb R)$，$\\widehat{Hf}(\\xi)=-i\\,\\operatorname{sgn}(\\xi)\\widehat f(\\xi)$。由Plancherel，$\\|Hf\\|_2^2=(2\\pi)^{-1}\\int|\\operatorname{sgn}\\xi|^2|\\widehat f(\\xi)|^2d\\xi=\\|f\\|_2^2$，因为单点$\\xi=0$为零测集。故$H$在稠密子空间$\\mathcal S$上有范数1，并唯一连续延拓到整个$L^2$，仍为等距算子。再乘一次乘子得到$\\widehat{H^2f}=(-i\\operatorname{sgn}\\xi)^2\\widehat f=-\\widehat f$几乎处处，因此$H^2=-I$作为$L^2$算子恒等式成立。对一般分布，$\\operatorname{sgn}\\xi$在$\\xi=0$不光滑，不能与任意分布的Fourier变换无条件相乘；支撑在$\\xi=0$的分布会暴露这一问题。因此“所有分布上逐点成立”既混淆分布等式与逐点等式，也忽略乘子乘法的定义域。",
+  "subject": "非基础及进阶课程",
+  "source": "generated | trap: theorem-condition"
+}
