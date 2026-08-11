@@ -1,0 +1,7 @@
+{
+  "idx": 346,
+  "problem": "在线性模型$y=X\\beta+\\varepsilon$中，$X\\in\\mathbb R^{n\\times p}$满列秩，$E\\varepsilon=0$，$\\operatorname{Cov}(\\varepsilon)=\\sigma^2I$。岭估计定义为\\n\\[\\n\\hat\\beta_\\lambda=(X^TX+\\lambda I)^{-1}X^Ty,\\qquad \\lambda>0.\\n\\]\\n利用$X^TX=V\\operatorname{diag}(d_1,\\dots,d_p)V^T$（$d_j>0$）推导$E\\hat\\beta_\\lambda$、协方差矩阵与均方误差$E\\|\\hat\\beta_\\lambda-\\beta\\|^2$的谱分解公式；进一步证明不存在一个固定$\\lambda>0$能对所有$\\beta\\in\\mathbb R^p$都严格支配OLS的均方误差。",
+  "answer": "记$\\theta=V^T\\beta$。有$E\\hat\\beta_\\lambda=(X^TX+\\lambda I)^{-1}X^TX\\beta=V\\operatorname{diag}(d_j/(d_j+\\lambda))V^T\\beta$，故第$j$个主成分方向偏差为$-\\lambda\\theta_j/(d_j+\\lambda)$。协方差为$\\sigma^2V\\operatorname{diag}(d_j/(d_j+\\lambda)^2)V^T$。于是\\n\\[\\n\\operatorname{MSE}_\\lambda=\\sum_{j=1}^p\\frac{\\lambda^2\\theta_j^2+\\sigma^2d_j}{(d_j+\\lambda)^2}.\\n\\]\\nOLS的MSE为$\\sigma^2\\sum_j1/d_j$。虽然岭的方差项逐方向下降，但偏差项随$\\|\\beta\\|$二次增长。固定任意$\\lambda>0$，取$\\beta=tVe_k$并令$t\\to\\infty$，则岭MSE含$\\lambda^2t^2/(d_k+\\lambda)^2\\to\\infty$，而OLS MSE与$\\beta$无关且有限。因此不存在固定正$\\lambda$在所有$\\beta$上都严格支配OLS；“岭总比OLS好”必须附加参数集合或风险准则条件。",
+  "subject": "线性回归",
+  "source": "generated | trap: quantifier-swap"
+}
