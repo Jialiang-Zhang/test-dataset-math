@@ -1,0 +1,7 @@
+{
+  "idx": 214,
+  "problem": "设群$G$由$d$个元素生成，$H\le G$的指数为$m<\infty$。请利用Schreier陪集代表与Schreier生成元构造法严格证明$H$有限生成，并给出生成元个数上界$$\operatorname{rank}(H)\le m(d-1)+1.$$要求说明为何不能简单声称$H$由原生成集与$H$的交集生成。",
+  "answer": "取右陪集$H\backslash G$的一棵Schreier横截树，并选Schreier transversal $T$，含单位元，满足每个$t\in T$的前缀仍在$T$。设$S$为$G$的$d$元生成集（可取对称生成字母体系后做标准Schreier改写）。对$t\in T,s\in S$定义$$\gamma(t,s)=ts\overline{ts}^{-1}\in H,$$其中$\overline{g}\in T$代表$Hg$。Schreier引理说明这些$\gamma(t,s)$生成$H$：任意$h=s_1\cdots s_r\in H$逐步插入相应陪集代表即可将$h$改写成Schreier生成元之积。总共有至多$md$个候选生成元。由横截树性质，对除根外的$m-1$个顶点，各有一条树边对应的Schreier生成元等于$1$，故至少$m-1$个候选元可删去。因此非平凡生成元个数至多$$md-(m-1)=m(d-1)+1.$$所以$H$有限生成且秩满足所给上界。原生成集与$H$的交集一般不能生成$H$：有限指数子群中的生成元通常是形如$ts\overline{ts}^{-1}$的共轭修正词，而不必属于原生成集。",
+  "subject": "抽象代数",
+  "source": "generated | trap: missing-assumption"
+}
