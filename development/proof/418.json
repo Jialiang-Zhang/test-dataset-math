@@ -1,0 +1,7 @@
+{
+  "idx": 418,
+  "problem": "在线性模型$y=X_1\beta_1+X_2\beta_2+\varepsilon$中，假设$X_1$满列秩且$[X_1,X_2]$满列秩。令$M_1=I-X_1(X_1^TX_1)^{-1}X_1^T$。证明Frisch--Waugh--Lovell结论$\hat\beta_2=(X_2^TM_1X_2)^{-1}X_2^TM_1y$，并解释为什么若只知道$X_2$满列秩，却不要求$[X_1,X_2]$满列秩，则该公式中的逆矩阵可能不存在。",
+  "answer": "正规方程第一块给$\hat\beta_1=(X_1^TX_1)^{-1}X_1^T(y-X_2\hat\beta_2)$。代回第二块得到$X_2^TM_1(y-X_2\hat\beta_2)=0$，故公式成立。并且$v^TX_2^TM_1X_2v=\|M_1X_2v\|^2$；其为0当且仅当$X_2v\in\operatorname{col}(X_1)$。因此$X_2^TM_1X_2$可逆恰要求$X_2$的列在模去$\operatorname{col}(X_1)$后仍线性无关，这由联合满列秩保证，而单独$X_2$满列秩并不足够。",
+  "subject": "线性回归",
+  "source": "generated | trap: missing-assumption"
+}
