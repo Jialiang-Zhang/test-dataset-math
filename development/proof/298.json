@@ -1,0 +1,7 @@
+{
+  "idx": 298,
+  "problem": "证明Euler函数求和的渐近公式$\\sum_{n\\le x}\\varphi(n)=\\frac{3}{\\pi^2}x^2+O(x\\log x)$。要求从恒等式$\\varphi(n)=n\\sum_{d\\mid n}\\mu(d)/d$出发重排求和，明确主项中$\\sum_{d\\ge1}\\mu(d)/d^2=1/\\zeta(2)$的来源，并控制截断与取整产生的误差。",
+  "answer": "由$\\varphi(n)=n\\sum_{d\\mid n}\\mu(d)/d$，$S(x)=\\sum_{n\\le x}\\varphi(n)=\\sum_{d\\le x}\\mu(d)\\sum_{m\\le x/d}m$。记$y=x/d$，有$\\sum_{m\\le y}m=\\frac12y^2+O(y)$，故$S(x)=\\frac{x^2}{2}\\sum_{d\\le x}\\frac{\\mu(d)}{d^2}+O\\left(x\\sum_{d\\le x}\\frac1d\\right)=\\frac{x^2}{2}\\sum_{d\\le x}\\frac{\\mu(d)}{d^2}+O(x\\log x)$。由Dirichlet级数$\\sum_{d\\ge1}\\mu(d)d^{-s}=1/\\zeta(s)$在$s=2$绝对收敛，$\\sum_{d\\le x}\\mu(d)/d^2=1/\\zeta(2)+O(1/x)=6/\\pi^2+O(1/x)$。代回得到$S(x)=\\frac{3}{\\pi^2}x^2+O(x\\log x)$。",
+  "subject": "非基础及进阶课程",
+  "source": "generated | standard"
+}
