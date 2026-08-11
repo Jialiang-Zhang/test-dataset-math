@@ -1,0 +1,7 @@
+{
+  "idx": 148,
+  "problem": "设$a>0$，考虑旋转曲面$$X(u,v)=\bigl(a\cosh(v/a)\cos u,\ a\cosh(v/a)\sin u,\ v\bigr),\quad 0\le u<2\pi,\ v\in\mathbb R.$$请用第一、第二基本形式严格证明该曲面为极小曲面，并求其高斯曲率$K(u,v)$以及全曲面的总曲率$\int_S K\,dA$。要求给出单位法向、主曲率（或等价的$H,K$计算），并证明总曲率积分绝对收敛。",
+  "answer": "记$c=\cosh(v/a),s=\sinh(v/a)$。有$X_u=(-ac\sin u,ac\cos u,0)$，$X_v=(s\cos u,s\sin u,1)$，故$E=a^2c^2,F=0,G=s^2+1=c^2$。取单位法向$N=(\cos u,\sin u,-s)/c$。二阶导数给出$X_{uu}=(-ac\cos u,-ac\sin u,0)$，$X_{uv}=(-s\sin u,s\cos u,0)$，$X_{vv}=(c/a\cos u,c/a\sin u,0)$，于是$e=\langle X_{uu},N\rangle=-a$，$f=0$，$g=1/a$。主曲率为$k_1=e/E=-1/(ac^2)$与$k_2=g/G=1/(ac^2)$，故$H=(k_1+k_2)/2=0$，曲面极小；$K=k_1k_2=-1/(a^2c^4)$。面积元$dA=\sqrt{EG-F^2}\,du\,dv=ac^2\,du\,dv$，故$|K|dA=(1/a)c^{-2}\,du\,dv$可积，因为$\int_{-\infty}^{\infty}\operatorname{sech}^2(v/a)dv=2a$。因此$\int_S KdA=-\int_0^{2\pi}\int_{-\infty}^{\infty}(1/a)\operatorname{sech}^2(v/a)dvdu=-4\pi$。",
+  "subject": "微分几何",
+  "source": "generated | standard"
+}
