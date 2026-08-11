@@ -1,0 +1,7 @@
+{
+  "idx": 133,
+  "problem": "设$B_t$为标准布朗运动，$X_t=B_t+\mu t$，其中$\mu<0$，并记$M=\sup_{t\ge0}X_t$。请利用指数鞅与可选停止定理严格证明对任意$a>0$有$\mathbb P(M\ge a)=e^{2\mu a}$，并由此求$M$的分布与期望。证明中需说明为何负漂移保证首次到达时刻的截断极限合法。",
+  "answer": "令$\tau_a=\inf\{t\ge0:X_t=a\}$。对$\theta=-2\mu>0$，过程$\exp(\theta B_t-\theta^2t/2)=\exp(-2\mu X_t)$是鞅。对$\tau_a\wedge T$可选停止：$1=\mathbb E[e^{-2\mu X_{\tau_a\wedge T}}]$。更直接地对漂移扩散的调和函数$h(x)=e^{-2\mu x}$应用停时，或先在$[-b,a]$双边停止再令$b\to\infty$，得到$\mathbb P_0(\tau_a<\tau_{-b})=(1-e^{2\mu b})/(e^{-2\mu a}-e^{2\mu b})$。因$\mu<0$时$X_t/t\to\mu<0$几乎处处，故$X_t\to-\infty$，于是令$b\to\infty$得到$\mathbb P(\tau_a<\infty)=e^{2\mu a}$。因此$\mathbb P(M\le x)=1-e^{2\mu x}$（$x\ge0$），即$M\sim\mathrm{Exp}(-2\mu)$，故$\mathbb EM=-1/(2\mu)$。",
+  "subject": "随机过程",
+  "source": "generated | trap: theorem-condition"
+}
