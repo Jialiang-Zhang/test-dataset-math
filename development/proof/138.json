@@ -1,0 +1,7 @@
+{
+  "idx": 138,
+  "problem": "在线性模型$y=X\beta+\varepsilon$中，$\operatorname{Var}(\varepsilon)=\sigma^2\Omega$，其中$\Omega\succ0$已知，$X$满列秩。再给定线性约束$R\beta=r$，其中$R$满行秩。请从拉格朗日乘子出发推导受约束GLS估计量的闭式表达式，并证明它是所有满足约束的线性无偏估计量中协方差矩阵最小的；同时给出其协方差。",
+  "answer": "无约束GLS为$\hat\beta=(X^T\Omega^{-1}X)^{-1}X^T\Omega^{-1}y$，记$C=(X^T\Omega^{-1}X)^{-1}$。最小化$(y-X\beta)^T\Omega^{-1}(y-X\beta)$且满足$R\beta=r$，KKT条件给出$\tilde\beta=\hat\beta-C R^T(RCR^T)^{-1}(R\hat\beta-r)$。其期望在真参数满足$R\beta=r$时等于$\beta$。写$P=I-CR^T(RCR^T)^{-1}R$，则$\tilde\beta-\beta=P(\hat\beta-\beta)$，故$\operatorname{Var}(\tilde\beta)=\sigma^2[ C-CR^T(RCR^T)^{-1}RC]$。若$Ly$是任一满足约束且无偏的线性估计，则在约束参数空间的切空间$\{h:Rh=0\}$上必须有$LXh=h$。将其与上述估计量之差分解并利用GLS正交性，可得$\operatorname{Var}(Ly)-\operatorname{Var}(\tilde\beta)$为半正定矩阵，故受约束GLS具有Gauss-Markov最优性。",
+  "subject": "线性回归",
+  "source": "generated | standard"
+}
