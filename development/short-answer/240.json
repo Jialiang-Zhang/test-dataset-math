@@ -1,0 +1,7 @@
+{
+  "idx": 240,
+  "problem": "设$T$为有限维复向量空间上的线性算子，已知$$m_T(x)=(x-1)^3(x+2)^2,\\qquad \\chi_T(x)=(x-1)^7(x+2)^5,$$并且$$\\dim\\ker(T-I)=3,\\qquad \\dim\\ker(T+2I)=2.$$判断这样的$T$是否存在；若存在确定所有可能Jordan型，若不存在指出精确矛盾。",
+  "answer": "不存在。对特征值$-2$，代数重数为5，Jordan块数等于$\\dim\\ker(T+2I)=2$；而最小多项式中$(x+2)^2$说明最大Jordan块大小为2。于是两个Jordan块总大小至多4，不可能等于代数重数5。故给定数据不相容。",
+  "subject": "高等代数",
+  "source": "generated | trap: missing-assumption"
+}
