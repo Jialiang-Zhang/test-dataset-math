@@ -1,0 +1,7 @@
+{
+  "idx": 134,
+  "problem": "设$m\ge2$为整数，$0<a<m$。利用钥匙孔围道与函数$f(z)=z^{a-1}/(1+z^m)$的适当单值分支，严格证明$\int_0^\infty \frac{x^{a-1}}{1+x^m}\,dx=\frac\pi m\csc\frac{\pi a}{m}$；再在可交换微分与积分的参数范围内求$\int_0^\infty \frac{x^{a-1}\log x}{1+x^m}\,dx$的精确表达式。",
+  "answer": "取$\arg z\in(0,2\pi)$，则割线沿正实轴。钥匙孔围道上下沿之差给出$(1-e^{2\pi i a})I(a)$，其中$I(a)=\int_0^\infty x^{a-1}/(1+x^m)\,dx$。围道内极点为$z_k=e^{(2k+1)\pi i/m}$，$k=0,\dots,m-1$，留数为$z_k^{a-m}/m$。求和并化简几何级数得到$I(a)=\frac\pi m\csc(\pi a/m)$。对任意紧子区间$[\varepsilon,m-\varepsilon]\subset(0,m)$，被积函数关于$a$的导数由$x^{\varepsilon-1}|\log x|$（$x\le1$）与$x^{-1-\varepsilon}\log x$（$x\ge1$）控制，因此可在积分号下求导。故$\int_0^\infty \frac{x^{a-1}\log x}{1+x^m}\,dx=I'(a)=-\frac{\pi^2}{m^2}\csc\frac{\pi a}{m}\cot\frac{\pi a}{m}$。",
+  "subject": "复分析",
+  "source": "generated | standard"
+}
