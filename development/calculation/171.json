@@ -1,0 +1,7 @@
+{
+  "idx": 171,
+  "problem": "求解非线性常微分方程初值问题$$y''=y^3-y,\qquad y(0)=0,\quad y'(0)=\frac1{\sqrt2}.$$要求先由能量积分证明解轨道满足一阶方程，再确定符号并求出显式解析解；最后证明该解在全实轴存在且满足$\lim_{x\to\pm\infty}y(x)=\pm1$。",
+  "answer": "将方程乘以$y'$并积分：$$\frac12(y')^2=\frac14y^4-\frac12y^2+C.$$由初值$y(0)=0,y'(0)=1/\sqrt2$得$C=1/4$，所以$$\frac12(y')^2=\frac14(y^2-1)^2,\qquad (y')^2=\frac12(1-y^2)^2.$$在$x=0$附近$y'>0$，故沿连接$-1$与$1$的轨道取$$y'=\frac1{\sqrt2}(1-y^2).$$分离变量得到$\operatorname{artanh}y=x/\sqrt2+C_1$，由$y(0)=0$得$C_1=0$，因此$$y(x)=\tanh\frac{x}{\sqrt2}.$$直接代入可验证$y''=y^3-y$及两个初值。该函数对所有$x\in\mathbb R$光滑，故解全局存在，并由双曲正切的极限得$y(x)\to1$当$x\to+\infty$、$y(x)\to-1$当$x\to-\infty$。",
+  "subject": "常微分方程",
+  "source": "generated | standard"
+}
