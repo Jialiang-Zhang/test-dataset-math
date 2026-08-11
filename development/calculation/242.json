@@ -1,0 +1,7 @@
+{
+  "idx": 242,
+  "problem": "对参数$\\alpha\\in\\mathbb R$考察$$F(\\alpha)=\\int_0^\\infty \\frac{\\log(1+\\alpha^2x^2)}{1+x^2}\\,dx.$$求$F(\\alpha)$的精确表达式，并严格说明参数求导的合法性、$\\alpha=0$处的处理以及积分常数如何恢复。",
+  "answer": "由偶性只需设$\\alpha>0$。对任意紧区间$\\alpha\\in[a,b]\\subset(0,\\infty)$，被积函数对$\\alpha$的导数可由可积函数一致控制，因此可交换微分积分。计算得$$F'(\\alpha)=2\\alpha\\int_0^\\infty\\frac{x^2}{(1+x^2)(1+\\alpha^2x^2)}dx=\\frac{\\pi}{1+\\alpha}.$$又由控制收敛$F(\\alpha)\\to0$当$\\alpha\\downarrow0$，故$F(\\alpha)=\\pi\\log(1+\\alpha)$对$\\alpha\\ge0$。由偶性$$\\boxed{F(\\alpha)=\\pi\\log(1+|\\alpha|)}.$$该表达式在0不可微，因此不能跨过0无条件交换参数微分。",
+  "subject": "数学分析",
+  "source": "generated | trap: theorem-condition"
+}
