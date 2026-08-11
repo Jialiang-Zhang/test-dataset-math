@@ -3,5 +3,5 @@
   "problem": "用Crank--Nicolson格式离散一维热方程$u_t=u_{xx}$，空间步长$h$，时间步长$\\tau$，记$r=\\tau/h^2$，齐次Dirichlet边界。内部网格向量满足\n\\[\n(I-\\tfrac r2 L)U^{n+1}=(I+\\tfrac r2 L)U^n,\n\\]\n其中$L$为标准二阶差分矩阵，特征值位于$[-4,0]$。关于该格式，下列说法哪些正确？（多选）\nA. 对任意$r>0$，离散$L^2$范数非增；\nB. 对任意$r>0$，若$U^0\\ge0$逐分量成立，则所有$U^n\\ge0$；\nC. 若$r\\le1$，一步矩阵$(I-\\frac r2L)^{-1}(I+\\frac r2L)$逐项非负，因此保持正性；\nD. 当$r\\to\\infty$时，高频模态的放大因子趋于$-1$而非$0$，所以该方法不是L稳定的时间离散。",
   "answer": "A,C,D",
   "subject": "数值分析",
-  "source": "generated | trap: stability-vs-positivity"
+  "source": "generated | standard"
 }

@@ -3,5 +3,5 @@
   "problem": "独立地观测$X\\sim\\operatorname{Pois}(\\lambda_1t_1)$与$Y\\sim\\operatorname{Pois}(\\lambda_2t_2)$，其中$t_1,t_2>0$已知。考虑检验$H_0:\\lambda_1=\\lambda_2$对双侧备择。说明如何通过条件化消去共同强度这一干扰参数，并写出精确水平$\\alpha$条件检验的一般形式。若要求检验在条件族中无偏，写出随机化拒绝函数需要满足的两个矩条件，并解释其含义。",
   "answer": "令$N=X+Y$。在$H_0$下，条件于$N=n$有$X|N=n\\sim\\operatorname{Bin}(n,p_0)$，$p_0=t_1/(t_1+t_2)$，故干扰参数被消去。对每个$n$取两端拒绝域并在边界必要时随机化。若$\\phi_n(x)$为拒绝概率，精确条件水平要求$E_{p_0}\\phi_n(X)=\\alpha$；双侧无偏的一阶条件为$E_{p_0}[(X-np_0)\\phi_n(X)]=0$，因为功效对$p$的导数在$p_0$处与该矩成比例。第一个条件固定原假设拒绝率，第二个使功效在$p_0$处的一阶导数为0；结合二项族单调似然比可构造双侧UMPU条件检验。",
   "subject": "统计推断",
-  "source": "generated | trap: nuisance-parameter"
+  "source": "generated | standard"
 }
