@@ -1,0 +1,7 @@
+{
+  "idx": 58,
+  "problem": "设$w(x)>0$在$[a,b]$上可积，$p_n$为关于内积$\langle f,g\rangle=\int_a^b f(x)g(x)w(x)dx$的首一$n$次正交多项式，其$n$个零点为$x_1,\dots,x_n$。证明以这些零点为节点存在唯一权重$\omega_i$使Gauss求积公式$\int_a^b f(x)w(x)dx=\sum_{i=1}^n\omega_i f(x_i)$对所有$\deg f\le2n-1$精确；并证明$\omega_i>0$。",
+  "answer": "先令$\ell_i$为节点$x_i$的Lagrange基函数，取$\omega_i=\int_a^b\ell_i(x)w(x)dx$，则公式对次数至多$n-1$的多项式唯一且精确。对任意$\deg f\le2n-1$，作Euclid除法$f=q p_n+r$，其中$\deg q\le n-1,\deg r\le n-1$。由$p_n$与所有低于$n$次多项式正交，$\int q p_n w=0$；又$p_n(x_i)=0$，故$\sum\omega_i f(x_i)=\sum\omega_i r(x_i)=\int rw=\int fw$。因此达到$2n-1$次精度。若另有一组权重具有该精度，则在$\ell_i$上即被唯一确定。正性方面，对$L_i=\ell_i^2$有$\deg L_i=2n-2$，故$\omega_i=\sum_j\omega_j\ell_i(x_j)^2=\int_a^b\ell_i(x)^2w(x)dx>0$，因为$\ell_i\not\equiv0$且$w>0$几乎处处。",
+  "subject": "数值分析",
+  "source": "generated | standard"
+}
