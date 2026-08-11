@@ -1,0 +1,7 @@
+{
+  "idx": 90,
+  "problem": "定义$f:\mathbb R^n\to\mathbb R$为$f(x)=\log\left(\sum_{i=1}^n e^{x_i}\right)$。严格求其Fenchel共轭$f^*(p)=\sup_x\{\langle p,x\rangle-f(x)\}$的完整表达式，包括其有效定义域；并从最优性条件解释为什么该共轭恰好给出概率单纯形上的负熵。",
+  "answer": "先利用平移$x\mapsto x+c\mathbf1$：目标变为$\langle p,x\rangle-f(x)+c(\sum_i p_i-1)$。若$\sum_i p_i\ne1$，取$c\to\pm\infty$即得$f^*(p)=+\infty$。若某$p_i<0$，固定其余坐标令$x_i\to-\infty$，则$\langle p,x\rangle\to+\infty$而$f(x)$保持有界增量，故同样为$+\infty$。因此有限域只能是概率单纯形$\Delta_n=\{p_i\ge0,\sum p_i=1\}$。若$p$在单纯形内部，最优性条件$p_i=e^{x_i}/\sum_j e^{x_j}$，故$x_i=\log p_i+c$。代入得$\langle p,x\rangle-f(x)=\sum_i p_i\log p_i$，与$c$无关。边界点由极限$p_i\downarrow0$并约定$0\log0=0$得到同一公式。故$f^*(p)=\sum_{i=1}^n p_i\log p_i$当$p\in\Delta_n$，否则$f^*(p)=+\infty$。因此log-sum-exp的Fenchel共轭正是概率单纯形上的负Shannon熵。",
+  "subject": "非基础及进阶课程",
+  "source": "generated | standard"
+}
