@@ -1,0 +1,7 @@
+{
+  "idx": 267,
+  "problem": "设$Z=(X^T,Y^T)^T$服从非退化联合高斯分布，协方差块矩阵$\\Sigma=\\begin{pmatrix}\\Sigma_{XX}&\\Sigma_{XY}\\\\\\Sigma_{YX}&\\Sigma_{YY}\\end{pmatrix}$，且精度矩阵$\\Omega=\\Sigma^{-1}$按同样方式分块。下列哪些说法正确？A. $X$与$Y$独立当且仅当$\\Sigma_{XY}=0$。B. $X\\mid Y=y$的协方差与$y$无关，等于$\\Sigma_{XX}-\\Sigma_{XY}\\Sigma_{YY}^{-1}\\Sigma_{YX}$。C. 若再把$Z=(X,Y,W)$分块，则高斯情形下$X\\perp Y\\mid W$当且仅当相应精度矩阵的$XY$块为零。D. 对任意非高斯分布，只要协方差矩阵非奇异，$\\Sigma_{XY}=0$也蕴含$X,Y$独立。请选择所有正确选项。",
+  "answer": "A,B,C",
+  "subject": "概率论",
+  "source": "generated | trap: independence"
+}
