@@ -1,0 +1,7 @@
+{
+  "idx": 287,
+  "problem": "设$(Z_n)$为均值$m>1$、方差$0<\\sigma^2<\\infty$的Galton--Watson过程，$Z_0=1$，令$W_n=Z_n/m^n$。证明$(W_n)$是非负鞅，并计算$\\operatorname{Var}(W_n)$的精确公式及极限；据此证明$W_n$在$L^2$中收敛。",
+  "answer": "由分枝性质$E[Z_{n+1}\\mid\\mathcal F_n]=mZ_n$，故$E[W_{n+1}\\mid\\mathcal F_n]=W_n$，且$W_n\\ge0$。条件方差为$\\operatorname{Var}(Z_{n+1}\\mid\\mathcal F_n)=\\sigma^2Z_n$。全方差公式给$v_{n+1}=m^2v_n+\\sigma^2m^n$，其中$v_n=\\operatorname{Var}(Z_n),v_0=0$。解得$v_n=\\sigma^2 m^{n-1}(m^n-1)/(m-1)$。因此$\\operatorname{Var}(W_n)=v_n/m^{2n}=\\frac{\\sigma^2}{m(m-1)}(1-m^{-n})\\to\\frac{\\sigma^2}{m(m-1)}$。故$\\sup_nE[W_n^2]=1+\\sup_n\\operatorname{Var}(W_n)<\\infty$，由$L^2$鞅收敛定理，$W_n\\to W$于$L^2$及几乎处处。",
+  "subject": "随机过程",
+  "source": "generated | standard"
+}
