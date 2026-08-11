@@ -1,0 +1,7 @@
+{
+  "idx": 235,
+  "problem": "求Riccati方程$$y'(x)=x+\\frac{y(x)}x+\\frac{y(x)^2}{x},\\qquad x>0,$$满足$y(1)=0$的最大实解。要求通过Riccati线性化化为二阶线性方程，并精确给出最大存在区间。",
+  "answer": "令$y=-xu'/u$。代入后得到$u''+u=0$。故$$u=A\\cos x+B\\sin x,\\qquad y=-x\\frac{-A\\sin x+B\\cos x}{A\\cos x+B\\sin x}.$$条件$y(1)=0$给$-A\\sin1+B\\cos1=0$，可取$A=\\cos1,B=\\sin1$，于是$u(x)=\\cos(x-1)$，$$y(x)=x\\tan(x-1).$$含$x=1$的最大存在区间由$x>0$且$\\cos(x-1)\\ne0$决定，因此为$$\\boxed{(0,1+\\pi/2)}.$$",
+  "subject": "常微分方程",
+  "source": "generated | standard"
+}
