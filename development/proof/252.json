@@ -1,0 +1,7 @@
+{
+  "idx": 252,
+  "problem": "设$f$在闭条带$S=\\{z:0\\le\\Re z\\le1\\}$上连续、内部全纯且有界，令$M_0=\\sup_{t\\in\\mathbb R}|f(it)|$，$M_1=\\sup_{t\\in\\mathbb R}|f(1+it)|$。证明Hadamard三线定理：对$0<\\theta<1$，$$|f(\\theta+it)|\\le M_0^{1-\\theta}M_1^{\\theta}.$$要求给出对无界条带使用最大模原理时的截断/扰动处理，并说明为什么这等价于$\\log M(x)$关于$x$的凸性。",
+  "answer": "先假设$M_0,M_1>0$。令$a=\\log M_0,b=\\log M_1$，对$\\varepsilon>0$定义$$g_\\varepsilon(z)=f(z)\\exp[-(1-z)a-zb+\\varepsilon z^2].$$在边界$\\Re z=0,1$上，$|g_\\varepsilon|\\le e^{-\\varepsilon t^2}$或$e^{\\varepsilon(1-t^2)}$，故当$|t|$大时严格小于1。对矩形$0\\le\\Re z\\le1,|\\Im z|\\le T$应用最大模原理；取$T$足够大，使水平边界也因$e^{-\\varepsilon T^2}$压低到不超过1，于是条带内部$|g_\\varepsilon|\\le e^{\\varepsilon}$。令$\\varepsilon\\downarrow0$得$$|f(x+it)|\\le e^{(1-x)a+xb}=M_0^{1-x}M_1^x.$$若某$M_j=0$，由边界唯一性或对$M_j+\\delta$应用结论后令$\\delta\\downarrow0$处理。对任意子条带$[x_0,x_1]$重复应用，得到$\\log M((1-\\theta)x_0+\\theta x_1)\\le(1-\\theta)\\log M(x_0)+\\theta\\log M(x_1)$，这正是$\\log M(x)$的凸性。",
+  "subject": "复分析",
+  "source": "generated | standard"
+}
