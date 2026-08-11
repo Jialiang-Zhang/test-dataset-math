@@ -1,0 +1,7 @@
+{
+  "idx": 116,
+  "problem": "利用复分析方法计算$I=\int_0^\infty\frac{\log x}{1+x^4}\,dx$的精确值。要求构造参数积分$F(a)=\int_0^\infty\frac{x^{a-1}}{1+x^4}\,dx$，通过钥匙孔围道或留数定理严格得到$F(a)$在$0<a<4$上的解析表达式，再证明可在$a=1$处对参数求导并据此求$I$。",
+  "answer": "对$0<a<4$，钥匙孔围道应用于$z^{a-1}/(1+z^4)$可得经典Beta型结果$F(a)=\frac\pi4\csc(\pi a/4)$。在$a=1$附近，$x^{a-1}|\log x|/(1+x^4)$可由分别在$(0,1)$与$(1,\infty)$可积的幂函数控制，因此可在积分号下求导。于是$I=F'(1)=-\frac{\pi^2}{16}\csc(\pi/4)\cot(\pi/4)=-\frac{\pi^2\sqrt2}{16}=-\frac{\pi^2}{8\sqrt2}$。",
+  "subject": "复分析",
+  "source": "generated | trap: theorem-condition"
+}
