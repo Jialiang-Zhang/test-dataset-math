@@ -1,0 +1,7 @@
+{
+  "idx": 305,
+  "problem": "考虑CIR扩散$dX_t=\kappa(\theta-X_t)dt+\sigma\sqrt{X_t}\,dW_t$，其中$\kappa,\theta,\sigma>0$且$2\kappa\theta>\sigma^2$。求其平稳密度，并从平稳Fokker--Planck方程的零概率流条件推导参数；同时给出平稳均值和方差。",
+  "answer": "平稳零流条件为$\kappa(\theta-x)\pi(x)-\frac12\frac d{dx}(\sigma^2x\pi(x))=0$。于是$\frac{\pi'(x)}{\pi(x)}=\frac{2\kappa\theta/\sigma^2-1}{x}-\frac{2\kappa}{\sigma^2}$。积分得$\pi(x)=Cx^{\alpha-1}e^{-\beta x}$，其中$\alpha=2\kappa\theta/\sigma^2$，$\beta=2\kappa/\sigma^2$。归一化后$\pi$为Gamma$(\alpha,\text{rate }\beta)$密度：$\pi(x)=\beta^\alpha x^{\alpha-1}e^{-\beta x}/\Gamma(\alpha)$。故$E_\pi X=\alpha/\beta=\theta$，$\operatorname{Var}_\pi X=\alpha/\beta^2=\theta\sigma^2/(2\kappa)$。条件$2\kappa\theta>\sigma^2$使$\alpha>1$，并保证0边界处密度行为良好。",
+  "subject": "随机过程",
+  "source": "generated | standard"
+}
