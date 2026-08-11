@@ -1,0 +1,7 @@
+{
+  "idx": 200,
+  "problem": "设$X_1,\dots,X_n\overset{iid}{\sim}\operatorname{Poisson}(\theta)$，$\theta>0$，$n\ge2$。目标参数为$g(\theta)=e^{-\theta}$。请从充分性与完备性出发，构造$g(\theta)$的UMVU估计量，并计算其精确方差。要求不能直接猜测关于$T=\sum_iX_i$的函数，而应先给出一个显然无偏估计量，再用Rao-Blackwell与Lehmann-Scheffe定理；同时证明$T$的完备性。",
+  "answer": "先取$U=\mathbf1_{\{X_1=0\}}$，则$\mathbb E_\theta U=P_\theta(X_1=0)=e^{-\theta}$，所以$U$无偏。Poisson族的联合似然依赖样本仅通过$T=\sum_iX_i$，故$T\sim\operatorname{Poisson}(n\theta)$为充分统计量。给定$T=t$时，$(X_1,\dots,X_n)$服从参数均为$1/n$的多项分布，因此$$\mathbb E(U\mid T=t)=P(X_1=0\mid T=t)=\left(1-\frac1n\right)^t.$$于是候选估计量为$$\delta(T)=\left(\frac{n-1}{n}\right)^T.$$验证无偏性也可由Poisson概率母函数得$\mathbb E[s^T]=\exp(n\theta(s-1))$，代$s=(n-1)/n$即为$e^{-\theta}$。完备性：若$\mathbb E_\theta h(T)=0$对所有$\theta>0$，则$$e^{-n\theta}\sum_{t\ge0}h(t)\frac{(n\theta)^t}{t!}=0.$$该幂级数在所有正实点为零，解析唯一性给出每个系数$h(t)=0$，故$T$完备。由Lehmann-Scheffe，$\delta(T)$是唯一UMVU估计量。其二阶矩为$$\mathbb E\delta^2=\exp\left(n\theta\left(\frac{(n-1)^2}{n^2}-1\right)\right)=\exp\left(-\left(2-\frac1n\right)\theta\right).$$因此$$\operatorname{Var}(\delta)=e^{-(2-1/n)\theta}-e^{-2\theta}.$$",
+  "subject": "统计推断",
+  "source": "generated | standard"
+}
