@@ -1,0 +1,7 @@
+{
+  "idx": 295,
+  "problem": "设$A\\in\\mathbb R^{m\\times n},b\\in\\mathbb R^m$。证明Farkas二择一定理：恰有一个系统可解：(i) $Ax=b,x\\ge0$；(ii) 存在$y\\in\\mathbb R^m$使$A^Ty\\ge0$且$b^Ty<0$。要求说明二者不可能同时成立，并用凸锥分离证明至少一个成立；再解释该结论如何给出线性规划不可行性的可验证证书。",
+  "answer": "若(i)(ii)同时成立，则$b^Ty=y^TAx=x^TA^Ty\\ge0$，与$b^Ty<0$矛盾。反之设(i)不可解。令$C=\\{Ax:x\\ge0\\}$，这是由$A$的列有限生成的闭凸锥，且$b\\notin C$。由点与闭凸锥的严格分离，可取$y$使$y^Tb<0$而$y^Tc\\ge0$对所有$c\\in C$。取$c=Ae_jt,t\\ge0$即得$(A^Ty)_j\\ge0$对每个$j$，故(ii)成立。若(i)成立则上述第一步说明(ii)不可能，因此恰有一个成立。向量$y$只需检查有限个线性不等式$A^Ty\\ge0$及一个严格不等式$b^Ty<0$，故它构成原非负线性方程系统以及由此嵌入的LP的可验证不可行证书。",
+  "subject": "运筹学",
+  "source": "generated | standard"
+}
