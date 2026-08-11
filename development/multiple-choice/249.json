@@ -1,0 +1,7 @@
+{
+  "idx": 249,
+  "problem": "设$X\\sim N(0,I_n)$，$A,B$为$n\\times n$实对称幂等矩阵。记$Q_A=X^TAX,Q_B=X^TBX$。判断下列命题哪些正确：A. $Q_A\\sim\\chi^2_{\\operatorname{rank}A}$；B. 若$AB=0$，则$Q_A,Q_B$独立；C. 若$Q_A,Q_B$独立，则必有$AB=0$；D. 仅由$\\operatorname{Cov}(Q_A,Q_B)=0$即可推出$AB=0$。要求逐项给出严格理由。",
+  "answer": "A,B,C,D。A：对称幂等矩阵正交对角化后特征值仅为0或1，因此$Q_A$是$\\operatorname{rank}A$个独立标准正态平方和。B：$AB=0$意味着$\\operatorname{Ran}(A)\\perp\\operatorname{Ran}(B)$，把$X$投影到两个正交子空间所得Gaussian向量独立，因此平方范数独立。C：独立推出协方差为0，而Gaussian二次型满足$\\operatorname{Cov}(Q_A,Q_B)=2\\operatorname{tr}(AB)$。对正交投影$A,B$，$\\operatorname{tr}(AB)=\\operatorname{tr}(ABA)=\\|BA\\|_F^2\\ge0$，故为0时$BA=0$，进而$AB=0$。D正是同一论证：在对称幂等这一额外结构下，零协方差已迫使$AB=0$；若去掉投影结构则该结论一般不成立。",
+  "subject": "概率论",
+  "source": "generated | trap: independence"
+}
