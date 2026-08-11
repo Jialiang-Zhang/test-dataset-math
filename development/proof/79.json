@@ -1,0 +1,7 @@
+{
+  "idx": 79,
+  "problem": "设$X_t=B_t-tB_1$为$[0,1]$上的标准布朗桥。将其视为$L^2[0,1]$值高斯随机元。严格求协方差算子$K$的全部非零特征值与归一化特征函数，并写出Karhunen-Loève展开；要求说明积分特征方程如何化为Sturm-Liouville边值问题。",
+  "answer": "协方差核为$C(s,t)=\min(s,t)-st$，故$(Kf)(t)=\int_0^1C(s,t)f(s)ds$。若$Kf=\lambda f$且$\lambda\ne0$，对$t$两次求导可得$\lambda f''(t)=-f(t)$；由核在端点为0得$f(0)=f(1)=0$。因此$f''+\lambda^{-1}f=0$配Dirichlet边界。非零解要求$\lambda_k^{-1/2}=k\pi$，故$\lambda_k=1/(k^2\pi^2)$，归一化特征函数$e_k(t)=\sqrt2\sin(k\pi t)$。于是$X_t=\sum_{k\ge1}\sqrt{\lambda_k}\,\xi_ke_k(t)=\sum_{k\ge1}\frac{\sqrt2}{k\pi}\xi_k\sin(k\pi t)$，其中$\xi_k$独立且服从$N(0,1)$；级数在$L^2(\Omega\times[0,1])$中收敛，并可取连续版本实现更强收敛。",
+  "subject": "随机过程",
+  "source": "generated | standard"
+}
