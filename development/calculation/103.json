@@ -1,0 +1,7 @@
+{
+  "idx": 103,
+  "problem": "设$0<a<1$，在圆环域$\Omega=\{(r,\theta):a<r<1\}$上求解Laplace方程$\Delta u=0$，边界条件为$u(1,\theta)=\cos(n\theta)$、$u(a,\theta)=0$，其中$n\ge1$。严格求$u$的显式表达式，并利用Green第一恒等式而不是直接二重积分，计算Dirichlet能量$E=\int_\Omega|\nabla u|^2\,dA$的精确值；说明$a\downarrow0$时极限与单位圆盘对应模态一致。",
+  "answer": "分离变量知$n$阶调和模态形如$(Ar^n+Br^{-n})\cos n\theta$。由$u(a,\theta)=0$得$Aa^n+Ba^{-n}=0$，故$B=-Aa^{2n}$；由$u(1,\theta)=\cos n\theta$得$A(1-a^{2n})=1$。因此$u(r,\theta)=\frac{r^n-a^{2n}r^{-n}}{1-a^{2n}}\cos(n\theta)$。由于$\Delta u=0$，Green第一恒等式给$E=\int_{\partial\Omega}u\partial_\nu u\,ds$。内边界上$u=0$无贡献；外边界$r=1$上$\partial_\nu u=u_r=\frac{n(1+a^{2n})}{1-a^{2n}}\cos(n\theta)$且$ds=d\theta$。故$E=\frac{n(1+a^{2n})}{1-a^{2n}}\int_0^{2\pi}\cos^2(n\theta)d\theta=\pi n\frac{1+a^{2n}}{1-a^{2n}}$。当$a\downarrow0$时，$u\to r^n\cos n\theta$且$E\to\pi n$，正是单位圆盘中第$n$个Fourier调和模态的Dirichlet能量。",
+  "subject": "偏微分方程",
+  "source": "generated | standard"
+}
