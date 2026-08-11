@@ -1,0 +1,7 @@
+{
+  "idx": 219,
+  "problem": "在$H=L^2(0,2\pi)$上定义无界算子$$Af=-if',\qquad D(A)=\{f\in H^1(0,2\pi):f(0)=f(2\pi)\}.$$关于$A$，下列说法哪些正确？（多选）\nA. $A$是自伴算子。\nB. $\sigma(A)=\mathbb Z$，每个$k\in\mathbb Z$都是单特征值。\nC. $A$的预解算子$(A-i)^{-1}$是紧算子。\nD. 因为$A$无界，所以其谱必为整个复平面。",
+  "answer": "A,B,C",
+  "subject": "泛函分析",
+  "source": "generated | trap: finite-vs-infinite-dimensional"
+}
