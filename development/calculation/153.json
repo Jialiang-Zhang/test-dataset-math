@@ -1,0 +1,7 @@
+{
+  "idx": 153,
+  "problem": "考虑非线性初值问题$$y''=2y^3,\qquad y(0)=1,\quad y'(0)=0.$$不要求用初等函数写出$y(x)$，但请严格求出其实解的最大存在区间，并证明解在两个有限端点发生爆破。要求通过第一积分得到可分离关系，利用Beta/Gamma函数精确计算爆破时间，并说明为什么解关于$x=0$为偶函数。",
+  "answer": "方程自治且右端光滑，局部解唯一。两边乘$y'$得$y'y''=2y^3y'$，积分并代入初值：$\frac12(y')^2=\frac12y^4-\frac12$，故$(y')^2=y^4-1$。又$y''(0)=2>0$，所以$x>0$足够小时$y'>0$，随后由能量恒等式在$y>1$处取正支$y'=\sqrt{y^4-1}$，故$$x=\int_1^{y(x)}\frac{ds}{\sqrt{s^4-1}}.$$当$y\to\infty$时右端趋于有限值$$T=\int_1^\infty\frac{ds}{\sqrt{s^4-1}}.$$令$t=s^{-4}$，则$ds=-(1/4)t^{-5/4}dt$且$\sqrt{s^4-1}=t^{-1/2}(1-t)^{1/2}$，所以$$T=\frac14\int_0^1t^{-3/4}(1-t)^{-1/2}dt=\frac14B\!\left(\frac14,\frac12\right)=\frac{\sqrt\pi\,\Gamma(1/4)}{4\Gamma(3/4)}.$$因此$x\uparrow T$时$y(x)\to\infty$，否则若保持有界，由ODE延拓定理可越过$T$，矛盾。由于方程与初值在变换$x\mapsto-x$下不变，$y(-x)$满足同一初值问题，唯一性给出$y(-x)=y(x)$，故在$x\downarrow -T$时同样爆破。最大存在区间为$$(-T,T),\qquad T=\frac{\sqrt\pi\Gamma(1/4)}{4\Gamma(3/4)}.$$",
+  "subject": "常微分方程",
+  "source": "generated | trap: boundary-case"
+}
