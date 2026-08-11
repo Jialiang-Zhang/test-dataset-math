@@ -1,0 +1,7 @@
+{
+  "idx": 259,
+  "problem": "设$a\\in\\mathbb R_{>0}^m,b\\in\\mathbb R_{>0}^n$且$\\sum_i a_i=\\sum_j b_j=1$，成本矩阵$C\\in\\mathbb R^{m\\times n}$，$\\varepsilon>0$。考虑熵正则最优传输$$\\min_{P\\ge0}\left\{\\sum_{ij}C_{ij}P_{ij}+\\varepsilon\\sum_{ij}P_{ij}(\\log P_{ij}-1):P\\mathbf1=b?\\right\}$$其中约束应理解为$P\\mathbf1_n=a$、$P^T\\mathbf1_m=b$。推导其对偶问题，证明最优解唯一且具有Sinkhorn形式$$P^*=\\operatorname{diag}(u)K\\operatorname{diag}(v),\\qquad K_{ij}=e^{-C_{ij}/\\varepsilon},$$并说明$(u,v)$为什么只在公共缩放$u\\mapsto cu,v\\mapsto c^{-1}v$下不唯一。",
+  "answer": "以乘子$f\\in\\mathbb R^m,g\\in\\mathbb R^n$处理边缘约束，Lagrangian为$$L(P,f,g)=\\sum_{ij}\{C_{ij}P_{ij}+\\varepsilon P_{ij}(\\log P_{ij}-1)-f_iP_{ij}-g_jP_{ij}\}+f^Ta+g^Tb.$$对每个$P_{ij}>0$极小化，驻点满足$C_{ij}+\\varepsilon\\log P_{ij}-f_i-g_j=0$，故$$P_{ij}=e^{f_i/\\varepsilon}e^{-C_{ij}/\\varepsilon}e^{g_j/\\varepsilon}=u_iK_{ij}v_j.$$代回得到对偶$$\\max_{f,g}\left\{f^Ta+g^Tb-\\varepsilon\\sum_{ij}e^{(f_i+g_j-C_{ij})/\\varepsilon}\right\}.$$原目标在正正交象限上严格凸，而可行集为非空紧凸运输多面体；由于$a,b>0$且$K_{ij}>0$，最优点满足上述正的KKT形式，因此原问题最优$P^*$唯一。边缘约束化为$u\\odot(Kv)=a$与$v\\odot(K^Tu)=b$，即Sinkhorn缩放方程。若$f$加常数$c_0$而$g$减同一常数，对偶值及$f_i+g_j$均不变，对应$u$乘$e^{c_0/\\varepsilon}$、$v$乘其倒数，$P^*$不变；在正边缘与全正$K$下，这正是唯一的规范自由度。",
+  "subject": "运筹学",
+  "source": "generated | standard"
+}
