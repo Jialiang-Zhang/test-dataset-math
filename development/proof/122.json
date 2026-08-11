@@ -1,0 +1,7 @@
+{
+  "idx": 122,
+  "problem": "设$N$是有限维复向量空间$V$上的幂零线性算子，定义$d_k=\dim\ker N^k$，并约定$d_0=0$。严格证明：Jordan标准形中大小至少为$k$的Jordan块个数等于$d_k-d_{k-1}$；大小恰为$k$的Jordan块个数等于$2d_k-d_{k-1}-d_{k+1}$。据此说明仅知道序列$(d_k)$即可唯一恢复$N$的Jordan块大小多重集。",
+  "answer": "设Jordan块大小为$m_1,\dots,m_r$。单个大小$m$的幂零Jordan块对$\ker N^k$贡献$\min(k,m)$维，因此$d_k=\sum_i\min(k,m_i)$。于是$d_k-d_{k-1}=\sum_i[\min(k,m_i)-\min(k-1,m_i)]$，括号在$m_i\ge k$时等于1，否则为0，故该差正是大小至少$k$的块数。大小恰为$k$的块数等于“大小至少$k$”减去“大小至少$k+1$”，即$(d_k-d_{k-1})-(d_{k+1}-d_k)=2d_k-d_{k-1}-d_{k+1}$。因此从所有$d_k$可逐个得到每一种块大小的个数，Jordan型唯一恢复。",
+  "subject": "高等代数",
+  "source": "generated | trap: necessary-vs-sufficient"
+}
