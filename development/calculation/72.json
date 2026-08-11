@@ -1,0 +1,7 @@
+{
+  "idx": 72,
+  "problem": "设$I_n=\int_0^\infty\exp\{-n(x^2+x^{-2})\}\,dx$。利用Laplace方法严格求$n\to\infty$时$I_n$的一阶精确渐近等价，并指出主贡献点、二阶展开以及为什么区间端点不贡献同阶项。",
+  "answer": "令$\phi(x)=x^2+x^{-2}$。在$(0,\infty)$上$\phi'(x)=2x-2x^{-3}$，唯一驻点为$x_0=1$，且$\phi(1)=2$、$\phi''(1)=2+6=8>0$，因此$x=1$是唯一全局非退化极小点；当$x\downarrow0$或$x\to\infty$时$\phi(x)\to\infty$。在$x=1+h$附近，$\phi(x)=2+4h^2+O(h^3)$。Laplace方法给出$I_n\sim e^{-2n}\sqrt{\frac{2\pi}{n\phi''(1)}}=\frac{\sqrt\pi}{2\sqrt n}e^{-2n}$。严格性可通过取固定小邻域$|x-1|<\delta$做二次Taylor上下界并缩放$h=y/\sqrt n$，邻域外因$\phi\ge2+\eta$而贡献$O(e^{-(2+\eta)n})$，故端点与远区均为指数更小阶。",
+  "subject": "数学分析",
+  "source": "generated | standard"
+}
