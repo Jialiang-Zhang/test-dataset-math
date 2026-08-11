@@ -1,0 +1,7 @@
+{
+  "idx": 261,
+  "problem": "设透镜空间$L(p,q)$由两个实心环面沿边界粘合得到，其中第二个实心环面的子午线在第一个边界环面上被粘到同调类$p\\mu+q\\lambda$，$p\\ge2$且$\\gcd(p,q)=1$。使用Seifert–van Kampen定理计算$\\pi_1(L(p,q))$，并进一步求$H_1(L(p,q);\\mathbb Z)$。要求明确说明粘合关系如何在基本群中产生$p$次关系，以及为什么结果与$q$无关。",
+  "answer": "记第一个实心环面为$V_1$，其基本群由核心圈$\\lambda$生成，子午线$\\mu$在$V_1$中可缩，因此$\\pi_1(V_1)\\cong\\mathbb Z=\\langle a\\rangle$，其中边界经线$\\lambda$映到$a$、$\\mu$映到1。第二个实心环面的子午线在$V_2$中可缩；粘合后它在$\\partial V_1$中对应$p\\mu+q\\lambda$还是$q\\mu+p\\lambda$取决于基底约定。按题目给定约定$p\\mu+q\\lambda$若$\\mu$可缩，会给$a^q=1$，与标准透镜空间结论矛盾，说明题面中的系数约定需要把产生关系的经线系数置为$p$。在标准约定下，粘合子午线为$q\\mu+p\\lambda$，于是van Kampen给$$\\pi_1(L(p,q))\\cong\\langle a\mid a^p=1\\rangle\\cong\\mathbb Z/p\\mathbb Z.$$其阿贝尔化仍为$\\mathbb Z/p\\mathbb Z$，故$H_1(L(p,q);\\mathbb Z)\\cong\\mathbb Z/p\\mathbb Z$。参数$q$影响粘合映射及透镜空间的同胚类型，但在基本群关系中$\\mu$已在实心环面内可缩，故不改变群的阶。",
+  "subject": "拓扑学",
+  "source": "generated | trap: convention-check"
+}
