@@ -1,0 +1,7 @@
+{
+  "idx": 128,
+  "problem": "设$A\in\mathbb R^{n\times n}$对称正定，其特征值位于$[m,M]$，条件数$\kappa=M/m$。对方程$Ax=b$应用共轭梯度法。请利用Krylov子空间最优性与Chebyshev多项式极小极大性质证明能量范数误差估计$\|x_k-x_*\|_A\le 2\left(\frac{\sqrt\kappa-1}{\sqrt\kappa+1}\right)^k\|x_0-x_*\|_A$，并指出为何该界不能通过把最速下降法的单步收缩率简单连乘得到。",
+  "answer": "CG的Galerkin最优性给出$\|e_k\|_A=\min_{p\in\Pi_k,\,p(0)=1}\|p(A)e_0\|_A\le \min_p\max_{\lambda\in[m,M]}|p(\lambda)|\,\|e_0\|_A$。把$[m,M]$仿射映射到$[-1,1]$，取$p_k(\lambda)=T_k((M+m-2\lambda)/(M-m))/T_k((M+m)/(M-m))$。分子在谱区间绝对值不超过1。设$c=(M+m)/(M-m)>1$，利用$T_k(c)=\frac12[(c+\sqrt{c^2-1})^k+(c-\sqrt{c^2-1})^k]$得$1/|T_k(c)|\le2(c-\sqrt{c^2-1})^k=2((\sqrt\kappa-1)/(\sqrt\kappa+1))^k$，故结论成立。最速下降的单步因子来自每一步在当前梯度方向上的局部最优，而CG在整个Krylov子空间上作全局多项式最优，方向间具有$A$-共轭性；因此其界不是单步最速下降收缩率的机械乘积。",
+  "subject": "数值分析",
+  "source": "generated | standard"
+}
