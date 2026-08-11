@@ -1,0 +1,7 @@
+{
+  "idx": 255,
+  "problem": "在$H=L^2(0,1)$上定义自伴算子$$Tf(x)=xf(x)+\\alpha\\left(\\int_0^1f(t)dt\\right),\\qquad \\alpha\\in\\mathbb R.$$确定$T$的本质谱、点谱以及位于$[0,1]$之外的全部特征值，并证明不存在嵌入在$(0,1)$中的特征值。要求显式解出离散特征值关于$\\alpha$的公式。",
+  "answer": "记$M_xf=xf$，$P f=\\langle f,1\\rangle1$，则$T=M_x+\\alpha P$，其中$P$秩一且紧。因此由Weyl定理$\\sigma_{ess}(T)=\\sigma_{ess}(M_x)=[0,1]$。若$\\lambda\\notin[0,1]$为特征值且$c=\\int_0^1f\\ne0$，特征方程给$$(x-\\lambda)f(x)=-\\alpha c,\\qquad f(x)=\\frac{\\alpha c}{\\lambda-x}.$$积分后需满足$$1=\\alpha\\int_0^1\\frac{dx}{\\lambda-x}=\\alpha\\log\\frac{\\lambda}{\\lambda-1}.$$故$\\alpha\\ne0$时唯一离散特征值为$$\\lambda_\\alpha=\\frac1{1-e^{-1/\\alpha}}.$$若$\\alpha>0$则$\\lambda_\\alpha>1$；若$\\alpha<0$则$\\lambda_\\alpha<0$。对应特征函数与$(\\lambda_\\alpha-x)^{-1}$成比例。若$\\lambda\\in(0,1)$，同样的形式在$x=\\lambda$附近不属于$L^2$，除非$c=0$；而$c=0$时$(x-\\lambda)f=0$几乎处处，故$f=0$。端点0,1也不是$M_x$的$L^2$特征值，秩一扰动方程同样不给非零平方可积解。因此点谱仅为$\\{\\lambda_\\alpha\\}$（$\\alpha\\ne0$），当$\\alpha=0$时点谱为空。",
+  "subject": "泛函分析",
+  "source": "generated | trap: essential-vs-point-spectrum"
+}
