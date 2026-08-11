@@ -1,0 +1,7 @@
+{
+  "idx": 221,
+  "problem": "设$0<\rho<1$，在圆环$A_\rho=\{(r,\theta):\rho<r<1\}$上考虑Laplace方程$\Delta u=0$，内边界满足Neumann条件$u_r(\rho,\theta)=0$，外边界给定Dirichlet数据$u(1,\theta)=f(\theta)$。定义外边界Dirichlet-to-Neumann算子$\Lambda_\rho f=u_r(1,\theta)$。请用Fourier分离变量严格求出$\Lambda_\rho$的全部特征值，并证明其在$L^2(S^1)$上非负且自伴。",
+  "answer": "常数模$n=0$给出径向常数解，故特征值$\lambda_0=0$。对$n\ge1$，外边界模$\cos n\theta$或$\sin n\theta$对应径向部分$$R(r)=Ar^n+Br^{-n}.$$内边界条件$R'(\rho)=0$给出$A\rho^{n-1}=B\rho^{-n-1}$，即$B=A\rho^{2n}$。由$R(1)=1$得$A=(1+\rho^{2n})^{-1}$，故$$R'(1)=nA-nB=n\frac{1-\rho^{2n}}{1+\rho^{2n}}.$$因此$$\Lambda_\rho(\cos n\theta)=\lambda_n\cos n\theta,\qquad \Lambda_\rho(\sin n\theta)=\lambda_n\sin n\theta,$$其中$$\lambda_n=n\frac{1-\rho^{2n}}{1+\rho^{2n}}>0\quad(n\ge1),\qquad\lambda_0=0.$$Fourier基是$L^2(S^1)$的完备正交基，且上述特征值均为实数，所以$\Lambda_\rho$在其自然定义域上自伴；亦可由Green公式得$$\langle\Lambda_\rho f,f\rangle_{L^2(S^1)}=\int_{A_\rho}|\nabla u|^2\,dA\ge0,$$内边界项因Neumann条件消失，从而算子非负。",
+  "subject": "偏微分方程",
+  "source": "generated | standard"
+}
