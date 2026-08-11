@@ -1,0 +1,7 @@
+{
+  "idx": 188,
+  "problem": "设$$I_n=\int_{-\infty}^{\infty}\frac{e^{-n x^4}}{1+x^2}\,dx.$$请用退化型Laplace方法严格求出$I_n$的前两项渐近展开，并证明余项阶为$O(n^{-5/4})$。不得把$x=0$误当作普通非退化二次极值点。",
+  "answer": "令$x=n^{-1/4}t$，则$$I_n=n^{-1/4}\int_{\mathbb R}\frac{e^{-t^4}}{1+n^{-1/2}t^2}dt.$$利用恒等式$$(1+\varepsilon t^2)^{-1}=1-\varepsilon t^2+\frac{\varepsilon^2t^4}{1+\varepsilon t^2},\qquad \varepsilon=n^{-1/2},$$得到$$I_n=n^{-1/4}\left[\int e^{-t^4}dt-n^{-1/2}\int t^2e^{-t^4}dt+R_n\right],$$且$|R_n|\le n^{-1}\int t^4e^{-t^4}dt=O(n^{-1})$。由$\int_0^\infty t^{r-1}e^{-t^4}dt=\frac14\Gamma(r/4)$，有$$\int_{\mathbb R}e^{-t^4}dt=\frac12\Gamma\!\left(\frac14\right),\qquad \int_{\mathbb R}t^2e^{-t^4}dt=\frac12\Gamma\!\left(\frac34\right).$$因此$$I_n=\frac{\Gamma(1/4)}{2n^{1/4}}-\frac{\Gamma(3/4)}{2n^{3/4}}+O(n^{-5/4}).$$退化点$x=0$的首项尺度是$n^{-1/4}$而非普通Laplace法中的$n^{-1/2}$，这是本题关键。",
+  "subject": "数学分析",
+  "source": "generated | trap: theorem-condition"
+}
