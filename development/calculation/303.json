@@ -1,0 +1,7 @@
+{
+  "idx": 303,
+  "problem": "设$(X_1,X_2,X_3)^T\sim N(0,\Sigma)$，其中$\Sigma=\begin{pmatrix}2&1&1\\1&2&1\\1&1&3\end{pmatrix}$。求$\operatorname{Cov}((X_1,X_2)^T\mid X_3)$，并判断$X_1$与$X_2$在给定$X_3$后是否条件独立。再说明为什么无条件不相关与条件独立在高斯情形中的判据不同。",
+  "answer": "分块写$\Sigma_{12}=\begin{pmatrix}2&1\\1&2\end{pmatrix}$，$c=(1,1)^T$，$\sigma_{33}=3$。条件协方差为$\Sigma_{12\mid3}=\Sigma_{12}-cc^T/3=\begin{pmatrix}5/3&2/3\\2/3&5/3\end{pmatrix}$。其非对角元$2/3\ne0$，故在联合高斯条件分布下$X_1$与$X_2$给定$X_3$后不独立。无条件高斯独立由原协方差$\operatorname{Cov}(X_1,X_2)$是否为0判定；条件独立则由Schur补中的条件协方差是否为0判定，两者一般不同。",
+  "subject": "概率论",
+  "source": "generated | trap: independence"
+}
