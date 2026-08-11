@@ -1,0 +1,7 @@
+{
+  "idx": 75,
+  "problem": "在$(0,1)$上令$f_n(x)=\dfrac{n^\alpha}{(1+n^\beta x)^\gamma}$，其中$\alpha,\beta,\gamma>0$。关于$f_n\to0$的性质，下列哪一项给出了正确的充要条件？A. 几乎处处收敛与$L^1$收敛均当且仅当$\alpha<\beta\gamma$；B. 几乎处处收敛当且仅当$\alpha<\beta\gamma$，而$L^1$收敛当且仅当$\alpha<\beta\min\{1,\gamma\}$；C. 一致收敛当且仅当$\alpha<\beta$；D. 只要几乎处处收敛，就存在与$n$无关的$L^1$控制函数。",
+  "answer": "B",
+  "subject": "测度积分",
+  "source": "generated | trap: convergence-direction"
+}
