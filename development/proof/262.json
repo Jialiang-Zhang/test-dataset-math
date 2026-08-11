@@ -1,0 +1,7 @@
+{
+  "idx": 262,
+  "problem": "在一维环面$\\mathbb T=\\mathbb R/2\\pi\\mathbb Z$上，以Fourier系数定义$H^s$范数$$\\|f\\|_{H^s}^2=\\sum_{k\\in\\mathbb Z}(1+k^2)^s|\\widehat f(k)|^2.$$证明当$s>1/2$时存在常数$C_s$使$\\|f\\|_{L^\\infty}\\le C_s\\|f\\|_{H^s}$，并构造一列三角多项式说明临界点$s=1/2$时不存在这样的统一常数。要求你的反例在$H^{1/2}$中有一致有界范数但$L^\\infty$范数趋于无穷。",
+  "answer": "Fourier反演与Cauchy–Schwarz给$$|f(x)|\\le\\sum_k|\\widehat f(k)|\\le\left(\\sum_k(1+k^2)^s|\\widehat f(k)|^2\\right)^{1/2}\left(\\sum_k(1+k^2)^{-s}\right)^{1/2}.$$后一数列当且仅当$s>1/2$可和，因此得到连续嵌入$H^s(\\mathbb T)\\hookrightarrow L^\\infty(\\mathbb T)$。临界点取$$f_N(x)=\\frac1{\\sqrt{\\log N}}\\sum_{k=1}^N\\frac{e^{ikx}}k.$$则$$\\|f_N\\|_{H^{1/2}}^2=\\frac1{\\log N}\\sum_{k=1}^N(1+k^2)^{1/2}k^{-2}\\asymp\\frac1{\\log N}\\sum_{k=1}^N\\frac1k=O(1),$$且同时有统一正下界，所以范数保持有界；但在$x=0$，$$|f_N(0)|=\\frac1{\\sqrt{\\log N}}\\sum_{k=1}^N\\frac1k\\sim\\sqrt{\\log N}\\to\\infty.$$故$s=1/2$时不存在$\\|f\\|_\\infty\\le C\\|f\\|_{H^{1/2}}$的统一常数。这也说明临界指数不能由$s>1/2$简单取极限得到。",
+  "subject": "非基础及进阶课程",
+  "source": "generated | trap: boundary-case"
+}
