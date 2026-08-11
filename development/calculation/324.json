@@ -1,0 +1,7 @@
+{
+  "idx": 324,
+  "problem": "对$0<a<1$，计算$I(a)=\int_0^\infty \frac{x^{a-1}(\log x)^2}{1+x}\,dx$。要求先用带割线的钥匙孔围道证明$\int_0^\infty\frac{x^{a-1}}{1+x}dx=\pi/\sin(\pi a)$，再严格说明为何可对参数$a$二次求导。",
+  "answer": "钥匙孔围道取$z^{a-1}=e^{(a-1)\Log z}$，割线沿正实轴，上下两侧相差因子$e^{2\pi i(a-1)}$；唯一极点$z=-1$的留数结合围道极限给$J(a)=\int_0^\infty x^{a-1}/(1+x)dx=\pi\csc(\pi a)$。对任意紧子区间$[\delta,1-\delta]\subset(0,1)$，$x^{a-1}(\log x)^2/(1+x)$可分别在$(0,1)$与$(1,\infty)$由可积函数$x^{\delta-1}|\log x|^2$和$x^{-\delta-1}(\log x)^2$控制，故可二次逐项求导。于是$I(a)=J''(a)=\pi^3\csc(\pi a)\cot^2(\pi a)+\pi^3\csc^3(\pi a)$，即$I(a)=\pi^3\csc(\pi a)(1+2\cot^2(\pi a))$。",
+  "subject": "复分析",
+  "source": "generated | trap: theorem-condition"
+}
