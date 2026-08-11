@@ -1,0 +1,7 @@
+{
+  "idx": 130,
+  "problem": "设$M$为紧致定向二维黎曼流形，$\gamma$是一条将$M$分成两个区域$D_1,D_2$的简单闭测地线。假设高斯曲率$K>0$处处成立。利用Gauss-Bonnet定理证明$\chi(D_1)>0$且$\chi(D_2)>0$，并据此证明$\gamma$必为分离曲线且每个$D_i$都同胚于圆盘；进一步说明为什么结论若仅假设$K\ge0$则可能失效。",
+  "answer": "因$\gamma$为测地线，其测地曲率$k_g\equiv0$。对每个带边界区域$D_i$应用Gauss-Bonnet：$\int_{D_i}K\,dA+\int_{\partial D_i}k_g\,ds=2\pi\chi(D_i)$，故$2\pi\chi(D_i)=\int_{D_i}K\,dA>0$，于是$\chi(D_i)>0$。紧致定向连通带一个边界分量的曲面满足$\chi=1-2g$，因此$\chi>0$迫使$g=0$，故每个$D_i$同胚于圆盘。若$K\ge0$而不严格为正，可能出现$\int_{D_i}K=0$，从而$\chi(D_i)=0$；例如平坦圆柱型区域可由闭测地线围成而不具有圆盘拓扑，因此严格正曲率是推出正Euler示性的关键。",
+  "subject": "微分几何",
+  "source": "generated | trap: theorem-condition"
+}
