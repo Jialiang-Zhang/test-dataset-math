@@ -1,0 +1,7 @@
+{
+  "idx": 155,
+  "problem": "在复希尔伯特空间$L^2(0,1)$上定义无界算子$$Af=-i f',\qquad D(A)=\{f\in H^1(0,1):f(1)=f(0)\}.$$请严格证明$A$是自伴算子，求出其完整谱，并证明其预解算子$(A-i)^{-1}$为紧算子。要求不能只写Fourier级数结论；必须说明对称性、伴随算子定义域的端点条件、特征函数完备性以及紧预解的理由。",
+  "answer": "对$f,g\in D(A)$分部积分：$\langle Af,g\rangle-\langle f,Ag\rangle=-i[f\bar g]_0^1=0$，故$A$对称。若$g\in D(A^*)$，则存在$h\in L^2$使$\langle Af,g\rangle=\langle f,h\rangle$对所有周期$H^1$函数$f$成立。先取$C_c^\infty(0,1)$可知$g\in H^1$且$h=-ig'$；再对一般周期$f$分部积分，边界项$-i f(0)(\bar g(1)-\bar g(0))$必须对任意$f(0)$为零，故$g(1)=g(0)$。于是$D(A^*)=D(A)$且$A^*=A$。特征方程$-if'=\lambda f$给出$f(x)=Ce^{i\lambda x}$；周期条件要求$e^{i\lambda}=1$，故$\lambda=2\pi k$，$k\in\mathbb Z$。函数$e_k(x)=e^{2\pi ikx}$构成$L^2(0,1)$的完备正交基，因此谱无其他部分，$$\sigma(A)=\{2\pi k:k\in\mathbb Z\},$$每个特征值单重。对$g=\sum g_ke_k$，$$(A-i)^{-1}g=\sum_{k\in\mathbb Z}\frac{g_k}{2\pi k-i}e_k.$$其对角系数$(2\pi k-i)^{-1}\to0$，故该算子是有限秩截断的算子范数极限，从而紧。",
+  "subject": "泛函分析",
+  "source": "generated | trap: theorem-condition"
+}
