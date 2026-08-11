@@ -1,0 +1,7 @@
+{
+  "idx": 258,
+  "problem": "设$V$为有限维复向量空间，$\\mathcal A$是一族两两可交换的线性算子。证明：$\\mathcal A$可同时上三角化。进一步证明：若$\\mathcal A$中的每个算子都可对角化，则它们可同时对角化。要求指出复数域与交换性分别在哪一步被使用，并给出删除任一条件后结论可能失效的说明。",
+  "answer": "先证明存在公共特征向量。取$T\\in\\mathcal A$，复数域保证$T$有特征值$\\lambda$及非零特征空间$E_\\lambda$。对任意$S\\in\\mathcal A$，因$ST=TS$，有$S(E_\\lambda)\\subset E_\\lambda$。若$E_\\lambda\\ne V$，就在该较低维空间上对限制族归纳；若$E_\\lambda=V$则$T=\\lambda I$，忽略它并对其他算子继续。于是得到公共特征向量$v_1$。公共特征直线$\\mathbb Cv_1$对全族不变，在商空间$V/\\mathbb Cv_1$上诱导算子仍两两交换；维数归纳给出公共不变旗标，故全族可同时上三角化。若每个算子都可对角化，固定某个$T$并分解$V=\\bigoplus_\\lambda E_\\lambda(T)$。交换性使每个$E_\\lambda(T)$对其余算子不变，而且可对角化算子的限制仍可对角化。对各特征空间递归处理并拼接公共特征基，即得同时对角化。复数域用于保证特征值/特征向量存在；例如实平面旋转$90^\\circ$在$\\mathbb R$上不可三角化。交换性则保证特征空间不变；例如$\\begin{pmatrix}1&0\\\\0&2\\end{pmatrix}$与$\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}$各自可对角化但不交换，也不能同时对角化。",
+  "subject": "高等代数",
+  "source": "generated | trap: theorem-condition"
+}
