@@ -3,5 +3,5 @@
   "problem": "设$X_1,\dots,X_n\overset{iid}\sim N(\mu,\sigma^2)$，其中$n\ge2$且$\mu\in\mathbb R,\sigma^2>0$均未知。请构造$\mu^2$的UMVU估计量并计算其精确方差。要求说明所用充分完备统计量及Lehmann-Scheffe定理的适用性。",
   "answer": "记$\bar X=n^{-1}\sum_iX_i$，$S^2=(n-1)^{-1}\sum_i(X_i-\bar X)^2$。有$E\bar X^2=\mu^2+\sigma^2/n$且$ES^2=\sigma^2$，故$$T=\bar X^2-\frac{S^2}{n}$$对$\mu^2$无偏。正态二参数族可写成满秩指数族，其自然统计量$(\sum_iX_i,\sum_iX_i^2)$在自然参数空间含开集时为完备充分统计量；而$T$是它的可测函数，因此由Lehmann-Scheffe定理，$T$为唯一UMVU估计。又$\bar X$与$S^2$独立，令$\tau^2=\sigma^2/n$，则$$\operatorname{Var}(\bar X^2)=2\tau^4+4\mu^2\tau^2=\frac{2\sigma^4}{n^2}+\frac{4\mu^2\sigma^2}{n}.$$同时$\operatorname{Var}(S^2)=2\sigma^4/(n-1)$，故$$\operatorname{Var}(T)=\frac{2\sigma^4}{n^2}+\frac{4\mu^2\sigma^2}{n}+\frac{2\sigma^4}{n^2(n-1)}=\frac{4\mu^2\sigma^2}{n}+\frac{2\sigma^4}{n(n-1)}.$$",
   "subject": "统计推断",
-  "source": "generated | theorem-condition"
+  "source": "generated | trap: theorem-condition"
 }
