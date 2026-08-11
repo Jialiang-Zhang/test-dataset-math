@@ -1,0 +1,7 @@
+{
+  "idx": 111,
+  "problem": "在$([0,1],\mathcal M,m)$上令$f_n(x)=n^\alpha\mathbf 1_{(0,n^{-\beta})}(x)$，其中$\beta>0$、$\alpha\in\mathbb R$。关于$n\to\infty$，下列结论哪些正确？A. $f_n\to0$几乎处处对所有$\alpha$都成立；B. $f_n\to0$于$L^p(0,1)$当且仅当$\alpha<\beta/p$；C. $\{f_n\}$一致可积当且仅当$\alpha<\beta$；D. $f_n\to0$一致收敛当且仅当$\alpha<0$。",
+  "answer": "A,B,C,D",
+  "subject": "测度积分",
+  "source": "generated | trap: convergence-direction"
+}
