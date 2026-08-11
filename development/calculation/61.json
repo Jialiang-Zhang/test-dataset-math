@@ -1,0 +1,7 @@
+{
+  "idx": 61,
+  "problem": "设$X_t=B_t+\mu t$，其中$B_t$为标准布朗运动，$\mu<0$，并令$\tau_a=\inf\{t\ge0:X_t=a\}$，$a>0$。利用指数鞅与可选停止定理严格求出$\mathbb E[e^{-s\tau_a};\tau_a<\infty]$（$s\ge0$），并由此推出$\mathbb P(\tau_a<\infty)$。需要说明停止与极限步骤为何合法。",
+  "answer": "取$r>0$满足$r\mu+r^2/2=s$，即$r=-\mu+\sqrt{\mu^2+2s}$。过程$M_t=\exp(rX_t-st)=\exp(rB_t-r^2t/2)$为正鞅。对$\tau_a\wedge T$应用可选停止，$1=\mathbb E[M_{\tau_a\wedge T}]$。在$\{\tau_a\le T\}$上$M=e^{ra-s\tau_a}$；在$\{\tau_a>T\}$上，由$X_T<a$得$M_T\le e^{ra}e^{-sT}$（$s>0$时直接趋零；$s=0$可先取$s>0$再令$s\downarrow0$，或用非负鞅/Fatou与漂移趋于$-\infty$）。令$T\to\infty$得$1=e^{ra}\mathbb E[e^{-s\tau_a};\tau_a<\infty]$，故$\mathbb E[e^{-s\tau_a};\tau_a<\infty]=\exp\{(\mu-\sqrt{\mu^2+2s})a\}$。令$s\downarrow0$并用单调收敛，得到$\mathbb P(\tau_a<\infty)=e^{2\mu a}$。",
+  "subject": "概率论",
+  "source": "generated | trap: theorem-condition"
+}
