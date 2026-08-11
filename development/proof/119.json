@@ -1,0 +1,7 @@
+{
+  "idx": 119,
+  "problem": "在$H=L^2(0,1)$上定义紧自伴积分算子$(Kf)(x)=\int_0^1\min(x,t)f(t)\,dt$。严格求出$K$的全部非零特征值与对应特征函数，并计算$\|K\|$。要求从积分特征方程出发，经两次求导转化为Sturm-Liouville边值问题，同时说明$0$为何属于谱但不是特征值。",
+  "answer": "若$Kf=\lambda f$且$\lambda\ne0$，则$\lambda f(x)=\int_0^x t f(t)dt+x\int_x^1f(t)dt$。求导得$\lambda f'(x)=\int_x^1f(t)dt$，再求导得$\lambda f''(x)=-f(x)$。边界由原式和一阶式给出$f(0)=0$、$f'(1)=0$。故$f''+\lambda^{-1}f=0$，非零解为$f_k(x)=\sin((k+\tfrac12)\pi x)$，并有$\lambda_k=((k+\tfrac12)^2\pi^2)^{-1}=4/((2k+1)^2\pi^2)$，$k=0,1,\dots$。最大特征值为$4/\pi^2$，因此$\|K\|=4/\pi^2$。若$Kf=0$，由上式求导两次可得$f=0$，所以0不是特征值；但$K$为无限维空间上的紧算子，非零特征值趋于0，故0属于谱。",
+  "subject": "泛函分析",
+  "source": "generated | trap: finite-vs-infinite-dimensional"
+}
