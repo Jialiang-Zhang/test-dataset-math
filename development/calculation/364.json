@@ -1,0 +1,7 @@
+{
+  "idx": 364,
+  "problem": "考虑经典测量误差模型：$Y=\beta X+\varepsilon$，但只能观测$W=X+U$。设$X,U,\varepsilon$均零均值、相互独立，方差分别为$\sigma_X^2,\sigma_U^2,\sigma_\varepsilon^2$，且另有独立重复测量$Z=X+V$，其中$V$与前三者独立、方差$\sigma_V^2$。求用$W$对$Y$做无截距OLS所得斜率的概率极限；再证明以$Z$为工具变量的IV估计量一致，并给出其渐近方差。",
+  "answer": "OLS概率极限为$\operatorname{Cov}(W,Y)/\operatorname{Var}(W)=\beta\sigma_X^2/(\sigma_X^2+\sigma_U^2)$，表现为衰减偏差。IV估计量可写为$\hat\beta_{IV}=\sum Z_iY_i/\sum Z_iW_i$。有$E[ZY]=\beta E[(X+V)X]=\beta\sigma_X^2$，$E[ZW]=E[(X+V)(X+U)]=\sigma_X^2$，故$\hat\beta_{IV}\xrightarrow p\beta$。其矩条件为$E[Z(Y-\beta W)]=0$，而$Y-\beta W=\varepsilon-\beta U$。因$Z=X+V$与$(\varepsilon,U)$独立，$\operatorname{Var}(Z(\varepsilon-\beta U))=E[Z^2]E[(\varepsilon-\beta U)^2]=(\sigma_X^2+\sigma_V^2)(\sigma_\varepsilon^2+\beta^2\sigma_U^2)$。故$\sqrt n(\hat\beta_{IV}-\beta)\Rightarrow N(0,\Omega)$，其中$\Omega=(\sigma_X^2+\sigma_V^2)(\sigma_\varepsilon^2+\beta^2\sigma_U^2)/\sigma_X^4$。",
+  "subject": "线性回归",
+  "source": "generated | trap: independence"
+}
