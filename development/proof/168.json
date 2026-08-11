@@ -1,0 +1,7 @@
+{
+  "idx": 168,
+  "problem": "设$Q_8=\\{\\pm1,\\pm i,\\pm j,\\pm k\\}$为四元数群。请严格证明$\\operatorname{Aut}(Q_8)\\cong S_4$。要求先计算自同构的总数，再研究其对三个阶为4的循环子群$\\langle i\\rangle,\\langle j\\rangle,\\langle k\\rangle$的作用，识别核为$\\operatorname{Inn}(Q_8)\\cong V_4$，最后说明所得半直积$V_4\\rtimes S_3$中的作用与$S_4$中共轭作用于Klein四元子群的作用一致。",
+  "answer": "任一自同构由$i,j$的像决定。$i$可映到六个阶4元素中的任意一个；给定$\\varphi(i)$后，$\\varphi(j)$必须取不属于$\\langle\\varphi(i)\\rangle$的四个阶4元素之一，随后$k=ij$的像被唯一确定，故$|\\operatorname{Aut}(Q_8)|=24$。自同构置换三个子群$\\langle i\\rangle,\\langle j\\rangle,\\langle k\\rangle$，得到满同态$\\rho:\\operatorname{Aut}(Q_8)\\to S_3$。其核由保持三个子群不变的自同构组成，恰有4个；另一方面$\\operatorname{Inn}(Q_8)\\cong Q_8/Z(Q_8)\\cong V_4$且内自同构确实固定这三个子群，故$\\ker\\rho=\\operatorname{Inn}(Q_8)\\cong V_4$。于是$\\operatorname{Aut}(Q_8)\\cong V_4\\rtimes S_3$，其中$S_3$忠实置换$V_4$的三个非单位元。该作用与$S_4$对其正规Klein四元子群$\\{1,(12)(34),(13)(24),(14)(23)\\}$的共轭作用完全相同；因此两个半直积同构，得到$\\operatorname{Aut}(Q_8)\\cong S_4$。",
+  "subject": "抽象代数",
+  "source": "generated | standard"
+}
