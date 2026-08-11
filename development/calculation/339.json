@@ -1,0 +1,7 @@
+{
+  "idx": 339,
+  "problem": "设$X_1,X_2,\\dots$独立同分布，$X_i\\sim\\mathrm{Exp}(1)$，令$S_n=\\sum_{i=1}^nX_i$。对固定$a>1$，求\\n\\[\\n\\lim_{n\\to\\infty}\\frac1n\\log\\mathbb P(S_n\\ge an),\\n\\]\\n并不仅给出Cramér速率函数，还要求用指数倾斜构造下界，说明Chernoff上界为何在指数尺度上是精确的。",
+  "answer": "矩母函数$M(\\theta)=1/(1-\\theta)$（$\\theta<1$），故$I(a)=\\sup_{\\theta<1}\\{\\theta a+\\log(1-\\theta)\\}$。极值条件$a-1/(1-\\theta)=0$给$\\theta_*=1-1/a$，于是$I(a)=a-1-\\log a$。Chernoff给$\\limsup n^{-1}\\log\\mathbb P(S_n\\ge an)\\le-I(a)$。为下界，以$\\theta_*$指数倾斜：在新测度$\\mathbb P_*$下，$X_i\\sim\\mathrm{Exp}(1/a)$，均值为$a$。固定$\\varepsilon>0$，在事件$an\\le S_n\\le(a+\\varepsilon)n$上反变换得$\\mathbb P(\\cdot)\\ge \\exp[-nI(a)-\\theta_*\\varepsilon n]\\mathbb P_*(an\\le S_n\\le(a+\\varepsilon)n)$。由中心极限定理，最后概率不在指数尺度衰减，因此$\\liminf\\ge-I(a)-\\theta_*\\varepsilon$，令$\\varepsilon\\downarrow0$得\\n$\\lim n^{-1}\\log\\mathbb P(S_n\\ge an)=-(a-1-\\log a)$。",
+  "subject": "概率论",
+  "source": "generated | standard"
+}
