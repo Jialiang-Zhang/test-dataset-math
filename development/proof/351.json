@@ -1,0 +1,7 @@
+{
+  "idx": 351,
+  "problem": "设$n\\ge2$。证明不存在连续retraction $r:B^n\\to S^{n-1}$满足$r|_{S^{n-1}}=\\operatorname{id}$，并据此推出Brouwer不动点定理：任意连续映射$f:B^n\\to B^n$都有不动点。要求使用同调或基本群之外至少一个清晰的构造步骤，不能只引用“无收缩定理”等价命题。",
+  "answer": "先用约化同调证明无retraction。若存在$r$，包含映射$i:S^{n-1}\\hookrightarrow B^n$满足$r\\circ i=\\operatorname{id}$，则在$\\widetilde H_{n-1}$上$r_*\\circ i_*=\\operatorname{id}_{\\mathbb Z}$。但$B^n$可缩，$\\widetilde H_{n-1}(B^n)=0$，所以$i_*=0$，不可能有左逆，矛盾。由此推Brouwer：若$f$无不动点，则对每个$x\\in B^n$，从$f(x)$出发沿经过$x$的射线继续向外，唯一交单位球面于一点$r(x)$。写$r(x)=f(x)+t(x)(x-f(x))$，其中$t(x)\\ge1$由$\\|f(x)+t(x)(x-f(x))\\|=1$确定。由于$x\\ne f(x)$且闭球严格凸，朝该方向的出射交点唯一，并且由二次方程根的连续依赖性知$t(x)$连续，故$r$连续；若$x\\in S^{n-1}$，则$t(x)=1$且$r(x)=x$。于是构造出$B^n$到$S^{n-1}$的retraction，与前半矛盾。因此$f$必有不动点。",
+  "subject": "拓扑学",
+  "source": "generated | trap: converse-error"
+}
