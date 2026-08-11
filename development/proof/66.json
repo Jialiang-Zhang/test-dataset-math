@@ -1,0 +1,7 @@
+{
+  "idx": 66,
+  "problem": "设$X_1,\dots,X_n\overset{iid}\sim N(\mu,\sigma^2)$，其中$\mu\in\mathbb R,\sigma^2>0$均未知，$n\ge2$。证明$T=(\sum_iX_i,\sum_iX_i^2)$是完全充分统计量，并据此构造$\mu^2$的UMVU估计量。要求说明为什么仅凭$\bar X$充分性不足以完成结论。",
+  "answer": "正态族可写成二维满秩自然指数族$f_\theta(x)=h(x)\exp\{\eta_1\sum x_i+\eta_2\sum x_i^2-nA(\eta)\}$，其中$\eta_1=\mu/\sigma^2,\eta_2=-1/(2\sigma^2)$，自然参数空间$\{(\eta_1,\eta_2):\eta_2<0\}$含开集，故由满秩指数族完全性定理，$T=(\sum X_i,\sum X_i^2)$完全且由因子分解定理充分。又$E(\bar X^2)=\mu^2+\sigma^2/n$，且$E(S^2)=\sigma^2$，所以$U=\bar X^2-S^2/n$无偏估计$\mu^2$。$U$是$T$的可测函数，因此由Lehmann--Scheffe定理，$U$是唯一UMVU估计量。若只用$\bar X$，当$\sigma^2$未知时它不是联合参数$(\mu,\sigma^2)$的充分统计量，无法直接应用Lehmann--Scheffe。",
+  "subject": "统计推断",
+  "source": "generated | trap: theorem-condition"
+}
