@@ -1,0 +1,7 @@
+{
+  "idx": 391,
+  "problem": "判断并证明或给出反例：设$(\\Omega,\\mathcal F,\\mu)$为有限测度空间，$f_n,f\\in L^1(\\mu)$。若$f_n\\to f$依测度收敛且族$\\{f_n\\}$一致可积，则必有$\\|f_n-f\\|_1\\to0$。进一步说明若把“有限测度空间”删除而仍采用定义\n\\[\n\\lim_{K\\to\\infty}\\sup_n\\int_{\\{|f_n|>K\\}}|f_n|\\,d\\mu=0\n\\]\n作为“一致可积”，原结论是否仍成立。",
+  "answer": "true（有限测度情形）。由$f_n\\to f$依测度收敛，任意子列都有进一步子列$f_{n_k}\\to f$几乎处处。有限测度空间上，一致可积与依测度收敛结合Vitali定理给出$\\|f_{n_k}-f\\|_1\\to0$。若原序列不在$L^1$中收敛，则存在$\\varepsilon>0$及子列使$\\|f_{n_k}-f\\|_1\\ge\\varepsilon$，与上述进一步子列矛盾，故全序列$L^1$收敛。\n\n删除有限测度条件后，若仅保留题中“尾部截断”条件，结论为false。取$\\Omega=\\mathbb R$配Lebesgue测度，$f_n=n^{-1}\\mathbf1_{[0,n]}$，$f=0$。对任意$\\varepsilon>0$，当$n>1/\\varepsilon$时$\\mu(|f_n|>\\varepsilon)=0$，故依测度收敛到0；且当$K>1$时所有$\\{|f_n|>K\\}$为空，因此满足题设尾部条件，但$\\|f_n\\|_1=1$。故无限测度上还需要“紧性/逃逸质量控制”，仅振幅尾部条件不足。",
+  "subject": "测度积分",
+  "source": "generated | trap: finite-vs-infinite-measure"
+}

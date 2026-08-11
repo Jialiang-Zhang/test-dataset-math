@@ -1,0 +1,7 @@
+{
+  "idx": 403,
+  "problem": "考虑不确定线性约束$(a_i+\\Delta_i)^Tx\\le b_i$，要求对所有允许扰动成立。分别在(i)盒型不确定集$|\\Delta_{ij}|\\le\\rho_{ij}$；(ii)椭球不确定集$\\Delta_i^TQ_i^{-1}\\Delta_i\\le1$（$Q_i\\succ0$）下写出精确鲁棒对应式，并说明前者如何线性化为LP约束、后者为何成为二阶锥约束。要求从支持函数/对偶范数推导。",
+  "answer": "鲁棒约束等价于$a_i^Tx+\\sup_{\\Delta_i\\in\\mathcal U_i}\\Delta_i^Tx\\le b_i$。盒型情形支持函数为$\\sum_j\\rho_{ij}|x_j|$，故约束为$a_i^Tx+\\sum_j\\rho_{ij}|x_j|\\le b_i$；引入$t_j\\ge x_j,t_j\\ge-x_j$即可线性化。椭球情形写$\\Delta_i=Q_i^{1/2}z,\\|z\\|_2\\le1$，由Cauchy--Schwarz得支持函数$\\|Q_i^{1/2}x\\|_2$，故鲁棒约束为$a_i^Tx+\\|Q_i^{1/2}x\\|_2\\le b_i$，是标准SOCP约束。",
+  "subject": "运筹学",
+  "source": "generated | standard"
+}

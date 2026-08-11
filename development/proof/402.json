@@ -1,0 +1,7 @@
+{
+  "idx": 402,
+  "problem": "设域特征为$0$，$N_m=J_m(0)$、$N_n=J_n(0)$。考虑Kronecker和$T=N_m\\otimes I_n+I_m\\otimes N_n$。证明其Jordan块大小恰为$m+n-1,m+n-3,\\dots,|m-n|+1$，每种各一次。允许使用$\\mathfrak{sl}_2$有限维表示的Clebsch--Gordan分解，但必须解释其与该幂零算子Jordan分解的对应。",
+  "answer": "把$N_m,N_n$分别视为$\\mathfrak{sl}_2$不可约表示$V_{m-1},V_{n-1}$中升算子$e$的矩阵（经对角相似归一为Jordan块）。张量积上$e$作用为$e\\otimes I+I\\otimes e$，故与$T$相似。Clebsch--Gordan给$V_{m-1}\\otimes V_{n-1}\\cong\\bigoplus_{j=0}^{r-1}V_{m+n-2-2j}$，$r=\\min(m,n)$。在$V_d$上升算子是一个大小$d+1$的幂零Jordan块，所以块大小为$m+n-1-2j$，即$m+n-1,m+n-3,\\dots,|m-n|+1$。维数和为$mn$，故无遗漏。",
+  "subject": "高等代数",
+  "source": "generated | standard"
+}

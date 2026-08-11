@@ -1,0 +1,7 @@
+{
+  "idx": 406,
+  "problem": "设$K=\\mathbb Q(\\sqrt{-5})$，整数环$\\mathcal O_K=\\mathbb Z[\\sqrt{-5}]$，判别式$D_K=-20$。利用Minkowski界证明其理想类群恰有两个元素。要求说明每个理想类存在范数不超过$\\frac{2}{\\pi}\\sqrt{20}<3$的积分理想代表，分析范数$2$的素理想，并证明该素理想非主且其平方为主理想。",
+  "answer": "Minkowski界给每个理想类一个积分理想$\\mathfrak a$满足$N\\mathfrak a\\le(2/\\pi)\\sqrt{20}<3$，故每类由范数1或2的理想代表。范数1仅主类。因$2|D_K$，$2$分歧；取$\\mathfrak p=(2,1+\\sqrt{-5})$，则$\\mathcal O_K/\\mathfrak p\\cong\\mathbb F_2$，故$N\\mathfrak p=2$，且$(2)=\\mathfrak p^2$。若$\\mathfrak p$主，则存在$\\alpha=a+b\\sqrt{-5}$满足$|N\\alpha|=a^2+5b^2=2$，不可能，故其类非平凡。又$[\\mathfrak p]^2=1$。Minkowski界及范数2素理想的唯一性说明没有其他类，所以$\\mathrm{Cl}(K)\\cong\\mathbb Z/2\\mathbb Z$，$h_K=2$。",
+  "subject": "非基础及进阶课程",
+  "source": "generated | standard"
+}

@@ -1,0 +1,7 @@
+{
+  "idx": 404,
+  "problem": "求$n\\to\\infty$时$I_n=\\int_0^\\infty e^{-nx^4}(\\frac{\\sin x}{x}-e^{-x^2})\\,dx$的前两项渐近展开，并给出余项阶。要求处理$x=0$处的消去结构，并说明为什么可把局部Taylor展开推广为整个积分的渐近展开。",
+  "answer": "在$x=0$处，$\\sin x/x-e^{-x^2}=\\frac56x^2-\\frac{59}{120}x^4+O(x^6)$。利用$\\int_0^\\infty e^{-nx^4}x^kdx=\\frac14\\Gamma((k+1)/4)n^{-(k+1)/4}$，得到$I_n=\\frac{5}{24}\\Gamma(3/4)n^{-3/4}-\\frac{59}{480}\\Gamma(5/4)n^{-5/4}+O(n^{-7/4})$。严谨性上，在固定小邻域用$O(x^6)$余项并积分得到$O(n^{-7/4})$；邻域外因$e^{-nx^4}$产生指数小尾部，因此局部Watson型展开控制整个积分。",
+  "subject": "数学分析",
+  "source": "generated | trap: asymptotic-justification"
+}

@@ -1,0 +1,7 @@
+{
+  "idx": 399,
+  "problem": "设$q\\in L^\\infty(0,1)$为实值且$q\\ge-C$。在$L^2(0,1)$上定义$Au=-u''+qu$，$D(A)=H^2(0,1)\\cap H_0^1(0,1)$。证明$A$自伴且下半有界，并证明$(A+\\lambda I)^{-1}$在充分大$\\lambda>0$时为紧算子。由此推出$A$的谱只由有限重数实特征值组成，唯一可能聚点为$+\\infty$。指出“$A$本身紧”为什么错误。",
+  "answer": "取$\\lambda>C+1$，闭对称型$a_\\lambda(u,v)=\\int u'\\bar v'+\\int(q+\\lambda)u\\bar v$在$H_0^1$上连续且强制。Lax--Milgram给唯一弱解，一维椭圆正则性使其属于$H^2\\cap H_0^1$，于是$A+\\lambda I$满射；结合对称性得$A$自伴。且$\\langle Au,u\\rangle\\ge-C\\|u\\|_2^2$。预解算子把$L^2$有界集映到$H_0^1$有界集，而Rellich嵌入$H_0^1\\hookrightarrow L^2$紧，所以预解紧。紧自伴预解的谱定理给$A$离散实谱、有限重数且$\\lambda_n\\to+\\infty$。$A$是无界算子，不属于$B(H)$，故不能把它本身称为紧有界算子；紧的是预解算子。",
+  "subject": "泛函分析",
+  "source": "generated | trap: finite-vs-infinite-dimensional"
+}

@@ -1,0 +1,7 @@
+{
+  "idx": 401,
+  "problem": "设$f\\in C^2(\\mathbb R)$严格凸，考虑守恒律$u_t+f(u)_x=0$的Riemann初值$u_L$（$x<0$）、$u_R$（$x>0$）。关于熵解，下列说法哪些正确？（多选）A. 若$u_L>u_R$，熵解是速度$s=[f(u_L)-f(u_R)]/(u_L-u_R)$的激波；B. 若$u_L<u_R$，熵解在扇形区由$f'(u)=x/t$确定；C. 只要满足Rankine--Hugoniot条件的间断都是熵可接受激波；D. 严格凸情形中，$u_L>u_R$时有$f'(u_R)<s<f'(u_L)$。",
+  "answer": "A,B,D",
+  "subject": "偏微分方程",
+  "source": "generated | trap: entropy-condition"
+}

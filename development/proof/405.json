@@ -1,0 +1,7 @@
+{
+  "idx": 405,
+  "problem": "设$p,q\\ge2$互素，$K_{p,q}$为$S^3$中的$(p,q)$-torus knot。证明$\\pi_1(S^3\\setminus K_{p,q})\\cong\\langle a,b\\mid a^p=b^q\\rangle$。进一步计算其阿贝尔化，并证明中心包含由$a^p=b^q$生成的无限循环子群；说明为什么互素条件保证阿贝尔化为$\\mathbb Z$而不是带额外有限挠部分。",
+  "answer": "把$S^3$按包含结的公共环面分为两个实心环面并删去结的管状邻域，取两开集分别变形收缩到两侧核心圆。交集中的结方向在两侧基本群中分别映为$a^p,b^q$，Seifert--van Kampen给出$\\langle a,b\\mid a^p=b^q\\rangle$。阿贝尔化为$\\mathbb Z^2/\\langle(p,-q)\\rangle\\cong\\mathbb Z\\oplus\\mathbb Z/\\gcd(p,q)$，互素时即$\\mathbb Z$。令$z=a^p=b^q$，它与$a,b$均交换，故居于中心；其在阿贝尔化中的像为$pq$倍生成元，非零，故$z$有无限阶。",
+  "subject": "拓扑学",
+  "source": "generated | trap: coprimality"
+}

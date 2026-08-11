@@ -1,0 +1,7 @@
+{
+  "idx": 400,
+  "problem": "在线性模型$y=X\\beta+\\varepsilon$中，$X\\in\\mathbb R^{n\\times p}$允许秩亏，$E\\varepsilon=0,\\operatorname{Cov}(\\varepsilon)=\\sigma^2I$。给定$c\\in\\mathbb R^p$，关于$c^T\\beta$的可估性与BLUE，下列说法哪些正确？（多选）A. 可估当且仅当$c\\in\\operatorname{col}(X^T)$；B. 若可估，则对任意$X^TX$的广义逆$G$，$c^TG X^Ty$给出同一个BLUE；C. 若$c\\notin\\operatorname{col}(X^T)$，仍可通过Moore--Penrose逆得到无偏估计；D. 可估时BLUE方差可写为$\\sigma^2c^TG c$，且该值与所选广义逆无关。",
+  "answer": "A,B,D",
+  "subject": "线性回归",
+  "source": "generated | trap: estimability"
+}
