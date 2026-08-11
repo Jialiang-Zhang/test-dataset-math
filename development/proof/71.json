@@ -1,0 +1,7 @@
+{
+  "idx": 71,
+  "problem": "给定严格正概率向量$r\in\mathbb R_{++}^m,c\in\mathbb R_{++}^n$与代价矩阵$C\in\mathbb R^{m\times n}$，考虑熵正则化运输问题$\min_{P\ge0}\{\langle C,P\rangle+\varepsilon\sum_{ij}P_{ij}(\log P_{ij}-1):P\mathbf1=r,P^T\mathbf1=c\}$，其中$\varepsilon>0$。证明最优解唯一，并由KKT条件推出$P^*=\operatorname{diag}(u)K\operatorname{diag}(v)$，$K_{ij}=e^{-C_{ij}/\varepsilon}$，其中$u,v>0$满足Sinkhorn缩放方程。说明$(u,v)$为何只在共同倍数意义下不唯一而$P^*$唯一。",
+  "answer": "目标函数在正正交锥内部严格凸，因为熵项Hessian为$\varepsilon\operatorname{diag}(1/P_{ij})\succ0$；可行集凸且因$r,c>0$存在严格正可行点，所以最优解存在且唯一并落在正内部。引入乘子$\alpha,\beta$，Lagrangian的一阶条件为$C_{ij}+\varepsilon\log P_{ij}-\alpha_i-\beta_j=0$，故$P_{ij}=e^{\alpha_i/\varepsilon}e^{-C_{ij}/\varepsilon}e^{\beta_j/\varepsilon}=u_iK_{ij}v_j$。边缘约束等价于$u\odot(Kv)=r$与$v\odot(K^Tu)=c$。若$(u,v)$可行，则对任意$t>0$，$(tu,t^{-1}v)$给出同一$P$，所以缩放因子具有一维规范自由度；反之严格凸性保证运输矩阵$P^*$唯一，因此任何两组正缩放只能产生同一矩阵。",
+  "subject": "运筹学",
+  "source": "generated | standard"
+}
