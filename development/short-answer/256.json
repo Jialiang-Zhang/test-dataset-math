@@ -1,0 +1,7 @@
+{
+  "idx": 256,
+  "problem": "设$(Y_i,X_i,Z_i)$为i.i.d.，满足$Y=\\beta X+\\gamma Z+\\varepsilon$，$\\mathbb E[\\varepsilon\\mid X,Z]=0$，且二阶矩有限、$\\operatorname{Var}(X)>0$。现在错误地只用带截距的一元OLS回归$Y$对$X$。求斜率估计量的概率极限，并推导其在一般异方差下的渐近方差。由此严格判断：何时该一元OLS仍一致估计$\\beta$？“$X$与$Z$不独立”是否必然导致不一致？",
+  "answer": "带截距OLS斜率收敛到线性投影系数$$\\beta^*=\\frac{\\operatorname{Cov}(X,Y)}{\\operatorname{Var}(X)}=\\beta+\\gamma\\frac{\\operatorname{Cov}(X,Z)}{\\operatorname{Var}(X)},$$因为$\\operatorname{Cov}(X,\\varepsilon)=0$。令$u^*=Y-\\alpha^*-\\beta^*X$，其中$\\alpha^*=\\mathbb EY-\\beta^*\\mathbb EX$，再令$\\tilde X=X-\\mathbb EX$。标准M估计展开给$$\\sqrt n(\\hat\\beta-\\beta^*)\\Rightarrow N\\left(0,\\frac{\\mathbb E[\\tilde X^2(u^*)^2]}{(\\mathbb E\\tilde X^2)^2}\\right),$$这就是异方差稳健sandwich方差的一维形式。故$\\hat\\beta$一致估计$\\beta$当且仅当$\\gamma\\operatorname{Cov}(X,Z)=0$；若关注真正遗漏变量情形$\\gamma\\ne0$，则等价于$\\operatorname{Cov}(X,Z)=0$。$X,Z$不独立并不必然导致不一致，因为依赖变量仍可能协方差为0；反之，独立当然推出协方差为0但远强于所需条件。",
+  "subject": "线性回归",
+  "source": "generated | trap: independence-vs-uncorrelated"
+}
