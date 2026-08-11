@@ -1,0 +1,7 @@
+{
+  "idx": 308,
+  "problem": "设$X_1,\dots,X_n$独立同分布于指数分布$\operatorname{Exp}(\lambda)$（rate参数$\lambda>0$）。构造$\log\lambda$的UMVU估计量。要求利用$T=\sum X_i$的Gamma分布求$E(\log T)$，并说明完全充分性为何保证UMVU。",
+  "answer": "$T\sim\operatorname{Gamma}(n,\text{rate }\lambda)$，故$E(\log T)=\psi(n)-\log\lambda$，其中$\psi$为digamma函数。因此$\widehat{\log\lambda}=\psi(n)-\log T$无偏。指数族中$T$对$\lambda$充分且完全：若$E_\lambda g(T)=0$对所有$\lambda>0$成立，则$\int_0^\infty g(t)t^{n-1}e^{-\lambda t}dt=0$对所有$\lambda>0$，由Laplace变换唯一性得$g=0$ a.e.。由Lehmann--Scheffe定理，该无偏统计量即为$\log\lambda$的唯一UMVU估计量。",
+  "subject": "统计推断",
+  "source": "generated | standard"
+}
