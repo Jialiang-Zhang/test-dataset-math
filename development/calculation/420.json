@@ -1,0 +1,7 @@
+{
+  "idx": 420,
+  "problem": "设复矩阵$A$只有特征值$0$，且已知$\dim\ker A=3$，$\dim\ker A^2=5$，$\dim\ker A^3=6$，并且$A^3=0$。确定$A$的Jordan块大小及个数，并说明仅由$\dim\ker A=3$为什么不能唯一确定Jordan型。",
+  "answer": "设$d_k=\dim\ker A^k$，则$d_k-d_{k-1}$等于大小至少为$k$的Jordan块数（$d_0=0$）。所以块总数为$d_1=3$；大小至少2的块数为$d_2-d_1=2$；大小至少3的块数为$d_3-d_2=1$；不存在更大块。故恰有1个大小3块，1个大小2块，1个大小1块，即Jordan型$J_3(0)\oplus J_2(0)\oplus J_1(0)$。只知道$\ker A$维数只给出块总数，不能给出各块长度。",
+  "subject": "高等代数",
+  "source": "generated | trap: necessary-vs-sufficient"
+}
