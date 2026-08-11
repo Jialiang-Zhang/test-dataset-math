@@ -1,0 +1,7 @@
+{
+  "idx": 293,
+  "problem": "设$\\Omega\\subset\\mathbb R^d$有界光滑，$p>1$，考虑$u_t=\\Delta u+u^p$于$\\Omega\\times(0,T)$，$u=0$于边界，$u_0\\ge0$且非零。设$\\phi_1>0$为第一Dirichlet特征函数，归一化为$\\int_\\Omega\\phi_1=1$，$-\\Delta\\phi_1=\\lambda_1\\phi_1$。证明若$Y(0):=\\int u_0\\phi_1>\\lambda_1^{1/(p-1)}$，则经典解必在有限时间爆破，并给出由比较ODE得到的爆破时间上界积分表达式。",
+  "answer": "令$Y(t)=\\int_\\Omega u\\phi_1$。分部积分和边界条件给$Y'=-\\lambda_1Y+\\int u^p\\phi_1$。由于$\\phi_1dx$是概率测度，Jensen不等式给$\\int u^p\\phi_1\\ge Y^p$，故$Y'\\ge Y^p-\\lambda_1Y=:F(Y)$。当$Y(0)>\\lambda_1^{1/(p-1)}$时$F(Y(0))>0$，比较原理表明$Y(t)$支配ODE $z'=z^p-\\lambda_1z,z(0)=Y(0)$。该ODE的爆破时间为$T_* =\\int_{Y(0)}^\\infty \\frac{ds}{s^p-\\lambda_1s}<\\infty$。故$Y$至迟于$T_*$发散；而$Y(t)\\le\\|u(t)\\|_\\infty$，所以经典解必在不超过$T_*$的时间内爆破。",
+  "subject": "偏微分方程",
+  "source": "generated | standard"
+}
