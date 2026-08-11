@@ -1,0 +1,7 @@
+{
+  "idx": 228,
+  "problem": "设$A\\in\\mathbb C^{n\\times n}$可对角化，$A=V\\Lambda V^{-1}$，且$\\kappa_2(V)$很大。关于$\\varepsilon$-伪谱$$\\sigma_\\varepsilon(A)=\\{z:\\|(zI-A)^{-1}\\|_2>\\varepsilon^{-1}\\}\\cup\\sigma(A),$$下列哪些结论必然正确？（多选）A. $\\sigma_\\varepsilon(A)\\subseteq\\bigcup_{\\lambda\\in\\sigma(A)}B(\\lambda,\\kappa_2(V)\\varepsilon)$；B. $\\bigcup_{\\lambda\\in\\sigma(A)}B(\\lambda,\\varepsilon/\\kappa_2(V))\\subseteq\\sigma_\\varepsilon(A)$；C. 若$A$正规，则$\\sigma_\\varepsilon(A)=\\bigcup_{\\lambda\\in\\sigma(A)}B(\\lambda,\\varepsilon)$；D. 若所有特征值均满足$\\Re\\lambda<0$，则对任意$t>0$都有$\\|e^{tA}\\|_2\\le1$。",
+  "answer": "A,B,C。由预解式相似变换估计$$\\|(zI-A)^{-1}\\|\\le \\kappa(V)\\max_j|z-\\lambda_j|^{-1}$$得A；反向估计$$\\|(zI-A)^{-1}\\|\\ge \\kappa(V)^{-1}\\max_j|z-\\lambda_j|^{-1}$$得B。正规矩阵满足$\\|(zI-A)^{-1}\\|=\\operatorname{dist}(z,\\sigma(A))^{-1}$，故C。D错误：非正规稳定矩阵可有瞬态增长。",
+  "subject": "数值分析",
+  "source": "generated | trap: theorem-condition"
+}
