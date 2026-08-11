@@ -1,0 +1,7 @@
+{
+  "idx": 178,
+  "problem": "设$\alpha=\sqrt[4]{2}$。求多项式$x^4-2\in\mathbb Q[x]$的分裂域$K$及扩张次数$[K:\mathbb Q]$，并严格确定Galois群$\operatorname{Gal}(K/\mathbb Q)$的同构类型。要求写出两个生成自同构并验证其关系，而不能只给出群名。",
+  "answer": "$x^4-2$由Eisenstein判别在$\mathbb Q$上不可约，其根为$\pm\alpha,\pm i\alpha$，故分裂域$K=\mathbb Q(\alpha,i)$。有$[\mathbb Q(\alpha):\mathbb Q]=4$，且$\mathbb Q(\alpha)\subset\mathbb R$，所以$i\notin\mathbb Q(\alpha)$，从而$[K:\mathbb Q]=8$。定义$r(\alpha)=i\alpha,r(i)=i$，以及$s(\alpha)=\alpha,s(i)=-i$。二者均保持代数关系$\alpha^4=2,i^2=-1$，故延拓为$K$的$\mathbb Q$-自同构。显然$r^4=s^2=1$，且$sr(\alpha)=s(i\alpha)=-i\alpha=r^{-1}(\alpha)$、$sr(i)=-i=r^{-1}s(i)$，因此$srs=r^{-1}$。由$\langle r,s\rangle$含有$8$个不同元素$1,r,r^2,r^3,s,sr,sr^2,sr^3$，而Galois群总阶为8，故$$\operatorname{Gal}(K/\mathbb Q)=\langle r,s\mid r^4=s^2=1,\ srs=r^{-1}\rangle\cong D_4.$$",
+  "subject": "抽象代数",
+  "source": "generated | standard"
+}
