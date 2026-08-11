@@ -1,0 +1,7 @@
+{
+  "idx": 80,
+  "problem": "不得用纯实变量三角换元直接求值。利用含参数围道积分先证明$0<a<4$时$F(a)=\int_0^\infty\frac{x^{a-1}}{1+x^4}\,dx=\frac\pi4\csc\frac{\pi a}{4}$，再通过对参数求导严格计算$\int_0^\infty\frac{\log x}{1+x^4}\,dx$；需说明求导与积分交换的合法性。",
+  "answer": "取钥匙孔围道并选$z^{a-1}=e^{(a-1)\Log z}$的分支，可由上下割线的相位差及$1+z^4$四个极点留数得到$F(a)=\frac\pi4\csc(\pi a/4)$，$0<a<4$。在任意紧子区间$a\in[\varepsilon,4-\varepsilon]$上，$x^{a-1}|\log x|/(1+x^4)$在$(0,1)$由$x^{\varepsilon-1}|\log x|$控制，在$(1,\infty)$由$x^{-1-\varepsilon}\log x$控制，故可由控制收敛对$a$求导。于是$F'(a)=\int_0^\infty\frac{x^{a-1}\log x}{1+x^4}\,dx=-\frac{\pi^2}{16}\csc\frac{\pi a}{4}\cot\frac{\pi a}{4}$。取$a=1$得$\int_0^\infty\frac{\log x}{1+x^4}\,dx=-\frac{\pi^2\sqrt2}{16}$。",
+  "subject": "复分析",
+  "source": "generated | standard"
+}
