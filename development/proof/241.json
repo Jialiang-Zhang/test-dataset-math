@@ -1,0 +1,7 @@
+{
+  "idx": 241,
+  "problem": "设$(E,\\mathcal I)$是有限独立系统。证明下列命题等价：(i) $(E,\\mathcal I)$是拟阵；(ii) 对任意非负权重$w$，按权重非增序扫描并在保持独立时加入元素的贪心算法总能得到最大权独立集。证明(ii)$\\Rightarrow$(i)时必须显式构造权重反证交换公理。",
+  "answer": "(i)$\\Rightarrow$(ii)$为拟阵贪心定理，可由交换公理逐步把贪心元素换入任意最优基而不降低总权重。反之若交换公理失败，存在$I,J\\in\\mathcal I$，$|I|<|J|$，且$I\\cup\\{e\\}\\notin\\mathcal I$对所有$e\\in J\\setminus I$。令$I$中元素权重$1+\\varepsilon$，$J\\setminus I$中权重1，其余为0，取$0<\\varepsilon<( |J|-|I|)/|I|$。贪心先选完$I$，随后不能加入任何$J\\setminus I$，所得权重至多$(1+\\varepsilon)|I|<|J|=w(J)$，矛盾。因此交换公理成立。若$I=\\varnothing$，由遗传性任一$e\\in J$都有$\\{e\\}\\in\\mathcal I$，交换不可能失败。",
+  "subject": "运筹学",
+  "source": "generated | trap: converse-error"
+}
