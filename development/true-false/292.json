@@ -1,0 +1,7 @@
+{
+  "idx": 292,
+  "problem": "在线性模型$y=X\\beta+u$中，假设$X$满列秩且$E[u\\mid X]=0$，但$\\operatorname{Var}(u\\mid X)=\\Omega$为未知正定矩阵。命题：只要OLS估计量$\\hat\\beta=(X^TX)^{-1}X^Ty$仍然无偏，就可以继续使用$\\sigma^2(X^TX)^{-1}$作为其真实条件协方差，并且常规同方差标准误在大样本下一定一致。判断真伪并给出理由。",
+  "answer": "false。无偏性只依赖$E[u\\mid X]=0$，并不推出同方差。真实条件协方差是$(X^TX)^{-1}X^T\\Omega X(X^TX)^{-1}$；除非$\\Omega=\\sigma^2I$或满足使两者恰好相等的特殊结构，否则不能化成$\\sigma^2(X^TX)^{-1}$。常规同方差标准误因此一般不一致；在适当矩条件与独立/弱相关条件下应使用异方差稳健的sandwich协方差估计。",
+  "subject": "线性回归",
+  "source": "generated | trap: missing-assumption"
+}
