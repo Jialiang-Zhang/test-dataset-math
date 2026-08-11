@@ -1,0 +1,7 @@
+{
+  "idx": 370,
+  "problem": "设$p$为奇素数，$\zeta=e^{2\pi i/p}$。证明：$(1)$第$p$个分圆多项式$\Phi_p(x)$在$\mathbb Q$上不可约；$(2)$在$K=\mathbb Q(\zeta)$中有$N_{K/\mathbb Q}(1-\zeta)=p$；$(3)$主理想满足$(p)=(1-\zeta)^{p-1}$乘以一个单位生成的主理想。要求把Eisenstein判别、Galois共轭与范数结合起来。",
+  "answer": "有$\Phi_p(x)=1+x+\cdots+x^{p-1}$。考察$\Phi_p(x+1)=((x+1)^p-1)/x=\sum_{k=1}^p\binom pk x^{k-1}$。除最高次系数1外，其余系数均被$p$整除，而常数项为$p$不被$p^2$整除，故由Eisenstein判别$\Phi_p(x+1)$不可约，从而$\Phi_p(x)$不可约，且$[K:\mathbb Q]=p-1$。所有Galois共轭把$\zeta$送到$\zeta^a$，$1\le a\le p-1$，所以$N(1-\zeta)=\prod_{a=1}^{p-1}(1-\zeta^a)=\Phi_p(1)=p$。又$1-\zeta^a=(1-\zeta)(1+\zeta+\cdots+\zeta^{a-1})$。由于$N(1-\zeta^a)=N(1-\zeta)=p$，故商$u_a=(1-\zeta^a)/(1-\zeta)$是范数为1的代数整数，因而为单位。于是$p=\prod_{a=1}^{p-1}(1-\zeta^a)=u(1-\zeta)^{p-1}$，其中$u=\prod_a u_a$为单位，因此理想意义下$(p)=((1-\zeta)^{p-1})$。",
+  "subject": "非基础及进阶课程",
+  "source": "generated | standard"
+}
