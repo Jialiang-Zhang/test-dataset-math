@@ -1,0 +1,7 @@
+{
+  "idx": 363,
+  "problem": "在$H=L^2(0,1)$上定义Volterra算子$(Tf)(x)=\int_0^x f(t)\,dt$。求$T$的全部奇异值及算子范数。要求从$TT^*$的积分核出发，把谱问题化为带边界条件的二阶常微分方程，并明确说明边界条件如何得到。",
+  "answer": "先有$(T^*g)(t)=\int_t^1g(x)\,dx$，故$(TT^*g)(x)=\int_0^1\min(x,y)g(y)\,dy$。设$TT^*g=\lambda g$，$\lambda>0$。记$Sg(x)=\int_0^1\min(x,y)g(y)\,dy$，则$Sg(0)=0$，且$Sg'(x)=\int_x^1g(y)\,dy$，所以$Sg'(1)=0$、$Sg''(x)=-g(x)$。因此$\lambda g''+g=0$，边界条件为$g(0)=0$、$g'(1)=0$。非零解为$g(x)=A\sin(\alpha x)$，其中$\alpha^2=1/\lambda$且$\cos\alpha=0$，故$\alpha_n=(n-\tfrac12)\pi$，$n\ge1$。于是$TT^*$的特征值为$\lambda_n=((n-\tfrac12)\pi)^{-2}$，故$T$的奇异值为$s_n=((n-\tfrac12)\pi)^{-1}=2/((2n-1)\pi)$。最大奇异值给出$\|T\|=s_1=2/\pi$。",
+  "subject": "泛函分析",
+  "source": "generated | standard"
+}
