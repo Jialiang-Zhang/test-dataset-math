@@ -1,0 +1,7 @@
+{
+  "idx": 197,
+  "problem": "考虑状态空间$\mathbb Z_{\ge0}$上的连续时间出生-死亡过程$X_t$，出生率与死亡率分别为$$\lambda_n=\lambda(n+\alpha),\qquad \mu_n=\mu n,$$其中$\alpha>0$且$0<\lambda<\mu$。请严格求出其平稳分布，证明该分布使过程可逆，并计算平稳状态下的概率母函数、均值和方差。要求说明归一化为何成立以及$\lambda<\mu$在何处不可缺少。",
+  "answer": "平稳可逆分布若存在，应满足详细平衡$$\pi_n\lambda(n+\alpha)=\pi_{n+1}\mu(n+1).$$递推得$$\pi_n=\pi_0\prod_{j=0}^{n-1}\frac{\lambda(j+\alpha)}{\mu(j+1)}=\pi_0\frac{(\alpha)_n}{n!}\rho^n,\qquad \rho=\lambda/\mu<1.$$利用广义二项式级数$$\sum_{n\ge0}\frac{(\alpha)_n}{n!}\rho^n=(1-\rho)^{-\alpha},$$故$\pi_0=(1-\rho)^\alpha$，从而$$\pi_n=(1-\rho)^\alpha\frac{(\alpha)_n}{n!}\rho^n,$$即参数为$(\alpha,\rho)$的负二项分布。详细平衡逐项成立，因此$\pi_iq_{ij}=\pi_jq_{ji}$，过程关于$\pi$可逆。概率母函数为$$G(z)=\sum_{n\ge0}\pi_nz^n=\left(\frac{1-\rho}{1-\rho z}\right)^\alpha.$$故$$\mathbb E_\pi X=G'(1)=\frac{\alpha\rho}{1-\rho}=\frac{\alpha\lambda}{\mu-\lambda},$$以及$$\operatorname{Var}_\pi(X)=\frac{\alpha\rho}{(1-\rho)^2}=\frac{\alpha\lambda\mu}{(\mu-\lambda)^2}.$$若$\lambda\ge\mu$，则$\rho\ge1$，上述级数不可归一化为概率分布；这正是正再生平稳性的临界条件。",
+  "subject": "随机过程",
+  "source": "generated | trap: boundary-case"
+}
