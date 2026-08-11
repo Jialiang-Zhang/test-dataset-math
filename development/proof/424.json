@@ -1,0 +1,7 @@
+{
+  "idx": 424,
+  "problem": "设$p$为奇素数，定义二次Gauss和$G=\sum_{x=0}^{p-1}e^{2\pi i x^2/p}$。证明$|G|=\sqrt p$，并进一步利用$\overline G=(\frac{-1}{p})G$与$G^2=(\frac{-1}{p})p$说明$G$在$p\equiv1\pmod4$时为实数、在$p\equiv3\pmod4$时为纯虚数。无需确定实数或纯虚数的正负号。",
+  "answer": "写$\zeta=e^{2\pi i/p}$。有$|G|^2=\sum_{x,y}\zeta^{x^2-y^2}=\sum_{u,v}\zeta^{uv}$，其中$(u,v)=(x-y,x+y)$在$p$奇时为双射。固定$u=0$内和为$p$；$u\ne0$时$\sum_v\zeta^{uv}=0$，故$|G|^2=p$。又$\overline G=\sum_x\zeta^{-x^2}=(\frac{-1}{p})G$，所以$p\equiv1\pmod4$时$G$为实数，$p\equiv3\pmod4$时$\overline G=-G$而为纯虚数。标准乘法重排还给$G^2=(\frac{-1}{p})p$，与$|G|=\sqrt p$一致。",
+  "subject": "非基础及进阶课程",
+  "source": "generated | standard"
+}
