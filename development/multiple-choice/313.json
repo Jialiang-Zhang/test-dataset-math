@@ -1,0 +1,7 @@
+{
+  "idx": 313,
+  "problem": "考虑标准型线性规划$\min c^Tx$ s.t. $Ax=b,x\ge0$，其对偶为$\max b^Ty$ s.t. $A^Ty\le c$。设原、对偶均有最优解。判断哪些说法正确：A. 任意一对原、对偶最优解都满足互补松弛；B. 若某个最优原解$x^*$中$x_i^*>0$，则对任意最优对偶解$y^*$都有$(A^Ty^*)_i=c_i$；C. 若某个最优对偶解在第$i$个约束严格松弛，则所有最优原解都满足$x_i=0$；D. 若某个最优原解退化，则一定存在多个最优解。",
+  "answer": "A,B,C",
+  "subject": "运筹学",
+  "source": "generated | trap: necessary-vs-sufficient"
+}
