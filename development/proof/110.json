@@ -1,0 +1,7 @@
+{
+  "idx": 110,
+  "problem": "对谐振子系统$y'=Ay$，其中$A=\begin{pmatrix}0&\omega\\-\omega&0\end{pmatrix}$、$\omega>0$，应用隐式中点法$y_{n+1}=y_n+hA\frac{y_n+y_{n+1}}2$。严格证明其一步矩阵是Cayley变换$M_h=(I-\frac h2A)^{-1}(I+\frac h2A)$，并证明对任意步长$h>0$均严格保持欧氏能量$\|y_n\|_2$。进一步求出每一步对应的精确旋转角$\theta_h$，以及数值频率$\widetilde\omega_h$，并给出$h\to0$时的首个非零相位误差项。",
+  "answer": "移项即得$(I-\frac h2A)y_{n+1}=(I+\frac h2A)y_n$，故$M_h=(I-\frac h2A)^{-1}(I+\frac h2A)$。因$A^T=-A$，有$M_h^TM_h=I$，所以$\|y_{n+1}\|_2=\|y_n\|_2$，能量对任意$h$精确保持。令$q=\omega h/2$，直接化简得到$M_h=\frac1{1+q^2}\begin{pmatrix}1-q^2&2q\\-2q&1-q^2\end{pmatrix}$，故它是角度$-\theta_h$的旋转，其中$\cos\theta_h=(1-q^2)/(1+q^2)$、$\sin\theta_h=2q/(1+q^2)$，因此$\theta_h=2\arctan q=2\arctan(\omega h/2)$。数值频率为$\widetilde\omega_h=\theta_h/h=\omega-\omega^3h^2/12+O(h^4)$。所以单步相位相对精确角$\omega h$的首个非零误差为$\theta_h-\omega h=-\omega^3h^3/12+O(h^5)$。",
+  "subject": "数值分析",
+  "source": "generated | trap: theorem-condition"
+}
