@@ -1,0 +1,7 @@
+{
+  "idx": 278,
+  "problem": "设$a,b>0$。严格计算两个具有端点消去的参数积分$F(a,b)=\\int_0^\\infty\\frac{e^{-ax}-e^{-bx}}x\\,dx$与$G(a,b)=\\int_0^\\infty\\frac{e^{-ax}-e^{-bx}}x\\log x\\,dx$。要求先证明两积分在$0$与$\\infty$端收敛，再引入Mellin参数$M(s)=\\int_0^\\infty x^{s-1}(e^{-ax}-e^{-bx})\\,dx$并利用$\\Gamma(s)$在$s=0$附近的Laurent展开求$M(0)$与$M'(0)$。最后解释为什么不能把$G$拆成两个发散积分分别计算后再相减。",
+  "answer": "在$x\\downarrow0$时$e^{-ax}-e^{-bx}=(b-a)x+O(x^2)$，故第一个被积函数趋于$b-a$，第二个为$(b-a)\\log x+O(x\\log x)$，均可积；在无穷端指数衰减保证绝对可积。对$\\Re s>0$，$M(s)=\\Gamma(s)(a^{-s}-b^{-s})$。记$L=\\log(b/a)$，展开$\\Gamma(s)=1/s-\\gamma+O(s)$，以及$a^{-s}-b^{-s}=sL+\\frac{s^2}{2}((\\log a)^2-(\\log b)^2)+O(s^3)$。因此$M(s)=L+s[\\frac12((\\log a)^2-(\\log b)^2)-\\gamma L]+O(s^2)$。由端点消去可在$s=0$附近对$x^{s-1}(e^{-ax}-e^{-bx})(\\log x)^j$（$j=0,1$）构造分段可积支配函数，所以$M(0),M'(0)$分别等于原积分。故$F(a,b)=\\log(b/a)$，$G(a,b)=\\frac12((\\log a)^2-(\\log b)^2)-\\gamma\\log(b/a)$。若拆开$G$，每一项在0端都像$(\\log x)/x$而发散；只有差值的一阶消去使积分有意义。",
+  "subject": "数学分析",
+  "source": "generated | standard"
+}
