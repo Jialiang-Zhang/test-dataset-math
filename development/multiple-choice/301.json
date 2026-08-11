@@ -1,0 +1,7 @@
+{
+  "idx": 301,
+  "problem": "在$(\mathbb R,\mathcal B,m)$上设$f_n\ge0$且$\int f_n=1$。判断哪些条件足以保证$\{f_n\}$在$L^1(\mathbb R)$中相对弱紧：A. 一致可积且对任意$\varepsilon>0$存在有限测度集$E$使$\sup_n\int_{E^c}f_n<\varepsilon$；B. 仅一致可积；C. 存在$g\in L^1$使$f_n\le g$ a.e.；D. $f_n\to0$逐点且$\int f_n=1$。",
+  "answer": "A,C",
+  "subject": "测度积分",
+  "source": "generated | trap: finite-vs-infinite-dimensional"
+}
