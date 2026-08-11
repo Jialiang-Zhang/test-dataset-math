@@ -1,0 +1,7 @@
+{
+  "idx": 361,
+  "problem": "求初值问题$y''+2y^3=0$，$y(0)=1$，$y'(0)=0$的精确周期解，并给出最小正周期。答案允许使用Jacobi椭圆函数$\operatorname{cn}(u\mid m)$与第一类完全椭圆积分$K(m)$，但必须从能量积分推出正确的模参数与时间缩放。",
+  "answer": "乘以$y'$积分得$\frac12(y')^2+\frac12y^4=\frac12$，故$(y')^2=1-y^4$。Jacobi函数满足$\operatorname{cn}''(u\mid m)+(1-2m)\operatorname{cn}(u\mid m)+2m\operatorname{cn}^3(u\mid m)=0$。取$m=1/2$时变为$\operatorname{cn}''+\operatorname{cn}^3=0$。于是令$y(t)=\operatorname{cn}(\sqrt2\,t\mid1/2)$，有$y''=2\operatorname{cn}''=-2\operatorname{cn}^3=-2y^3$，且$y(0)=1,y'(0)=0$。同时其导数恒等式给$(y')^2=1-y^4$，与能量积分一致。$\operatorname{cn}(u\mid m)$关于$u$的最小正周期为$4K(m)$，故本题最小正周期为$T=4K(1/2)/\sqrt2=2\sqrt2\,K(1/2)$。",
+  "subject": "常微分方程",
+  "source": "generated | standard"
+}
