@@ -1,7 +1,7 @@
 {
   "idx": 194,
   "problem": "设$S$为定向二维黎曼曲面，$\Delta$是由三条光滑测地线段围成的简单测地三角形，内角为$\alpha,\beta,\gamma$，且$\Delta$包含在一个可定向正交标架场的坐标邻域中。请利用活动标架、联络1-形式与Gauss-Bonnet定理，严格证明沿$\partial\Delta$平行移动一个切向量一周后的总旋转角（模$2\pi$）等于$$\int_\Delta K\,dA,$$并推出球面半径$R$上的测地三角形面积公式$$\operatorname{Area}(\Delta)=R^2(\alpha+\beta+\gamma-\pi).$$",
-  "answer": "取局部定向正交标架$(e_1,e_2)$，定义Levi-Civita联络1-形式$\omega$使$\nabla e_1=\omega e_2,\ \nabla e_2=-\omega e_1$。若平行向量写成$V=\cos\theta\,e_1+\sin\theta\,e_2$，沿曲线平行条件$\nabla_{\dot\gamma}V=0$给出$d\theta=-\omega$。因此沿边界平滑部分累计的标架相对旋转为$-\oint_{\partial\Delta}\omega$；在三个顶点处需加上切向方向的外角，三者之和为$3\pi-(\alpha+\beta+\gamma)$。Cartan第二结构方程在二维写为$d\omega=-K\,dA$（符号取决于约定，但与边界定向同时改变后最终结论一致），由Stokes定理得$-\oint\omega=\int_\Delta K\,dA$。另一方面，Gauss-Bonnet对测地边界$k_g=0$给出$$\int_\Delta K\,dA+[\pi-\alpha+\pi-\beta+\pi-\gamma]=2\pi,$$故$$\int_\Delta K\,dA=\alpha+\beta+\gamma-\pi.$$这正是平行移动一周的holonomy角模$2\pi$。在半径$R$的球面上$K=1/R^2$为常数，因此$$\frac{\operatorname{Area}(\Delta)}{R^2}=\alpha+\beta+\gamma-\pi,$$即所求面积公式。",
+  "answer": "取$\Delta$邻域上的定向正交标架$(e_1,e_2)$，定义Levi-Civita联络1-形式$\omega$使$\nabla e_1=\omega e_2,\ \nabla e_2=-\omega e_1$。若平行向量写成$V=\cos\theta\,e_1+\sin\theta\,e_2$，则沿每条边由$\nabla_{\dot\gamma}V=0$得到$d\theta=-\omega$。平行向量在顶点处连续，因此顶点本身不产生额外跳角；绕闭边界一周的holonomy角为$$\Delta\theta=-\oint_{\partial\Delta}\omega.$$Cartan第二结构方程在上述符号约定下为$d\omega=-K\,dA$，故由Stokes定理$$\Delta\theta=-\int_\Delta d\omega=\int_\Delta K\,dA\pmod{2\pi}.$$另一方面，对分片光滑的测地三角形应用Gauss-Bonnet：三条边的测地曲率均为$0$，三个外角分别为$\pi-\alpha,\pi-\beta,\pi-\gamma$，因此$$\int_\Delta K\,dA+(\pi-\alpha)+(\pi-\beta)+(\pi-\gamma)=2\pi,$$即$$\int_\Delta K\,dA=\alpha+\beta+\gamma-\pi.$$在半径$R$的球面上$K=1/R^2$，于是$$\operatorname{Area}(\Delta)=R^2(\alpha+\beta+\gamma-\pi).$$",
   "subject": "微分几何",
   "source": "generated | trap: local-vs-global"
 }
