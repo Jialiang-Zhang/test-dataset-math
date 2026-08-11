@@ -1,0 +1,7 @@
+{
+  "idx": 224,
+  "problem": "设$$I_n=\int_0^1\frac{e^{-nx^4}}{1+x^2}\,dx.$$请严格求出$n\to\infty$时的前两项渐近展开，要求给出主导尺度、将有限积分区间延拓到无穷远的误差控制，并证明余项阶数。",
+  "answer": "令$x=n^{-1/4}t$，则$$I_n=n^{-1/4}\int_0^{n^{1/4}}\frac{e^{-t^4}}{1+n^{-1/2}t^2}\,dt.$$由于$e^{-t^4}$超指数衰减，把上限$n^{1/4}$延拓到$\infty$产生$O(e^{-cn})$误差。对$u=n^{-1/2}t^2\ge0$，有$$\frac1{1+u}=1-u+\frac{u^2}{1+u},$$故$$I_n=n^{-1/4}\left[\int_0^\infty e^{-t^4}dt-n^{-1/2}\int_0^\infty t^2e^{-t^4}dt+R_n\right]+O(e^{-cn}),$$且$$0\le R_n\le n^{-1}\int_0^\infty t^4e^{-t^4}dt=O(n^{-1}).$$利用$\int_0^\infty t^ae^{-t^4}dt=\frac14\Gamma((a+1)/4)$，得到$$\int_0^\infty e^{-t^4}dt=\frac14\Gamma\!\left(\frac14\right),\qquad \int_0^\infty t^2e^{-t^4}dt=\frac14\Gamma\!\left(\frac34\right).$$因此$$I_n=\frac{\Gamma(1/4)}4n^{-1/4}-\frac{\Gamma(3/4)}4n^{-3/4}+O(n^{-5/4}).$$",
+  "subject": "数学分析",
+  "source": "generated | standard"
+}
