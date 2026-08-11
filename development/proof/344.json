@@ -1,0 +1,7 @@
+{
+  "idx": 344,
+  "problem": "设$X_1,\\dots,X_n$独立同分布于密度\\n\\[\\nf_\\theta(x)=\\theta x^{\\theta-1}\\mathbf1_{(0,1)}(x),\\qquad \\theta>0.\\n\\]\\n证明$T=-\\sum_{i=1}^n\\log X_i$是关于$\\theta$的完全充分统计量，并构造$\\theta$的无偏估计量中方差最小者（要求$n\\ge3$）。给出其方差。",
+  "answer": "令$Y_i=-\\log X_i$，则$Y_i\\sim\\mathrm{Exp}(\\theta)$，故$T=\\sum Y_i\\sim\\Gamma(n,\\text{rate }\\theta)$，密度为$\\theta^nt^{n-1}e^{-\\theta t}/\\Gamma(n)$。因联合密度可写为$\\theta^n\\exp[-\\theta T]\\prod x_i^{-1}$，由因子分解定理$T$充分。若$E_\\theta[g(T)]=0$对所有$\\theta>0$，则$\\int_0^\\infty g(t)t^{n-1}e^{-\\theta t}dt=0$对所有$\\theta>0$，Laplace变换唯一性给$g(T)=0$几乎处处，故完全。对$T\\sim\\Gamma(n,\\theta)$，$E(T^{-1})=\\theta/(n-1)$，所以$\\hat\\theta=(n-1)/T$无偏。由Lehmann–Scheffé，它是唯一UMVU。又$E(T^{-2})=\\theta^2/[(n-1)(n-2)]$，故$\\operatorname{Var}(\\hat\\theta)=\\theta^2/(n-2)$。",
+  "subject": "统计推断",
+  "source": "generated | trap: boundary-case"
+}
