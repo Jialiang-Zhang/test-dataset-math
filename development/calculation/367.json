@@ -1,0 +1,7 @@
+{
+  "idx": 367,
+  "problem": "给定$a_i>0$与总资源$P>0$，考虑严格凹优化问题\n\[\n\max_{x_i\ge0,\ \sum_i x_i=P}\sum_{i=1}^m\log(1+a_ix_i).\n\]\n推导唯一最优解的water-filling形式，给出决定活跃集的阈值条件，并证明最优值函数$V(P)$在活跃集不发生改变的区间上满足$V'(P)=\lambda(P)$，其中$\lambda$为等式约束的最优KKT乘子。",
+  "answer": "目标函数严格凹、可行集凸紧，故最优解唯一。KKT条件给出：若$x_i>0$，则$a_i/(1+a_ix_i)=\lambda$；若$x_i=0$，则$a_i\le\lambda$。因此$x_i^*=(1/\lambda-1/a_i)_+$，其中$\lambda>0$由$\sum_i(1/\lambda-1/a_i)_+=P$唯一确定。故活跃集为$A(\lambda)=\{i:a_i>\lambda\}$，等价地水位$1/\lambda$超过阈值$1/a_i$的坐标获得正资源。若在某个$P$区间内活跃集$A$固定，则$P=|A|/\lambda-\sum_{i\in A}1/a_i$，从而$\lambda(P)=|A|/(P+\sum_{i\in A}1/a_i)$。代入最优值$V(P)=\sum_{i\in A}\log(a_i/\lambda)$并求导，得到$V'(P)=-|A|\lambda'(P)/\lambda=\lambda$。这也与包络定理一致。",
+  "subject": "运筹学",
+  "source": "generated | trap: boundary-case"
+}
