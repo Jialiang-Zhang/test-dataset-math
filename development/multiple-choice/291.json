@@ -1,0 +1,7 @@
+{
+  "idx": 291,
+  "problem": "在$\\ell^2(\\mathbb N)$上令单边移位$S(x_1,x_2,\\dots)=(0,x_1,x_2,\\dots)$。关于$S$的谱分解，下列说法正确的是哪些？\nA. $\\sigma(S)=\\{\\lambda:|\\lambda|\\le1\\}$。\nB. $S$的点谱为空。\nC. 对$|\\lambda|<1$，$S-\\lambda I$的值域稠密但不满，因此属于连续谱。\nD. 对$|\\lambda|=1$，$S-\\lambda I$单射、值域稠密但不满。",
+  "answer": "A,B,D",
+  "subject": "泛函分析",
+  "source": "generated | trap: theorem-condition"
+}
