@@ -1,0 +1,7 @@
+{
+  "idx": 125,
+  "problem": "把Klein瓶$K$表示为单位正方形按边识别$(0,y)\sim(1,y)$、$(x,0)\sim(1-x,1)$所得的商空间。利用Seifert-van Kampen定理严格求出$\pi_1(K)$的群表示，再计算其交换化与第一整数同调群$H_1(K;\mathbb Z)$。最后从群表示或覆盖空间结构解释该空间为何不可定向。",
+  "answer": "取横向基本回路$a$与纵向基本回路$b$。由正方形2-胞腔的粘贴词可得关系$aba^{-1}b=1$，等价于$aba^{-1}=b^{-1}$，故$\pi_1(K)=\langle a,b\mid aba^{-1}=b^{-1}\rangle$。交换化后令$a,b$可交换，关系变成$b=b^{-1}$，即$2b=0$，而$a$无额外关系，所以$\pi_1(K)_{ab}\cong\mathbb Z\oplus\mathbb Z/2\mathbb Z$。由Hurewicz定理的第一维情形，$H_1(K;\mathbb Z)\cong\mathbb Z\oplus\mathbb Z/2\mathbb Z$。不可定向性可从粘贴看出：沿对应$a$或$b$的适当闭路绕行时局部取向被反转；等价地，Klein瓶存在一个取向双覆盖为环面$T^2\to K$，该覆盖非平凡，说明$K$没有全局一致取向。",
+  "subject": "拓扑学",
+  "source": "generated | trap: local-vs-global"
+}
