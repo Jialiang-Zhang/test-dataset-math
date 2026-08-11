@@ -1,0 +1,7 @@
+{
+  "idx": 248,
+  "problem": "设$\\Sigma^2\\subset S^3$为紧致无边界极小曲面，第二基本形式记为$A$。已知Simons恒等式$$\\frac12\\Delta|A|^2=|\\nabla A|^2+2|A|^2-|A|^4.$$证明：若$|A|^2<2$处处成立，则$\\Sigma$必为全测地大球面；若仅假设$|A|^2\\le2$，证明要么$A\\equiv0$，要么$|A|^2\\equiv2$且$\\nabla A\\equiv0$。说明为什么第二种情形表明严格不等号条件不能简单删除。",
+  "answer": "在紧致无边界曲面上积分Simons恒等式，$\\int_\\Sigma\\Delta|A|^2=0$，故$$0=\\int_\\Sigma\bigl(|\\nabla A|^2+|A|^2(2-|A|^2)\\bigr).$$若$|A|^2<2$处处，则两个被积项均非负，且第二项除非$|A|=0$否则为正，因此只能有$A\\equiv0$。第二基本形式恒零即$\\Sigma$全测地，所以其像为$S^3$中的大$2$球面。若$|A|^2\\le2$，同一积分仍迫使$|\\nabla A|^2\\equiv0$及$|A|^2(2-|A|^2)\\equiv0$。由于$|A|^2$连续且$\\Sigma$每个连通分支上为常数，因此每个连通分支上只有$|A|^2\\equiv0$或$|A|^2\\equiv2$；若$\\Sigma$连通即得到题述二分。后一情形确实存在，例如Clifford环面$S^1(1/\\sqrt2)\\times S^1(1/\\sqrt2)\\subset S^3$满足主曲率$1,-1$，故$|A|^2=2$且$\\nabla A=0$。因此把$<2$改成$\\le2$后不能仍推出全测地。",
+  "subject": "微分几何",
+  "source": "generated | trap: boundary-case"
+}
