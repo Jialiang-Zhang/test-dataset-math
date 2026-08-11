@@ -1,0 +1,7 @@
+{
+  "idx": 330,
+  "problem": "设$A,B\in\mathbb C^{n\times n}$可交换，且$A$的最小多项式分解为$m_A(t)=\prod_{j=1}^s(t-\lambda_j)^{r_j}$。下列哪些结论必然成立？A. 每个广义特征空间$V_j=\ker(A-\lambda_jI)^{r_j}$在$B$下不变；B. $A,B$可同时上三角化；C. 若$A$可对角化，则$A,B$必可同时对角化；D. 若$A,B$都可对角化，则它们可同时对角化。",
+  "answer": "A,B,D",
+  "subject": "高等代数",
+  "source": "generated | trap: necessary-vs-sufficient"
+}
