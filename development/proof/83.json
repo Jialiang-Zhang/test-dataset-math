@@ -1,0 +1,7 @@
+{
+  "idx": 83,
+  "problem": "在$\ell^2(\mathbb N)$上定义单边移位算子$S(x_1,x_2,\dots)=(0,x_1,x_2,\dots)$。严格求$\sigma(S)$，并分别判定点谱、连续谱与剩余谱；要求说明为什么单位圆内与单位圆上的谱类型不同。",
+  "answer": "$\|S\|=1$，故$\sigma(S)\subset\{\lambda:|\lambda|\le1\}$。若$|\lambda|>1$，Neumann级数给出$(S-\lambda I)^{-1}=-\lambda^{-1}\sum_{k\ge0}(S/\lambda)^k$，故不在谱中。$Sx=\lambda x$由第一坐标得$\lambda x_1=0$，递推得任意$\lambda$下只有$x=0$，故点谱为空。考察伴随$S^*(x_1,x_2,\dots)=(x_2,x_3,\dots)$。当$|\lambda|<1$时，$S^*$有特征向量$(1,\bar\lambda,\bar\lambda^2,\dots)$，故$\ker(S^*-\bar\lambda I)\ne0$，于是$\overline{\operatorname{Ran}(S-\lambda I)}\ne\ell^2$；结合$S-\lambda I$单射，得$|\lambda|<1$属于剩余谱。当$|\lambda|=1$时，$S^*$无对应$\ell^2$特征向量，故$\operatorname{Ran}(S-\lambda I)$稠密；但取截断近似特征向量可见$S-\lambda I$不有界下界，从而不满射且逆不有界，故单位圆属于连续谱。因此$\sigma(S)=\{\lambda:|\lambda|\le1\}$，点谱为空，剩余谱为$\{|\lambda|<1\}$，连续谱为$\{|\lambda|=1\}$。",
+  "subject": "泛函分析",
+  "source": "generated | trap: finite-vs-infinite-dimensional"
+}
