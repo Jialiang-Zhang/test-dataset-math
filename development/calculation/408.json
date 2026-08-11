@@ -1,0 +1,7 @@
+{
+  "idx": 408,
+  "problem": "设$A_K=\begin{pmatrix}1&K\\0&2\end{pmatrix}$，$K>0$。计算$(zI-A_K)^{-1}$，并证明尽管$\sigma(A_K)=\{1,2\}$与$K$无关，但当$K\to\infty$时，点$z=3/2$处的预解算子范数至少线性增长。再构造一个范数为$O(K^{-1})$的扰动$E_K$，使$3/2$成为$A_K+E_K$的特征值。",
+  "answer": "有$(zI-A_K)^{-1}=\begin{pmatrix}(z-1)^{-1}&K/((z-1)(z-2))\\0&(z-2)^{-1}\end{pmatrix}$。取$z=3/2$，右上元为$-4K$，故二范数至少为$4K$。令$E_K=\begin{pmatrix}0&0\\\delta&0\end{pmatrix}$，则$\det(\tfrac32I-A_K-E_K)=-\tfrac14-K\delta$；取$\delta=-1/(4K)$即使行列式为0，且$\|E_K\|_2=1/(4K)$。因此非正规矩阵的谱稳定性不能只由原特征值距离判断，而应考察预解范数/伪谱。",
+  "subject": "数值分析",
+  "source": "generated | trap: nonnormal-spectrum"
+}
