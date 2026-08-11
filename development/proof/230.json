@@ -1,0 +1,7 @@
+{
+  "idx": 230,
+  "problem": "设$M\\subset\\mathbb R^3$是紧致、无边界、定向的光滑曲面。证明$M$不可能是极小曲面。要求至少给出两种本质不同的论证：一种利用坐标函数在极小曲面上调和与最大值原理；另一种利用位置向量与Laplace–Beltrami算子的积分恒等式。",
+  "answer": "若$M$极小，则平均曲率向量$\\mathbf H=0$。对位置向量$X=(x_1,x_2,x_3)$有$\\Delta_MX=2\\mathbf H$（符号约定可能差负号），故每个坐标函数$x_i$调和。紧致无边界流形上的调和函数由最大值原理必为常数，于是$X$常值，与二维浸入矛盾。另一证：由$\\Delta_MX=0$，$$0=\\int_M\\langle X,\\Delta_MX\\rangle=-\\int_M|\\nabla_MX|^2.$$但二维浸入满足$|\\nabla_MX|^2=2$，故右端为$-2\\operatorname{Area}(M)<0$，矛盾。",
+  "subject": "微分几何",
+  "source": "generated | standard"
+}
