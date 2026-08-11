@@ -1,0 +1,7 @@
+{
+  "idx": 67,
+  "problem": "在$H=L^2(0,1)$上定义积分算子$(Tf)(x)=\int_0^1(\min\{x,t\}-xt)f(t)dt$。证明$T$为正的紧自伴算子，求其全部非零谱并计算$\|T\|$。要求将积分特征值问题严格转化为Sturm--Liouville边值问题。",
+  "answer": "核$K(x,t)=\min\{x,t\}-xt$连续且对称，故$T$为Hilbert--Schmidt算子，从而紧且自伴。且$K$是Dirichlet问题$-u''=f,u(0)=u(1)=0$的Green核，因此若$u=Tf$，则$-u''=f$且$u(0)=u(1)=0$；由分部积分，$\langle Tf,f\rangle=\int_0^1|u'|^2dx\ge0$，故$T\ge0$。若$Tf=\lambda f$且$\lambda\ne0$，则$-\lambda f''=f$，即$f''+\lambda^{-1}f=0$，并有$f(0)=f(1)=0$。非零解要求$\lambda^{-1/2}=n\pi$，故$\lambda_n=1/(n^2\pi^2)$，特征函数为$\sin(n\pi x)$。紧自伴算子除0外谱均为特征值，故$\sigma(T)=\{0\}\cup\{1/(n^2\pi^2):n\ge1\}$，且$\|T\|=\max\sigma(T)=1/\pi^2$。",
+  "subject": "泛函分析",
+  "source": "generated | standard"
+}
