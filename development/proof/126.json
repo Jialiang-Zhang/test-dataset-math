@@ -1,0 +1,7 @@
+{
+  "idx": 126,
+  "problem": "给定正整数$n\ge2$，严格刻画同余方程$x^2\equiv-1\pmod n$何时有整数解。要求把$n$作素因数分解，分别处理$2$-进部分与奇素数幂，使用Euler判别准则、Hensel提升及中国剩余定理证明所得条件既必要又充分。",
+  "answer": "写$n=2^e\prod_i p_i^{\alpha_i}$，其中$p_i$为奇素数。必要性：若$x^2\equiv-1\pmod n$有解，则模每个$p_i$也有解，因此$-1$是模$p_i$二次剩余。由Euler判别准则$(-1)^{(p_i-1)/2}=1$，故$p_i\equiv1\pmod4$。对2进部分，模4的平方仅为0或1，所以$e\ge2$不可能；故$e\le1$。充分性：若$e\le1$且所有奇素因子$p_i\equiv1\pmod4$，则Euler判别准则保证模$p_i$存在$x_i^2\equiv-1$。因为$2x_i\not\equiv0\pmod{p_i}$，多项式$f(x)=x^2+1$在该根处导数非零，Hensel引理将$x_i$唯一提升为模$p_i^{\alpha_i}$的根。若$e=1$，模2显然有根$x\equiv1$。最后各模数两两互素，中国剩余定理把这些局部根拼成模$n$的根。故充要条件为$v_2(n)\le1$且$n$的每个奇素因子都满足$p\equiv1\pmod4$。",
+  "subject": "非基础及进阶课程",
+  "source": "generated | trap: theorem-condition"
+}
