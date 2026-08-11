@@ -1,0 +1,7 @@
+{
+  "idx": 315,
+  "problem": "设$p:\widetilde X\to X$为连通、局部道路连通、半局部单连通空间上的连通覆盖，取基点$\tilde x_0\mapsto x_0$，令$H=p_*\pi_1(\widetilde X,\tilde x_0)\le\pi_1(X,x_0)$。证明该覆盖为正规（regular）覆盖当且仅当$H\triangleleft\pi_1(X,x_0)$；并在正规情形证明甲板变换群$\operatorname{Deck}(p)\cong\pi_1(X,x_0)/H$。要求说明基本群对纤维的单值作用、稳定子群与传递性的对应。",
+  "answer": "令$G=\pi_1(X,x_0)$。通过路径提升，$G$右作用于纤维$p^{-1}(x_0)$：$\tilde x\cdot[\gamma]$定义为从$\tilde x$出发提升$\gamma$的终点。覆盖连通保证该作用传递，而$\tilde x_0$的稳定子恰为$H$，故纤维可识别为右陪集$H\backslash G$。甲板变换与该$G$-集合的自同构对应。覆盖正规等价于甲板变换群在纤维上传递；对传递$G$-集$H\backslash G$，其$G$-自同构群传递当且仅当$H$正规。更具体地，$\operatorname{Aut}_G(H\backslash G)\cong N_G(H)/H$；因此正规当且仅当$N_G(H)=G$，即$H\triangleleft G$。此时$\operatorname{Deck}(p)\cong G/H=\pi_1(X,x_0)/H$。",
+  "subject": "拓扑学",
+  "source": "generated | trap: local-vs-global"
+}
