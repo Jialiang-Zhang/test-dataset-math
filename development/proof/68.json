@@ -1,0 +1,7 @@
+{
+  "idx": 68,
+  "problem": "在线性模型$y=X_1\beta_1+X_2\beta_2+\varepsilon$中，$\operatorname{Cov}(\varepsilon)=\sigma^2\Omega$，其中$\Omega$正定，且$[X_1\ X_2]$满列秩。证明广义最小二乘下的Frisch--Waugh--Lovell定理：$\hat\beta_2$等于先在$\Omega^{-1}$内积下将$y$与$X_2$分别对$X_1$残差化后，再对残差做GLS得到的系数。给出投影矩阵的精确形式。",
+  "answer": "记$W=\Omega^{-1}$，$P_1=X_1(X_1^TWX_1)^{-1}X_1^TW$，$M_1=I-P_1$。GLS正规方程为$X_1^TW(y-X_1\beta_1-X_2\beta_2)=0$与$X_2^TW(y-X_1\beta_1-X_2\beta_2)=0$。第一式给出$X_1\hat\beta_1=P_1(y-X_2\hat\beta_2)$。代回第二式，利用$M_1^TW=WM_1$及$M_1X_1=0$，得到$X_2^TWM_1(y-X_2\hat\beta_2)=0$，故$\hat\beta_2=(X_2^TWM_1X_2)^{-1}X_2^TWM_1y$。另一方面，以$\tilde y=M_1y,\tilde X_2=M_1X_2$做加权最小二乘，其正规方程为$\tilde X_2^TW(\tilde y-\tilde X_2\beta_2)=0$，而$M_1^TWM_1=WM_1$，得到同一表达式。",
+  "subject": "线性回归",
+  "source": "generated | standard"
+}
