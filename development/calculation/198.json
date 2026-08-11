@@ -1,0 +1,7 @@
+{
+  "idx": 198,
+  "problem": "设$0<a<3$。请利用复平面钥匙孔围道与适当的$z^{a-1}$单值分支，先严格计算$$J(a)=\int_0^\infty\frac{x^{a-1}}{1+x^3}\,dx,$$再证明可对参数$a$求导并求出$$I(a)=\int_0^\infty\frac{x^{a-1}\log x}{1+x^3}\,dx$$的精确解析式。要求说明分支跳跃、围道端点贡献消失条件以及参数微分的合法性。",
+  "answer": "取$\Log z$的辐角$0<\arg z<2\pi$，令$f(z)=z^{a-1}/(1+z^3)$。钥匙孔围道上下沿分别给出$J(a)$与$-e^{2\pi i(a-1)}J(a)$，两圆弧贡献在$0<a<3$时趋零。围道内部极点为$e^{i\pi/3},e^{i\pi},e^{i5\pi/3}$中位于该分支域的三个简单极点，留数求和后化简可得标准Euler-Beta结果$$J(a)=\frac\pi3\csc\frac{\pi a}{3}.$$也可由同一围道直接得到该式。对任意紧子区间$[\varepsilon,3-\varepsilon]$，有$$\left|\frac{x^{a-1}\log x}{1+x^3}\right|\le C_\varepsilon\begin{cases}x^{\varepsilon-1}|\log x|,&0<x\le1,\\x^{-1-\varepsilon}\log x,&x\ge1,\end{cases}$$右端可积，故由控制收敛可在参数下求导。因此$$I(a)=J'(a)=-\frac{\pi^2}{9}\csc\frac{\pi a}{3}\cot\frac{\pi a}{3}.$$",
+  "subject": "复分析",
+  "source": "generated | trap: theorem-condition"
+}
