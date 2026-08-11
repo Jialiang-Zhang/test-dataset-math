@@ -1,0 +1,7 @@
+{
+  "idx": 422,
+  "problem": "设$f_n:[0,1]\to\mathbb R$均为连续函数且$f_n\to f$逐点。关于交换极限、积分与一致收敛，下列哪些陈述正确？（多选）A. 若$f_n$单调递增且$f$连续，则$f_n\to f$一致；B. 若$|f_n|\le g\in L^1$，则$\int f_n\to\int f$；C. 若$\int|f_n-f|\to0$，则必有$f_n\to f$一致；D. 若$f_n'\to h$一致且存在$x_0$使$f_n(x_0)$收敛，则$f_n$一致收敛到某个可微$f$且$f'=h$。",
+  "answer": "A,B,D",
+  "subject": "数学分析",
+  "source": "generated | trap: convergence-direction"
+}
