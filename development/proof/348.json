@@ -1,0 +1,7 @@
+{
+  "idx": 348,
+  "problem": "设$A\\in\\mathbb C^{m\\times m}$、$B\\in\\mathbb C^{n\\times n}$。证明Sylvester方程\\n\\[\\nAX-XB=C\\n\\]\\n对每个$C\\in\\mathbb C^{m\\times n}$都有唯一解$X$，当且仅当$\\sigma(A)\\cap\\sigma(B)=\\varnothing$。要求给出Kronecker积/向量化证明，并解释若两谱相交，如何构造非零齐次解的左、右特征向量证据。",
+  "answer": "向量化恒等式给$\\operatorname{vec}(AX-XB)=(I_n\\otimes A-B^T\\otimes I_m)\\operatorname{vec}(X)$。因此对每个$C$唯一可解等价于$K=I_n\\otimes A-B^T\\otimes I_m$可逆。Kronecker和的谱为$\\sigma(K)=\\{\\alpha-\\beta:\\alpha\\in\\sigma(A),\\beta\\in\\sigma(B)\\}$，所以$K$可逆当且仅当不存在$\\alpha=\\beta$，即两谱不交。也可直接证明必要性：若$\\lambda\\in\\sigma(A)\\cap\\sigma(B)$，取$Au=\\lambda u$以及$B^Tv=\\lambda v$的非零向量$u,v$，令$X=uv^T\\ne0$，则$AX-XB=\\lambda uv^T-u(v^TB)=0$。故齐次方程已有非零解，不可能对所有$C$唯一可解。",
+  "subject": "高等代数",
+  "source": "generated | trap: necessary-vs-sufficient"
+}
