@@ -1,0 +1,7 @@
+{
+  "idx": 288,
+  "problem": "设$f$在单位圆盘邻域全纯且$f(0)\\ne0$，其在$|z|<1$内的零点（计重数）为$a_1,\\dots,a_m$，并假设单位圆周上无零点。关于Jensen公式及其推论，下列说法正确的是哪些？\nA. $\\log|f(0)|+\\sum_{j=1}^m\\log(1/|a_j|)=\\frac1{2\\pi}\\int_0^{2\\pi}\\log|f(e^{it})|dt$。\nB. 若$|f(z)|\\le1$于单位圆盘且$f(0)\\ne0$，则$\\sum_j\\log(1/|a_j|)\\le-\\log|f(0)|$。\nC. 若边界上允许有零点，公式无需任何极限解释仍原样成立。\nD. Jensen公式可由把每个零点用相应Blaschke因子消去后，对无零点全纯函数的$\\log|g|$使用平均值性质得到。",
+  "answer": "A,B,D",
+  "subject": "复分析",
+  "source": "generated | trap: boundary-case"
+}
