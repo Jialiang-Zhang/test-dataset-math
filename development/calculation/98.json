@@ -1,0 +1,7 @@
+{
+  "idx": 98,
+  "problem": "对$0<a<3$，定义$I(a)=\int_0^\infty\frac{x^{a-1}}{1+x^3}\,dx$。要求使用钥匙孔围道与分支$z^{a-1}=e^{(a-1)\Log z}$严格证明$I(a)=\frac\pi3\csc\frac{\pi a}{3}$，并在证明可对参数求导后计算$\int_0^\infty\frac{x^{a-1}\log x}{1+x^3}\,dx$的闭式；最后给出$a=1$时的精确值。",
+  "answer": "取割线沿正实轴并令$\arg z\in(0,2\pi)$。钥匙孔围道上下两侧分别给出$I(a)$与$-e^{2\pi i(a-1)}I(a)$，小圆与大圆在$0<a<3$时消失。围道内三个极点中按该分支求留数，或等价利用标准恒等式，得到$(1-e^{2\pi ia})I(a)=2\pi i\sum_{z^3=-1}\mathrm{Res}\,z^{a-1}/(1+z^3)$，化简为$I(a)=\frac\pi3\csc(\pi a/3)$。在任意紧子区间$[\delta,3-\delta]$上，$x^{a-1}|\log x|/(1+x^3)$可由$(x^{\delta-1}+x^{2-\delta})|\log x|/(1+x^3)$控制，故可用控制收敛对$a$求导。于是$I'(a)=\int_0^\infty\frac{x^{a-1}\log x}{1+x^3}dx=-\frac{\pi^2}{9}\csc\frac{\pi a}{3}\cot\frac{\pi a}{3}$。代$a=1$得$-\frac{\pi^2}{9}\cdot\frac{2}{\sqrt3}\cdot\frac1{\sqrt3}=-\frac{2\pi^2}{27}$。",
+  "subject": "复分析",
+  "source": "generated | trap: theorem-condition"
+}
