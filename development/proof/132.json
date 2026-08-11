@@ -1,0 +1,7 @@
+{
+  "idx": 132,
+  "problem": "设$G$为有限$p$-群，$\Phi(G)$为Frattini子群。证明一个自同态$\varphi:G\to G$是自同构，当且仅当它在商空间$G/\Phi(G)$上诱导的线性变换$\bar\varphi$是$\mathbb F_p$-向量空间自同构。要求证明中明确使用Burnside基定理或等价论证，并解释为什么仅在$G/[G,G]$上可逆一般不足以推出$\varphi$可逆。",
+  "answer": "若$\varphi$为自同构，则显然$\bar\varphi$可逆。反之，设$\bar\varphi$可逆。则$\varphi(G)\Phi(G)=G$。Burnside基定理的等价形式表明：若$H\le G$满足$H\Phi(G)=G$，则$H=G$。取$H=\varphi(G)$，得$\varphi(G)=G$，故$\varphi$满射。有限群上的满自同态必为单射，因此$\varphi$为自同构。也可从最小生成元角度论证：$G/\Phi(G)$的一组基可提升为$G$的最小生成集，而$\bar\varphi$可逆意味着其像仍生成商空间，从而像元素生成整个$G$。仅考察$G/[G,G]$不足，因为$\Phi(G)=G^p[G,G]$通常严格大于$[G,G]$；在阿贝尔$p$-群中$[G,G]=1$，但例如$G=C_{p^2}$上的映射$x\mapsto x^p$在某些较粗信息上不能检测生成元层级，真正控制最小生成性的商是$G/\Phi(G)$。",
+  "subject": "抽象代数",
+  "source": "generated | trap: necessary-vs-sufficient"
+}
