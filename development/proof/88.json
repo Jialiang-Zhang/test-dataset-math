@@ -1,0 +1,7 @@
+{
+  "idx": 88,
+  "problem": "设$K:[0,1]^2\to\mathbb R$连续，且$\sup_{x\in[0,1]}\int_0^1|K(x,t)|dt\le M$。设$g\in C[0,1]$，并定义$T:C[0,1]\to C[0,1]$为$(Tu)(x)=g(x)+\int_0^1K(x,t)\tanh(u(t))dt$。证明：$T$在$C[0,1]$上是完全连续算子；若存在$R>\|g\|_\infty+M$，则$T$在闭球$B_R$中至少有一个不动点。说明为何这一结论一般不能由Banach压缩原理直接得到。",
+  "answer": "因$|\tanh u|\le1$，对任意有界集$B\subset C[0,1]$，$Tu$一致有界：$\|Tu\|_\infty\le\|g\|_\infty+M$。又$K$在紧集上一致连续，故$|Tu(x)-Tu(y)|\le|g(x)-g(y)|+\int_0^1|K(x,t)-K(y,t)|dt$，右端与$u$无关且随$|x-y|\to0$一致趋零，所以$T(B)$等度连续。由Arzelà-Ascoli，$T$把有界集映为相对紧集；再由$\tanh$的Lipschitz连续性与核积分估计，$T$连续，故完全连续。若$R>\|g\|_\infty+M$，则$T(B_R)\subset B_R$。$B_R$非空、闭、凸，Schauder不动点定理给出$u=Tu$。而Banach原理需要收缩常数$<1$；虽$|\tanh a-\tanh b|\le|a-b|$，只能得$\|Tu-Tv\|_\infty\le M\|u-v\|_\infty$，当$M\ge1$时不能推出收缩。",
+  "subject": "数学分析",
+  "source": "generated | trap: theorem-condition"
+}
