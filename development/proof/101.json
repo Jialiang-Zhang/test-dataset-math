@@ -1,0 +1,7 @@
+{
+  "idx": 101,
+  "problem": "在$H=L^2[0,1]$上定义自伴算子$(T_\alpha f)(x)=xf(x)+\alpha\int_0^1f(t)dt$，其中$\alpha\in\mathbb R$。严格确定$\sigma(T_\alpha)$：证明本质谱为$[0,1]$，区间内不存在特征值；并证明当$\alpha>0$时恰有一个特征值$\lambda>1$，当$\alpha<0$时恰有一个特征值$\lambda<0$，写出其满足的标量方程并证明唯一性。",
+  "answer": "$T_\alpha=M_x+\alpha(\mathbf1\otimes\mathbf1)$是乘法算子$M_x$的秩一自伴扰动。有限秩扰动不改变本质谱，故$\sigma_{ess}(T_\alpha)=[0,1]$。若$\lambda\in[0,1]$且$T_\alpha f=\lambda f$，记$c=\int_0^1f$，则$(\lambda-x)f(x)=\alpha c$。若$c\ne0$，则$f(x)=\alpha c/(\lambda-x)$，在$\lambda\in[0,1]$时不属于$L^2$；若$c=0$，则$(\lambda-x)f=0$几乎处处，只能$f=0$。故无嵌入特征值。对$\lambda\notin[0,1]$，非零特征函数必形如$f(x)=\alpha c/(\lambda-x)$，积分后得到$1=\alpha\int_0^1(\lambda-x)^{-1}dx=\alpha\log\left|\frac{\lambda}{\lambda-1}\right|$。若$\lambda>1$，函数$g(\lambda)=\log(\lambda/(\lambda-1))$从$+\infty$严格降到0，因此当且仅当$\alpha>0$时方程有唯一根。若$\lambda<0$，$g(\lambda)=\log(|\lambda|/|\lambda-1|)<0$，且从0^-严格降到$-\infty$（按$\lambda:-\infty\to0^-$），故当且仅当$\alpha<0$时有唯一根。自伴秩一扰动除本质谱及这些离散特征值外无其他谱，故结论成立。",
+  "subject": "泛函分析",
+  "source": "generated | trap: finite-vs-infinite-dimensional"
+}
