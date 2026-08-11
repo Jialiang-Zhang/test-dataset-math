@@ -1,0 +1,7 @@
+{
+  "idx": 59,
+  "problem": "在$([0,1],\mathcal B,m)$上定义$f_n(x)=n^\alpha\mathbf 1_{(0,n^{-\beta})}(x)$，其中$\alpha,\beta>0$。关于$f_n\to0$的逐点收敛、$L^1$收敛与一致可积性，下列哪一项正确？A. 对所有$\alpha,\beta>0$均有$f_n\to0$几乎处处且$L^1$收敛；B. $f_n\to0$几乎处处当且仅当$\alpha<\beta$；C. $f_n\to0$几乎处处恒成立，而$\{f_n\}$一致可积当且仅当$\alpha<\beta$；D. 当$\alpha=\beta$时，$f_n\to0$几乎处处且由Vitali定理可推出$L^1$收敛。",
+  "answer": "C",
+  "subject": "测度积分",
+  "source": "generated | trap: convergence-direction"
+}
