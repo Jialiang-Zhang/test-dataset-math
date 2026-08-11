@@ -1,0 +1,7 @@
+{
+  "idx": 166,
+  "problem": "设旋转对称黎曼曲面在极坐标中具有度量$$ds^2=dr^2+f(r)^2d\\theta^2,\\qquad 0<r<L,$$其中$f>0$且在$r=0$处光滑延拓满足$f(0)=0,f'(0)=1$。已知高斯曲率恒为正常数$K\\equiv\\kappa>0$，并且该度量在另一端$r=L$也光滑闭合成一个无边界紧致曲面。请利用活动标架或Christoffel符号推导$K=-f''/f$，求出$f$与$L$，并严格说明所得曲面为何必与半径$1/\\sqrt\\kappa$的标准球面等距。",
+  "answer": "取正交余标架$\\omega^1=dr,\\omega^2=f(r)d\\theta$。结构方程给出联络形式$\\omega^1{}_2=-f'(r)d\\theta$，故曲率形式$$d\\omega^1{}_2=-f''(r)dr\\wedge d\\theta=-\\frac{f''(r)}{f(r)}\\omega^1\\wedge\\omega^2,$$因此$K=-f''/f$。由$K\\equiv\\kappa$得$f''+\\kappa f=0$，结合$f(0)=0,f'(0)=1$得到$$f(r)=\\frac1{\\sqrt\\kappa}\\sin(\\sqrt\\kappa r).$$另一端光滑闭合要求$f(L)=0$且$f'(L)=-1$；最小正零点为$L=\\pi/\\sqrt\\kappa$，并且此时$f'(L)=\\cos\\pi=-1$。于是$$ds^2=dr^2+\\kappa^{-1}\\sin^2(\\sqrt\\kappa r)d\\theta^2.$$令$\\phi=\\sqrt\\kappa r$，即得$\\kappa^{-1}(d\\phi^2+\\sin^2\\phi\,d\\theta^2)$，这正是半径$1/\\sqrt\\kappa$的标准球面度量。",
+  "subject": "微分几何",
+  "source": "generated | theorem-condition"
+}
