@@ -1,0 +1,7 @@
+{
+  "idx": 104,
+  "problem": "设$V$为有限维复向量空间，$\mathcal A\subset\mathrm{End}(V)$是一族两两交换且每个算子都可对角化的线性变换。严格证明$\mathcal A$可被同时对角化；并进一步证明由$\mathcal A$生成的交换子代数中的每个元素都可在同一组基下表示为对角矩阵。要求说明有限维性在证明中的具体作用。",
+  "answer": "对$\dim V$归纳。若所有$T\in\mathcal A$都是标量算子则任意基均可。否则取某个非标量$T\in\mathcal A$。因$T$可对角化，$V=\bigoplus_{\lambda}E_\lambda(T)$，且至少有两个非零特征子空间。对任意$S\in\mathcal A$及$v\in E_\lambda(T)$，有$T(Sv)=S(Tv)=\lambda Sv$，故每个$E_\lambda(T)$对整个$\mathcal A$不变。限制$S|_{E_\lambda}$仍可对角化：其最小多项式整除$S$的最小多项式，而后者无重根。由于每个$E_\lambda$维数严格小于$\dim V$，由归纳假设可在各$E_\lambda$中选取同时对角化所有限制算子的基，拼接后得到$V$的一组共同特征向量基。于是所有$T\in\mathcal A$同时为对角矩阵。由$\mathcal A$生成的交换子代数中的任意元素是这些算子的有限线性组合与有限乘积；同一基下对角矩阵的和与积仍为对角矩阵，故整个生成代数同时对角化。有限维性用于保证非标量可对角化算子的特征空间直和分解、归纳过程终止以及最小多项式判据成立于有限维线性代数框架；无限维中即使存在大量可对角化算子，也未必存在由共同特征向量组成的Hamel/Schauder基。",
+  "subject": "高等代数",
+  "source": "generated | trap: finite-vs-infinite-dimensional"
+}
