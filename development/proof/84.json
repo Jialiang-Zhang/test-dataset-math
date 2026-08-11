@@ -1,0 +1,7 @@
+{
+  "idx": 84,
+  "problem": "在线性模型$y=X_1\beta_1+X_2\beta_2+\varepsilon$中，设$\operatorname{Cov}(\varepsilon)=\sigma^2\Omega$，其中$\Omega$正定，且$[X_1,X_2]$满列秩。令$W=\Omega^{-1}$，$P_1=X_1(X_1^TWX_1)^{-1}X_1^TW$，$M_1=I-P_1$。严格证明广义最小二乘的Frisch-Waugh-Lovell恒等式，并给出$\hat\beta_2$的闭式。",
+  "answer": "GLS最小化$(y-X_1\beta_1-X_2\beta_2)^TW(y-X_1\beta_1-X_2\beta_2)$。固定$\beta_2$，对$\beta_1$的一阶条件给出$\hat\beta_1(\beta_2)=(X_1^TWX_1)^{-1}X_1^TW(y-X_2\beta_2)$。代回后残差为$M_1(y-X_2\beta_2)$。由于$P_1$是$W$内积下的正交投影，满足$M_1^T W=W M_1$且$M_1^2=M_1$，故约化目标为$(y-X_2\beta_2)^TWM_1(y-X_2\beta_2)$。再求导得$X_2^TWM_1X_2\hat\beta_2=X_2^TWM_1y$。由整体满列秩可知$X_2^TWM_1X_2$正定可逆，因此$\boxed{\hat\beta_2=(X_2^TWM_1X_2)^{-1}X_2^TWM_1y}$。这等价于先在$W$内积下将$y$与$X_2$分别对$X_1$残差化，再做GLS。",
+  "subject": "线性回归",
+  "source": "generated | standard"
+}
