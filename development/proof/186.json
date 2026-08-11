@@ -1,0 +1,7 @@
+{
+  "idx": 186,
+  "problem": "设$A\in\mathbb R^{n\times n}$为实对称矩阵，二次型$q(x)=x^TAx$。请不用只引用Sylvester惯性定律，而是证明：$A$的正惯性指数$p$恰等于使$q$在其上正定的线性子空间的最大可能维数；负惯性指数$q_-$有完全类似的极值刻画。由此推出若$B=S^TAS$且$S$可逆，则$A,B$具有相同的正、负、零惯性指数，并说明如何得到标准形$\operatorname{diag}(I_p,-I_{q_-},0)$. ",
+  "answer": "由谱定理存在正交矩阵$U$使$U^TAU=\operatorname{diag}(\lambda_1,\dots,\lambda_n)$。设正特征值个数为$p$，负特征值个数为$q_-$。由对应正特征子空间$E_+$可见存在$p$维子空间使$q$正定。反之若$W$是任意维数大于$p$的子空间，则$\dim W+\dim(E_-\oplus E_0)>n$，故$W\cap(E_-\oplus E_0)$含非零向量$v$，而$q(v)\le0$，矛盾。因此$p$正是最大正定子空间维数；负指数同理。若$B=S^TAS$，则$x^TBx=(Sx)^TA(Sx)$，可逆线性映射$S$在子空间之间保持维数，并把$B$上的正定（负定）子空间双射到$A$上的正定（负定）子空间，所以正负惯性指数相同；秩在可逆合同下不变，从而零惯性指数也相同。最后将正、负特征值分别按$|\lambda_i|^{-1/2}$缩放，即可构造可逆$S$使$$S^TAS=\operatorname{diag}(I_p,-I_{q_-},0).$$",
+  "subject": "高等代数",
+  "source": "generated | theorem-condition"
+}
