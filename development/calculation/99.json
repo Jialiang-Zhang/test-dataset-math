@@ -1,0 +1,7 @@
+{
+  "idx": 99,
+  "problem": "求解初值问题$yy''-(y')^2+y^4=0$，$y(0)=1$，$y'(0)=0$。要求证明局部解在其最大存在区间内保持正值，利用非线性变量代换得到显式精确解，并通过原方程直接验证所得解。",
+  "answer": "初值处$y(0)=1>0$，由解的连续性局部有$y>0$。在任意保持正值的区间令$u=\log y$，则$y'=yu'$、$y''=y(u''+(u')^2)$，故$yy''-(y')^2=y^2u''$，原方程化为$u''+e^{2u}=0$，且$u(0)=u'(0)=0$。乘以$u'$积分得$\frac12(u')^2+\frac12e^{2u}=\frac12$，即$(u')^2=1-e^{2u}$。满足初值且在$x>0$向下运动的解为$e^u=\operatorname{sech}x$，因此$y(x)=\operatorname{sech}x$；偶对称性给全实轴同一表达式。该函数处处正，故不存在因穿过0导致的代换失效，而且其光滑存在于$\mathbb R$，因此最大解至少延拓到全实轴；由常微分方程局部唯一性，最大解即此全局解。直接计算$y'=-y\tanh x$、$y''=y(\tanh^2x-\operatorname{sech}^2x)$，于是$yy''-(y')^2+y^4=y^2(\tanh^2-\operatorname{sech}^2)-y^2\tanh^2+y^4=-y^2\operatorname{sech}^2+y^4=0$，因$y=\operatorname{sech}x$。初值亦显然满足。",
+  "subject": "常微分方程",
+  "source": "generated | standard"
+}
