@@ -1,0 +1,7 @@
+{
+  "idx": 184,
+  "problem": "在线性回归模型$y=X\beta+\varepsilon$中，设$X\in\mathbb R^{n\times p}$满列秩，$\widehat\beta=(X^TX)^{-1}X^Ty$，第$i$个杠杆值为$h_{ii}=x_i^T(X^TX)^{-1}x_i$，残差为$e_i=y_i-x_i^T\widehat\beta$。假设$h_{ii}<1$。请利用Sherman-Morrison公式严格推导删除第$i$个观测后的估计量$\widehat\beta_{(-i)}$，并证明留一预测残差满足$$y_i-x_i^T\widehat\beta_{(-i)}=\frac{e_i}{1-h_{ii}}.$$最后给出PRESS统计量的无须重复拟合表达式。",
+  "answer": "删除第$i$行后，正规方程矩阵与右端分别变为$A_i=X^TX-x_ix_i^T$与$b_i=X^Ty-x_iy_i$。令$A=X^TX$。由Sherman-Morrison公式$$A_i^{-1}=A^{-1}+\frac{A^{-1}x_ix_i^TA^{-1}}{1-x_i^TA^{-1}x_i}=A^{-1}+\frac{A^{-1}x_ix_i^TA^{-1}}{1-h_{ii}}.$$代入$b_i$并用$A\widehat\beta=X^Ty$化简，得到$$\widehat\beta_{(-i)}=\widehat\beta-\frac{A^{-1}x_i e_i}{1-h_{ii}}.$$于是$$y_i-x_i^T\widehat\beta_{(-i)}=e_i+\frac{x_i^TA^{-1}x_i}{1-h_{ii}}e_i=\frac{e_i}{1-h_{ii}}.$$因此留一交叉验证的残差平方和即PRESS为$$\operatorname{PRESS}=\sum_{i=1}^n\left(\frac{e_i}{1-h_{ii}}\right)^2,$$无需重新拟合$n$次模型。条件$h_{ii}<1$正保证删去该观测后相应秩一修正可逆。",
+  "subject": "线性回归",
+  "source": "generated | trap: theorem-condition"
+}
