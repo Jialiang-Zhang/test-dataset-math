@@ -1,0 +1,7 @@
+{
+  "idx": 419,
+  "problem": "考虑粘性Burgers方程$u_t+uu_x=\nu u_{xx}$，$\nu>0$，在$\mathbb R$上取初值$u(0,x)=-2\nu(\log\phi_0(x))'$，其中$\phi_0(x)>0$光滑且增长使热核卷积有意义。用Cole--Hopf变换推导全局经典解的表示式，并说明为什么该表示阻止了无粘Burgers中有限时梯度灾难的直接发生。",
+  "answer": "令$u=-2\nu(\log\phi)_x$。代入方程并把仅依赖$t$的积分常数吸收到$\phi$的时间因子中，得到热方程$\phi_t=\nu\phi_{xx}$。因此$\phi(t,x)=(4\pi\nu t)^{-1/2}\int_{\mathbb R}e^{-(x-y)^2/(4\nu t)}\phi_0(y)\,dy$，且$u(t,x)=-2\nu\partial_x\log\phi(t,x)$。由于$\phi_0>0$，热核正性给$t>0$时$\phi>0$且热方程即时光滑化，所以$u$保持光滑；粘性通过扩散抑制无粘特征线交叉导致的梯度爆破。",
+  "subject": "偏微分方程",
+  "source": "generated | standard"
+}
