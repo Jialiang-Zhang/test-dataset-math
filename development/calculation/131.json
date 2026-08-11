@@ -1,0 +1,7 @@
+{
+  "idx": 131,
+  "problem": "设$X\sim N(0,\Sigma)$，其中$\Sigma$为$n\times n$对称正定矩阵，$A$为实对称矩阵。记$Q=X^TAX$。请严格推导$Q$的矩母函数$M_Q(t)$在其最大定义域内的解析表达式，并由此给出$\mathbb E Q$与$\operatorname{Var}(Q)$；同时说明当$A$不正定时，矩母函数存在区间为何由$\Sigma^{1/2}A\Sigma^{1/2}$的正负特征值共同决定。",
+  "answer": "令$Y=\Sigma^{-1/2}X\sim N(0,I)$，$B=\Sigma^{1/2}A\Sigma^{1/2}$。取正交矩阵$U$使$B=U^T\operatorname{diag}(\lambda_1,\dots,\lambda_n)U$，再令$Z=UY\sim N(0,I)$，则$Q=\sum_i\lambda_iZ_i^2$。独立性给出$M_Q(t)=\prod_i(1-2t\lambda_i)^{-1/2}=\det(I-2tB)^{-1/2}$，其条件是对每个$i$都有$1-2t\lambda_i>0$。因此最大开区间为$(\max_{\lambda_i<0}(2\lambda_i)^{-1},\min_{\lambda_i>0}(2\lambda_i)^{-1})$，空集合端点解释为$\pm\infty$。由$\log M_Q(t)=-\frac12\sum_i\log(1-2t\lambda_i)$求导，得$\mathbb EQ=\sum_i\lambda_i=\operatorname{tr}(A\Sigma)$，$\operatorname{Var}(Q)=2\sum_i\lambda_i^2=2\operatorname{tr}((A\Sigma)^2)$。",
+  "subject": "概率论",
+  "source": "generated | trap: boundary-case"
+}
