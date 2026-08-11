@@ -1,0 +1,7 @@
+{
+  "idx": 93,
+  "problem": "设$(X,\mathcal F,\mu)$为有限测度空间，$f_n\to f$依测度收敛，且族$\{f_n:n\ge1\}$一致可积。严格证明$f\in L^1(\mu)$且$\|f_n-f\|_1\to0$。进一步说明若去掉$\mu(X)<\infty$而仍只保留同一个一致可积定义$\sup_n\int_{\{|f_n|>M\}}|f_n|\to0$，结论为何可能失败，并给出反例。",
+  "answer": "先由依测度收敛抽取任意子列的进一步子列$f_{n_k}\to f$几乎处处。一致可积给出对任意$\varepsilon>0$存在$\delta>0$使$\mu(E)<\delta$时$\sup_n\int_E|f_n|<\varepsilon$，且$\sup_n\|f_n\|_1<\infty$。Fatou得$f\in L^1$。再由Egorov定理，在有限测度下可取$E$满足$\mu(E)<\delta$且$f_{n_k}\to f$在$X\setminus E$上一致；于是$\int_{X\setminus E}|f_{n_k}-f|\to0$，而$E$上用一致可积与$f\in L^1$控制，故该进一步子列在$L^1$中收敛。若原序列不在$L^1$收敛，可取一子列使$\|f_{n_k}-f\|_1\ge\varepsilon_0$，与刚证得的进一步子列结论矛盾，因此全序列$L^1$收敛。无限测度反例：在$(\mathbb R,\mathcal B,m)$上取$f_n=\mathbf1_{[n,n+1]}$。则$f_n\to0$依测度且对$M>1$有$\int_{\{|f_n|>M\}}|f_n|=0$，满足题中尾部定义，但$\|f_n\|_1=1$恒不趋于0。失败原因是质量可向无穷远逃逸；无限测度空间还需紧性/紧支撑型的均匀控制。",
+  "subject": "测度积分",
+  "source": "generated | trap: missing-assumption"
+}
