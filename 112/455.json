@@ -1,0 +1,7 @@
+{
+  "idx": 455,
+  "problem": "考虑区间$(0,\pi)$上的热方程$u_t=u_{xx}$，Dirichlet边界$u(0,t)=u(\pi,t)=0$。给定终端时刻$T>0$的数据$u(\cdot,T)=g\in L^2(0,\pi)$，分析从$g$反推$u(\cdot,0)$的逆问题：说明在何种Fourier系数条件下存在$L^2$初值，并严格证明该逆映射在$L^2$范数下不连续。",
+  "answer": "写$g=\sum_{n\ge1}g_n\sin(nx)$。若初值$u_0=\sum a_n\sin(nx)$，则$g_n=e^{-n^2T}a_n$，所以存在$L^2$初值当且仅当$\sum_{n\ge1}e^{2n^2T}|g_n|^2<\infty$，此时$a_n=e^{n^2T}g_n$且唯一。逆映射在其值域上无界：取$g^{(N)}=e^{-N^2T}\sin(Nx)$，则$\|g^{(N)}\|_2\to0$，但对应初值为$\sin(Nx)$，其$L^2$范数恒为$\sqrt{\pi/2}$。故反向热方程虽在可达数据上唯一，却对终端数据不连续，属于严重病态逆问题。",
+  "subject": "偏微分方程",
+  "source": "generated | trap: existence-vs-stability"
+}

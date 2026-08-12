@@ -1,0 +1,7 @@
+{
+  "idx": 391,
+  "problem": "设$(\\Omega,\\mathcal F,\\mu)$为测度空间，$f_n,f\\in L^1(\\mu)$。关于依测度收敛、一致可积与$L^1$收敛，下列说法哪些正确？（多选）\nA. 若$\\mu(\\Omega)<\\infty$，$f_n\\to f$依测度收敛且$\\{f_n\\}$一致可积，则$\\|f_n-f\\|_1\\to0$；\nB. 在任意无限测度空间，只要$\\lim_{K\\to\\infty}\\sup_n\\int_{\\{|f_n|>K\\}}|f_n|d\\mu=0$且$f_n\\to0$依测度，就必有$\\|f_n\\|_1\\to0$；\nC. 在$\\mathbb R$上取$f_n=n^{-1}\\mathbf1_{[0,n]}$可反驳B；\nD. A中有限测度假设的作用可由额外的“质量不逃向无穷远”紧性条件替代，故无限测度情形需要比单纯振幅尾部控制更强的假设。",
+  "answer": "A,C,D",
+  "subject": "测度积分",
+  "source": "generated | trap: finite-vs-infinite-measure"
+}

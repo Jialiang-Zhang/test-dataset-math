@@ -1,0 +1,7 @@
+{
+  "idx": 448,
+  "problem": "判断命题真伪：不存在阶为$36$的有限单群。要求作答时综合Sylow定理与群对Sylow子群集合的共轭作用；若Sylow $3$-子群不唯一，必须利用作用到$S_4$的同态而不是只列出Sylow数。",
+  "answer": "true",
+  "subject": "抽象代数",
+  "source": "generated | trap: theorem-condition"
+}

@@ -1,0 +1,7 @@
+{
+  "idx": 426,
+  "problem": "设$n$点Gauss-Legendre求积公式用于$[-1,1]$，节点$x_i$、权重$w_i$。下列哪些结论必然正确？A. 对所有次数不超过$2n-1$的多项式精确；B. 所有$w_i>0$且$x_i$均位于$(-1,1)$；C. 若$f\in C^{2n}[-1,1]$且$f^{(2n)}\ge0$，则积分误差$\int_{-1}^1f-\sum_iw_if(x_i)\ge0$；D. 任意包含端点$\pm1$的$n$点求积公式也能达到$2n-1$次代数精度。",
+  "answer": "A,B,C",
+  "subject": "数值分析",
+  "source": "generated | trap: theorem-condition"
+}

@@ -1,0 +1,7 @@
+{
+  "idx": 417,
+  "problem": "在$H=L^2([0,1])$上令$(Tf)(x)=x f(x)$。关于$T$下列哪些正确？（多选）A. $\sigma(T)=[0,1]$；B. 每个$\lambda\in(0,1)$都是特征值；C. $T$是自伴算子但不是紧算子；D. 对$\lambda\in[0,1]$可构造单位向量$f_n$使$\|(T-\lambda I)f_n\|_2\to0$；E. 因$0\in\sigma(T)$，所以存在非零$f$满足$Tf=0$。",
+  "answer": "A,C,D",
+  "subject": "泛函分析",
+  "source": "generated | trap: finite-vs-infinite-dimensional"
+}

@@ -1,0 +1,7 @@
+{
+  "idx": 355,
+  "problem": "设$(X,\mathcal A,\mu)$为测度空间，$f_n\in L^1(\mu)$，且$\sup_n\|f_n\|_1<\infty$。已知对每个可测集$E\in\mathcal A$都有$\int_E f_n\,d\mu\to0$。证明$f_n\rightharpoonup0$于$L^1$，即对每个$g\in L^\infty$有$\int gf_n\to0$。并明确指出统一的$L^1$有界性在用简单函数逼近$L^\infty$测试函数的证明中承担什么作用。",
+  "answer": "先对简单函数$s=\sum_{j=1}^m a_j\mathbf1_{E_j}$，由假设逐项得$\int sf_n\to0$。给定任意$g\in L^\infty$及$\varepsilon>0$，可取简单函数$s$使$\|g-s\|_\infty<\varepsilon$。若$M=\sup_n\|f_n\|_1$，则$|\int(g-s)f_n|\le\|g-s\|_\infty\|f_n\|_1\le M\varepsilon$。于是$\limsup_n|\int gf_n|\le M\varepsilon$；令$\varepsilon\downarrow0$即得$\int gf_n\to0$，故$f_n\rightharpoonup0$于$L^1$。这里统一$L^1$有界性用于把$L^\infty$范数下的简单函数逼近误差转化为对所有$n$一致的积分误差控制；本题只要求说明它在该证明机制中的作用，不断言它在更强的测度论定理框架下不能由其他假设推出。",
+  "subject": "测度积分",
+  "source": "generated | trap: missing-assumption"
+}

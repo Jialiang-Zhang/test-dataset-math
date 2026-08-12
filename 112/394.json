@@ -1,0 +1,7 @@
+{
+  "idx": 394,
+  "problem": "设$G$为阶$168=2^3\\cdot3\\cdot7$的非阿贝尔单群。关于其Sylow $7$-子群及共轭作用，下列结论哪些必然成立？（多选）A. Sylow $7$-子群个数$n_7=8$；B. $n_7$可能等于$24$；C. $G$对8个Sylow $7$-子群的共轭作用给出一个忠实嵌入$G\\hookrightarrow A_8$；D. 任意Sylow $7$-子群$P$的正规化子$N_G(P)$阶为$21$。",
+  "answer": "A,C,D",
+  "subject": "抽象代数",
+  "source": "generated | standard"
+}

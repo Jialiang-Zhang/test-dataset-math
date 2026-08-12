@@ -1,0 +1,7 @@
+{
+  "idx": 371,
+  "problem": "设$G=(V,E)$是一个有$2n$个顶点的简单图。对$i<j$，若$ij\in E$则引入独立不定元$x_{ij}$，并定义Tutte矩阵$T=(t_{ij})$为$t_{ij}=x_{ij}$（$i<j,ij\in E$）、$t_{ji}=-x_{ij}$，其余元素为$0$。证明：$G$存在完美匹配当且仅当$\det T$不是零多项式。要求不能直接引用“Tutte矩阵判据”，而应从Pfaffian展开出发解释为什么不同完美匹配对应的单项式不会相互抵消。",
+  "answer": "由于$T$是$2n\times2n$斜对称矩阵，$\det T=\operatorname{Pf}(T)^2$。Pfaffian有展开\n$\operatorname{Pf}(T)=\sum_M \operatorname{sgn}(M)\prod_{\{i,j\}\in M}t_{ij}$，\n其中求和遍历$\{1,\dots,2n\}$的所有配对。若某一配对含非边，则对应乘积为$0$；非零项恰对应$G$的完美匹配。对每个完美匹配$M$，把每条边写成$i<j$后，其项为$\pm\prod_{ij\in M}x_{ij}$。由于各边使用彼此独立的不定元，不同完美匹配含有不同的边集合，从而给出不同的平方自由单项式，故它们不可能在多项式环中相互抵消。因此$\operatorname{Pf}(T)$非零当且仅当至少存在一个完美匹配；再由$\det T=\operatorname{Pf}(T)^2$，得到$\det T\not\equiv0$当且仅当$G$有完美匹配。",
+  "subject": "离散数学",
+  "source": "generated | standard"
+}

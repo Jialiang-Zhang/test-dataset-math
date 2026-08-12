@@ -1,0 +1,7 @@
+{
+  "idx": 358,
+  "problem": "设$f(x)=x^4-5x^2+5\in\mathbb Q[x]$。求$f$在$\mathbb Q$上的分裂域及其Galois群，并证明该Galois群同构于$C_4$。要求明确写出一个4阶自同构对根的作用。",
+  "answer": "令$a^2=(5+\sqrt5)/2$，$b^2=(5-\sqrt5)/2$。则$f(x)=(x^2-a^2)(x^2-b^2)$，根为$\pm a,\pm b$，且$ab=\sqrt5$。因为$\sqrt5=2a^2-5\in\mathbb Q(a)$，又$b=\sqrt5/a\in\mathbb Q(a)$，故分裂域$L=\mathbb Q(a)$。现严格证明$f$在$\mathbb Q$上不可约。若它可分解为两个首一二次因子，由$x^3$系数为0可写成$(x^2+rx+s)(x^2-rx+t)$。比较$x$项得$r(t-s)=0$。若$r=0$，则$s+t=-5,st=5$，故$s,t$是$z^2+5z+5$的根，不可能都在$\mathbb Q$；若$s=t$，则由常数项得$s^2=5$，亦不可能$s\in\mathbb Q$。故$f$不可约，因而$[L:\mathbb Q]=4$。定义$\sigma(a)=b$，则$\sigma(\sqrt5)=\sigma(2a^2-5)=2b^2-5=-\sqrt5$，于是$\sigma(b)=\sigma(\sqrt5/a)=(-\sqrt5)/b=-a$。因此$a\mapsto b\mapsto-a\mapsto-b\mapsto a$，故$\sigma$阶为4。由于$L$已含$f$全部根且$f$可分，$L/\mathbb Q$为Galois扩张，$|\mathrm{Gal}(L/\mathbb Q)|=4$；又其中含4阶元$\sigma$，故$\mathrm{Gal}(L/\mathbb Q)\cong C_4$。",
+  "subject": "抽象代数",
+  "source": "generated | standard"
+}

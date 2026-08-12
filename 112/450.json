@@ -1,0 +1,7 @@
+{
+  "idx": 450,
+  "problem": "设$D\subset\mathbb C$为域，$f_n:D\to\mathbb C$均为单叶全纯函数，且$f_n$在紧集上一致收敛到全纯函数$f$。证明$f$要么为常数，要么仍为单叶函数。要求使用Hurwitz定理，并处理直接对$f_n(z)-f_n(w)$应用Hurwitz时零点$z=w$始终存在这一障碍。",
+  "answer": "固定$w\in D$，定义$h_n(z)=\frac{f_n(z)-f_n(w)}{z-w}$，在$z=w$处以$f_n'(w)$作可去延拓。单叶性保证$h_n$在$D$上处处非零。紧集一致收敛及Cauchy公式给$h_n\to h(z)=\frac{f(z)-f(w)}{z-w}$局部一致。由Hurwitz，$h$要么处处非零，要么恒为零。若对某个$w$有$h\equiv0$，则$f\equiv f(w)$为常数；否则对每个$w$，$h$处处非零，于是$f(z)\ne f(w)$对所有$z\ne w$成立，故$f$单叶。",
+  "subject": "复分析",
+  "source": "generated | trap: theorem-condition"
+}

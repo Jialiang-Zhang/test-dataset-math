@@ -1,0 +1,7 @@
+{
+  "idx": 373,
+  "problem": "设$(X,\mathcal F,\mu)$为有限测度空间，$1<p<\infty$，且$f_n\to f$几乎处处并满足$\sup_n\|f_n\|_p<\infty$。下列哪些结论必然成立？\nA. $f\in L^p$，且$f_n\rightharpoonup f$于$L^p$\nB. $f_n\to f$于$L^1$\nC. $f_n\to f$于$L^p$\nD. 若另有$\|f_n\|_p\to\|f\|_p$，则$f_n\to f$于$L^p$\nE. 对任意$q>p$都有$\sup_n\|f_n\|_q<\infty$",
+  "answer": "A,B,D。由Fatou引理，$f\in L^p$。因$1<p<\infty$，$L^p$反射；任意子列都有弱收敛子子列，结合几乎处处收敛可识别其弱极限只能是$f$，故全列$f_n\rightharpoonup f$。有限测度上$L^p$有界蕴含$L^1$一致可积，而几乎处处收敛蕴含依测度收敛，Vitali定理给出$L^1$收敛，故B真。C一般假：在$X=(0,1)$上取$f=0$及$f_n=n^{1/p}{\bf1}_{(0,1/n)}$，则$f_n\to0$几乎处处且$\|f_n\|_p=1$，故不强$L^p$收敛。若再有范数收敛，则由A的弱收敛和$L^p$（$1<p<\infty$）的一致凸性/Radon-Riesz性质得到强$L^p$收敛，故D真。E显然不由$L^p$有界推出。",
+  "subject": "测度积分",
+  "source": "generated | trap: convergence-direction"
+}

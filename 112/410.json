@@ -1,0 +1,7 @@
+{
+  "idx": 410,
+  "problem": "设$M\subset\mathbb R^3$为光滑、紧致、无边界、可定向的嵌入环面。证明其高斯曲率$K$不可能处处为正；进一步证明$K$也不可能处处非负且在某点严格为正。要求明确使用Gauss--Bonnet定理，并解释第二个结论为何不是第一个结论的直接同义改写。",
+  "answer": "环面Euler示性数$\chi(M)=0$，故Gauss--Bonnet给出$\int_MK\,dA=2\pi\chi(M)=0$。若$K>0$处处，则积分严格为正，矛盾。若$K\ge0$处处且在某点$p$有$K(p)>0$，由连续性存在邻域$U$及$c>0$使$K\ge c$于$U$，于是$\int_MK\,dA\ge c\operatorname{Area}(U)>0$，仍矛盾。因此若$K\ge0$处处，只能$K\equiv0$。第二步额外使用连续性把一点严格正提升为正测度邻域上的正下界。",
+  "subject": "微分几何",
+  "source": "generated | trap: local-vs-global"
+}

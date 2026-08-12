@@ -1,0 +1,7 @@
+{
+  "idx": 474,
+  "problem": "给定任意实矩阵$A\\in\\mathbb R^{n\\times n}$，求解正交Procrustes问题$\\min_{Q^TQ=I}\\|A-Q\\|_F$。要求用SVD推导最小值，并在$A$奇异时完整刻画所有最优$Q$，说明为何非奇异时最优解唯一。",
+  "answer": "取SVD $A=U\\Sigma V^T$，其中$\\Sigma=\\operatorname{diag}(\\sigma_1,\\dots,\\sigma_n)$。因$\\|A-Q\\|_F^2=\\|A\\|_F^2+n-2\\operatorname{tr}(Q^TA)$，问题等价于最大化迹。令$R=U^TQV\\in O(n)$，则$\\operatorname{tr}(Q^TA)=\\operatorname{tr}(R^T\\Sigma)=\\sum_i\\sigma_iR_{ii}\\le\\sum_i\\sigma_i=\\|A\\|_*$。设$r=\\operatorname{rank}A$。等号要求对每个$\\sigma_i>0$有$R_{ii}=1$；正交矩阵若$R_{ii}=1$则$Re_i=e_i$，故所有最优$R$恰为$I_r\\oplus W$，其中$W\\in O(n-r)$任意。因此所有最优解为$Q=U(I_r\\oplus W)V^T$。若$A$非奇异，则$r=n$，唯一最优解$Q=UV^T$。最小平方距离为$\\|A\\|_F^2+n-2\\|A\\|_*=\\sum_{i=1}^n(\\sigma_i-1)^2$。",
+  "subject": "高等代数",
+  "source": "generated | trap: boundary-case"
+}

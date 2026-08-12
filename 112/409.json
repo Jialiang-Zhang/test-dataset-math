@@ -1,0 +1,7 @@
+{
+  "idx": 409,
+  "problem": "设$(X,\mathcal A,\mu)$为有限测度空间，$f_n,f\in L^1(\mu)$且$f_n\to f$依测度收敛。下列哪些条件分别足以推出$\|f_n-f\|_1\to0$？（多选）A. $\sup_n\|f_n\|_1<\infty$；B. $\{f_n\}$一致可积；C. 存在$p>1$使$\sup_n\|f_n\|_p<\infty$；D. $|f_n|\le g_n$且$g_n\to g$于$L^1$，但不要求$g=|f|$或$|f|\le g$。",
+  "answer": "B,C",
+  "subject": "测度积分",
+  "source": "generated | trap: convergence-direction"
+}

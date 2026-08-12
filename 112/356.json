@@ -1,0 +1,7 @@
+{
+  "idx": 356,
+  "problem": "考虑旋转曲面（悬链面）$X(u,v)=(\cosh v\cos u,\cosh v\sin u,v)$，其中$u\in[0,2\pi)$，$v\in\mathbb R$。求其第一、第二基本形式，主曲率与Gauss曲率，并计算总曲率$\int_M K\,dA$。最后说明该曲面为何是极小曲面但不是平面。",
+  "answer": "有$X_u=(-\cosh v\sin u,\cosh v\cos u,0)$，$X_v=(\sinh v\cos u,\sinh v\sin u,1)$，故$E=G=\cosh^2v,F=0$。可取单位法向$N=(\cos u/\cosh v,\sin u/\cosh v,-\tanh v)$。又$X_{uu}=(-\cosh v\cos u,-\cosh v\sin u,0)$，$X_{uv}=(-\sinh v\sin u,\sinh v\cos u,0)$，$X_{vv}=(\cosh v\cos u,\cosh v\sin u,0)$，于是第二基本形式系数$e=-1,f=0,g=1$。因此主曲率为$k_1=e/E=-\operatorname{sech}^2v$，$k_2=g/G=\operatorname{sech}^2v$，所以$H=(k_1+k_2)/2=0$而$K=k_1k_2=-\operatorname{sech}^4v$。面积元$dA=\cosh^2v\,du\,dv$，从而$\int_MK\,dA=-\int_0^{2\pi}\int_{-\infty}^{\infty}\operatorname{sech}^2v\,dv\,du=-2\pi[\tanh v]_{-\infty}^{\infty}=-4\pi$。它是极小曲面因为$H\equiv0$；但$K<0$处处，故不可能是平面。",
+  "subject": "微分几何",
+  "source": "generated | standard"
+}

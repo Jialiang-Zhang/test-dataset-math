@@ -1,0 +1,7 @@
+{
+  "idx": 431,
+  "problem": "考虑到达率$\lambda$、服务率$\mu$且$0<\lambda<\mu$的$M/M/1$队列，从系统中恰有1名顾客开始，令$T$为首次回到0的忙期长度。求$\psi(s)=\mathbb E[e^{-sT}]$的精确表达式，并据此给出$\mathbb E[T]$。要求利用第一次跳转分解并选择使$\psi(s)\in[0,1]$的二次方程根。",
+  "answer": "第一次跳转时间$E\sim\mathrm{Exp}(\lambda+\mu)$。若先服务完成则忙期结束；若先到达，则由无记忆性和分枝分解，两个初始顾客对应两个独立同分布忙期之和。因此$\psi(s)=\frac{\mu+\lambda\psi(s)^2}{\lambda+\mu+s}$，即$\lambda\psi^2-(\lambda+\mu+s)\psi+\mu=0$。取$[0,1]$中的小根，$\psi(s)=\frac{\lambda+\mu+s-\sqrt{(\lambda+\mu+s)^2-4\lambda\mu}}{2\lambda}$。由$-\psi'(0)$得$\mathbb E[T]=1/(\mu-\lambda)$。",
+  "subject": "随机过程",
+  "source": "generated | trap: boundary-case"
+}
