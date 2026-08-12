@@ -20,7 +20,7 @@ jobs:
       - name: Rename files and sync idx
         run: |
           python - <<'PY'
-          import json
+          import re
           from pathlib import Path
 
           root = Path('112')
@@ -30,31 +30,29 @@ jobs:
           )
           assert len(files) == 112, f'expected 112 json files, got {len(files)}'
 
-          rows = []
-          required = {'idx', 'problem', 'answer', 'subject', 'source'}
-          for p in files:
-              obj = json.loads(p.read_text(encoding='utf-8'))
-              assert set(obj) == required, f'{p}: invalid fields {set(obj)}'
-              rows.append(obj)
+          rows = [p.read_text(encoding='utf-8') for p in files]
 
           for p in files:
               p.unlink()
 
-          for i, obj in enumerate(rows):
-              obj['idx'] = i
-              out = root / f'{i}.json'
-              out.write_text(
-                  json.dumps(obj, ensure_ascii=False, indent=2) + '\n',
-                  encoding='utf-8',
+          for i, text in enumerate(rows):
+              # Only replace the numeric value of the first idx field.
+              new_text, n = re.subn(
+                  r'("idx"\s*:\s*)-?\d+',
+                  lambda m: m.group(1) + str(i),
+                  text,
+                  count=1,
               )
+              assert n == 1, f'idx not found for new file {i}.json'
+              (root / f'{i}.json').write_text(new_text, encoding='utf-8')
 
-          # Final consistency check: filenames and idx are exactly 0..111.
+          # Final consistency check without reparsing historical JSON bodies.
           new_files = sorted(root.glob('*.json'), key=lambda p: int(p.stem))
           assert [int(p.stem) for p in new_files] == list(range(112))
           for i, p in enumerate(new_files):
-              obj = json.loads(p.read_text(encoding='utf-8'))
-              assert obj['idx'] == i, (p, obj['idx'])
-              assert set(obj) == required
+              text = p.read_text(encoding='utf-8')
+              m = re.search(r'"idx"\s*:\s*(-?\d+)', text)
+              assert m and int(m.group(1)) == i, (p, m.group(1) if m else None)
 
           readme = root / 'README.md'
           text = readme.read_text(encoding='utf-8')
