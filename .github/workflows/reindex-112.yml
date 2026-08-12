@@ -1,0 +1,75 @@
+name: Reindex curated 112 dataset
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/reindex-112.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  reindex:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Rename files and sync idx
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path('112')
+          files = sorted(
+              [p for p in root.glob('*.json') if p.stem.isdigit()],
+              key=lambda p: int(p.stem),
+          )
+          assert len(files) == 112, f'expected 112 json files, got {len(files)}'
+
+          rows = []
+          required = {'idx', 'problem', 'answer', 'subject', 'source'}
+          for p in files:
+              obj = json.loads(p.read_text(encoding='utf-8'))
+              assert set(obj) == required, f'{p}: invalid fields {set(obj)}'
+              rows.append(obj)
+
+          for p in files:
+              p.unlink()
+
+          for i, obj in enumerate(rows):
+              obj['idx'] = i
+              out = root / f'{i}.json'
+              out.write_text(
+                  json.dumps(obj, ensure_ascii=False, indent=2) + '\n',
+                  encoding='utf-8',
+              )
+
+          # Final consistency check: filenames and idx are exactly 0..111.
+          new_files = sorted(root.glob('*.json'), key=lambda p: int(p.stem))
+          assert [int(p.stem) for p in new_files] == list(range(112))
+          for i, p in enumerate(new_files):
+              obj = json.loads(p.read_text(encoding='utf-8'))
+              assert obj['idx'] == i, (p, obj['idx'])
+              assert set(obj) == required
+
+          readme = root / 'README.md'
+          text = readme.read_text(encoding='utf-8')
+          text = text.replace(
+              '- 保留源题原始 `idx`，便于追溯到 `development/` 中的原始记录。',
+              '- 文件名与内部 `idx` 已统一重新编号为 `0` 至 `111`。',
+          )
+          readme.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Commit reindexed dataset
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add 112
+          git diff --cached --quiet && exit 0
+          git commit -m "dataset: reindex curated 112 subset from 0 to 111"
+          git push origin main
