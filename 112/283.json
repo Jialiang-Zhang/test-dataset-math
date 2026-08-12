@@ -1,7 +1,0 @@
-{
-  "idx": 283,
-  "problem": "设$(f_n)\\subset L^1(\\mathbb R)$。判断下列关于$L^1(\\mathbb R)$相对弱紧性的说法哪些正确。\nA. 若$(f_n)$一致可积，则必相对弱紧。\nB. 若$(f_n)$一致可积且对任意$\\varepsilon>0$存在$R$使$\\sup_n\\int_{|x|>R}|f_n|<\\varepsilon$，则相对弱紧。\nC. 若$(f_n)$相对弱紧，则它一致可积，并且满足上述质量不逃逸条件。\nD. 在有限测度空间上，一致可积足以推出$L^1$中的相对弱紧。",
-  "answer": "B,C,D",
-  "subject": "测度积分",
-  "source": "generated | trap: finite-vs-infinite-dimensional"
-}

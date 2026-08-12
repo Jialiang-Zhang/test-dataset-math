@@ -1,0 +1,7 @@
+{
+  "idx": 76,
+  "problem": "设$X_1,\dots,X_n\overset{iid}\sim U(0,\theta)$，$\theta>0$，记$M_n=\max_iX_i$。选择所有正确结论：A. $M_n$为$\theta$的MLE；B. $\sqrt n(M_n-\theta)$渐近正态；C. $n(\theta-M_n)/\theta\Rightarrow\mathrm{Exp}(1)$；D. 该模型的似然支持集依赖$\theta$，所以常规Wilks定理不能直接用于以$\theta$为边界参数的似然比统计量。",
+  "answer": "A,C,D",
+  "subject": "统计推断",
+  "source": "generated | trap: theorem-condition"
+}

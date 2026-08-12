@@ -1,0 +1,7 @@
+{
+  "idx": 95,
+  "problem": "考虑二维热方程经空间离散后得到$u'(t)=(A+B)u(t)$，其中$A,B$为实对称半负定矩阵且$AB=BA$。Peaceman--Rachford ADI格式为$(I-\\frac h2A)u^{n+1/2}=(I+\\frac h2B)u^n$，$(I-\\frac h2B)u^{n+1}=(I+\\frac h2A)u^{n+1/2}$。证明：1）该格式对任意$h>0$在离散$\\ell^2$范数下无条件稳定；2）当$A,B$与时间无关时全局时间精度为二阶。要求显式写出放大算子并利用可交换对称矩阵的同时正交对角化，而不能只引用“ADI无条件稳定”的结论。",
+  "answer": "因$A,B$实对称且可交换，存在正交矩阵$Q$使$Q^TAQ=\\operatorname{diag}(\\lambda_j)$、$Q^TBQ=\\operatorname{diag}(\\mu_j)$，其中$\\lambda_j,\\mu_j\\le0$。一步放大算子为$R_h=(I-\\frac h2B)^{-1}(I+\\frac h2A)(I-\\frac h2A)^{-1}(I+\\frac h2B)$；由可交换性可重排为两个Cayley因子的乘积。于是每个共同特征向量上的放大因子为$r_j=\\frac{1+h\\lambda_j/2}{1-h\\lambda_j/2}\\frac{1+h\\mu_j/2}{1-h\\mu_j/2}$。对任意$\\xi\\le0$有$|(1+h\\xi/2)/(1-h\\xi/2)|\\le1$，故$|r_j|\\le1$，从而$\\|R_h\\|_2\\le1$，得到任意步长下的$\\ell^2$稳定性。精度方面，标量Cayley函数$c(z)=(1+z/2)/(1-z/2)$满足$\\log c(z)=z+z^3/12+O(z^5)$，故$c(hA)=e^{hA+O(h^3)}$、$c(hB)=e^{hB+O(h^3)}$。因$A,B$可交换，$R_h=c(hA)c(hB)=e^{h(A+B)}+O(h^3)$，局部截断误差$O(h^3)$；结合稳定性，在固定时间区间内全局误差为$O(h^2)$。",
+  "subject": "数值分析",
+  "source": "generated | standard"
+}

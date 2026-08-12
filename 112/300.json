@@ -1,7 +1,0 @@
-{
-  "idx": 300,
-  "problem": "对Hamilton系统$y'=J^{-1}\nabla H(y)$应用隐式中点法$y_{n+1}=y_n+hJ^{-1}\nabla H((y_n+y_{n+1})/2)$。设$J^T=-J$非奇异。判断下列结论哪些正确：A. 对任意光滑$H$，该方法是二阶且时间可逆；B. 其线性稳定函数为$R(z)=(1+z/2)/(1-z/2)$，故A稳定但非L稳定；C. 当$H(y)=\frac12y^TKy$且$K=K^T$时，离散迭代精确保留$H$；D. 因其为辛方法，所以对任意非二次Hamilton量也逐步精确保能量。",
-  "answer": "A,B,C",
-  "subject": "数值分析",
-  "source": "generated | trap: theorem-condition"
-}

@@ -1,0 +1,7 @@
+{
+  "idx": 16,
+  "problem": "考虑边值问题$-\\varepsilon u''(x)+b u'(x)=0$（$0<x<1$），其中$\\varepsilon>0,b>0$，边界条件$u(0)=0,u(1)=1$。在均匀网格$x_j=jh$上用中心差分离散。推导内部节点的三对角离散方程，证明当且仅当网格Péclet数$Pe_h=bh/(2\\varepsilon)\\le1$时离散矩阵是M-矩阵；并分析$Pe_h>1$时齐次差分方程的两个特征根，说明为何数值解会出现非物理振荡。",
+  "answer": "中心差分给出$-\\varepsilon (U_{j+1}-2U_j+U_{j-1})/h^2+b(U_{j+1}-U_{j-1})/(2h)=0$。即$-(\\varepsilon/h^2+b/(2h))U_{j-1}+2\\varepsilon U_j/h^2-(\\varepsilon/h^2-b/(2h))U_{j+1}=0$。要成为M-矩阵，非对角元须非正，因此必须且只需$\\varepsilon/h^2-b/(2h)\\ge0$，即$Pe_h\\le1$；此时又有弱对角占优并由边界行保证不可约意义下的逆非负性。令$U_j=r^j$，约去公因子后得到$(1-Pe_h)r^2-2r+(1+Pe_h)=0$，根为$r_1=1$与$r_2=(1+Pe_h)/(1-Pe_h)$。当$Pe_h>1$时$r_2<0$，故对应模态符号交替；边界条件一般激发该模态，从而产生网格尺度的非物理振荡。",
+  "subject": "数值分析",
+  "source": "generated | trap: boundary-case"
+}

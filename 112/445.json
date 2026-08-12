@@ -1,7 +1,0 @@
-{
-  "idx": 445,
-  "problem": "在$(0,1)^2$上定义$f(x,y)=\frac{x^2-y^2}{(x^2+y^2)^2}$。分别计算两个迭代积分$\int_0^1(\int_0^1 f(x,y)\,dx)dy$与$\int_0^1(\int_0^1 f(x,y)\,dy)dx$，并证明$f\notin L^1((0,1)^2)$，从而说明为什么不能使用Fubini定理交换积分次序。",
-  "answer": "注意$\partial_x\frac{x}{x^2+y^2}=\frac{y^2-x^2}{(x^2+y^2)^2}=-f$，故对$y>0$，$\int_0^1f(x,y)dx=-\frac1{1+y^2}$，再积分得$-\pi/4$。另一方面$\partial_y\frac{y}{x^2+y^2}=f$，故对$x>0$，$\int_0^1f(x,y)dy=\frac1{1+x^2}$，再积分得$\pi/4$。在第一象限极坐标中$f=\cos(2\theta)/r^2$，于是任取一个$|\cos2\theta|\ge c>0$的角区间，$\iint|f|\,dxdy\ge C\int_0^\varepsilon dr/r=\infty$。因此$f$非绝对可积，Fubini交换次序的假设失败。",
-  "subject": "测度积分",
-  "source": "generated | trap: theorem-condition"
-}

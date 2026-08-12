@@ -1,0 +1,7 @@
+{
+  "idx": 44,
+  "problem": "设$G$为有限群，$p$是整除$|G|$的最小素数，且$H\le G$满足$[G:H]=p$。证明$H\trianglelefteq G$。要求使用$G$对左陪集空间$G/H$的作用，并严格解释为什么作用像的阶只能是$p$而不能含有其他素因子。",
+  "answer": "令$G$左乘作用于$p$个左陪集，得同态$\varphi:G\to S_p$。该作用传递，因此$|\operatorname{im}\varphi|$被$p$整除。另一方面$|\operatorname{im}\varphi|$同时整除$|G|$和$p!$。若某素数$q$整除$|\operatorname{im}\varphi|$，则$q\mid|G|$且$q\le p$。由$p$是$|G|$的最小素因子，必有$q\ge p$，故$q=p$。但$p!$中$p$的指数仅为1，所以$|\operatorname{im}\varphi|=p$。于是$[G:\ker\varphi]=p=[G:H]$。又任意$h\in H$固定陪集$H$，且$\ker\varphi\subseteq H$（核中元素特别固定$H$），结合两者指数同为$p$得$\ker\varphi=H$。核为正规子群，故$H\trianglelefteq G$。",
+  "subject": "抽象代数",
+  "source": "generated | standard"
+}

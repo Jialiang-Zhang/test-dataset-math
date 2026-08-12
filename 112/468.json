@@ -1,7 +1,0 @@
-{
-  "idx": 468,
-  "problem": "利用Weierstrass整函数乘积而不是留数定理，证明$\\frac{\\sinh\\pi z}{\\pi z}=\\prod_{n=1}^\\infty\\left(1+\\frac{z^2}{n^2}\\right)$，并对乘积作对数求导，进而求出任意$a>0$时的精确和$\\sum_{n\\in\\mathbb Z}\\frac1{n^2+a^2}$。要求说明为什么规范化后乘积前不存在额外的非平凡指数因子。",
-  "answer": "$\\sinh\\pi z/(\\pi z)$是偶整函数，零点恰为$\\pm in\\ (n\\ge1)$且均为单零点。因$\\sum n^{-2}<\\infty$，规范积$P(z)=\\prod_{n\\ge1}(1+z^2/n^2)$一致收敛于紧集并具有同样零点。Hadamard分解给$\\sinh\\pi z/(\\pi z)=e^{az+b}P(z)$；左侧与$P$均为偶函数，故$a=0$，在$z=0$处两边均为1，故指数因子只剩1。对非零且避开零点的$z$作对数求导：$\\pi\\coth\\pi z-1/z=\\sum_{n\\ge1}\\frac{2z}{z^2+n^2}$。令$z=a>0$，得$2\\sum_{n\\ge1}(a^2+n^2)^{-1}=\\pi\\coth(\\pi a)/a-1/a^2$。加上$n=0$项，得到$\\sum_{n\\in\\mathbb Z}\\frac1{n^2+a^2}=\\frac\\pi a\\coth(\\pi a)$。",
-  "subject": "复分析",
-  "source": "generated | standard"
-}

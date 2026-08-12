@@ -1,0 +1,7 @@
+{
+  "idx": 98,
+  "problem": "设$X_1,X_2,\\dots$独立同分布且$X_i\\sim\\mathrm{Bernoulli}(p)$，其中$0<p<1$。固定$q\\in(p,1)$，记$S_n=\\sum_{i=1}^nX_i$。不得直接引用Cramér大偏差定理，证明精确指数率$\\lim_{n\\to\\infty}\\frac1n\\log\\mathbb P(S_n/n\\ge q)=-D(q\\|p)$，其中$D(q\\|p)=q\\log\\frac qp+(1-q)\\log\\frac{1-q}{1-p}$。要求上界用指数倾斜/Chernoff优化，下界至少用一个精确二项概率质量并结合Stirling公式。",
+  "answer": "对任意$t>0$，Chernoff界给出$\\mathbb P(S_n\\ge nq)\\le\\exp\\{-ntq\\}(1-p+pe^t)^n$。最小化$\\psi(t)=\\log(1-p+pe^t)-tq$，驻点满足$pe^t/(1-p+pe^t)=q$，即$e^{t_*}=q(1-p)/(p(1-q))$。代回得到$\\psi(t_*)=-D(q\\|p)$，故$\\limsup n^{-1}\\log P\\le-D(q\\|p)$。下界令$k_n=\\lceil nq\\rceil$，则$\\mathbb P(S_n/n\\ge q)\\ge\\mathbb P(S_n=k_n)=\\binom nk_np^{k_n}(1-p)^{n-k_n}$。由Stirling公式，若$k_n/n\\to q$，则$\\frac1n\\log\\binom nk_n\\to -q\\log q-(1-q)\\log(1-q)$，故该单点概率的对数指数率为$-D(q\\|p)$。于是$\\liminf\\ge-D(q\\|p)$，与上界合并即得结论。",
+  "subject": "概率论",
+  "source": "generated | standard"
+}

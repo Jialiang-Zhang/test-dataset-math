@@ -1,0 +1,7 @@
+{
+  "idx": 69,
+  "problem": "判断：在有限非原子测度空间$(X,\mu)$上，若$f_n\rightharpoonup f$于$L^1$且$\|f_n\|_1\to\|f\|_1$，则必有$\|f_n-f\|_1\to0$。注意不得把Hilbert空间或一致凸Banach空间中的Radon-Riesz性质直接搬到$L^1$。",
+  "answer": "false",
+  "subject": "测度积分",
+  "source": "generated | trap: finite-vs-infinite-dimensional"
+}

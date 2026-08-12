@@ -1,0 +1,7 @@
+{
+  "idx": 15,
+  "problem": "设$G$是有$n$个顶点的$d$-正则图，邻接矩阵最小特征值为$\\lambda_{\\min}<0$。设$S$为独立集，$\\mathbf 1_S$为其示性向量。关于Hoffman界及其等号情形，下列说法正确的是哪些？\nA. 总有$|S|\\le n\\frac{-\\lambda_{\\min}}{d-\\lambda_{\\min}}$。\nB. 若某个非空独立集达到等号，则$G$必连通。\nC. 若$S$达到等号，则$\\mathbf 1_S-\\frac{|S|}{n}\\mathbf 1$属于$\\lambda_{\\min}$的特征子空间。\nD. 若$G$为二分$d$-正则图，则Hoffman界必严格小于$n/2$。",
+  "answer": "A,C",
+  "subject": "离散数学",
+  "source": "generated | trap: theorem-condition"
+}

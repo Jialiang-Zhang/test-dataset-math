@@ -1,0 +1,7 @@
+{
+  "idx": 10,
+  "problem": "设$n\\ge 2k$，$\\mathcal F\\subseteq\\binom{[n]}k$为两两相交族。请用Katona循环排列法证明Erdős–Ko–Rado界$$|\\mathcal F|\\le \\binom{n-1}{k-1},$$并严格说明：对任一圆排列，$\\mathcal F$中至多有$k$个集合能作为该圆排列上的连续$k$段出现；随后通过双计数推出上述上界。",
+  "answer": "固定一个圆排列。标准Katona循环引理表明：当$n\\ge2k$时，两两相交的连续$k$段至多有$k$个。现对有序对$(F,\\sigma)$双计数，其中$F\\in\\mathcal F$且$F$在圆排列$\\sigma$中构成连续$k$段。每个$F$出现于$k!(n-k)!$个带标号圆排列，而每个圆排列至多贡献$k$个$\\mathcal F$成员，故$$|\\mathcal F|k!(n-k)!\\le k(n-1)!.$$约去得到$$|\\mathcal F|\\le\\frac{k(n-1)!}{k!(n-k)!}=\\binom{n-1}{k-1}.$$所有含某个固定元素的$k$子集达到等号。",
+  "subject": "离散数学",
+  "source": "generated | standard"
+}

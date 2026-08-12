@@ -1,7 +1,0 @@
-{
-  "idx": 393,
-  "problem": "设$(S_n)_{n\\ge0}$为简单对称随机游走，$S_0=i$，其中$0<i<N$，并令$\\tau=\\inf\\{n\\ge0:S_n\\in\\{0,N\\}\\}$。利用两个不同的鞅分别求$\\mathbb P_i(S_\\tau=N)$与$\\mathbb E_i\\tau$。要求说明为什么可对所用停时应用可选停止，而不能只形式地写$\\mathbb E M_\\tau=\\mathbb EM_0$。",
-  "answer": "第一，$S_n$为鞅。对$\\tau_m=\\tau\\wedge m$，可选停止给出$\\mathbb E_iS_{\\tau_m}=i$。由于$0\\le S_{\\tau_m}\\le N$，由支配收敛令$m\\to\\infty$得$\\mathbb E_iS_\\tau=i$。又$S_\\tau\\in\\{0,N\\}$，故$\\mathbb P_i(S_\\tau=N)=i/N$。第二，$M_n=S_n^2-n$为鞅。对$\\tau_m$有$\\mathbb E_i(S_{\\tau_m}^2-\\tau_m)=i^2$，所以$\\mathbb E_i\\tau_m\\le N^2-i^2$。单调收敛得$\\mathbb E_i\\tau<\\infty$；再由$S_{\\tau_m}^2\\to S_\\tau^2$且被$N^2$支配，得到$\\mathbb E_i\\tau=\\mathbb E_iS_\\tau^2-i^2=N^2(i/N)-i^2=i(N-i)$。关键是先对有界停时$\\tau_m$应用定理，再通过有界性与收敛定理取极限。",
-  "subject": "概率论",
-  "source": "generated | standard"
-}

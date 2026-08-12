@@ -1,0 +1,7 @@
+{
+  "idx": 81,
+  "problem": "设$A\in\mathbb R^{n\times n}$对称正定，条件数$\kappa=\lambda_{\max}/\lambda_{\min}$，用共轭梯度法求$Ax=b$。下列哪些结论在精确算术下必然成立？A. 第$k$步迭代$x_k$使$A$-范数误差在$x_0+\mathcal K_k(A,r_0)$中最小；B. 若$A$只有$r$个互异特征值，则至多$r$步得到精确解；C. 有$\|e_k\|_A\le2((\sqrt\kappa-1)/(\sqrt\kappa+1))^k\|e_0\|_A$；D. 在浮点运算中只要$A$仍对称正定，也必在$r$步内精确终止。",
+  "answer": "A,B,C",
+  "subject": "数值分析",
+  "source": "generated | standard"
+}

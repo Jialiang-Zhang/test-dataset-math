@@ -1,0 +1,7 @@
+{
+  "idx": 25,
+  "problem": "设$G$是一个$d$-正则简单图，顶点数为$n$，最小邻接特征值为$\\lambda_{\\min}<0$。证明任意独立集$I$满足Hoffman界\n\\[\n|I|\\le \\frac{-\\lambda_{\\min}}{d-\\lambda_{\\min}}n.\n\\]\n进一步证明：若取等号，则$\\mathbf 1_I-\\frac{|I|}{n}\\mathbf 1$必属于$\\lambda_{\\min}$特征子空间，并由此推出每个$v\\notin I$在$I$中恰有$-\\lambda_{\\min}$个邻点。最后说明为什么“达到Hoffman界”比单纯知道$\\alpha(G)$的数值包含更强的结构信息。",
+  "answer": "令$x=\\mathbf 1_I$，写$x=\\frac{|I|}{n}\\mathbf 1+y$且$y\\perp\\mathbf 1$。因$I$独立，$x^TAx=0$。又$A\\mathbf 1=d\\mathbf 1$，故\n$0=d|I|^2/n+y^TAy\\ge d|I|^2/n+\\lambda_{\\min}\\|y\\|^2$。\n而$\\|y\\|^2=|I|-|I|^2/n$，整理得\n$|I|\\le -\\lambda_{\\min}n/(d-\\lambda_{\\min})$。若等号成立，则Rayleigh商也取等号，所以$Ay=\\lambda_{\\min}y$。于是\n$Ax=A(\\frac{|I|}{n}\\mathbf1+y)=\\frac{d|I|}{n}\\mathbf1+\\lambda_{\\min}(x-\\frac{|I|}{n}\\mathbf1)\n=\\lambda_{\\min}x+\\frac{(d-\\lambda_{\\min})|I|}{n}\\mathbf1$。\n利用等号时$(d-\\lambda_{\\min})|I|/n=-\\lambda_{\\min}$，得$Ax=\\lambda_{\\min}x-\\lambda_{\\min}\\mathbf1$。对$v\\notin I$，$(Ax)_v=-\\lambda_{\\min}$，即其在$I$中恰有$-\\lambda_{\\min}$个邻点；对$v\\in I$则为0。故达到Hoffman界强迫独立集的特征向量落在极小特征子空间，并强迫外部顶点具有完全均匀的交数，这是仅知道$\\alpha(G)$数值本身不能推出的。",
+  "subject": "离散数学",
+  "source": "generated | trap: theorem-condition"
+}

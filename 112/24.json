@@ -1,0 +1,7 @@
+{
+  "idx": 24,
+  "problem": "设$M^n$为完备Riemann流形，Ricci曲率满足$\\mathrm{Ric}\\ge (n-1)k>0$。证明任意两点距离不超过$\\pi/\\sqrt{k}$，并由此推出$M$紧致且基本群有限。要求证明中明确使用极小测地线的第二变分，而不能直接引用Bonnet--Myers定理。",
+  "answer": "设$\\gamma:[0,L]\\to M$为两点间单位速极小测地线。取沿$\\gamma$平行的正交标架$E_1,\\dots,E_{n-1}$，令$V_i(t)=\\sin(\\pi t/L)E_i(t)$。极小性给出指标型$I(V_i,V_i)\\ge0$。求和得$0\\le\\int_0^L[(n-1)(\\pi/L)^2\\cos^2(\\pi t/L)-\\mathrm{Ric}(\\dot\\gamma,\\dot\\gamma)\\sin^2(\\pi t/L)]dt\\le (n-1)\\frac L2[(\\pi/L)^2-k]$。故$L\\le\\pi/\\sqrt k$。于是$M$有界；完备Riemann流形由Hopf--Rinow知闭有界集紧，故$M$紧。其万有覆盖带拉回度量仍完备且满足同一Ricci下界，故其直径也至多$\\pi/\\sqrt k$并紧致；紧致空间上的纤维$\\pi^{-1}(p)$是离散闭子集，因而有限，所以deck变换群即$\\pi_1(M)$有限。",
+  "subject": "微分几何",
+  "source": "generated | standard"
+}

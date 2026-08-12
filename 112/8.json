@@ -1,0 +1,7 @@
+{
+  "idx": 8,
+  "problem": "设完全多部图$K_{n_1,\dots,n_k}$有$k\ge2$个部，第$i$部含$n_i\ge1$个顶点，令$n=\sum_{i=1}^k n_i$。请利用图的Laplacian谱与矩阵树定理，严格证明其生成树数为$$\tau(K_{n_1,\dots,n_k})=n^{k-2}\prod_{i=1}^k (n-n_i)^{n_i-1}.$$要求说明Laplacian的全部特征值及重数，并解释为何非零特征值乘积除以$n$即得到生成树数。",
+  "answer": "记$L=D-A$。对第$i$部内坐标和为$0$、其余部坐标全为$0$的向量$v$，由于该部每个顶点度数为$n-n_i$且同部无边，直接有$Lv=(n-n_i)v$；此类向量空间维数$n_i-1$，故$n-n_i$为特征值，重数$n_i-1$。再考察在每一部上取常值的$k$维子空间。若第$i$部常值为$c_i$，则该部任一坐标满足$(Lv)_i=n c_i-\sum_{j=1}^k n_jc_j$。因此常向量对应特征值$0$；而满足$\sum_j n_jc_j=0$的$(k-1)$维子空间上$Lv=nv$，故$n$为特征值，重数$k-1$。维数总和$1+(k-1)+\sum_i(n_i-1)=n$，故谱已穷尽。矩阵树定理的谱形式指出，对任意连通$n$顶点图，若Laplacian特征值为$0=\lambda_1<\lambda_2\le\cdots\le\lambda_n$，则$$\tau=\frac1n\prod_{j=2}^n\lambda_j.$$代入上述谱得$$\tau=\frac1n\,n^{k-1}\prod_{i=1}^k(n-n_i)^{n_i-1}=n^{k-2}\prod_{i=1}^k(n-n_i)^{n_i-1}.$$",
+  "subject": "离散数学",
+  "source": "generated | standard"
+}

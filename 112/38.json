@@ -1,0 +1,7 @@
+{
+  "idx": 38,
+  "problem": "对$a>0$，利用留数定理证明Mittag-Leffler型恒等式\n\[\n\sum_{n\in\mathbb Z}\frac1{n^2+a^2}=\frac{\pi}{a}\coth(\pi a),\n\]\n并据此求出$\sum_{n=1}^{\infty}(n^2+a^2)^{-1}$。要求说明围道如何避开$\pi\cot(\pi z)$的整数极点，并核对$z=\pm ia$处留数的符号。",
+  "answer": "考虑$F(z)=\pi\cot(\pi z)/(z^2+a^2)$，取边长趋于无穷的正方形围道，边界与整数保持固定正距离，因此$\cot(\pi z)$在边界上一致有界，而分母为$O(R^2)$，故围道积分趋于0。$F$在每个整数$n$处的留数为$1/(n^2+a^2)$。又$\cot(\pi ia)=-i\coth(\pi a)$，所以$\operatorname{Res}(F,ia)=\pi(-i\coth\pi a)/(2ia)=-\pi\coth(\pi a)/(2a)$；同理$\operatorname{Res}(F,-ia)=-\pi\coth(\pi a)/(2a)$。由留数定理并令围道扩大，$0=\sum_{n\in\mathbb Z}1/(n^2+a^2)-\pi\coth(\pi a)/a$，从而得到所证恒等式。再分离$n=0$项并利用对称性，\n\[\n\sum_{n=1}^{\infty}\frac1{n^2+a^2}=\frac12\left(\frac{\pi}{a}\coth(\pi a)-\frac1{a^2}\right)=\frac{\pi a\coth(\pi a)-1}{2a^2}.\n\]",
+  "subject": "复分析",
+  "source": "generated | trap: boundary-case"
+}

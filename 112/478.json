@@ -1,7 +1,0 @@
-{
-  "idx": 478,
-  "problem": "设$p$为奇素数。证明$p$可表示为$p=x^2+2y^2$（$x,y\\in\\mathbb Z$）当且仅当$p\\equiv1$或$3\\pmod8$。要求使用二次互反律/补充定律与二次整数环$\\mathbb Z[\\sqrt{-2}]$：先证明范数$N(a+b\\sqrt{-2})=a^2+2b^2$使该环成为Euclidean整环，再从$(-2/p)=1$推出$p$在该环中可约，从而得到范数为$p$的因子。",
-  "answer": "先证$R=\\mathbb Z[\\sqrt{-2}]$对范数$N(a+b\\sqrt{-2})=a^2+2b^2$欧几里得。对$\\alpha/\\beta=x+y\\sqrt{-2}\\in\\mathbb Q(\\sqrt{-2})$，取最接近$x,y$的整数$m,n$，则$N((x-m)+(y-n)\\sqrt{-2})\\le1/4+2\\cdot1/4=3/4<1$，故有Euclidean除法，$R$为UFD。若$p=x^2+2y^2$且$p$奇，则$x$必奇，故$x^2\\equiv1\\pmod8$；$y$偶时$2y^2\\equiv0$，$y$奇时$2y^2\\equiv2$，所以$p\\equiv1$或$3\\pmod8$。反之若$p\\equiv1,3\\pmod8$，补充定律给$(-2/p)=(-1/p)(2/p)=1$，故存在$a$使$a^2\\equiv-2\\pmod p$。在$R/(p)$中$(a+\\sqrt{-2})(a-\\sqrt{-2})=a^2+2\\equiv0$，但两个因子都非零，所以$p$不是素元。UFD中不可约元必为素元，故$p$可约：$p=\\alpha\\beta$，且两因子均非单位。取范数得$p^2=N(\\alpha)N(\\beta)$；因两范数均为大于1的整数，只能$N(\\alpha)=N(\\beta)=p$。写$\\alpha=x+y\\sqrt{-2}$即得$p=x^2+2y^2$。",
-  "subject": "非基础及进阶课程",
-  "source": "generated | trap: theorem-condition"
-}

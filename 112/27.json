@@ -1,0 +1,7 @@
+{
+  "idx": 27,
+  "problem": "设$(X,\\mathcal F,\\mu)$为有限测度空间，$1<p<\\infty$，且$f_n\\rightharpoonup f$于$L^p(\\mu)$。以下哪些命题必然成立？（多选）\nA. $\\{ |f_n|^p\\}$在$L^1$中一致可积；\nB. $f_n\\to f$依测度收敛；\nC. 若再有$\\|f_n\\|_p\\to\\|f\\|_p$，则$f_n\\to f$于$L^p$；\nD. 对任意$g\\in L^q$（$1/p+1/q=1$），均有$\\int f_ng\\,d\\mu\\to\\int fg\\,d\\mu$；\nE. 若$f_n\\to f$几乎处处，则必有$\\|f_n-f\\|_p\\to0$。",
+  "answer": "C,D。D就是$L^p$弱收敛定义。C由$L^p$在$1<p<\\infty$时的一致凸性（Radon–Riesz/Kadec–Klee性质）：弱收敛加范数收敛推出强收敛。A错误：$f_n=n^{1/p}\\mathbf1_{(0,1/n)}$在$L^p(0,1)$中有界且弱收敛到0，但$|f_n|^p=n\\mathbf1_{(0,1/n)}$不是一致可积。B错误：Rademacher函数在$L^2(0,1)$中弱收敛到0但不依测度收敛。E错误：同一尖峰例$f_n=n^{1/p}\\mathbf1_{(0,1/n)}$几乎处处趋于0，但$\\|f_n\\|_p=1$。",
+  "subject": "测度积分",
+  "source": "generated | trap: convergence-direction"
+}

@@ -1,7 +1,0 @@
-{
-  "idx": 245,
-  "problem": "设$(A_i,B_i)_{i=1}^m$是一族有限集合对，满足$|A_i|=r,|B_i|=s$，且$A_i\\cap B_i=\\varnothing$；对任意$i\\ne j$都有$A_i\\cap B_j\\ne\\varnothing$。证明Bollobás集合对不等式$$m\\le {r+s\\choose r}.$$要求使用随机排列/双计数思想证明，并说明证明中为什么事件之间两两互斥；最后给出达到等号的一族构造。",
-  "answer": "令$U=\\bigcup_i(A_i\\cup B_i)$，在$U$的均匀随机排列中定义事件$E_i$：$A_i$的所有元素都出现在$B_i$所有元素之前。只看$A_i\\cup B_i$的相对次序，故$\\mathbb P(E_i)=1/{r+s\\choose r}$。若$i\\ne j$而$E_i,E_j$同时发生，取$x\\in A_i\\cap B_j$及$y\\in A_j\\cap B_i$。由$E_i$得$x$先于$y$，由$E_j$又得$y$先于$x$，矛盾。因此$E_i$两两互斥，故$1\\ge\\sum_i\\mathbb P(E_i)=m/{r+s\\choose r}$，即$m\\le {r+s\\choose r}$。等号构造：固定一个$r+s$元集合$X$，对每个$r$元子集$A\\subset X$取$B=X\\setminus A$。此时共有${r+s\\choose r}$对，且对不同$A_i,A_j$，因大小同为$r$且不等，存在$A_i\\setminus A_j\\ne\\varnothing$，于是$A_i\\cap B_j\\ne\\varnothing$，故达到等号。",
-  "subject": "离散数学",
-  "source": "generated | standard"
-}

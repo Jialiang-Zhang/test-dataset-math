@@ -1,7 +1,0 @@
-{
-  "idx": 446,
-  "problem": "设$\Sigma\subset\mathbb R^3$为紧致、可定向、无边界光滑曲面，主曲率为$\kappa_1,\kappa_2$，取约定$S=-dN$、$H=(\kappa_1+\kappa_2)/2$。对足够小的$t$定义平行曲面$F_t(p)=F(p)+tN(p)$。证明在$1-t\kappa_i>0$的范围内其面积满足$A(t)=A(0)-2t\int_\Sigma H\,dA+2\pi\chi(\Sigma)t^2$，并解释为什么越过焦点$1-t\kappa_i=0$后不能继续无条件使用该公式作为平行曲面的面积公式。",
-  "answer": "在主方向$e_i$上，$dF_t(e_i)=dF(e_i)+t\,dN(e_i)=(1-t\kappa_i)e_i$，故在两个因子均为正时面积元$dA_t=(1-t\kappa_1)(1-t\kappa_2)dA=(1-2Ht+Kt^2)dA$。积分得$A(t)=A(0)-2t\int H\,dA+t^2\int K\,dA$。由Gauss-Bonnet，$\int K\,dA=2\pi\chi(\Sigma)$，得到所给公式。当某处$1-t\kappa_i=0$时$dF_t$降秩，平行映射出现焦点；再越过后Jacobian会变号且可能自交，真实面积元应取绝对值，因而上述带符号二次多项式不能再直接当作几何面积。",
-  "subject": "微分几何",
-  "source": "generated | trap: local-vs-global"
-}

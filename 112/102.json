@@ -1,0 +1,7 @@
+{
+  "idx": 102,
+  "problem": "考虑无阻尼单摆$\\theta''+\\sin\\theta=0$。对振荡能量$E\\in(0,2)$，令$T(E)$为最小正周期。严格推导$T(E)$的第一类完全椭圆积分表示，并求临界能量$E\\uparrow2$时的主导发散：给出$T(E)$关于$2-E$的精确对数主项。要求从能量守恒出发，而不能直接引用单摆周期公式。",
+  "answer": "能量守恒为$\\frac12\\theta'^2+1-\\cos\\theta=E$。令$k=\\sqrt{E/2}\\in(0,1)$，转折角$\\theta_m$满足$\\sin(\\theta_m/2)=k$。于是$\\theta'^2=4(k^2-\\sin^2(\\theta/2))$。四分之一周期为$T/4=\\int_0^{\\theta_m}\\frac{d\\theta}{2\\sqrt{k^2-\\sin^2(\\theta/2)}}$。令$\\sin(\\theta/2)=k\\sin\\phi$，则$T/4=\\int_0^{\\pi/2}(1-k^2\\sin^2\\phi)^{-1/2}d\\phi=K(k)$，故$T(E)=4K(\\sqrt{E/2})$。当$E\\uparrow2$，余模$k'=\\sqrt{1-k^2}=\\sqrt{(2-E)/2}$。端点渐近给$K(k)=\\log(4/k')+O(k'^2\\log(1/k'))$，因此$T(E)=4\\log\\left(4\\sqrt{\\frac2{2-E}}\\right)+O((2-E)\\log\\frac1{2-E})=2\\log\\frac{32}{2-E}+O((2-E)\\log\\frac1{2-E})$。",
+  "subject": "常微分方程",
+  "source": "generated | trap: boundary-case"
+}

@@ -1,0 +1,7 @@
+{
+  "idx": 9,
+  "problem": "设$G$是含$n$个顶点的连通简单图，其Laplacian矩阵$L_G$的特征值为$0=\lambda_1<\lambda_2\le\cdots\le\lambda_n$。令$G^\ast=G\vee K_1$为在$G$上添加一个新顶点并将其与$G$中所有顶点相连所得的锥图。请严格证明$$\tau(G^\ast)=\prod_{j=2}^n(1+\lambda_j),$$其中$\tau(H)$表示图$H$的生成树数。要求从锥图Laplacian的谱分解出发，明确求出全部$n+1$个特征值，再使用矩阵树定理闭合证明。",
+  "answer": "按旧顶点在前、新顶点在后的顺序，$$L_{G^\ast}=\begin{pmatrix}L_G+I_n&-\mathbf1\\-\mathbf1^T&n\end{pmatrix}.$$若$v\perp\mathbf1$且$L_Gv=\lambda v$，则$(v,0)^T$是$L_{G^\ast}$的特征向量，特征值为$\lambda+1$。因此得到$\lambda_2+1,\dots,\lambda_n+1$。此外$(\mathbf1,1)^T$对应特征值$0$。最后取$(\mathbf1,-n)^T$，有$$L_{G^\ast}(\mathbf1,-n)^T=(n+1)(\mathbf1,-n)^T,$$故余下特征值为$n+1$。于是锥图的Laplacian谱为$$0,\ n+1,\ 1+\lambda_2,\dots,1+\lambda_n.$$由矩阵树定理的谱形式：含$N$个顶点的连通图若非零Laplacian特征值为$\mu_2,\dots,\mu_N$，则$$\tau=\frac1N\prod_{j=2}^N\mu_j.$$这里$N=n+1$，故$$\tau(G^\ast)=\frac1{n+1}(n+1)\prod_{j=2}^n(1+\lambda_j)=\prod_{j=2}^n(1+\lambda_j).$$",
+  "subject": "离散数学",
+  "source": "generated | standard"
+}

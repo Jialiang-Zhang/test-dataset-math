@@ -1,7 +1,0 @@
-{
-  "idx": 246,
-  "problem": "设$A$为对称正定矩阵，$\\sigma(A)\\subset[a,b]$，$0<a<b$。考虑只使用矩阵向量乘法构造的$m$步多项式迭代，其误差形如$e_m=p_m(A)e_0$，其中$p_m$为次数不超过$m$且满足$p_m(0)=1$的实多项式。求$$\\min_{p_m(0)=1}\\max_{\\lambda\\in[a,b]}|p_m(\\lambda)|$$的精确值与达到该值的多项式，并将结果化为条件数$\\kappa=b/a$的表达式。说明该极小极大结论为什么给出Chebyshev半迭代的最优最坏情形收敛因子。",
-  "answer": "作仿射变换$t=(a+b-2\\lambda)/(b-a)$，则$\\lambda\\in[a,b]$对应$t\\in[-1,1]$，而$\\lambda=0$对应$t_0=(a+b)/(b-a)>1$。问题等价于在$q(t_0)=1$下极小化$\\|q\\|_{L^\\infty[-1,1]}$。由Chebyshev交错极值性质，唯一极小解为$$q_*(t)=\\frac{T_m(t)}{T_m(t_0)},$$故$$p_*(\\lambda)=\\frac{T_m((a+b-2\\lambda)/(b-a))}{T_m((a+b)/(b-a))},\\qquad \\rho_m^*=\\frac1{|T_m((a+b)/(b-a))|}.$$令$\\kappa=b/a$及$q=(\\sqrt\\kappa-1)/(\\sqrt\\kappa+1)$。因$t_0=(\\kappa+1)/(\\kappa-1)=(q+q^{-1})/2$，有$T_m(t_0)=(q^{-m}+q^m)/2$，所以$$\\rho_m^*=\\frac{2q^m}{1+q^{2m}}<2q^m.$$任意这类多项式迭代的谱范数最坏误差至少为$\\rho_m^*$，而$p_*$达到该下界，因此Chebyshev半迭代在只已知谱区间$[a,b]$的多项式方法中具有最优的最坏情形收敛因子。",
-  "subject": "数值分析",
-  "source": "generated | standard"
-}

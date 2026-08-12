@@ -1,7 +1,7 @@
 {
   "idx": 73,
-  "problem": "设$m,n\ge2$，从完全二分图$K_{m,n}$中删去一条边$e$得到图$G=K_{m,n}-e$。不得直接引用删边后的现成生成树公式。请结合矩阵树定理与单位电阻网络中的有效电阻（或等价的生成树含边概率公式），严格求出$G$的生成树总数$\tau(G)$。",
-  "answer": "由矩阵树定理，$\tau(K_{m,n})=m^{n-1}n^{m-1}$。对单位电阻网络，均匀生成树包含边$e$的概率等于其有效电阻$R_{\mathrm{eff}}(e)$。设$e=uv$，其中$u$在$m$侧、$v$在$n$侧。利用$K_{m,n}$的对称性解Kirchhoff方程：令$v$电势为0、$u$电势为1；其余$m-1$个左侧顶点电势相同为$a$，其余$n-1$个右侧顶点相同为$b$。节点守恒给出$na-(n-1)b=0$与$mb-(m-1)a=1$，解得从$u$流出的总电流为$mn/(m+n-1)$，故$R_{\mathrm{eff}}(e)=(m+n-1)/(mn)$。因此含$e$的生成树数为$\tau(K_{m,n})R_{\mathrm{eff}}(e)$，删去$e$后剩余生成树数为$\tau(G)=m^{n-1}n^{m-1}\left(1-\frac{m+n-1}{mn}\right)=(m-1)(n-1)m^{n-2}n^{m-2}$。",
-  "subject": "离散数学",
-  "source": "generated | standard"
+  "problem": "考虑到达率$\lambda$、服务率$\mu$且$0<\lambda<\mu$的$M/M/1$队列，从系统中恰有1名顾客开始，令$T$为首次回到0的忙期长度。求$\psi(s)=\mathbb E[e^{-sT}]$的精确表达式，并据此给出$\mathbb E[T]$。要求利用第一次跳转分解并选择使$\psi(s)\in[0,1]$的二次方程根。",
+  "answer": "第一次跳转时间$E\sim\mathrm{Exp}(\lambda+\mu)$。若先服务完成则忙期结束；若先到达，则由无记忆性和分枝分解，两个初始顾客对应两个独立同分布忙期之和。因此$\psi(s)=\frac{\mu+\lambda\psi(s)^2}{\lambda+\mu+s}$，即$\lambda\psi^2-(\lambda+\mu+s)\psi+\mu=0$。取$[0,1]$中的小根，$\psi(s)=\frac{\lambda+\mu+s-\sqrt{(\lambda+\mu+s)^2-4\lambda\mu}}{2\lambda}$。由$-\psi'(0)$得$\mathbb E[T]=1/(\mu-\lambda)$。",
+  "subject": "随机过程",
+  "source": "generated | trap: boundary-case"
 }

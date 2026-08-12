@@ -1,0 +1,7 @@
+{
+  "idx": 97,
+  "problem": "设$(M,g)$为紧致、连通、可定向、无边界的二维Riemann流形，并假设高斯曲率$K>0$处处成立。利用Hodge理论与Bochner--Weitzenböck公式证明$H^1_{\\mathrm{dR}}(M)=0$，从而推出$M$的亏格为$0$。要求明确写出对调和$1$-形式积分后的Bochner恒等式，并说明二维中Ricci曲率如何化为$K$。",
+  "answer": "由Hodge定理，每个$H^1_{\\mathrm{dR}}(M)$上同调类有唯一调和$1$-形式代表$\\alpha$，满足$\\Delta_H\\alpha=0$。Weitzenböck公式为$\\Delta_H\\alpha=\\nabla^*\\nabla\\alpha+\\operatorname{Ric}(\\alpha)$。与$\\alpha$作$L^2$内积并在闭流形上积分，得$0=\\langle\\Delta_H\\alpha,\\alpha\\rangle_{L^2}=\\|\\nabla\\alpha\\|_{L^2}^2+\\int_M\\operatorname{Ric}(\\alpha,\\alpha)\\,dV$。二维中$\\operatorname{Ric}=Kg$，故$0=\\int_M(|\\nabla\\alpha|^2+K|\\alpha|^2)\\,dV$。因$K>0$，两项非负且第二项除非$\\alpha\\equiv0$否则积分为正，因此任一调和$1$-形式只能为零，故$H^1_{\\mathrm{dR}}(M)=0$。闭可定向曲面的第一Betti数为$b_1=2g$，于是$2g=0$，故亏格$g=0$，拓扑上$M$同胚于$S^2$。",
+  "subject": "微分几何",
+  "source": "generated | standard"
+}

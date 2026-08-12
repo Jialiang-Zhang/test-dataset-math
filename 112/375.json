@@ -1,7 +1,0 @@
-{
-  "idx": 375,
-  "problem": "设$(X_n)_{n\ge1}$是无限可交换的$\{0,1\}$值随机变量序列。由de Finetti定理，存在$[0,1]$值随机变量$\Theta$，使得在给定$\Theta$后，$X_n$条件独立同分布且$P(X_n=1\mid\Theta)=\Theta$。下列哪些说法必然正确？\nA. $n^{-1}\sum_{k=1}^nX_k\to\Theta$几乎处处\nB. $\operatorname{Cov}(X_1,X_2)=\operatorname{Var}(\Theta)$\nC. 若$X_1$与$X_2$不相关，则整个序列必为i.i.d. Bernoulli$(p)$，其中$p=EX_1$\nD. 只要$X_1$与$X_2$同分布，就有$X_1,X_2$独立\nE. 交换尾$\sigma$域可以包含非平凡信息，即使每个$X_n$边缘分布相同",
-  "answer": "A,B,C,E。条件于$\Theta$应用强大数定律，经验均值几乎处处收敛到$\Theta$，故A真。又$E(X_1X_2\mid\Theta)=\Theta^2$，而$EX_1=E\Theta$，所以协方差为$E\Theta^2-(E\Theta)^2=\operatorname{Var}(\Theta)$，B真。若不相关，则该方差为0，故$\Theta=p$几乎处处为常数；de Finetti表示随即退化为i.i.d. Bernoulli$(p)$，C真。D显然错误，同分布远弱于独立。E真：非退化$\Theta$本身可由经验均值极限恢复，因而属于交换尾信息，而各$X_n$仍具有完全相同的边缘分布。",
-  "subject": "概率论",
-  "source": "generated | trap: independence"
-}

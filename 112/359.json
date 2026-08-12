@@ -1,7 +1,0 @@
-{
-  "idx": 359,
-  "problem": "设$(X_t)$为循环群$\mathbb Z/n\mathbb Z$上的连续时间简单随机游走：从每个点以速率1跳向两个相邻点，因此生成元为$(Lf)(k)=f(k+1)+f(k-1)-2f(k)$。求平稳分布、生成元全部特征值及谱隙，并证明对任意均值为0的$f$都有$\|P_tf\|_{L^2(\pi)}\le e^{-\gamma t}\|f\|_{L^2(\pi)}$，其中$\gamma$为精确谱隙。",
-  "answer": "链在有限连通正则图上可逆，故平稳分布为$\pi(k)=1/n$。取Fourier基$e_j(k)=\exp(2\pi ijk/n)$，则$Le_j=(e^{2\pi ij/n}+e^{-2\pi ij/n}-2)e_j=-4\sin^2(\pi j/n)e_j$。故特征值为$\lambda_j=-4\sin^2(\pi j/n)$，$j=0,\dots,n-1$；零特征值对应常数函数。最小非零的$-\lambda_j$在$j=1,n-1$取得，因此谱隙$\gamma=4\sin^2(\pi/n)$。若$\pi(f)=0$，写$f=\sum_{j=1}^{n-1}c_je_j$，则$P_tf=e^{tL}f=\sum_{j=1}^{n-1}c_je^{\lambda_jt}e_j$。由Parseval，$\|P_tf\|_2^2=\sum_{j\ge1}|c_j|^2e^{2\lambda_jt}\le e^{-2\gamma t}\sum_{j\ge1}|c_j|^2=e^{-2\gamma t}\|f\|_2^2$，开方即得结论。",
-  "subject": "随机过程",
-  "source": "generated | standard"
-}

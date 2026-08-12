@@ -1,7 +1,7 @@
 {
   "idx": 91,
-  "problem": "设$G$是一个$d$-正则简单图，邻接矩阵为$A$，顶点数为$n$，最小特征值为$\tau<0$。严格证明Hoffman独立数上界$\alpha(G)\le n\frac{-\tau}{d-\tau}$；并证明若某独立集$S$达到等号，则其示性向量$\mathbf 1_S$满足$\mathbf 1_S-\frac{|S|}{n}\mathbf 1\in E_\tau$，进而每个$V\setminus S$中的顶点与$S$恰有$-\tau$条邻边。",
-  "answer": "令$s=|S|$，$x=\mathbf1_S-\frac{s}{n}\mathbf1$，则$x\perp\mathbf1$且$\|x\|^2=s-s^2/n$。因$S$独立，$\mathbf1_S^TA\mathbf1_S=0$，而$A\mathbf1=d\mathbf1$，故$x^TAx=-ds^2/n$。Rayleigh商在$\mathbf1^\perp$上不小于$\tau$，于是$-ds^2/n\ge\tau(s-s^2/n)$，化简得$s\le n(-\tau)/(d-\tau)$。若等号成立，则Rayleigh商取到最小值，故$x\in E_\tau$，即$Ax=\tau x$。于是$A\mathbf1_S=\tau\mathbf1_S+\frac{s}{n}(d-\tau)\mathbf1=\tau\mathbf1_S-\tau\mathbf1$，其中用了等号时$s(d-\tau)/n=-\tau$。故对$v\in S$，邻接数为0；对$v\notin S$，$(A\mathbf1_S)_v=-\tau$，即其与$S$恰有$-\tau$条邻边。",
-  "subject": "离散数学",
-  "source": "generated | trap: theorem-condition"
+  "problem": "在线性模型$Y=X\beta+\varepsilon$中，$X\in\mathbb R^{n\times p}$满列秩，$\varepsilon\sim N(0,\sigma^2I_n)$，$n>p$。对满行秩$R\in\mathbb R^{q\times p}$检验$H_0:R\beta=r$。推导精确$F$统计量的分布，并给出固定备择下的非中心参数。要求用正交投影/Cochran定理说明分子与残差平方和的独立性。",
+  "answer": "令$\hat\beta=(X^TX)^{-1}X^TY$，$V=R(X^TX)^{-1}R^T$。则$Q=(R\hat\beta-r)^TV^{-1}(R\hat\beta-r)$。在$H_0$下$Q/\sigma^2\sim\chi_q^2$；残差平方和$\mathrm{SSE}=\|(I-P_X)Y\|^2$满足$\mathrm{SSE}/\sigma^2\sim\chi_{n-p}^2$。前者只依赖$P_X\varepsilon$在与约束对应的$q$维子空间上的投影，后者依赖$(I-P_X)\varepsilon$，两正交高斯投影独立，故$F=\frac{Q/q}{\mathrm{SSE}/(n-p)}\sim F_{q,n-p}$。在一般固定$\beta$下，分子为非中心$\chi_q^2(\lambda)$，其中$\lambda=(R\beta-r)^TV^{-1}(R\beta-r)/\sigma^2$，因此$F\sim F_{q,n-p}(\lambda)$。",
+  "subject": "线性回归",
+  "source": "generated | standard"
 }

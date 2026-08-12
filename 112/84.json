@@ -1,0 +1,7 @@
+{
+  "idx": 84,
+  "problem": "令$X_t=B_t+\mu t$，其中$B_t$为标准Brown运动，$a,b>0$，$\tau=\inf\{t\ge0:X_t\in\{-b,a\}\}$。精确求$\mathbb P(X_\tau=a)$与$\mathbb E\tau$，并给出$\mu\to0$时的极限。要求明确处理漂移非零与零漂移两个情形，并说明停止论证所需的可积性来源。",
+  "answer": "设$p=\mathbb P(X_\tau=a)$。对$\mu\ne0$，尺度函数或指数鞅给$p=\frac{1-e^{-2\mu b}}{1-e^{-2\mu(a+b)}}$。由于区间有界，$\tau$有有限期望，且停止后的Brown鞅一致可积，于是$\mathbb E B_\tau=0$。故$\mathbb E X_\tau=ap-b(1-p)=\mu\mathbb E\tau$，从而$\mathbb E\tau=\frac{ap-b(1-p)}{\mu}$。当$\mu\to0$时，$p\to b/(a+b)$；再取极限或解$\frac12u''=-1$、$u(-b)=u(a)=0$，得到$\mathbb E\tau\to ab$。",
+  "subject": "概率论",
+  "source": "generated | trap: boundary-case"
+}

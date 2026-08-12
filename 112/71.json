@@ -1,0 +1,7 @@
+{
+  "idx": 71,
+  "problem": "设$(B_t)_{0\le t\le1}$为标准Brown运动，并令$M=\max_{0\le t\le1}B_t$。对$a>0$，严格计算Brown桥条件概率$\mathbb P(M<a\mid B_1=0)$。要求从反射原理得到联合密度关系，再通过对$B_1=0$的条件密度取极限，不能把零概率事件当作普通条件事件直接相除。",
+  "answer": "对$y<a$，反射原理给$\mathbb P(M\ge a,B_1\in dy)=\varphi(2a-y)dy$，其中$\varphi(y)=(2\pi)^{-1/2}e^{-y^2/2}$；因此$\mathbb P(M<a,B_1\in dy)=[\varphi(y)-\varphi(2a-y)]dy$。Brown桥条件律由正则条件密度得到，令$y\to0$，有$\mathbb P(M<a\mid B_1=0)=1-\varphi(2a)/\varphi(0)=1-e^{-2a^2}$。连续性使$<$与$\le$在此无区别。",
+  "subject": "概率论",
+  "source": "generated | trap: conditioning-zero-probability"
+}

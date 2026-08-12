@@ -1,7 +1,0 @@
-{
-  "idx": 461,
-  "problem": "设$G=(V,E)$为有限简单图，团数为$\\omega(G)=r\\ge2$。证明Motzkin--Straus公式：在单纯形$\\Delta=\\{x_i\\ge0,\\ \\sum_{i\\in V}x_i=1\\}$上，函数$F(x)=\\sum_{\\{i,j\\}\\in E}x_ix_j$满足$\\max_{x\\in\\Delta}F(x)=\\frac12\\left(1-\\frac1r\\right)$。要求不得直接引用该公式本身：应从极大点中选取支撑集最小者，利用非相邻顶点之间的质量转移证明其支撑必为团，再完成极值计算。最后取$x_i=1/|V|$推出Turán上界$|E|\\le\\frac12(1-1/r)|V|^2$。",
-  "answer": "取$F$的一个极大点$x$，并在所有极大点中选支撑大小最小者。若支撑中存在不相邻顶点$u,v$，令$s=x_u+x_v$，并记$A=\\sum_{j\\sim u}x_j$、$B=\\sum_{j\\sim v}x_j$。因$uv\\notin E$，在保持其他坐标不变且$x_u+x_v=s$时，$F$关于$x_u$是线性的：相关部分为$x_uA+(s-x_u)B$。若$A\\ge B$，把全部质量移到$u$；若$A\\le B$，把全部质量移到$v$。极值不下降，却使支撑严格变小，矛盾。因此极小支撑的极大点支撑为一个团，设其大小为$k\\le r$。在该团上$\\sum x_i=1$，故$F=\\frac12[(\\sum x_i)^2-\\sum x_i^2]=\\frac12(1-\\sum x_i^2)\\le\\frac12(1-1/k)\\le\\frac12(1-1/r)$，其中用到Cauchy不等式$\\sum x_i^2\\ge1/k$。另一方面，在任一$r$-团上取均匀权$x_i=1/r$即可达到$\\frac12(1-1/r)$，故公式成立。再取全体顶点均匀权$x_i=1/n$，得到$|E|/n^2=F(x)\\le\\frac12(1-1/r)$，即$|E|\\le\\frac12(1-1/r)n^2$。",
-  "subject": "离散数学",
-  "source": "generated | standard"
-}

@@ -1,0 +1,7 @@
+{
+  "idx": 65,
+  "problem": "设$X\sim N_p(\theta,I_p)$，$p\ge3$，考虑James--Stein估计量$\delta_a(X)=(1-a/\|X\|^2)X$。利用Stein恒等式推导其平方误差风险$R(\theta,\delta_a)$相对于MLE $X$的风险差，并确定哪些常数$a$能保证对所有$\theta$风险不增且某些$\theta$处严格降低。",
+  "answer": "写$\delta_a=X+g(X)$，$g(x)=-ax/\|x\|^2$。Stein公式给$R(\theta,X+g)=p+E_\theta[\|g(X)\|^2+2\operatorname{div}g(X)]$。这里$\|g\|^2=a^2/\|X\|^2$，而$\operatorname{div}(x/\|x\|^2)=(p-2)/\|x\|^2$，故风险差为$[a^2-2a(p-2)]E_\theta(1/\|X\|^2)$。当$0\le a\le2(p-2)$时不增；若$0<a<2(p-2)$则因期望严格正而对所有$\theta$严格降低。经典选择$a=p-2$。",
+  "subject": "统计推断",
+  "source": "generated | trap: theorem-condition"
+}

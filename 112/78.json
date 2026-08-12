@@ -1,0 +1,7 @@
+{
+  "idx": 78,
+  "problem": "在线性模型$y=X\beta+\varepsilon$中，$X$满列秩，$\operatorname{Var}(\varepsilon)=\sigma^2\Omega$且$\Omega\succ0$已知。给定满行秩线性约束$R\beta=r$。写出受约束GLS估计量的闭式，并给出其协方差矩阵；同时说明它如何由无约束GLS估计量投影得到。",
+  "answer": "记$C=X^T\Omega^{-1}X$，无约束GLS为$\hat\beta=C^{-1}X^T\Omega^{-1}y$。拉格朗日条件给$C\beta-X^T\Omega^{-1}y+R^T\lambda=0$及$R\beta=r$，从而$\hat\beta_R=\hat\beta-C^{-1}R^T(RC^{-1}R^T)^{-1}(R\hat\beta-r)$。它是在$C$诱导内积下把$\hat\beta$投影到仿射空间$\{\beta:R\beta=r\}$。若约束对真参数成立，则$\operatorname{Var}(\hat\beta_R)=\sigma^2[C^{-1}-C^{-1}R^T(RC^{-1}R^T)^{-1}RC^{-1}]$。",
+  "subject": "线性回归",
+  "source": "generated | standard"
+}

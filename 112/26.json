@@ -1,0 +1,7 @@
+{
+  "idx": 26,
+  "problem": "设$A\\in\\mathbb R^{n\\times n}$对称正定，特征值满足$0<\\lambda_{\\min}\\le\\lambda_i\\le\\lambda_{\\max}$，条件数$\\kappa=\\lambda_{\\max}/\\lambda_{\\min}$。共轭梯度法从$x_0$出发求解$Ax=b$。证明第$k$步误差满足\n\\[\n\\|x_k-x_*\\|_A\\le 2\\left(\\frac{\\sqrt\\kappa-1}{\\sqrt\\kappa+1}\\right)^k\\|x_0-x_*\\|_A.\n\\]\n要求从Krylov子空间的最优多项式刻画出发，自行构造经过区间仿射变换的Chebyshev多项式，并解释为什么该界只依赖谱区间而没有利用特征值聚簇，因此对实际收敛可能很保守。",
+  "answer": "CG满足$e_k=p_k(A)e_0$，其中$p_k\\in\\Pi_k$、$p_k(0)=1$，且在$A$-范数中取得Krylov空间上的最优值。因此\n$\\|e_k\\|_A\\le \\min_{p(0)=1}\\max_{\\lambda\\in[\\lambda_{\\min},\\lambda_{\\max}]}|p(\\lambda)|\\,\\|e_0\\|_A$。\n令\n$t(\\lambda)=(\\lambda_{\\max}+\\lambda_{\\min}-2\\lambda)/(\\lambda_{\\max}-\\lambda_{\\min})$，则$t$把谱区间映到$[-1,1]$，而$t(0)=c=(\\kappa+1)/(\\kappa-1)>1$。取\n$p_k(\\lambda)=T_k(t(\\lambda))/T_k(c)$。由于$|T_k(t)|\\le1$于$[-1,1]$，\n$\\max|p_k|\\le1/|T_k(c)|$。写$c=\\cosh\\theta$，则$e^{-\\theta}=(\\sqrt\\kappa-1)/(\\sqrt\\kappa+1)=q$，故\n$T_k(c)=\\frac12(q^{-k}+q^k)$，于是$1/T_k(c)\\le2q^k$。代回即得结论。该证明只用到所有特征值落在一个区间内；若实际特征值高度聚簇，可构造在这些离散点上更小的多项式，所以区间型Chebyshev界可能显著高估实际误差。",
+  "subject": "数值分析",
+  "source": "generated | standard"
+}

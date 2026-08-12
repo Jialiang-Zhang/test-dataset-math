@@ -1,0 +1,7 @@
+{
+  "idx": 93,
+  "problem": "记$s_2(n)$为正整数$n$的二进制展开中1的个数，$C_n=\frac1{n+1}\binom{2n}{n}$为第$n$个Catalan数。填空：先用Legendre公式证明$v_2\binom{2n}{n}=\underline{\qquad}$，再推出$v_2(C_n)=\underline{\qquad}$，并由二进制结构刻画$C_n$为奇数的全部$n$。",
+  "answer": "第一空：$s_2(n)$；第二空：$s_2(n)-v_2(n+1)$；且$C_n$为奇数当且仅当$n=2^k-1\ (k\ge0)$。因为$v_2(n!)=n-s_2(n)$且$s_2(2n)=s_2(n)$，故中央二项式的2-adic赋值为$s_2(n)$；而$v_2(n+1)$等于$n$二进制末尾连续1的个数，只有所有1都构成末尾连续块时两者相等。",
+  "subject": "非基础及进阶课程",
+  "source": "generated | standard"
+}

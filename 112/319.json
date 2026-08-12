@@ -1,7 +1,0 @@
-{
-  "idx": 319,
-  "problem": "在$(0,1)$上令$f_n(x)=n^\alpha\mathbf 1_{(0,n^{-\beta})}(x)$，其中$\alpha,\beta>0$。固定$p>1$。关于参数关系，下列哪些结论正确？A. $f_n\to0$于$L^1$当且仅当$\alpha<\beta$；B. $\{f_n\}$一致可积当且仅当$\alpha<\beta$；C. $f_n\rightharpoonup0$于$L^p$当且仅当$\alpha\le\beta/p$；D. 若$\alpha=\beta/p$，则$\{f_n\}$在$L^p$中有界但不存在强收敛到$0$。",
-  "answer": "A,B,C,D",
-  "subject": "测度积分",
-  "source": "generated | trap: convergence-direction"
-}

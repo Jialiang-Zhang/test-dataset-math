@@ -1,7 +1,7 @@
 {
   "idx": 109,
-  "problem": "设$G=(V,E)$为有限连通简单图，每条边电导均为$1$。从$G$的所有生成树中等概率随机选取一棵$T$。对任意边$e=\{u,v\}$，严格证明$\mathbb P(e\in T)=R_{\mathrm{eff}}(u,v)$，其中$R_{\mathrm{eff}}(u,v)$是在$G$中$u,v$之间的有效电阻。要求至少给出一种把矩阵树定理与拉普拉斯矩阵的行列式/伪逆联系起来的完整证明，并解释为何该概率也等于$\tau(G/e)/\tau(G)$。",
-  "answer": "记$\tau(G)$为生成树数。包含$e$的生成树与收缩$e$后图$G/e$的生成树一一对应，故$\mathbb P(e\in T)=\tau(G/e)/\tau(G)$。另一方面给$e$的电导引入参数$t$，其余边电导仍为1。加权矩阵树定理给出$\tau(t)=\det L_t^{(r)}$，且$L_t^{(r)}=L_0^{(r)}+tbb^T$，其中$b$是边$e$的删去根坐标后的关联向量。矩阵行列式引理得$\tau(t)=\tau(0)(1+t\,b^T(L_0^{(r)})^{-1}b)$；等价地，在$t=1$处对$\log\tau$关于$\log t$求导，得到边$e$出现在随机生成树中的概率。该导数为$b^T(L^{(r)})^{-1}b$，而电网络理论表明这正是$(\mathbf e_u-\mathbf e_v)^TL^+(\mathbf e_u-\mathbf e_v)=R_{\mathrm{eff}}(u,v)$。因此$\mathbb P(e\in T)=R_{\mathrm{eff}}(u,v)=\tau(G/e)/\tau(G)$。",
-  "subject": "离散数学",
-  "source": "generated | trap: theorem-condition"
+  "problem": "证明Bohr--Mollerup定理：若$f:(0,\\infty)\\to(0,\\infty)$满足$f(1)=1$、$f(x+1)=xf(x)$，且$\\log f$为凸函数，则$f(x)=\\Gamma(x)$。要求不能把结论当作已知唯一性定理直接引用；应从凸性给出对$f(x)$的上下夹逼并导出Euler极限。最后说明Gamma函数本身为何满足这些条件。",
+  "answer": "令$\\phi=\\log f$。先取$0<x\\le1$。对整数$n\\ge2$，凸性给相邻割线斜率夹逼$x[\\phi(n)-\\phi(n-1)]\\le\\phi(n+x)-\\phi(n)\\le x[\\phi(n+1)-\\phi(n)]$。由递推关系，两侧斜率分别为$\\log(n-1)$与$\\log n$。又$f(n+x)=x(x+1)\\cdots(x+n-1)f(x)$且$f(n)=(n-1)!$，故$\\frac{(n-1)!(n-1)^x}{x(x+1)\\cdots(x+n-1)}\\le f(x)\\le\\frac{(n-1)!n^x}{x(x+1)\\cdots(x+n-1)}$。两端之比$(n/(n-1))^x\\to1$，夹逼得到$f(x)=\\lim_{n\\to\\infty}\\frac{(n-1)!n^x}{x(x+1)\\cdots(x+n-1)}$，即Euler极限定义的$\\Gamma(x)$。任意$x>1$由递推反复降到$(0,1]$。反过来$\\Gamma(1)=1$，分部积分给$\\Gamma(x+1)=x\\Gamma(x)$；Hölder不等式给$\\Gamma(\\lambda x+(1-\\lambda)y)\\le\\Gamma(x)^\\lambda\\Gamma(y)^{1-\\lambda}$，故$\\log\\Gamma$凸。因此Gamma满足全部条件且唯一。",
+  "subject": "数学分析",
+  "source": "generated | standard"
 }

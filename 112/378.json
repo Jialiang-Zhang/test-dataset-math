@@ -1,7 +1,0 @@
-{
-  "idx": 378,
-  "problem": "设$0<\theta<\pi$。利用复分析中的分支选择或等价的Mellin参数围道方法，计算\n$I(\theta)=\displaystyle\int_0^\infty\frac{(\log x)^2}{x^2+2x\cos\theta+1}\,dx$。\n要求先建立带参数积分\n$F(s)=\int_0^\infty\frac{x^{s-1}}{x^2+2x\cos\theta+1}\,dx$在$0<\Re s<2$内的解析表达式，再由参数求导得到答案。",
-  "answer": "分解\n$\dfrac1{x^2+2x\cos\theta+1}=\dfrac1{2i\sin\theta}\left(\dfrac1{x+e^{-i\theta}}-\dfrac1{x+e^{i\theta}}\right)$。\n在$0<\Re s<1$先用主支$\int_0^\infty x^{s-1}/(x+a)\,dx=\pi a^{s-1}/\sin(\pi s)$，再解析延拓到$0<\Re s<2$（在$s=1$处为可去奇点），得到\n$F(s)=\dfrac{\pi\sin((1-s)\theta)}{\sin\theta\,\sin(\pi s)}$。\n令$\delta=s-1$，则\n$F(1+\delta)=\dfrac{\pi\sin(\theta\delta)}{\sin\theta\,\sin(\pi\delta)}\n=\dfrac{\theta}{\sin\theta}\left[1+\frac{\pi^2-\theta^2}{6}\delta^2+O(\delta^4)\right]$。\n在$s=1$邻域可由支配估计对参数求二阶导，且$F''(1)=\int_0^\infty (\log x)^2/(x^2+2x\cos\theta+1)\,dx$。因此\n$I(\theta)=\dfrac{\theta(\pi^2-\theta^2)}{3\sin\theta}$。",
-  "subject": "复分析",
-  "source": "generated | standard"
-}

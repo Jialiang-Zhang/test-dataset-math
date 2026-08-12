@@ -1,7 +1,0 @@
-{
-  "idx": 299,
-  "problem": "设二分图$G=(X\sqcup Y,E)$，对$S\subseteq X$记$N(S)\subseteq Y$为邻集，并定义缺陷$\delta(G)=\max_{S\subseteq X}(|S|-|N(S)|)$。证明$G$中最大匹配能覆盖的$X$中顶点数恰为$|X|-\delta(G)$。要求同时证明上下界，不得只引用Hall定理的结论；下界需通过加入$\delta(G)$个与$X$中所有顶点相连的新右侧顶点并严格验证Hall条件得到。",
-  "answer": "任取匹配$M$及$S\subseteq X$。$S$中被$M$覆盖的顶点至多$|N(S)|$，故至少$|S|-|N(S)|$个$S$中顶点未覆盖，所以任一匹配至多覆盖$|X|-\delta(G)$个$X$顶点。反之加入新右侧顶点集合$Z$，$|Z|=\delta(G)$，并令每个$z\in Z$与所有$x\in X$相连。对任意$S\subseteq X$，新图中$N'(S)=N(S)\cup Z$，因此$|N'(S)|=|N(S)|+\delta(G)\ge |S|$。由Hall定理，新图存在覆盖全部$X$的匹配。该匹配至多使用$|Z|=\delta(G)$条通向新顶点的边，删去这些边后得到原图中的匹配，至少覆盖$|X|-\delta(G)$个$X$顶点。结合上界即得结论。",
-  "subject": "离散数学",
-  "source": "generated | standard"
-}

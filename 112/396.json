@@ -1,7 +1,0 @@
-{
-  "idx": 396,
-  "problem": "设$m>0$为整数，$0<a<m$。用带分支的钥匙孔围道先证明Mellin公式$F(a)=\\int_0^\\infty\\frac{x^{a-1}}{1+x^m}\\,dx=\\frac{\\pi}{m}\\csc\\frac{\\pi a}{m}$，并据此计算$J(a)=\\int_0^\\infty\\frac{x^{a-1}(\\log x)^2}{1+x^m}\\,dx$。要求说明对$a$作二阶参数求导的合法性，并给出精确闭式。",
-  "answer": "取$z^{a-1}=e^{(a-1)\\Log z}$并用钥匙孔围道，由上下岸相位差及$1+z^m$各根留数之和得到$F(a)=\\frac{\\pi}{m}\\csc\\theta$，$\\theta=\\pi a/m$，有效范围$0<a<m$。在任意紧子区间$\\delta\\le a\\le m-\\delta$上，$x^{a-1}|\\log x|^2/(1+x^m)$可由$0$端的$x^{\\delta-1}|\\log x|^2$与无穷端的$x^{-1-\\delta}(\\log x)^2$支配，故可二次求导。于是$J(a)=F''(a)$，即$J(a)=\\frac{\\pi^3}{m^3}\\csc\\frac{\\pi a}{m}\\left(\\cot^2\\frac{\\pi a}{m}+\\csc^2\\frac{\\pi a}{m}\\right)$。",
-  "subject": "复分析",
-  "source": "generated | standard"
-}

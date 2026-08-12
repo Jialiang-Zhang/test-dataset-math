@@ -1,0 +1,7 @@
+{
+  "idx": 0,
+  "problem": "设一个连通简单平面图有10个顶点、15条边。其平面嵌入的面数（包括外部面）为多少？ A. 5；B. 6；C. 7；D. 8。",
+  "answer": "C",
+  "subject": "离散数学",
+  "source": "generated | standard"
+}

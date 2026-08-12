@@ -1,0 +1,7 @@
+{
+  "idx": 70,
+  "problem": "设$M\subset\mathbb R^3$为连通、闭、可定向的光滑浸入曲面，并且Gauss曲率处处$K>0$。选择所有必然成立的结论：A. $M$的亏格为$0$；B. 取合适定向后Gauss映射$N:M\to S^2$为全局微分同胚；C. $M$必为某个圆球面；D. $\int_MK\,dA=4\pi$。",
+  "answer": "A,B,D",
+  "subject": "微分几何",
+  "source": "generated | trap: local-vs-global"
+}

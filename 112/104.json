@@ -1,0 +1,7 @@
+{
+  "idx": 104,
+  "problem": "在$L^2(0,1)$上定义积分算子$(Tf)(x)=\\int_0^1\\min(x,y)f(y)\\,dy$。证明$T$是紧、自伴、正算子，并完整求出其所有非零特征值与对应特征函数；由此给出算子范数$\\|T\\|$。要求把积分特征方程转化为一个带边界条件的Sturm--Liouville问题。",
+  "answer": "核$K(x,y)=\\min(x,y)$连续且对称，故$T$为Hilbert--Schmidt紧算子且自伴。又$\\langle Tf,f\\rangle=\\int_0^1|\\int_t^1f(y)dy|^2dt\\ge0$，故$T\\ge0$。令$u=Tf$，则$u(x)=\\int_0^xyf(y)dy+x\\int_x^1f(y)dy$，从而$u'(x)=\\int_x^1f(y)dy$、$u''(x)=-f(x)$，并有$u(0)=0,u'(1)=0$。若$Tf=\\lambda f$且$\\lambda\\ne0$，则$u=\\lambda f$，故$u''+\\lambda^{-1}u=0$。因$T\\ge0$，$\\lambda>0$。令$\\mu=\\lambda^{-1/2}$，则$u=A\\sin\\mu x$，边界条件给$\\cos\\mu=0$，故$\\mu_n=(n-\\tfrac12)\\pi$。因此$\\lambda_n=((n-\\tfrac12)^2\\pi^2)^{-1}$，特征函数可取$f_n(x)=\\sin((n-\\tfrac12)\\pi x)$。最大特征值$\\lambda_1=4/\\pi^2$，故$\\|T\\|=4/\\pi^2$。",
+  "subject": "泛函分析",
+  "source": "generated | standard"
+}

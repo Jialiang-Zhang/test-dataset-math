@@ -1,7 +1,0 @@
-{
-  "idx": 477,
-  "problem": "对整数$m\\ge2$，令$T_m$为度$m$映射$f:S^1\\to S^1$，$f(z)=z^m$的映射环面：$T_m=(S^1\\times[0,1])/((z,1)\\sim(z^m,0))$。用van Kampen定理求$\\pi_1(T_m)$，再求其阿贝尔化与$H_1(T_m;\\mathbb Z)$。最后说明为什么$m\\ge2$时自然投影$T_m\\to S^1$不是局部平凡的圆周纤维丛。",
-  "answer": "取$a$为纤维$S^1$的生成元，$t$为沿映射环面方向绕一周的环。van Kampen给表示$\\pi_1(T_m)=\\langle a,t\\mid tat^{-1}=a^m\\rangle$（选择相反方向的$t$可得到等价反向写法）。阿贝尔化后关系变为$a=ma$，即$(m-1)a=0$，而$t$无额外关系，所以$\\pi_1(T_m)_{\\mathrm{ab}}\\cong\\mathbb Z\\oplus\\mathbb Z/(m-1)\\mathbb Z$。由Hurewicz定理$H_1(T_m;\\mathbb Z)$同构于该阿贝尔化。若自然投影是局部平凡的$S^1$-纤维丛，则绕基圆一周的粘合必须由纤维自同胚给出；但$z\\mapsto z^m$在$m\\ge2$时是$m$重覆盖而非同胚，因此接缝处不能产生这种圆周纤维丛的局部平凡化。",
-  "subject": "拓扑学",
-  "source": "generated | standard"
-}

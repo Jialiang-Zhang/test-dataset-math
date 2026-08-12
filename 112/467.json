@@ -1,7 +1,0 @@
-{
-  "idx": 467,
-  "problem": "令$B$为从$x>0$出发的一维标准Brownian运动，并在首次到达$0$时杀死，记其半群为$P_t^0$。取正调和函数$h(x)=x$，定义Doob $h$-变换$P_t^hf(x)=h(x)^{-1}P_t^0(hf)(x)$。证明该变换得到三维Bessel过程：求出其生成元，写出对应SDE，并利用尺度函数或边界分类证明从任意$x>0$出发几乎必然永不到达$0$。",
-  "answer": "被杀Brownian运动在$(0,\\infty)$内的生成元为$L=\\frac12\\frac{d^2}{dx^2}$，而$Lh=0$。对光滑紧支撑$f$，$L^hf=h^{-1}L(hf)=x^{-1}\\frac12(xf)''=\\frac12f''+x^{-1}f'$。这正是三维Bessel过程的生成元，因此其SDE为$dR_t=dW_t+R_t^{-1}dt,\\ R_0=x>0$。尺度密度为$s'(x)=\\exp(-\\int^x2/y\\,dy)=x^{-2}$，可取尺度函数$s(x)=-1/x$，故$s(0+)=-\\infty$。对$0<a<x<b$，命中概率$\\mathbb P_x(\\tau_a<\\tau_b)=(s(b)-s(x))/(s(b)-s(a))$。令$a\\downarrow0$，分母趋于$+\\infty$，故该概率趋于0；再令$b\\uparrow\\infty$可知$\\mathbb P_x(\\tau_0<\\infty)=0$。因此Doob变换后的过程即BES(3)，且$0$不可从内部到达。",
-  "subject": "随机过程",
-  "source": "generated | standard"
-}

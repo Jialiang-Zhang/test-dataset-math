@@ -1,0 +1,7 @@
+{
+  "idx": 14,
+  "problem": "设$A\\in\\mathbb C^{n\\times n}$可逆，GMRES从$x_0$出发，$r_0=b-Ax_0\\ne0$。关于精确算术下第$m$步残差$r_m$，下列哪些说法正确？A. $\\|r_m\\|_2=\\min\\{\\|p(A)r_0\\|_2:p\\in\\mathcal P_m,\\ p(0)=1\\}$。B. 若相对于$r_0$的最小多项式次数为$d$，则GMRES至迟在第$d$步精确收敛。C. 只要两个可逆矩阵具有完全相同的特征值（含代数重数），则对任意同范数初始残差，它们的GMRES残差范数序列必相同。D. 若$A$正规，则$$\\frac{\\|r_m\\|_2}{\\|r_0\\|_2}\\le \\min_{p\\in\\mathcal P_m,p(0)=1}\\max_{\\lambda\\in\\sigma(A)}|p(\\lambda)|.$$请选择所有正确选项。",
+  "answer": "A,B,D",
+  "subject": "数值分析",
+  "source": "generated | trap: finite-vs-infinite-dimensional"
+}

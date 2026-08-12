@@ -1,0 +1,7 @@
+{
+  "idx": 89,
+  "problem": "设$X_1,\dots,X_n\overset{iid}\sim N(\mu,\sigma^2)$，$n\ge3$，两参数均未知，$T=(\bar X,S^2)$。下列哪些结论正确？A. $T$是$(\mu,\sigma^2)$的最小充分统计量；B. $T$是完全统计量；C. $W=(X_1-\bar X)/S$是辅助统计量，且由Basu定理可知$W$与$T$独立；D. $\bar X$与$S^2$独立这一事实可直接由Basu定理推出。",
+  "answer": "A,B,C",
+  "subject": "统计推断",
+  "source": "generated | trap: theorem-condition"
+}

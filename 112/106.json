@@ -1,0 +1,7 @@
+{
+  "idx": 106,
+  "problem": "设单位圆盘$D=\\{0\\le r<1\\}$上的边界函数$g(e^{i\\theta})=\\sum_{n\\in\\mathbb Z}g_ne^{in\\theta}$满足$\\sum |n||g_n|^2<\\infty$。求其调和延拓$u$，并证明Dirichlet-to-Neumann算子$\\Lambda g=\\partial_\\nu u|_{\\partial D}$满足$\\Lambda e^{in\\theta}=|n|e^{in\\theta}$以及能量恒等式$\\int_D|\\nabla u|^2\\,dx=2\\pi\\sum_{n\\in\\mathbb Z}|n||g_n|^2$。最后说明为什么这一恒等式精确刻画了边界$H^{1/2}$半范数。",
+  "answer": "Poisson延拓逐模为$u(r,\\theta)=\\sum_{n\\in\\mathbb Z}g_n r^{|n|}e^{in\\theta}$。在$r=1$处外法向导数为$\\partial_r u(1,\\theta)=\\sum |n|g_ne^{in\\theta}$，故$\\Lambda e^{in\\theta}=|n|e^{in\\theta}$。对光滑$g$先用Green恒等式与$\\Delta u=0$：$\\int_D|\\nabla u|^2dx=\\int_{\\partial D}\\overline g\\,\\partial_\\nu u\\,d\\theta=2\\pi\\sum |n||g_n|^2$，再由Fourier截断逼近推广到给定假设。右侧正是圆周上齐次$H^{1/2}$半范数的Fourier表达（差一个固定归一化常数），常数模$n=0$不贡献能量。因此边界数据存在有限Dirichlet能量的调和延拓，当且仅当其齐次$H^{1/2}$半范数有限。",
+  "subject": "偏微分方程",
+  "source": "generated | standard"
+}

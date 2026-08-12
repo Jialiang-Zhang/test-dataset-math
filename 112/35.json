@@ -1,0 +1,7 @@
+{
+  "idx": 35,
+  "problem": "设$(M_t)_{t\ge0}$是连续局部鞅，$M_0=0$，且二次变差满足$\langle M\rangle_t=t$。证明$M$是相对于其原滤过的标准Brownian运动。要求从指数鞅出发证明增量的条件特征函数，而不是直接引用Lévy刻画定理。",
+  "answer": "对任意$\theta\in\mathbb R$，Itô公式给出$Z_t=\exp(i\theta M_t+\frac12\theta^2\langle M\rangle_t)$为局部鞅。因在任意有限时间区间上$|Z_t|=\exp(\theta^2t/2)$有界，故它是真鞅。于是对$0\le s<t$，$E[Z_t\mid\mathcal F_s]=Z_s$。代入$\langle M\rangle_t=t$并整理得$E[\exp(i\theta(M_t-M_s))\mid\mathcal F_s]=\exp(-\frac12\theta^2(t-s))$。右端是$N(0,t-s)$的特征函数且与$\mathcal F_s$无关，所以$M_t-M_s$条件于$\mathcal F_s$仍服从$N(0,t-s)$，从而该增量独立于$\mathcal F_s$。因此$M$具有独立平稳Gaussian增量，$M_0=0$且路径连续，故$M$是标准Brownian运动。",
+  "subject": "概率论",
+  "source": "generated | trap: theorem-condition"
+}
