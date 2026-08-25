@@ -1,7 +1,7 @@
 {
   "idx": 4,
-  "problem": "设$G$是一个$d$-正则图，顶点数为$n$，邻接矩阵特征值满足$d=\\lambda_1\\ge \\lambda_2\\ge\\cdots\\ge\\lambda_n$。设$S\\subseteq V(G)$为独立集。请利用Rayleigh商与正交分解严格证明Hoffman界：若$\\lambda_n<0$，则$|S|\\le \\frac{-\\lambda_n}{d-\\lambda_n}n$；并证明等号成立时，独立集示性向量在去掉常数分量后必属于$\\lambda_n$对应特征子空间。",
-  "answer": "令$\\mathbf 1_S$为$S$的示性向量，写$\\mathbf 1_S=\\frac{|S|}{n}\\mathbf 1+z$，其中$z\\perp\\mathbf 1$。因$G$为$d$-正则，$A\\mathbf 1=d\\mathbf 1$；又$S$独立，故$\\mathbf 1_S^TA\\mathbf 1_S=0$。于是$0=d|S|^2/n+z^TAz\\ge d|S|^2/n+\\lambda_n\\|z\\|^2$。而$\\|z\\|^2=|S|-|S|^2/n$。代入得$0\\ge d|S|^2/n+\\lambda_n(|S|-|S|^2/n)=\\frac{d-\\lambda_n}{n}|S|^2+\\lambda_n|S|$。因$|S|>0$，得到$|S|\\le \\frac{-\\lambda_n}{d-\\lambda_n}n$。若等号成立，则Rayleigh下界也必须取等，即$z^TAz=\\lambda_n\\|z\\|^2$。对实对称矩阵这当且仅当$z$完全落在$\\lambda_n$特征子空间中。",
+  "problem": "设$G$为连通平面多重图（允许桥与自环），固定一个平面嵌入，$G^*$为几何对偶。证明：边集$T\\subseteq E(G)$是$G$的生成树，当且仅当补集$E(G)\\setminus T$所对应的对偶边集是$G^*$的生成树。进一步从Tutte多项式的子集展开式出发证明$T_G(x,y)=T_{G^*}(y,x)$，并推出$\\tau(G)=\\tau(G^*)$。要求明确说明桥与自环在对偶中的对应关系为何不破坏论证。",
+  "answer": "先设$T$是$G$的生成树。由Euler公式$|V|-|E|+|F|=2$，其补集边数为$|E|-|T|=|E|-|V|+1=|F|-1=|V(G^*)|-1$。若补集的对偶边含有一个对偶圈，则该圈在平面上分离内外区域，其所穿过的原图边构成一个非平凡割；这些边全不在$T$中，故$T$不能连通，矛盾。因此补集对偶边无圈，结合边数即为$G^*$的生成树。反向命题对$G^*$应用同一论证即可，因为$(G^*)^*=G$（忽略自然同构）。桥在对偶中成为自环，自环在对偶中成为桥；生成树必含所有桥且不含自环，恰与取补集一致。\n\n对子集展开式\n$T_G(x,y)=\\sum_{A\\subseteq E}(x-1)^{r_G(E)-r_G(A)}(y-1)^{|A|-r_G(A)}$，平面对偶秩满足\n$r_{G^*}(E\\setminus A)=|E\\setminus A|-r_G(E)+r_G(A)$。\n该式可由对嵌入子图$(V,A)$应用Euler公式，并观察$G^*$中边集$E\\setminus A$的连通分量对应$(V,A)$的面得到。于是\n$r_{G^*}(E)-r_{G^*}(E\\setminus A)=|A|-r_G(A)$，\n$|E\\setminus A|-r_{G^*}(E\\setminus A)=r_G(E)-r_G(A)$。\n在$T_{G^*}(y,x)$中令$B=E\\setminus A$，两指数正好交换，故$T_G(x,y)=T_{G^*}(y,x)$。取$(x,y)=(1,1)$，只有生成树项存留，得到$\\tau(G)=\\tau(G^*)$。",
   "subject": "离散数学",
-  "source": "generated | trap: theorem-condition"
+  "source": "generated | trap: planar-duality"
 }

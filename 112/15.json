@@ -1,7 +1,7 @@
 {
   "idx": 15,
-  "problem": "设简单图$G$是参数为$(v,k,\\lambda,\\mu)=(16,6,2,2)$的强正则图，邻接矩阵为$A$。关于$G$，下列结论哪些必然成立？A. $A$的谱为$6^{(1)},2^{(6)},(-2)^{(9)}$；B. 独立数$\\alpha(G)\\le4$；C. 若存在大小为$4$的独立集$S$，则每个$V(G)\\setminus S$中的顶点与$S$恰有$2$条邻边；D. 若$S$为大小$4$的独立集，则$G[V(G)\\setminus S]$必为$4$-正则图。要求不得引用该具体参数图的已知分类。",
-  "answer": "A,B,C,D",
+  "problem": "设$G=(V,E)$为有限无向图，任选定向得到关联矩阵$B$，拉普拉斯矩阵$L=BB^T$。证明矩阵森林定理\n$\\det(I+tL)=\\sum_F t^{|E(F)|}\\prod_{C\\in\\mathcal C(F)}|V(C)|$，\n其中求和遍历$G$的所有生成森林$F$，$\\mathcal C(F)$为其连通分量集合。进而解释右端为何等于“每个树分量选定一个根”的有根生成森林的加权计数。不得直接引用矩阵森林定理。",
+  "answer": "由Sylvester恒等式$\\det(I+tBB^T)=\\det(I+tB^TB)$，再对后者按主子式展开并用Cauchy--Binet，\n$\\det(I+tL)=\\sum_{S\\subseteq E}t^{|S|}\\det(B_S^TB_S)$，\n其中$B_S$由$S$对应的列组成。若$S$含圈，则这些关联向量线性相关，Gram行列式为零。若$S$为森林，其不同树分量对应的关联矩阵在适当排行后分块，故Gram行列式是各树分量贡献的乘积。\n\n对一个含$q$个顶点的树$T$，其关联矩阵$B_T$为$q\\times(q-1)$。Cauchy--Binet给出\n$\\det(B_T^TB_T)=\\sum_{r=1}^q\\det(B_T^{(r)})^2$，\n其中$B_T^{(r)}$表示删去第$r$行。树的每个删行关联矩阵行列式均为$\\pm1$，故该和等于$q$。于是森林$S$的Gram行列式等于各分量顶点数之积，得到题中公式。对固定无根森林，每个分量可独立选择一个根，选择数正是$\\prod_C|V(C)|$；而森林有$|E(F)|$条边，故$t^{|E(F)|}$给出所述加权有根森林计数。",
   "subject": "离散数学",
-  "source": "generated | trap: theorem-condition"
+  "source": "generated | trap: determinant-expansion"
 }

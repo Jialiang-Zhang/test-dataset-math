@@ -1,7 +1,7 @@
 {
   "idx": 8,
-  "problem": "设完全多部图$K_{n_1,\\dots,n_k}$有$k\\ge2$个部，第$i$部含$n_i\\ge1$个顶点，令$n=\\sum_{i=1}^k n_i$。请利用图的Laplacian谱与矩阵树定理，严格证明其生成树数为$$\\tau(K_{n_1,\\dots,n_k})=n^{k-2}\\prod_{i=1}^k (n-n_i)^{n_i-1}.$$要求说明Laplacian的全部特征值及重数，并解释为何非零特征值乘积除以$n$即得到生成树数。",
-  "answer": "记$L=D-A$。对第$i$部内坐标和为$0$、其余部坐标全为$0$的向量$v$，由于该部每个顶点度数为$n-n_i$且同部无边，直接有$Lv=(n-n_i)v$；此类向量空间维数$n_i-1$，故$n-n_i$为特征值，重数$n_i-1$。再考察在每一部上取常值的$k$维子空间。若第$i$部常值为$c_i$，则该部任一坐标满足$(Lv)_i=n c_i-\\sum_{j=1}^k n_jc_j$。因此常向量对应特征值$0$；而满足$\\sum_j n_jc_j=0$的$(k-1)$维子空间上$Lv=nv$，故$n$为特征值，重数$k-1$。维数总和$1+(k-1)+\\sum_i(n_i-1)=n$，故谱已穷尽。矩阵树定理的谱形式指出，对任意连通$n$顶点图，若Laplacian特征值为$0=\\lambda_1<\\lambda_2\\le\\cdots\\le\\lambda_n$，则$$\\tau=\\frac1n\\prod_{j=2}^n\\lambda_j.$$代入上述谱得$$\\tau=\\frac1n\\,n^{k-1}\\prod_{i=1}^k(n-n_i)^{n_i-1}=n^{k-2}\\prod_{i=1}^k(n-n_i)^{n_i-1}.$$",
+  "problem": "设$G$为$n$个顶点的简单图，且不含$K_{2,t}$作为子图，其中$t\\ge2$。通过双计数长度为$2$的无向路（等价地，共同邻点）证明精确上界\n$|E(G)|\\le \\frac n4\\left(1+\\sqrt{1+4(t-1)(n-1)}\\right)$，\n并推出$|E(G)|\\le \\frac12\\sqrt{t-1}\\,n^{3/2}+O(n)$。要求指出凸性估计出现等号时对度数分布的限制。",
+  "answer": "记$m=|E(G)|$、各顶点度为$d(v)$。按中间顶点计数无序长度为$2$的路，数目为$\\sum_v\\binom{d(v)}2$。按两个端点计数时，每对顶点的共同邻点数至多$t-1$，否则这两个端点与$t$个共同邻点构成$K_{2,t}$，故\n$\\sum_v\\binom{d(v)}2\\le (t-1)\\binom n2$。\n另一方面，函数$x\\mapsto\\binom x2=x(x-1)/2$为凸函数，由Jensen不等式和$\\sum_vd(v)=2m$，\n$\\sum_v\\binom{d(v)}2\\ge n\\binom{2m/n}{2}=\\frac{2m^2}{n}-m$。\n因此\n$\\frac{2m^2}{n}-m\\le\\frac{(t-1)n(n-1)}2$，即\n$4m^2-2nm-(t-1)n^2(n-1)\\le0$。\n取该二次不等式的正根，得到\n$m\\le\\frac n4\\left(1+\\sqrt{1+4(t-1)(n-1)}\\right)$。\n再用$\\sqrt{1+4(t-1)(n-1)}=2\\sqrt{t-1}\\,n^{1/2}+O(n^{-1/2})$即得渐近式。Jensen取等要求所有$d(v)$相等（至多因整数性相差$1$）；共同邻点计数取等还要求每对顶点恰有$t-1$个共同邻点，因此完全取等具有很强的设计结构限制。",
   "subject": "离散数学",
-  "source": "generated | standard"
+  "source": "generated | trap: double-counting"
 }

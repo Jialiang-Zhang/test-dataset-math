@@ -1,7 +1,7 @@
 {
   "idx": 16,
-  "problem": "设$G$是一个$d$-正则简单图，顶点数为$n$，最小邻接特征值为$\\lambda_{\\min}<0$。证明任意独立集$I$满足Hoffman界\\n\\[\\n|I|\\le \\frac{-\\lambda_{\\min}}{d-\\lambda_{\\min}}n.\\n\\]\\n进一步证明：若取等号，则$\\mathbf 1_I-\\frac{|I|}{n}\\mathbf 1$必属于$\\lambda_{\\min}$特征子空间，并由此推出每个$v\\notin I$在$I$中恰有$-\\lambda_{\\min}$个邻点。最后说明为什么“达到Hoffman界”比单纯知道$\\alpha(G)$的数值包含更强的结构信息。",
-  "answer": "令$x=\\mathbf 1_I$，写$x=\\frac{|I|}{n}\\mathbf 1+y$且$y\\perp\\mathbf 1$。因$I$独立，$x^TAx=0$。又$A\\mathbf 1=d\\mathbf 1$，故\\n$0=d|I|^2/n+y^TAy\\ge d|I|^2/n+\\lambda_{\\min}\\|y\\|^2$。\\n而$\\|y\\|^2=|I|-|I|^2/n$，整理得\\n$|I|\\le -\\lambda_{\\min}n/(d-\\lambda_{\\min})$。若等号成立，则Rayleigh商也取等号，所以$Ay=\\lambda_{\\min}y$。于是\\n$Ax=A(\\frac{|I|}{n}\\mathbf1+y)=\\frac{d|I|}{n}\\mathbf1+\\lambda_{\\min}(x-\\frac{|I|}{n}\\mathbf1)\\n=\\lambda_{\\min}x+\\frac{(d-\\lambda_{\\min})|I|}{n}\\mathbf1$。\\n利用等号时$(d-\\lambda_{\\min})|I|/n=-\\lambda_{\\min}$，得$Ax=\\lambda_{\\min}x-\\lambda_{\\min}\\mathbf1$。对$v\\notin I$，$(Ax)_v=-\\lambda_{\\min}$，即其在$I$中恰有$-\\lambda_{\\min}$个邻点；对$v\\in I$则为0。故达到Hoffman界强迫独立集的特征向量落在极小特征子空间，并强迫外部顶点具有完全均匀的交数，这是仅知道$\\alpha(G)$数值本身不能推出的。",
+  "problem": "设$A$是有限笛卡尔积$X_1\\times\\cdots\\times X_d$的子集，$\\pi_{-i}(A)$表示删去第$i$个坐标后的投影。先证明Shearer熵不等式的特例\n$(d-1)H(Z_1,\\dots,Z_d)\\le\\sum_{i=1}^dH(Z_{-i})$，\n再令$Z$在$A$上均匀分布，推出离散Loomis--Whitney不等式\n$|A|^{d-1}\\le\\prod_{i=1}^d|\\pi_{-i}(A)|$。\n要求在熵证明中明确使用“条件越多，条件熵越小”。",
+  "answer": "更一般地，若一族坐标集合$\\mathcal S$使每个坐标至少被覆盖$k$次，则\n$\\sum_{S\\in\\mathcal S}H(Z_S)\\ge kH(Z_1,\\dots,Z_d)$。\n固定坐标顺序。由链式法则，\n$H(Z_S)=\\sum_{j\\in S}H(Z_j\\mid Z_{S\\cap\\{1,\\dots,j-1\\}})$。\n由于$S\\cap\\{1,\\dots,j-1\\}\\subseteq\\{1,\\dots,j-1\\}$，条件越少熵越大，故每一项不小于$H(Z_j\\mid Z_1,\\dots,Z_{j-1})$。对$S$求和，每个$j$至少出现$k$次，得到一般式。取$\\mathcal S=\\{[d]\\setminus\\{i\\}:1\\le i\\le d\\}$，每个坐标恰出现$d-1$次，便得题设Shearer不等式。\n\n现在令$Z$在$A$上均匀分布，则$H(Z)=\\log|A|$。随机向量$Z_{-i}$的取值支撑包含于$\\pi_{-i}(A)$，所以$H(Z_{-i})\\le\\log|\\pi_{-i}(A)|$。代入得\n$(d-1)\\log|A|\\le\\sum_i\\log|\\pi_{-i}(A)|$，指数化即为$|A|^{d-1}\\le\\prod_i|\\pi_{-i}(A)|$。",
   "subject": "离散数学",
-  "source": "generated | trap: theorem-condition"
+  "source": "generated | trap: entropy-conditioning"
 }

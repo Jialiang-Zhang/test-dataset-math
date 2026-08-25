@@ -1,7 +1,7 @@
 {
   "idx": 13,
-  "problem": "设$G$是有$n$个顶点的$d$-正则图，邻接矩阵最小特征值为$\\lambda_{\\min}<0$。设$S$为独立集，$\\mathbf 1_S$为其示性向量。关于Hoffman界及其等号情形，下列说法正确的是哪些？\\nA. 总有$|S|\\le n\\frac{-\\lambda_{\\min}}{d-\\lambda_{\\min}}$。\\nB. 若某个非空独立集达到等号，则$G$必连通。\\nC. 若$S$达到等号，则$\\mathbf 1_S-\\frac{|S|}{n}\\mathbf 1$属于$\\lambda_{\\min}$的特征子空间。\\nD. 若$G$为二分$d$-正则图，则Hoffman界必严格小于$n/2$。",
-  "answer": "A,C",
+  "problem": "设$K_n$为完全图，选定一个汇点并删去其拉普拉斯矩阵对应的行与列，得到约化拉普拉斯矩阵$\\widetilde L=nI_{n-1}-J_{n-1}$。仅用整数初等行、列变换求$\\widetilde L$的Smith标准形，进而证明临界群（砂堆群）\n$\\operatorname{coker}(\\widetilde L)\\cong(\\mathbb Z/n\\mathbb Z)^{n-2}$，\n并由此重新得到Cayley公式$\\tau(K_n)=n^{n-2}$。",
+  "answer": "令$k=n-1$，矩阵$M=nI_k-J_k$的对角元为$n-1$、非对角元为$-1$。先把所有列加到第一列；由于每一行元素和为$n-k=1$，新第一列全为$1$。再对$i=2,\\dots,k$作行变换$R_i\\leftarrow R_i-R_1$。此时第一列除首元外全为$0$，而右下$(k-1)\\times(k-1)$块恰为$nI_{k-1}$；第一行在其余列仍为$-1$。最后对$j=2,\\dots,k$作$C_j\\leftarrow C_j+C_1$，消去第一行的$-1$。这些都是行列式为$\\pm1$的整数可逆变换，故得到Smith标准形\n$\\operatorname{diag}(1,\\underbrace{n,\\dots,n}_{n-2})$。\n因此\n$\\mathbb Z^{n-1}/\\widetilde L\\mathbb Z^{n-1}\\cong \\mathbb Z/1\\mathbb Z\\oplus(\\mathbb Z/n\\mathbb Z)^{n-2}\\cong(\\mathbb Z/n\\mathbb Z)^{n-2}$。\n临界群阶等于约化拉普拉斯行列式，也等于生成树数；Smith不变量之积为$n^{n-2}$，从而$\\tau(K_n)=n^{n-2}$。",
   "subject": "离散数学",
-  "source": "generated | trap: theorem-condition"
+  "source": "generated | standard"
 }
