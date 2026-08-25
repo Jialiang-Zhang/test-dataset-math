@@ -1,7 +1,7 @@
 {
   "idx": 17,
-  "problem": "设$(f_n)\\subset L^1(\\mathbb R)$。判断下列关于$L^1(\\mathbb R)$相对弱紧性的说法哪些正确。\nA. 若$(f_n)$一致可积，则必相对弱紧。\nB. 若$(f_n)$一致可积且对任意$\\varepsilon>0$存在$R$使$\\sup_n\\int_{|x|>R}|f_n|<\\varepsilon$，则相对弱紧。\nC. 若$(f_n)$相对弱紧，则它一致可积，并且满足上述质量不逃逸条件。\nD. 在有限测度空间上，一致可积足以推出$L^1$中的相对弱紧。",
-  "answer": "B,C,D",
-  "subject": "测度积分",
-  "source": "generated | trap: finite-vs-infinite-dimensional"
+  "problem": "设$G$是有限无桥三正则图（允许不是二分图）。证明$G$存在完美匹配。要求以Tutte的1-因子定理为核心：对任意$S\\subseteq V(G)$，估计$G-S$的奇分量数$o(G-S)$；论证中必须明确使用‘三正则’给出的奇偶性以及‘无桥’排除单边割的作用。",
+  "answer": "由Tutte定理，只需证明对任意$S\\subseteq V(G)$都有$o(G-S)\\le |S|$。设$C$是$G-S$的一个奇分量，记$\\delta(C)$为从$C$到$S$的边集。因$G$三正则，$3|V(C)|=2|E(C)|+|\\delta(C)|$。左边为奇数，故$|\\delta(C)|$为奇数。又$G$无桥，所以不可能有$|\\delta(C)|=1$；于是每个奇分量都满足$|\\delta(C)|\\ge3$。若$q=o(G-S)$，则所有奇分量通向$S$的边互不重叠，因此$3q\\le\\sum_C|\\delta(C)|\\le3|S|$，最后一个不等式来自$S$中每个顶点度数为3。故$q\\le|S|$。Tutte定理遂推出$G$存在完美匹配。",
+  "subject": "离散数学",
+  "source": "generated | trap: theorem-condition"
 }

@@ -1,7 +1,7 @@
 {
   "idx": 96,
-  "problem": "在$([0,1],\\mathcal B,m)$上令$r_n$为第$n$个Rademacher函数（在每个长度$2^{-n}$的二进制小区间上交替取$\\pm1$），并设$f_n=1+\\frac12r_n$。关于$L^1(0,1)$中的收敛性，下列哪些结论正确？A. $f_n\\rightharpoonup1$弱收敛于$1$；B. $f_n\\to1$依测度收敛；C. $\\|f_n\\|_1\\to\\|1\\|_1$但$\\|f_n-1\\|_1\\not\\to0$；D. 这与Radon--Riesz性质矛盾，因为$L^1$是严格凸且均匀凸的。要求判断时说明为何可用二进制简单函数逼近任意$L^\\infty$测试函数。",
-  "answer": "A,C",
-  "subject": "测度积分",
+  "problem": "在$L^2[0,1]$上定义Volterra算子$$(Vf)(x)=\\int_0^x f(t)\\,dt.$$证明$\\sigma(V)=\\{0\\}$，但$V$并非幂零算子。要求给出$V^n$的积分核公式、范数估计并使用谱半径公式。",
+  "answer": "迭代积分得$$(V^nf)(x)=\\frac1{(n-1)!}\\int_0^x(x-t)^{n-1}f(t)\\,dt.$$Hilbert–Schmidt估计给$$\\|V^n\\|\\le\\frac1{(n-1)!\\sqrt{(2n-1)(2n)}}.$$故$\\limsup\\|V^n\\|^{1/n}=0$，于是$r(V)=0$，即$\\sigma(V)\\subseteq\\{0\\}$。另一方面$V$不满射，例如常数函数1不可能是$Vf$，因为$Vf$有绝对连续代表且在0取0，所以$0\\in\\sigma(V)$。因此$\\sigma(V)=\\{0\\}$。但$V^n1=x^n/n!\\ne0$，故$V$不幂零。",
+  "subject": "泛函分析",
   "source": "generated | trap: finite-vs-infinite-dimensional"
 }

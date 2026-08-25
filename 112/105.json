@@ -1,7 +1,7 @@
 {
   "idx": 105,
-  "problem": "考虑无截距线性模型$x_i=\\pi_n z_i+v_i$，$y_i=\\beta x_i+u_i$，其中$z_i\\overset{iid}{\\sim}N(0,1)$，$(u_i,v_i)$独立同分布为二维正态、均值$0$、方差均为$1$、相关系数$\\rho$，且$z_i$与$(u_i,v_i)$独立。设弱工具变量序列$\\pi_n=c/\\sqrt n$。对单一工具变量2SLS估计量$\\hat\\beta_{IV}=\\frac{\\sum z_i y_i}{\\sum z_i x_i}$，求其极限分布并据此判断一致性。要求与强工具变量$\\pi_n\\equiv\\pi\\ne0$的情形作对比。",
-  "answer": "有$\\hat\\beta_{IV}-\\beta=\\frac{\\sum z_i u_i}{\\pi_n\\sum z_i^2+\\sum z_i v_i}$。除以$\\sqrt n$：分子$U_n=n^{-1/2}\\sum z_iu_i$，分母为$c(n^{-1}\\sum z_i^2)+V_n$，其中$V_n=n^{-1/2}\\sum z_iv_i$。由大数定律$n^{-1}\\sum z_i^2\\to1$，由二维CLT，$(U_n,V_n)\\Rightarrow(U,V)$，其中$(U,V)$为均值0、方差均1、协方差$\\rho$的二维正态。故$\\hat\\beta_{IV}\\Rightarrow\\beta+U/(c+V)$。该极限是非退化比值分布，因此$\\hat\\beta_{IV}$不依概率收敛到$\\beta$，弱工具变量下不一致。若$\\pi_n\\equiv\\pi\\ne0$，分母主项为$\\pi n+O_p(\\sqrt n)$而分子为$O_p(\\sqrt n)$，于是$\\hat\\beta_{IV}-\\beta=O_p(n^{-1/2})\\to0$，恢复一致性。",
-  "subject": "线性回归",
-  "source": "generated | trap: boundary-case"
+  "problem": "考虑区间$(0,\\pi)$上的热方程$u_t=u_{xx}$，Dirichlet边界$u(0,t)=u(\\pi,t)=0$。给定终端时刻$T>0$的数据$u(\\cdot,T)=g\\in L^2(0,\\pi)$，分析从$g$反推$u(\\cdot,0)$的逆问题：说明在何种Fourier系数条件下存在$L^2$初值，并严格证明该逆映射在$L^2$范数下不连续。",
+  "answer": "写$g=\\sum_{n\\ge1}g_n\\sin(nx)$。若初值$u_0=\\sum a_n\\sin(nx)$，则$g_n=e^{-n^2T}a_n$，所以存在$L^2$初值当且仅当$\\sum_{n\\ge1}e^{2n^2T}|g_n|^2<\\infty$，此时$a_n=e^{n^2T}g_n$且唯一。逆映射在其值域上无界：取$g^{(N)}=e^{-N^2T}\\sin(Nx)$，则$\\|g^{(N)}\\|_2\\to0$，但对应初值为$\\sin(Nx)$，其$L^2$范数恒为$\\sqrt{\\pi/2}$。故反向热方程虽在可达数据上唯一，却对终端数据不连续，属于严重病态逆问题。",
+  "subject": "偏微分方程",
+  "source": "generated | trap: existence-vs-stability"
 }

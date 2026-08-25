@@ -1,7 +1,7 @@
 {
   "idx": 37,
-  "problem": "设$(X_t)$为循环群$\mathbb Z/n\mathbb Z$上的连续时间简单随机游走：从每个点以速率1跳向两个相邻点，因此生成元为$(Lf)(k)=f(k+1)+f(k-1)-2f(k)$。求平稳分布、生成元全部特征值及谱隙，并证明对任意均值为0的$f$都有$\|P_tf\|_{L^2(\pi)}\le e^{-\gamma t}\|f\|_{L^2(\pi)}$，其中$\gamma$为精确谱隙。",
-  "answer": "链在有限连通正则图上可逆，故平稳分布为$\pi(k)=1/n$。取Fourier基$e_j(k)=\exp(2\pi ijk/n)$，则$Le_j=(e^{2\pi ij/n}+e^{-2\pi ij/n}-2)e_j=-4\sin^2(\pi j/n)e_j$。故特征值为$\lambda_j=-4\sin^2(\pi j/n)$，$j=0,\dots,n-1$；零特征值对应常数函数。最小非零的$-\lambda_j$在$j=1,n-1$取得，因此谱隙$\gamma=4\sin^2(\pi/n)$。若$\pi(f)=0$，写$f=\sum_{j=1}^{n-1}c_je_j$，则$P_tf=e^{tL}f=\sum_{j=1}^{n-1}c_je^{\lambda_jt}e_j$。由Parseval，$\|P_tf\|_2^2=\sum_{j\ge1}|c_j|^2e^{2\lambda_jt}\le e^{-2\gamma t}\sum_{j\ge1}|c_j|^2=e^{-2\gamma t}\|f\|_2^2$，开方即得结论。",
-  "subject": "随机过程",
-  "source": "generated | standard"
+  "problem": "在$((0,1),\\mathcal B,m)$上，给定参数$\\alpha,\\beta>0$与$0<\\gamma<1$，定义$$f_n(x)=n^\\alpha x^{-\\gamma}\\mathbf 1_{(0,n^{-\\beta})}(x).$$请完整刻画：(i) $f_n\\to0$的逐点/几乎处处收敛；(ii) $L^1$收敛到$0$的充要条件；(iii)族$\\{f_n\\}$一致可积的充要条件；(iv)是否存在某个$F\\in L^1(0,1)$使$|f_n|\\le F$对所有$n$几乎处处成立的充要条件。特别要求解释临界情形$\\alpha=\\beta(1-\\gamma)$为何虽逐点收敛但既不$L^1$收敛也不一致可积。",
+  "answer": "对任意固定$x>0$，当$n>x^{-1/\\beta}$时有$x\\notin(0,n^{-\\beta})$，故$f_n(x)=0$，所以对所有$x\\in(0,1)$逐点收敛于$0$。其次$\\|f_n\\|_1=n^\\alpha\\int_0^{n^{-\\beta}}x^{-\\gamma}dx=\\frac1{1-\\gamma}n^{\\alpha-\\beta(1-\\gamma)}$，故$L^1\\to0$当且仅当$\\alpha<\\beta(1-\\gamma)$。若该严格不等式成立，则求全族包络：给定$x$，只有$n\\le x^{-1/\\beta}$时可能非零，因此$\\sup_n f_n(x)\\le Cx^{-\\gamma-\\alpha/\\beta}$；指数$\\gamma+\\alpha/\\beta<1$，故该包络可积，于是存在$L^1$控制函数，进而一致可积。反之若$\\alpha>\\beta(1-\\gamma)$，则$\\|f_n\\|_1\\to\\infty$，不可能一致可积。临界情形$\\alpha=\\beta(1-\\gamma)$时$\\|f_n\\|_1=1/(1-\\gamma)$恒定，而支撑集$(0,n^{-\\beta})$的测度趋于$0$；若一致可积，则对这些小测度集合积分应一致趋于$0$，但$\\int_0^{n^{-\\beta}}f_n=1/(1-\\gamma)$，矛盾。因此一致可积当且仅当$\\alpha<\\beta(1-\\gamma)$。同样，存在统一$L^1$控制函数的充分性已由上面的包络给出；必要性由控制收敛定理：若有$F\\in L^1$控制且$f_n\\to0$ a.e.，则$\\|f_n\\|_1\\to0$，故必须有$\\alpha<\\beta(1-\\gamma)$。综上(ii)(iii)(iv)的充要条件相同，均为$\\alpha<\\beta(1-\\gamma)$。",
+  "subject": "测度积分",
+  "source": "generated | trap: convergence-direction"
 }

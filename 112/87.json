@@ -1,7 +1,7 @@
 {
   "idx": 87,
-  "problem": "设$D\subset\mathbb C$为域，$f_n:D\to\mathbb C$均为单叶全纯函数，且$f_n$在紧集上一致收敛到全纯函数$f$。证明$f$要么为常数，要么仍为单叶函数。要求使用Hurwitz定理，并处理直接对$f_n(z)-f_n(w)$应用Hurwitz时零点$z=w$始终存在这一障碍。",
-  "answer": "固定$w\in D$，定义$h_n(z)=\frac{f_n(z)-f_n(w)}{z-w}$，在$z=w$处以$f_n'(w)$作可去延拓。单叶性保证$h_n$在$D$上处处非零。紧集一致收敛及Cauchy公式给$h_n\to h(z)=\frac{f(z)-f(w)}{z-w}$局部一致。由Hurwitz，$h$要么处处非零，要么恒为零。若对某个$w$有$h\equiv0$，则$f\equiv f(w)$为常数；否则对每个$w$，$h$处处非零，于是$f(z)\ne f(w)$对所有$z\ne w$成立，故$f$单叶。",
-  "subject": "复分析",
-  "source": "generated | trap: theorem-condition"
+  "problem": "求初值问题$$yy''-(y')^2+y^4=0,\\qquad y(0)=1,\\quad y'(0)=0$$的最大实经典解，并严格证明该解在其最大存在区间内保持正值。要求使用非显然代换将方程降维，不得直接猜解后验证。",
+  "answer": "在$y>0$的局部邻域令$u=\\log y$，则$y'=yu'$、$y''=y[(u')^2+u'']$，所以$$yy''-(y')^2=y^2u''.$$原方程化为$$u''+e^{2u}=0,\\qquad u(0)=0,\\ u'(0)=0.$$乘以$2u'$积分得能量守恒$$(u')^2+e^{2u}=1.$$由$u''(0)=-1$知$x>0$小时$u'<0$，于是$u'=-\\sqrt{1-e^{2u}}$。令$v=e^{-u}$，则$v'=-e^{-u}u'=\\sqrt{v^2-1}$，且$v(0)=1$，从而$v=\\cosh x$，故$$u=-\\log\\cosh x,\\qquad y(x)=\\operatorname{sech}x.$$该函数在全实轴严格为正并直接满足原方程和初值，因此局部代换所得解可延拓到$\\mathbb R$。原方程在区域$y\\ne0$可写为光滑一阶系统；由局部唯一性，任何解只要保持非零就必须与$\\operatorname{sech}x$一致，而后者永不为零且无有限时爆破，因此最大实经典解的区间为$(-\\infty,\\infty)$。",
+  "subject": "常微分方程",
+  "source": "generated | standard"
 }

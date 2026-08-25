@@ -1,7 +1,7 @@
 {
   "idx": 6,
-  "problem": "设完全多部图$K_{n_1,\dots,n_k}$的第$i$个部大小为$n_i\ge1$，总顶点数$n=\sum_{i=1}^k n_i$，且$k\ge2$。请利用拉普拉斯矩阵的谱分解与矩阵树定理，严格证明其生成树数为$$\tau(K_{n_1,\dots,n_k})=n^{k-2}\prod_{i=1}^k (n-n_i)^{n_i-1}.$$要求明确给出拉普拉斯算子在“各部内和为零”的子空间与“各部常数”子空间上的作用，并说明零特征值与非零特征值的重数。",
-  "answer": "记$V_i$为第$i$部。对每个$i$，令$W_i$为仅支撑在$V_i$且坐标和为$0$的向量空间，$\dim W_i=n_i-1$。若$x\in W_i$，则对$v\in V_i$有$(Lx)_v=(n-n_i)x_v$，而其他部坐标为$0$，故$n-n_i$是特征值，重数至少$n_i-1$。这些$W_i$直和维数为$n-k$。其正交补$U$由“每一部上取常数”的向量组成，维数$k$。若$x$在$V_i$上常值$c_i$，记$S=\sum_j n_jc_j$，则对$v\in V_i$有$(Lx)_v=(n-n_i)c_i-\sum_{j\ne i}n_jc_j=nc_i-S$。因此在$U$上，$L$对应映射$c\mapsto nc-S\mathbf1$。常数向量给出特征值$0$；若$\sum_jn_jc_j=0$，则$Lc=nc$，故$n$为特征值，重数$k-1$。于是拉普拉斯谱为$0$一次、$n$重数$k-1$，以及$n-n_i$重数$n_i-1$。矩阵树定理的谱形式给出$\tau=\frac1n\prod_{\lambda\ne0}\lambda=\frac1n\,n^{k-1}\prod_i(n-n_i)^{n_i-1}=n^{k-2}\prod_i(n-n_i)^{n_i-1}$。维数总和$1+(k-1)+\sum_i(n_i-1)=n$，故无遗漏。",
+  "problem": "设图$G=C_m\\square C_n$为两个循环图的笛卡尔积，其中$m,n\\ge3$。请利用拉普拉斯谱与矩阵树定理严格证明$G$的生成树数为$$\\tau(G)=\\frac1{mn}\\prod_{\\substack{0\\le j<m,\\ 0\\le k<n\\\\(j,k)\\ne(0,0)}}\\left(4-2\\cos\\frac{2\\pi j}{m}-2\\cos\\frac{2\\pi k}{n}\\right).$$要求先从$C_m,C_n$的傅里叶特征向量推出笛卡尔积的全部拉普拉斯特征值，并解释为什么唯一的零特征值对应常数向量。",
+  "answer": "$C_m$的拉普拉斯特征向量为$u_j(r)=e^{2\\pi ijr/m}$，对应特征值$\\lambda_j=2-2\\cos(2\\pi j/m)$；同理$C_n$的特征值为$\\mu_k=2-2\\cos(2\\pi k/n)$。笛卡尔积满足$L_G=L_{C_m}\\otimes I_n+I_m\\otimes L_{C_n}$，故$u_j\\otimes v_k$为特征向量，特征值为$$\\lambda_j+\\mu_k=4-2\\cos\\frac{2\\pi j}{m}-2\\cos\\frac{2\\pi k}{n}.$$由于循环图连通，$\\lambda_j=0$仅当$j=0$，$\\mu_k=0$仅当$k=0$，故$G$连通且唯一零特征值对应$(j,k)=(0,0)$的常数向量。对含$N=mn$个顶点的连通图，矩阵树定理的谱形式为$\\tau(G)=N^{-1}\\prod_{r=2}^N\\nu_r$，其中$\\nu_r$为非零拉普拉斯特征值。代入上述谱即得到题设乘积公式。",
   "subject": "离散数学",
   "source": "generated | standard"
 }

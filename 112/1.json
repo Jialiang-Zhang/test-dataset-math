@@ -1,7 +1,7 @@
 {
   "idx": 1,
-  "problem": "设$m,n\ge 2$。利用矩阵树定理而不是递推或直接枚举，求完全二分图$K_{m,n}$的生成树总数，并严格说明拉普拉斯矩阵的非零特征值如何进入余子式行列式的计算。",
-  "answer": "设$K_{m,n}$的拉普拉斯矩阵为$L$。其谱为$0$（重数1）、$m$（重数$n-1$）、$n$（重数$m-1$）、$m+n$（重数1）。对任意$n+m$阶图拉普拉斯矩阵，矩阵树定理与非零谱给出$\tau(G)=\frac{1}{m+n}\prod_{\lambda_i\ne0}\lambda_i$。因此$\tau(K_{m,n})=\frac{1}{m+n}m^{n-1}n^{m-1}(m+n)=m^{n-1}n^{m-1}$。谱的求法可由分别考察两侧顶点和为零的子空间以及两侧常数向量张成的二维子空间得到。",
+  "problem": "设$G$是$n$个顶点的$d$-正则简单图，邻接矩阵为$A$，最小特征值为$\\lambda_{\\min}<0$。证明Hoffman界$\\alpha(G)\\le n\\frac{-\\lambda_{\\min}}{d-\\lambda_{\\min}}$。进一步证明：若独立集$S$达到等号，则其示性向量$\\mathbf 1_S$满足$\\mathbf 1_S-\\frac{|S|}{n}\\mathbf 1$属于$A$的$\\lambda_{\\min}$-特征空间，并推出每个$V\\setminus S$中的顶点在$S$中恰有$-\\lambda_{\\min}$个邻点。",
+  "answer": "令$s=|S|$，$x=\\mathbf 1_S-\\frac{s}{n}\\mathbf 1$，则$x\\perp\\mathbf 1$。因$S$独立，$\\mathbf 1_S^TA\\mathbf 1_S=0$；又$A\\mathbf 1=d\\mathbf 1$，故$x^TAx=-d s^2/n$，而$\\|x\\|^2=s-s^2/n=s(n-s)/n$。Rayleigh商给出$-ds/(n-s)\\ge\\lambda_{\\min}$，整理得$s\\le n\\frac{-\\lambda_{\\min}}{d-\\lambda_{\\min}}$。若等号成立，则Rayleigh商达到最小值，故$Ax=\\lambda_{\\min}x$。于是$A\\mathbf 1_S=\\lambda_{\\min}\\mathbf 1_S+\\frac{s}{n}(d-\\lambda_{\\min})\\mathbf 1$。由等号关系$\\frac{s}{n}(d-\\lambda_{\\min})=-\\lambda_{\\min}$，故$A\\mathbf 1_S=\\lambda_{\\min}\\mathbf 1_S-\\lambda_{\\min}\\mathbf 1$。对$v\\notin S$，左侧分量等于$v$在$S$中的邻点数，右侧为$-\\lambda_{\\min}$。",
   "subject": "离散数学",
-  "source": "generated | standard"
+  "source": "generated | trap: theorem-condition"
 }

@@ -1,7 +1,7 @@
 {
   "idx": 31,
-  "problem": "设$G$是有限无桥三正则图（允许不是二分图）。证明$G$存在完美匹配。要求以Tutte的1-因子定理为核心：对任意$S\subseteq V(G)$，估计$G-S$的奇分量数$o(G-S)$；论证中必须明确使用‘三正则’给出的奇偶性以及‘无桥’排除单边割的作用。",
-  "answer": "由Tutte定理，只需证明对任意$S\subseteq V(G)$都有$o(G-S)\le |S|$。设$C$是$G-S$的一个奇分量，记$\delta(C)$为从$C$到$S$的边集。因$G$三正则，$3|V(C)|=2|E(C)|+|\delta(C)|$。左边为奇数，故$|\delta(C)|$为奇数。又$G$无桥，所以不可能有$|\delta(C)|=1$；于是每个奇分量都满足$|\delta(C)|\ge3$。若$q=o(G-S)$，则所有奇分量通向$S$的边互不重叠，因此$3q\le\sum_C|\delta(C)|\le3|S|$，最后一个不等式来自$S$中每个顶点度数为3。故$q\le|S|$。Tutte定理遂推出$G$存在完美匹配。",
-  "subject": "离散数学",
-  "source": "generated | trap: theorem-condition"
+  "problem": "设$A\\in\\mathbb C^{n\\times n}$可逆，GMRES从$x_0$出发，$r_0=b-Ax_0\\ne0$。关于精确算术下第$m$步残差$r_m$，下列哪些说法正确？A. $\\|r_m\\|_2=\\min\\{\\|p(A)r_0\\|_2:p\\in\\mathcal P_m,\\ p(0)=1\\}$。B. 若相对于$r_0$的最小多项式次数为$d$，则GMRES至迟在第$d$步精确收敛。C. 只要两个可逆矩阵具有完全相同的特征值（含代数重数），则对任意同范数初始残差，它们的GMRES残差范数序列必相同。D. 若$A$正规，则$$\\frac{\\|r_m\\|_2}{\\|r_0\\|_2}\\le \\min_{p\\in\\mathcal P_m,p(0)=1}\\max_{\\lambda\\in\\sigma(A)}|p(\\lambda)|.$$请选择所有正确选项。",
+  "answer": "A,B,D",
+  "subject": "数值分析",
+  "source": "generated | trap: finite-vs-infinite-dimensional"
 }

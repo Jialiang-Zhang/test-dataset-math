@@ -1,7 +1,7 @@
 {
   "idx": 80,
-  "problem": "设$X$为$v$元集合，$\mathcal F=\{A_1,\dots,A_m\}$满足对某个固定整数$\lambda\ge0$，任意$i\ne j$都有$|A_i\cap A_j|=\lambda$，且每个$|A_i|>\lambda$。证明$m\le v$。要求使用关联矩阵与秩论证，并明确说明为什么对应Gram矩阵正定；不得直接引用Fisher不等式。",
-  "answer": "令$B$为$m\times v$关联矩阵，第$i$行是$A_i$的示性向量。则$G=BB^T$满足$G_{ii}=|A_i|$、$G_{ij}=\lambda(i\ne j)$，故$G=D+\lambda J$，其中$D=\operatorname{diag}(|A_i|-\lambda)$正定而$\lambda J$半正定。对任意$0\ne c\in\mathbb R^m$，$c^TGc=\sum_i(|A_i|-\lambda)c_i^2+\lambda(\sum_i c_i)^2>0$，所以$G$正定，$\operatorname{rank}G=m$。又$G=BB^T$，故$m=\operatorname{rank}G\le\operatorname{rank}B\le v$。",
-  "subject": "离散数学",
+  "problem": "设$a>0$。请利用复分析中的留数定理与适当的大矩形围道，严格证明Mittag-Leffler型恒等式$$\\sum_{n=-\\infty}^{\\infty}\\frac1{n^2+a^2}=\\frac{\\pi}{a}\\coth(\\pi a),$$并由此推出$$\\sum_{n=1}^{\\infty}\\frac1{n^2+a^2}=\\frac{\\pi a\\coth(\\pi a)-1}{2a^2}.$$要求说明为何选取$\\pi\\cot(\\pi z)/(z^2+a^2)$，计算整数点与$\\pm ia$处的全部留数，并给出围道积分趋于$0$的估计思路。",
+  "answer": "取$F(z)=\\pi\\cot(\\pi z)/(z^2+a^2)$。在整数$n$处，$\\pi\\cot(\\pi z)$留数为$1$，故$\\operatorname{Res}(F,n)=1/(n^2+a^2)$。在$z=ia$处，$\\operatorname{Res}(F,ia)=\\pi\\cot(\\pi ia)/(2ia)$；利用$\\cot(iu)=-i\\coth u$得该留数$=-\\pi\\coth(\\pi a)/(2a)$。同理$z=-ia$处留数也为$-\\pi\\coth(\\pi a)/(2a)$，两者和为$-\\pi\\coth(\\pi a)/a$。取边界避开整数的对称大矩形$R_N$，例如竖边$\\Re z=\\pm(N+1/2)$、横边$\\Im z=\\pm N$。在竖边上$|\\cot\\pi z|$有统一界；在远离实轴的横边上$\\cot\\pi z$也一致有界，而分母为$\\asymp N^2$，围道长度$O(N)$，故$\\int_{\\partial R_N}F(z)dz=O(1/N)\\to0$。留数定理于是给出$$0=\\lim_{N\\to\\infty}2\\pi i\\left(\\sum_{|n|\\le N}\\frac1{n^2+a^2}-\\frac{\\pi}{a}\\coth(\\pi a)\\right),$$从而第一式成立。再把$n=0$项$1/a^2$分离，并利用正负$n$对称：$1/a^2+2\\sum_{n\\ge1}(n^2+a^2)^{-1}=\\pi\\coth(\\pi a)/a$，即得第二式。",
+  "subject": "复分析",
   "source": "generated | standard"
 }

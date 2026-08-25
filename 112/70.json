@@ -1,7 +1,7 @@
 {
   "idx": 70,
-  "problem": "设$M\subset\mathbb R^3$为连通、闭、可定向的光滑浸入曲面，并且Gauss曲率处处$K>0$。选择所有必然成立的结论：A. $M$的亏格为$0$；B. 取合适定向后Gauss映射$N:M\to S^2$为全局微分同胚；C. $M$必为某个圆球面；D. $\int_MK\,dA=4\pi$。",
-  "answer": "A,B,D",
-  "subject": "微分几何",
-  "source": "generated | trap: local-vs-global"
+  "problem": "设$G$为阶$p^3$的有限群，$p$为素数。证明$Z(G)\\neq1$且$|Z(G)|\\in\\{p,p^2,p^3\\}$；进一步证明若$|Z(G)|\\ge p^2$则$G$必为阿贝尔群；因此任意非阿贝尔阶$p^3$群都有$|Z(G)|=p$且$G/Z(G)\\cong C_p\\times C_p$。要求给出类方程论证，并说明为什么$G/Z(G)$循环会迫使$G$阿贝尔。",
+  "answer": "由类方程$|G|=|Z(G)|+\\sum [G:C_G(x_i)]$，非中心共轭类大小均为$p$的正幂，故模$p$有$|Z(G)|\\equiv|G|\\equiv0\\pmod p$，所以$Z(G)\\ne1$且其阶只能为$p,p^2,p^3$。若$|Z(G)|=p^3$显然阿贝尔；若$|Z(G)|=p^2$，则$|G/Z(G)|=p$为循环群。一般若$G/Z(G)=\\langle gZ(G)\\rangle$，任意$a,b\\in G$可写$a=g^mz_1,b=g^nz_2$，其中$z_1,z_2\\in Z(G)$，于是$ab=ba$，故$G$阿贝尔。因此非阿贝尔情形只能有$|Z(G)|=p$。此时$G/Z(G)$阶为$p^2$且不循环，否则仍推出$G$阿贝尔；阶$p^2$群均阿贝尔，故只能同构于$C_p\\times C_p$。",
+  "subject": "抽象代数",
+  "source": "generated | trap: theorem-condition"
 }

@@ -1,7 +1,7 @@
 {
   "idx": 88,
-  "problem": "求初值问题$y''=y^2,\ y(0)=1,\ y'(0)=0$的最大实解存在区间端点。要求先作能量积分，证明解在正半轴严格增大并发生有限时爆破，再把爆破时间精确写成Beta函数值；不得只给出定性爆破解释。",
-  "answer": "乘以$y'$积分得$\frac12(y')^2=\frac13(y^3-1)$。因$y''=y^2>0$且$y'(0)=0$，对$x>0$有$y'>0$，所以$y$由1单调增至无穷。于是到达无穷的时间$T=\sqrt{\frac32}\int_1^\infty\frac{dy}{\sqrt{y^3-1}}$。令$t=y^{-3}$，积分为$\frac13B(\frac16,\frac12)$，故$T=\frac1{\sqrt6}B(\frac16,\frac12)<\infty$。由方程自治且初始斜率为0，唯一性给$y(-x)=y(x)$，故最大存在区间为$(-T,T)$。",
+  "problem": "求解Ermakov--Pinney初值问题$y''+\\omega^2y=\\frac{c}{y^3}$，$y(0)=a>0,y'(0)=0$，其中$\\omega>0,c>0$。要求给出保持正值的显式解，并用能量积分或直接代入验证；同时求其最小值和最大值。",
+  "answer": "取线性方程$u''+\\omega^2u=0$的基本解$u=\\cos\\omega t,v=\\sin(\\omega t)/\\omega$，其Wronskian为1。Pinney公式给$y^2=A u^2+2Buv+Dv^2$且$AD-B^2=c$。由初值得$A=a^2,B=0,D=c/a^2$，故$y(t)=\\sqrt{a^2\\cos^2(\\omega t)+\\frac{c}{a^2\\omega^2}\\sin^2(\\omega t)}$。括号内恒正，故这是全局正解。其平方在两个常数$a^2$与$c/(a^2\\omega^2)$之间振荡，因此$y_{\\min}=\\min\\{a,\\sqrt c/(a\\omega)\\}$，$y_{\\max}=\\max\\{a,\\sqrt c/(a\\omega)\\}$。亦可由能量$E=\\frac12y'^2+\\frac12\\omega^2y^2+\\frac{c}{2y^2}$守恒验证转向点。",
   "subject": "常微分方程",
   "source": "generated | standard"
 }

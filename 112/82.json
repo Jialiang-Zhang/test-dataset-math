@@ -1,7 +1,7 @@
 {
   "idx": 82,
-  "problem": "在$(0,1)^2$上定义$f(x,y)=\frac{x^2-y^2}{(x^2+y^2)^2}$。分别计算两个迭代积分$\int_0^1(\int_0^1 f(x,y)\,dx)dy$与$\int_0^1(\int_0^1 f(x,y)\,dy)dx$，并证明$f\notin L^1((0,1)^2)$，从而说明为什么不能使用Fubini定理交换积分次序。",
-  "answer": "注意$\partial_x\frac{x}{x^2+y^2}=\frac{y^2-x^2}{(x^2+y^2)^2}=-f$，故对$y>0$，$\int_0^1f(x,y)dx=-\frac1{1+y^2}$，再积分得$-\pi/4$。另一方面$\partial_y\frac{y}{x^2+y^2}=f$，故对$x>0$，$\int_0^1f(x,y)dy=\frac1{1+x^2}$，再积分得$\pi/4$。在第一象限极坐标中$f=\cos(2\theta)/r^2$，于是任取一个$|\cos2\theta|\ge c>0$的角区间，$\iint|f|\,dxdy\ge C\int_0^\varepsilon dr/r=\infty$。因此$f$非绝对可积，Fubini交换次序的假设失败。",
-  "subject": "测度积分",
-  "source": "generated | trap: theorem-condition"
+  "problem": "设$f$在闭条带$S=\\{z:0\\le\\Re z\\le1\\}$上连续、内部全纯且有界，令$M_0=\\sup_{t\\in\\mathbb R}|f(it)|$，$M_1=\\sup_{t\\in\\mathbb R}|f(1+it)|$。证明Hadamard三线定理：对$0<\\theta<1$，$$|f(\\theta+it)|\\le M_0^{1-\\theta}M_1^{\\theta}.$$要求给出对无界条带使用最大模原理时的截断/扰动处理，并说明为什么这等价于$\\log M(x)$关于$x$的凸性。",
+  "answer": "先假设$M_0,M_1>0$。令$a=\\log M_0,b=\\log M_1$，对$\\varepsilon>0$定义$$g_\\varepsilon(z)=f(z)\\exp[-(1-z)a-zb+\\varepsilon z^2].$$在边界$\\Re z=0,1$上，$|g_\\varepsilon|\\le e^{-\\varepsilon t^2}$或$e^{\\varepsilon(1-t^2)}$，故当$|t|$大时严格小于1。对矩形$0\\le\\Re z\\le1,|\\Im z|\\le T$应用最大模原理；取$T$足够大，使水平边界也因$e^{-\\varepsilon T^2}$压低到不超过1，于是条带内部$|g_\\varepsilon|\\le e^{\\varepsilon}$。令$\\varepsilon\\downarrow0$得$$|f(x+it)|\\le e^{(1-x)a+xb}=M_0^{1-x}M_1^x.$$若某$M_j=0$，由边界唯一性或对$M_j+\\delta$应用结论后令$\\delta\\downarrow0$处理。对任意子条带$[x_0,x_1]$重复应用，得到$\\log M((1-\\theta)x_0+\\theta x_1)\\le(1-\\theta)\\log M(x_0)+\\theta\\log M(x_1)$，这正是$\\log M(x)$的凸性。",
+  "subject": "复分析",
+  "source": "generated | standard"
 }

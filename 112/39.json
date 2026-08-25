@@ -1,7 +1,7 @@
 {
   "idx": 39,
-  "problem": "设$G=(V,E)$是一个有$2n$个顶点的简单图。对$i<j$，若$ij\in E$则引入独立不定元$x_{ij}$，并定义Tutte矩阵$T=(t_{ij})$为$t_{ij}=x_{ij}$（$i<j,ij\in E$）、$t_{ji}=-x_{ij}$，其余元素为$0$。证明：$G$存在完美匹配当且仅当$\det T$不是零多项式。要求不能直接引用“Tutte矩阵判据”，而应从Pfaffian展开出发解释为什么不同完美匹配对应的单项式不会相互抵消。",
-  "answer": "由于$T$是$2n\times2n$斜对称矩阵，$\det T=\operatorname{Pf}(T)^2$。Pfaffian有展开\n$\operatorname{Pf}(T)=\sum_M \operatorname{sgn}(M)\prod_{\{i,j\}\in M}t_{ij}$，\n其中求和遍历$\{1,\dots,2n\}$的所有配对。若某一配对含非边，则对应乘积为$0$；非零项恰对应$G$的完美匹配。对每个完美匹配$M$，把每条边写成$i<j$后，其项为$\pm\prod_{ij\in M}x_{ij}$。由于各边使用彼此独立的不定元，不同完美匹配含有不同的边集合，从而给出不同的平方自由单项式，故它们不可能在多项式环中相互抵消。因此$\operatorname{Pf}(T)$非零当且仅当至少存在一个完美匹配；再由$\det T=\operatorname{Pf}(T)^2$，得到$\det T\not\equiv0$当且仅当$G$有完美匹配。",
-  "subject": "离散数学",
-  "source": "generated | standard"
+  "problem": "在$((0,1),\\mathcal B,m)$上，给定参数$\\alpha,\\beta>0$与$0\\le\\gamma<1$，定义$$f_n(x)=n^\\alpha x^{-\\gamma}\\mathbf 1_{(0,n^{-\\beta})}(x).$$关于$\\{f_n\\}$的几乎处处收敛、$L^1$收敛与一致可积性，下列说法中哪些正确？\\nA. 对任意参数都有$f_n(x)\\to0$几乎处处。\\nB. $f_n\\to0$于$L^1$当且仅当$\\alpha<\\beta(1-\\gamma)$。\\nC. 当$\\alpha=\\beta(1-\\gamma)$时，虽然$\\sup_n\\|f_n\\|_1<\\infty$且$f_n\\to0$几乎处处，但$\\{f_n\\}$不是一致可积族。\\nD. 若$\\alpha<\\beta(1-\\gamma)$，则存在单个$F\\in L^1(0,1)$使$|f_n|\\le F$对所有$n$几乎处处成立。",
+  "answer": "A,B,C,D。A：固定$x>0$后，当$n$充分大有$x>n^{-\\beta}$，故$f_n(x)=0$。B：$$\\|f_n\\|_1=n^\\alpha\\int_0^{n^{-\\beta}}x^{-\\gamma}dx=\\frac1{1-\\gamma}n^{\\alpha-\\beta(1-\\gamma)},$$故$L^1$收敛到$0$当且仅当$\\alpha<\\beta(1-\\gamma)$。C：临界情形下$\\|f_n\\|_1\\equiv(1-\\gamma)^{-1}$，但质量集中到$E_n=(0,n^{-\\beta})$；有$m(E_n)\\to0$而$\\int_{E_n}f_n=(1-\\gamma)^{-1}$，故违反一致可积性的绝对连续性判据。D：固定$x\\in(0,1)$，若$f_n(x)\\ne0$则$n<x^{-1/\\beta}$，于是$n^\\alpha\\le x^{-\\alpha/\\beta}$，从而$$f_n(x)\\le x^{-(\\gamma+\\alpha/\\beta)}=:F(x).$$条件$\\alpha<\\beta(1-\\gamma)$恰等价于$\\gamma+\\alpha/\\beta<1$，因此$F\\in L^1(0,1)$。",
+  "subject": "测度积分",
+  "source": "generated | trap: convergence-direction"
 }

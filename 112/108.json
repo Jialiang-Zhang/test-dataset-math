@@ -1,7 +1,7 @@
 {
   "idx": 108,
-  "problem": "设离散损失随机变量$Z$在场景$i=1,\\dots,N$下取值$z_i$，概率$p_i>0$且$\\sum p_i=1$，固定$\\alpha\\in(0,1)$。从Rockafellar--Uryasev公式$\\mathrm{CVaR}_\\alpha(Z)=\\min_t\\left[t+\\frac1{1-\\alpha}\\sum_i p_i(z_i-t)_+\\right]$出发：1）写成线性规划；2）严格推导其对偶风险包络$\\max_q\\sum_iq_iz_i$；3）给出$q$的全部约束；4）用次梯度条件刻画最优$t$与$\\alpha$-VaR的关系。",
-  "answer": "引入$s_i\\ge0$且$s_i\\ge z_i-t$，原问题等价于$\\min_{t,s} t+\\sum_i c_i s_i$，其中$c_i=p_i/(1-\\alpha)$。给约束$z_i-t-s_i\\le0$的乘子$q_i\\ge0$，给$-s_i\\le0$的乘子$r_i\\ge0$。Lagrangian为$L=t+\\sum c_is_i+\\sum q_i(z_i-t-s_i)-\\sum r_is_i$。对$t$取下确界有限要求$\\sum_iq_i=1$；对$s_i$要求$c_i-q_i-r_i=0$，故$0\\le q_i\\le p_i/(1-\\alpha)$。因此对偶为$\\max\\sum_iq_iz_i$，约束$\\sum q_i=1,\\ 0\\le q_i\\le p_i/(1-\\alpha)$，线性规划强对偶给两者相等。关于$t$的次梯度条件等价于$\\mathbb P(Z<t)\\le\\alpha\\le\\mathbb P(Z\\le t)$，所以最优$t$恰为任一$\\alpha$分位数。",
-  "subject": "运筹学",
-  "source": "generated | trap: theorem-condition"
+  "problem": "设$p>1$，$q=p/(p-1)$，$f\\in C_c^\\infty(0,\\infty)$且$f\\ge0$，$F(x)=\\int_0^x f(t)dt$。证明Hardy不等式$\\|F/x\\|_{L^p(0,\\infty)}\\le q\\|f\\|_{L^p(0,\\infty)}$，并证明常数$q$最优。要求给出分部积分与Hölder步骤，并构造一族近极值函数说明任何更小常数均不成立。",
+  "answer": "记$I=\\int_0^\\infty F(x)^px^{-p}dx$。边界项消失，分部积分得$I=q\\int_0^\\infty(F/x)^{p-1}f\\,dx$。Hölder给$I\\le q I^{(p-1)/p}\\|f\\|_p$，所以$I^{1/p}\\le q\\|f\\|_p$。为证尖锐性，可先取$f_R(x)=x^{-1/p}\\mathbf1_{(1,R)}$并用光滑截断逼近。其$\\|f_R\\|_p^p=\\log R$；在$1\\ll x<R$上，$F_R(x)=q(x^{1/q}-1)$，故$F_R(x)/x=q x^{-1/p}(1-x^{-1/q})$。因此$\\|F_R/x\\|_p^p=q^p\\log R+O(1)$，而尾部$x>R$只贡献$O(1)$。于是范数比趋于$q$，故常数不可减小。",
+  "subject": "数学分析",
+  "source": "generated | standard"
 }

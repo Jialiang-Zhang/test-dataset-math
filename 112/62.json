@@ -1,7 +1,7 @@
 {
   "idx": 62,
-  "problem": "设连续时间生灭链在$\mathbb Z_{\ge0}$上具有出生率$\lambda_n>0$与死亡率$\mu_n>0(n\ge1)$，且$\mu_0=0$。定义$\pi_0=1$，$\pi_n=\lambda_0\cdots\lambda_{n-1}/(\mu_1\cdots\mu_n)$。证明若$Z=\sum_{n\ge0}\pi_n<\infty$，则$p_n=\pi_n/Z$为平稳分布且链关于$p$可逆；并说明仅有局部平衡关系$\pi_n\lambda_n=\pi_{n+1}\mu_{n+1}$为何还不足以得到概率平稳分布。",
-  "answer": "定义直接给出$\pi_n\lambda_n=\pi_{n+1}\mu_{n+1}$。若$Z<\infty$，令$p_n=\pi_n/Z$，则$p_n\lambda_n=p_{n+1}\mu_{n+1}$，即详细平衡。对每个$n$，流入率与流出率相等，所以$pQ=0$，且详细平衡给出可逆性。若$Z=\infty$，$\pi$只能给出一个不变测度，无法归一化为总质量1的概率分布，因此局部平衡本身不足。",
-  "subject": "随机过程",
-  "source": "generated | trap: missing-assumption"
+  "problem": "设$(M_t)_{t\\ge0}$是连续局部鞅，$M_0=0$，且二次变差满足$\\langle M\\rangle_t=t$。证明$M$是相对于其原滤过的标准Brownian运动。要求从指数鞅出发证明增量的条件特征函数，而不是直接引用Lévy刻画定理。",
+  "answer": "对任意$\\theta\\in\\mathbb R$，Itô公式给出$Z_t=\\exp(i\\theta M_t+\\frac12\\theta^2\\langle M\\rangle_t)$为局部鞅。因在任意有限时间区间上$|Z_t|=\\exp(\\theta^2t/2)$有界，故它是真鞅。于是对$0\\le s<t$，$E[Z_t\\mid\\mathcal F_s]=Z_s$。代入$\\langle M\\rangle_t=t$并整理得$E[\\exp(i\\theta(M_t-M_s))\\mid\\mathcal F_s]=\\exp(-\\frac12\\theta^2(t-s))$。右端是$N(0,t-s)$的特征函数且与$\\mathcal F_s$无关，所以$M_t-M_s$条件于$\\mathcal F_s$仍服从$N(0,t-s)$，从而该增量独立于$\\mathcal F_s$。因此$M$具有独立平稳Gaussian增量，$M_0=0$且路径连续，故$M$是标准Brownian运动。",
+  "subject": "概率论",
+  "source": "generated | trap: theorem-condition"
 }

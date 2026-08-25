@@ -1,7 +1,7 @@
 {
   "idx": 57,
-  "problem": "设$A_K=\begin{pmatrix}1&K\\0&2\end{pmatrix}$，$K>0$。计算$(zI-A_K)^{-1}$，并证明尽管$\sigma(A_K)=\{1,2\}$与$K$无关，但当$K\to\infty$时，点$z=3/2$处的预解算子范数至少线性增长。再构造一个范数为$O(K^{-1})$的扰动$E_K$，使$3/2$成为$A_K+E_K$的特征值。",
-  "answer": "有$(zI-A_K)^{-1}=\begin{pmatrix}(z-1)^{-1}&K/((z-1)(z-2))\\0&(z-2)^{-1}\end{pmatrix}$。取$z=3/2$，右上元为$-4K$，故二范数至少为$4K$。令$E_K=\begin{pmatrix}0&0\\\delta&0\end{pmatrix}$，则$\det(\tfrac32I-A_K-E_K)=-\tfrac14-K\delta$；取$\delta=-1/(4K)$即使行列式为0，且$\|E_K\|_2=1/(4K)$。因此非正规矩阵的谱稳定性不能只由原特征值距离判断，而应考察预解范数/伪谱。",
-  "subject": "数值分析",
-  "source": "generated | trap: nonnormal-spectrum"
+  "problem": "设$X\\sim N_n(0,I_n)$，$P,Q$为$n\\times n$实对称幂等矩阵（即正交投影）。证明二次型$X^TPX$与$X^TQX$相互独立当且仅当$PQ=0$。要求一方面利用正交分解解释$PQ=0$时的独立性；另一方面在假设两个二次型独立时，通过联合矩母函数或混合二阶矩严格推出$\\operatorname{tr}(PQ)=0$，再利用投影矩阵的正定性结构推出$PQ=0$。",
+  "answer": "若$PQ=0$，则$\\operatorname{Ran}P\\perp\\operatorname{Ran}Q$。取正交矩阵把$\\mathbb R^n$分解为$\\operatorname{Ran}P\\oplus\\operatorname{Ran}Q\\oplus W$；标准高斯在正交变换下仍为独立标准高斯坐标，于是$X^TPX$只依赖第一块坐标，$X^TQX$只依赖第二块坐标，故独立。反之设两二次型独立。对标准高斯与对称矩阵$A,B$，Wick公式给出$\\mathbb E[(X^TAX)(X^TBX)]=\\operatorname{tr}A\\operatorname{tr}B+2\\operatorname{tr}(AB)$。取$A=P,B=Q$，独立性意味着左端等于$\\mathbb E(X^TPX)\\mathbb E(X^TQX)=\\operatorname{tr}P\\operatorname{tr}Q$，故$\\operatorname{tr}(PQ)=0$。又$P,Q$为正交投影，$\\operatorname{tr}(PQ)=\\operatorname{tr}(PQP)$，而$PQP$为半正定，因为$x^TPQPx=\\|QPx\\|^2\\ge0$。半正定矩阵迹为$0$必为零，所以$PQP=0$。于是对任意$x$，$\\|QPx\\|^2=x^TPQPx=0$，故$QP=0$，转置得$PQ=0$。因此充要条件成立。",
+  "subject": "概率论",
+  "source": "generated | trap: independence"
 }

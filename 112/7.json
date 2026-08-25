@@ -1,7 +1,7 @@
 {
   "idx": 7,
-  "problem": "设$[n]=\{1,\dots,n\}$，$\mathcal F\subseteq 2^{[n]}$是反链，即任意不同$A,B\in\mathcal F$均不满足$A\subset B$。请通过对$[n]$的全排列（等价地，Boolean格的极大链）进行双计数，严格证明LYM不等式$$\sum_{A\in\mathcal F}\binom{n}{|A|}^{-1}\le 1,$$并由此推出Sperner定理$$|\mathcal F|\le \binom{n}{\lfloor n/2\rfloor}.$$同时说明何处实质使用了“反链”条件。",
-  "answer": "每个排列$\pi=(\pi_1,\dots,\pi_n)$产生极大链$\varnothing\subset\{\pi_1\}\subset\cdots\subset[n]$。对有序对$(A,\pi)$计数，其中$A\in\mathcal F$且$A$出现在$\pi$对应的链中。若$|A|=k$，则恰有$k!(n-k)!$个排列使$A$出现，因此有序对总数为$\sum_{A\in\mathcal F}|A|!(n-|A|)!$。另一方面，由于$\mathcal F$是反链，一条极大链至多含有$\mathcal F$中的一个成员，所以有序对总数至多$n!$。除以$n!$即得$$\sum_{A\in\mathcal F}\frac1{\binom n{|A|}}\le1.$$又因$\binom n{|A|}\le\binom n{\lfloor n/2\rfloor}$，故$$\frac{|\mathcal F|}{\binom n{\lfloor n/2\rfloor}}\le\sum_{A\in\mathcal F}\binom n{|A|}^{-1}\le1,$$从而得到Sperner上界。反链条件正用于保证每条极大链至多命中一个$\mathcal F$成员；没有该条件，按排列侧的计数上界$n!$即失效。",
+  "problem": "设$[n]=\\{1,\\dots,n\\}$，$\\mathcal F\\subseteq 2^{[n]}$是反链，即任意不同$A,B\\in\\mathcal F$均不满足$A\\subset B$。请通过对$[n]$的全排列（等价地，Boolean格的极大链）进行双计数，严格证明LYM不等式$$\\sum_{A\\in\\mathcal F}\\binom{n}{|A|}^{-1}\\le 1,$$并由此推出Sperner定理$$|\\mathcal F|\\le \\binom{n}{\\lfloor n/2\\rfloor}.$$同时说明何处实质使用了“反链”条件。",
+  "answer": "每个排列$\\pi=(\\pi_1,\\dots,\\pi_n)$产生极大链$\\varnothing\\subset\\{\\pi_1\\}\\subset\\cdots\\subset[n]$。对有序对$(A,\\pi)$计数，其中$A\\in\\mathcal F$且$A$出现在$\\pi$对应的链中。若$|A|=k$，则恰有$k!(n-k)!$个排列使$A$出现，因此有序对总数为$\\sum_{A\\in\\mathcal F}|A|!(n-|A|)!$。另一方面，由于$\\mathcal F$是反链，一条极大链至多含有$\\mathcal F$中的一个成员，所以有序对总数至多$n!$。除以$n!$即得$$\\sum_{A\\in\\mathcal F}\\frac1{\\binom n{|A|}}\\le1.$$又因$\\binom n{|A|}\\le\\binom n{\\lfloor n/2\\rfloor}$，故$$\\frac{|\\mathcal F|}{\\binom n{\\lfloor n/2\\rfloor}}\\le\\sum_{A\\in\\mathcal F}\\binom n{|A|}^{-1}\\le1,$$从而得到Sperner上界。反链条件正用于保证每条极大链至多命中一个$\\mathcal F$成员；没有该条件，按排列侧的计数上界$n!$即失效。",
   "subject": "离散数学",
   "source": "generated | standard"
 }

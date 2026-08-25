@@ -1,7 +1,7 @@
 {
   "idx": 42,
-  "problem": "设$F:S^2\to\mathbb R^3$是一个光滑共形浸入，且其平均曲率$H$为常数。证明$F(S^2)$必为一个圆球（允许有重新参数化，但要求说明为何不存在非圆球的CMC二球）。要求使用Hopf二次微分与Codazzi方程，不得直接引用Hopf球面定理。",
-  "answer": "取局部共形坐标$z$，第一基本形式写为$I=e^{2u}|dz|^2$。记第二基本形式的$(2,0)$部分为$Q\,dz^2$，即$Q=\langle F_{zz},N\rangle$。Codazzi方程在共形坐标中给出$Q_{\bar z}=\tfrac12 e^{2u}H_z$（常数因约定可略有差异，但当$H$常数时均有$Q_{\bar z}=0$），故$Q\,dz^2$是$S^2$上的全纯二次微分。由$S^2\cong\mathbb{CP}^1$上不存在非零全纯二次微分（等价于$H^0(S^2,K^{\otimes2})=0$），得$Q\equiv0$。于是浸入处处全脐，形算子$S=H I$。Weingarten公式给$dN=-H\,dF$。若$H=0$，则$dN=0$，法向恒定，像落在一个平面中；但紧致二球不可能浸入为平面中的开闭二维子流形，矛盾。因此$H\ne0$。于是$d(F+N/H)=0$，故$F+N/H=c$为常向量，因而$|F-c|=1/|H|$，像包含于半径$1/|H|$的球面。局部浸入到该球面是局部微分同胚，像又紧且球面连通，所以像为整个圆球。",
-  "subject": "微分几何",
-  "source": "generated | standard"
+  "problem": "设$(\\Omega,\\mathcal F,\\mathbb P)$为概率空间，$\\mathcal F_n\\uparrow\\mathcal F_\\infty:=\\sigma(\\cup_n\\mathcal F_n)$，且$X\\in L^1$。证明$M_n=\\mathbb E[X\\mid\\mathcal F_n]$几乎处处且在$L^1$中收敛到$\\mathbb E[X\\mid\\mathcal F_\\infty]$。随后构造一个非负、$L^1$有界但非一致可积的鞅$(N_n)$，使$N_n\\to0$几乎处处而$\\|N_n\\|_1\\equiv1$，从而说明仅有$L^1$有界不能推出$L^1$收敛。",
+  "answer": "第一部分是Lévy向上定理。先由鞅收敛定理及条件期望族的一致可积性得到$M_n\\to M_\\infty$几乎处处和$L^1$；对任意$A\\in\\cup_n\\mathcal F_n$，当$n$足够大时$A\\in\\mathcal F_n$，故$\\int_A M_n=\\int_A X$。令$n\\to\\infty$并用$L^1$收敛，得$\\int_A M_\\infty=\\int_A X$。再由单调类定理推广到全部$A\\in\\mathcal F_\\infty$，故$M_\\infty=\\mathbb E[X\\mid\\mathcal F_\\infty]$。反例取$\\Omega=(0,1]$配Lebesgue测度，$\\mathcal F_n$为前$n$层二进分割生成的$\\sigma$代数，令$N_n=2^n\\mathbf1_{(0,2^{-n}]}$。在原子$(0,2^{-n}]$上，下一步有一半概率取$2^{n+1}$、一半取0，因此$\\mathbb E[N_{n+1}\\mid\\mathcal F_n]=N_n$；故$(N_n)$为非负鞅。对每个$x>0$，最终$x>2^{-n}$，所以$N_n(x)\\to0$，但$\\mathbb E N_n=1$恒成立，故不可能在$L^1$收敛到0。若其一致可积，则几乎处处收敛结合一致可积会推出$L^1$收敛，矛盾，所以该鞅非一致可积。",
+  "subject": "测度积分",
+  "source": "generated | trap: missing-assumption"
 }

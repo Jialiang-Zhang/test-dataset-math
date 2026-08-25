@@ -1,7 +1,7 @@
 {
   "idx": 72,
-  "problem": "设$p$为素数，$G$为阶$p^3$的非阿贝尔群。证明$|Z(G)|=p$，$G/Z(G)\cong C_p\times C_p$，并进一步证明交换子群$[G,G]=Z(G)$。要求明确指出类方程、商群循环则原群阿贝尔、以及交换子群与中心之间的逻辑关系。",
-  "answer": "由类方程，有限$p$群中心非平凡，故$|Z(G)|$为$p,p^2$或$p^3$。非阿贝尔排除$p^3$。若$|Z(G)|=p^2$，则$G/Z(G)$阶$p$从而循环；而若$G/Z(G)$循环，设其由$xZ(G)$生成，则任意元素写成$x^az_1,x^bz_2$，其中$z_i\in Z(G)$，两者必交换，迫使$G$阿贝尔，矛盾。因此$|Z(G)|=p$。于是$G/Z(G)$阶$p^2$。它不能循环，否则同样推出$G$阿贝尔，所以$G/Z(G)\cong C_p\times C_p$。该商群阿贝尔说明$[G,G]\subseteq Z(G)$；又$G$非阿贝尔，故$[G,G]\ne1$。由于$|Z(G)|=p$，其唯一非平凡子群就是自身，故$[G,G]=Z(G)$。",
+  "problem": "设$p$为奇素数，二面体群$D_{2p}=\\langle r,s\\mid r^p=s^2=1,\\ srs=r^{-1}\\rangle$。完整确定其复不可约特征标：先求共轭类与一维表示，再构造全部二维不可约表示，并用维数平方和与正交性说明没有遗漏。答案必须给出二维特征标在$r^k$与$sr^k$上的显式值。",
+  "answer": "共轭类为$\\{1\\}$、$\\{r^k,r^{-k}\\}$（$1\\le k\\le(p-1)/2$）以及包含全部$p$个反射的单一共轭类，因此共有$(p+3)/2$个不可约特征标。因阿贝尔化$D_{2p}^{\\mathrm{ab}}\\cong C_2$，有两个一维特征标：$\\chi_+(r)=1,\\chi_+(s)=1$与$\\chi_-(r)=1,\\chi_-(s)=-1$。令$\\zeta=e^{2\\pi i/p}$。对$j=1,\\dots,(p-1)/2$定义$\\rho_j(r)=\\operatorname{diag}(\\zeta^j,\\zeta^{-j})$，$\\rho_j(s)=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}$。这些表示不可约且两两不同，特征标为$\\chi_j(r^k)=\\zeta^{jk}+\\zeta^{-jk}=2\\cos(2\\pi jk/p)$，$\\chi_j(sr^k)=0$。已有两个一维表示和$(p-1)/2$个二维表示，其维数平方和为$2\\cdot1^2+\\frac{p-1}{2}\\cdot2^2=2p=|D_{2p}|$，故已穷尽全部不可约表示。",
   "subject": "抽象代数",
-  "source": "generated | trap: converse-error"
+  "source": "generated | standard"
 }

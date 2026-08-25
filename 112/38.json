@@ -1,7 +1,7 @@
 {
   "idx": 38,
-  "problem": "对$a>0$，利用留数定理证明Mittag-Leffler型恒等式\n\[\n\sum_{n\in\mathbb Z}\frac1{n^2+a^2}=\frac{\pi}{a}\coth(\pi a),\n\]\n并据此求出$\sum_{n=1}^{\infty}(n^2+a^2)^{-1}$。要求说明围道如何避开$\pi\cot(\pi z)$的整数极点，并核对$z=\pm ia$处留数的符号。",
-  "answer": "考虑$F(z)=\pi\cot(\pi z)/(z^2+a^2)$，取边长趋于无穷的正方形围道，边界与整数保持固定正距离，因此$\cot(\pi z)$在边界上一致有界，而分母为$O(R^2)$，故围道积分趋于0。$F$在每个整数$n$处的留数为$1/(n^2+a^2)$。又$\cot(\pi ia)=-i\coth(\pi a)$，所以$\operatorname{Res}(F,ia)=\pi(-i\coth\pi a)/(2ia)=-\pi\coth(\pi a)/(2a)$；同理$\operatorname{Res}(F,-ia)=-\pi\coth(\pi a)/(2a)$。由留数定理并令围道扩大，$0=\sum_{n\in\mathbb Z}1/(n^2+a^2)-\pi\coth(\pi a)/a$，从而得到所证恒等式。再分离$n=0$项并利用对称性，\n\[\n\sum_{n=1}^{\infty}\frac1{n^2+a^2}=\frac12\left(\frac{\pi}{a}\coth(\pi a)-\frac1{a^2}\right)=\frac{\pi a\coth(\pi a)-1}{2a^2}.\n\]",
-  "subject": "复分析",
-  "source": "generated | trap: boundary-case"
+  "problem": "在$\\mathbb R$上令$$f_n(x)=\\frac{n}{1+n^2x^2},\\qquad d\\mu_n=f_n(x)\\,dx.$$请证明：$(1)$ $\\mu_n$作为有限Radon测度弱收敛到$\\pi\\delta_0$；$(2)$ 虽然$f_n(x)\\to0$几乎处处且$\\|f_n\\|_{L^1}=\\pi$，但$\\{f_n\\}$在$L^1(\\mathbb R)$中不是一致可积的；$(3)$ $\\{f_n\\}$在$L^1(\\mathbb R)$中甚至不存在弱收敛子列。要求给出完整论证，并解释“作为测度的弱收敛”与“作为$L^1$函数的弱收敛”为何不矛盾。",
+  "answer": "对任意$\\varphi\\in C_c(\\mathbb R)$，令$u=nx$，则$$\\int\\varphi(x)f_n(x)dx=\\int_{\\mathbb R}\\frac{\\varphi(u/n)}{1+u^2}du\\to\\varphi(0)\\int\\frac{du}{1+u^2}=\\pi\\varphi(0),$$由控制收敛定理得$\\mu_n\\Rightarrow\\pi\\delta_0$。又$\\int f_n=\\pi$且$f_n\\to0$于$x\\ne0$。若一致可积，则结合依测度收敛到0可由Vitali定理推出$\\|f_n\\|_1\\to0$，矛盾；也可直接取$E_n=(-1/n,1/n)$，有$m(E_n)=2/n\\to0$但$\\int_{E_n}f_n=\\int_{-1}^{1}(1+u^2)^{-1}du=\\pi/2$。最后若某子列$f_{n_k}\\rightharpoonup g$于$L^1$，则对任意远离0的有界可测集$E$，$\\int_Ef_{n_k}\\to0$，故$g=0$几乎处处于$\\mathbb R\\setminus\\{0\\}$，从而$g=0$几乎处处；但以$1\\in L^\\infty$测试又有$\\int f_{n_k}=\\pi\\to\\int g=0$，矛盾。测度极限$\\pi\\delta_0$不是绝对连续测度，因而不对应任何$L^1$密度，这正是两种弱收敛概念的差别。",
+  "subject": "测度积分",
+  "source": "generated | trap: convergence-direction"
 }

@@ -1,7 +1,7 @@
 {
   "idx": 93,
-  "problem": "记$s_2(n)$为正整数$n$的二进制展开中1的个数，$C_n=\frac1{n+1}\binom{2n}{n}$为第$n$个Catalan数。填空：先用Legendre公式证明$v_2\binom{2n}{n}=\underline{\qquad}$，再推出$v_2(C_n)=\underline{\qquad}$，并由二进制结构刻画$C_n$为奇数的全部$n$。",
-  "answer": "第一空：$s_2(n)$；第二空：$s_2(n)-v_2(n+1)$；且$C_n$为奇数当且仅当$n=2^k-1\ (k\ge0)$。因为$v_2(n!)=n-s_2(n)$且$s_2(2n)=s_2(n)$，故中央二项式的2-adic赋值为$s_2(n)$；而$v_2(n+1)$等于$n$二进制末尾连续1的个数，只有所有1都构成末尾连续块时两者相等。",
-  "subject": "非基础及进阶课程",
-  "source": "generated | standard"
+  "problem": "设$X_1,\\dots,X_n\\overset{iid}\\sim N(\\mu,1)$，检验$H_0:\\mu=0$对单侧备择$H_1:\\mu\\ge0$。求似然比统计量$2\\log\\Lambda$在$H_0$下的精确分布，并解释为什么Wilks定理的通常$\\chi_1^2$极限在这里失效。",
+  "answer": "约束极大似然估计为$\\hat\\mu=\\max(\\bar X,0)$。因此$2\\log\\Lambda=n(\\max(\\bar X,0))^2=(\\max(Z,0))^2$，其中$Z=\\sqrt n\\bar X\\sim N(0,1)$在$H_0$下精确成立。故该统计量以概率$1/2$等于0；在正半轴上其分布等于$\\chi_1^2$的右半部分，即总体分布为$\\frac12\\delta_0+\\frac12\\chi_1^2$。等价地，对$t>0$，$P(2\\log\\Lambda\\le t)=\\Phi(\\sqrt t)$。通常Wilks定理要求真参数位于参数空间内部，而$\\mu=0$恰是约束参数空间$[0,\\infty)$的边界，因此局部二次近似只保留一个方向，产生上述Chernoff混合分布而非纯$\\chi_1^2$。",
+  "subject": "统计推断",
+  "source": "generated | trap: boundary-case"
 }

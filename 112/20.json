@@ -1,7 +1,7 @@
 {
   "idx": 20,
-  "problem": "在$(\mathbb R,\mathcal B,m)$上设$f_n\ge0$且$\int f_n=1$。判断哪些条件足以保证$\{f_n\}$在$L^1(\mathbb R)$中相对弱紧：A. 一致可积且对任意$\varepsilon>0$存在有限测度集$E$使$\sup_n\int_{E^c}f_n<\varepsilon$；B. 仅一致可积；C. 存在$g\in L^1$使$f_n\le g$ a.e.；D. $f_n\to0$逐点且$\int f_n=1$。",
-  "answer": "A,C",
-  "subject": "测度积分",
-  "source": "generated | trap: missing-assumption"
+  "problem": "设$\\mathcal F\\subseteq2^{[n]}$满足任意$A,B\\in\\mathcal F$都有$A\\cap B\\ne\\varnothing$，且$\\mathcal F$是反链。证明$|\\mathcal F|\\le\\binom{n}{\\lfloor n/2\\rfloor}$；进一步说明当$n$为偶数且等号成立时，不能仅由Sperner定理直接推出$\\mathcal F=\\binom{[n]}{n/2}$，并给出利用互补配对排除该候选的论证。",
+  "answer": "由Sperner定理，任意反链均满足$|\\mathcal F|\\le\\binom{n}{\\lfloor n/2\\rfloor}$。当$n=2m$且达到该上界时，Sperner等号情形迫使$\\mathcal F$为全部$m$元子集。可是$m$元子集按$A\\leftrightarrow A^c$成互补对，每对两集合不相交，故全部$m$元子集不可能两两相交。因此在$n$偶数时，给定“两两相交+反链”的额外条件实际上使Sperner上界不能取到；严格地说有$|\\mathcal F|<\\binom{2m}{m}$。关键是区分一般反链的等号结构与加入相交约束后的可实现性。",
+  "subject": "离散数学",
+  "source": "generated | trap: theorem-condition"
 }

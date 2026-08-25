@@ -1,7 +1,7 @@
 {
   "idx": 22,
-  "problem": "设$A\\in\\mathbb R^{m\\times m}$对称正定，考虑线性系统$y'(t)+Ay(t)=0$的BDF2离散：$\\frac{3y_{n+1}-4y_n+y_{n-1}}{2h}+Ay_{n+1}=0$。证明存在只依赖于$(y_{n+1},y_n)$的离散能量$E_n$，使得对任意$h>0$都有$E_{n+1}\\le E_n$，并给出一个显式$E_n$及严格能量恒等式。",
-  "answer": "使用恒等式$2(3a-4b+c,a)=\\|a\\|^2-\\|b\\|^2+\\|2a-b\\|^2-\\|2b-c\\|^2+\\|a-2b+c\\|^2$。将$a=y_{n+1},b=y_n,c=y_{n-1}$代入，并把离散方程与$4hy_{n+1}$作内积，得$E_{n+1}-E_n+\\|y_{n+1}-2y_n+y_{n-1}\\|^2+4h(Ay_{n+1},y_{n+1})=0$，其中可取$E_n=\\|y_n\\|^2+\\|2y_n-y_{n-1}\\|^2$。因$A$正定，后二项非负，故$E_{n+1}\\le E_n$对任意$h>0$成立。",
-  "subject": "数值分析",
+  "problem": "设$X$为$v$元集合，$\\mathcal F=\\{A_1,\\dots,A_m\\}$满足对某个固定整数$\\lambda\\ge0$，任意$i\\ne j$都有$|A_i\\cap A_j|=\\lambda$，且每个$|A_i|>\\lambda$。证明$m\\le v$。要求使用关联矩阵与秩论证，并明确说明为什么对应Gram矩阵正定；不得直接引用Fisher不等式。",
+  "answer": "令$B$为$m\\times v$关联矩阵，第$i$行是$A_i$的示性向量。则$G=BB^T$满足$G_{ii}=|A_i|$、$G_{ij}=\\lambda(i\\ne j)$，故$G=D+\\lambda J$，其中$D=\\operatorname{diag}(|A_i|-\\lambda)$正定而$\\lambda J$半正定。对任意$0\\ne c\\in\\mathbb R^m$，$c^TGc=\\sum_i(|A_i|-\\lambda)c_i^2+\\lambda(\\sum_i c_i)^2>0$，所以$G$正定，$\\operatorname{rank}G=m$。又$G=BB^T$，故$m=\\operatorname{rank}G\\le\\operatorname{rank}B\\le v$。",
+  "subject": "离散数学",
   "source": "generated | standard"
 }

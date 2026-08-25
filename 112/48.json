@@ -1,7 +1,7 @@
 {
   "idx": 48,
-  "problem": "用Crank--Nicolson格式离散一维热方程$u_t=u_{xx}$，空间步长$h$，时间步长$\\tau$，记$r=\\tau/h^2$，齐次Dirichlet边界。内部网格向量满足\n\\[\n(I-\\tfrac r2 L)U^{n+1}=(I+\\tfrac r2 L)U^n,\n\\]\n其中$L$为标准二阶差分矩阵，特征值位于$[-4,0]$。关于该格式，下列说法哪些正确？（多选）\nA. 对任意$r>0$，离散$L^2$范数非增；\nB. 对任意$r>0$，若$U^0\\ge0$逐分量成立，则所有$U^n\\ge0$；\nC. 若$r\\le1$，一步矩阵$(I-\\frac r2L)^{-1}(I+\\frac r2L)$逐项非负，因此保持正性；\nD. 当$r\\to\\infty$时，高频模态的放大因子趋于$-1$而非$0$，所以该方法不是L稳定的时间离散。",
-  "answer": "A,C,D",
-  "subject": "数值分析",
+  "problem": "设$a>0$，考虑旋转曲面$$X(u,v)=\\bigl(a\\cosh(v/a)\\cos u,\\ a\\cosh(v/a)\\sin u,\\ v\\bigr),\\quad 0\\le u<2\\pi,\\ v\\in\\mathbb R.$$请用第一、第二基本形式严格证明该曲面为极小曲面，并求其高斯曲率$K(u,v)$以及全曲面的总曲率$\\int_S K\\,dA$。要求给出单位法向、主曲率（或等价的$H,K$计算），并证明总曲率积分绝对收敛。",
+  "answer": "记$c=\\cosh(v/a),s=\\sinh(v/a)$。有$X_u=(-ac\\sin u,ac\\cos u,0)$，$X_v=(s\\cos u,s\\sin u,1)$，故$E=a^2c^2,F=0,G=s^2+1=c^2$。取单位法向$N=(\\cos u,\\sin u,-s)/c$。二阶导数给出$X_{uu}=(-ac\\cos u,-ac\\sin u,0)$，$X_{uv}=(-s\\sin u,s\\cos u,0)$，$X_{vv}=(c/a\\cos u,c/a\\sin u,0)$，于是$e=\\langle X_{uu},N\\rangle=-a$，$f=0$，$g=1/a$。主曲率为$k_1=e/E=-1/(ac^2)$与$k_2=g/G=1/(ac^2)$，故$H=(k_1+k_2)/2=0$，曲面极小；$K=k_1k_2=-1/(a^2c^4)$。面积元$dA=\\sqrt{EG-F^2}\\,du\\,dv=ac^2\\,du\\,dv$，故$|K|dA=(1/a)c^{-2}\\,du\\,dv$可积，因为$\\int_{-\\infty}^{\\infty}\\operatorname{sech}^2(v/a)dv=2a$。因此$\\int_S KdA=-\\int_0^{2\\pi}\\int_{-\\infty}^{\\infty}(1/a)\\operatorname{sech}^2(v/a)dvdu=-4\\pi$。",
+  "subject": "微分几何",
   "source": "generated | standard"
 }

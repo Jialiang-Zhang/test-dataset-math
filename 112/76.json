@@ -1,7 +1,7 @@
 {
   "idx": 76,
-  "problem": "设$X_1,\dots,X_n\overset{iid}\sim U(0,\theta)$，$\theta>0$，记$M_n=\max_iX_i$。选择所有正确结论：A. $M_n$为$\theta$的MLE；B. $\sqrt n(M_n-\theta)$渐近正态；C. $n(\theta-M_n)/\theta\Rightarrow\mathrm{Exp}(1)$；D. 该模型的似然支持集依赖$\theta$，所以常规Wilks定理不能直接用于以$\theta$为边界参数的似然比统计量。",
-  "answer": "A,C,D",
-  "subject": "统计推断",
-  "source": "generated | trap: theorem-condition"
+  "problem": "设$(B_t)_{t\\ge0}$为标准Brownian运动。对$\\lambda>0,T>0$，求$$E\\exp\\!\\left(-\\lambda\\int_0^T B_t^2\\,dt\\right).$$要求利用Feynman–Kac公式建立抛物型方程，并通过Gaussian Ansatz求得闭式。",
+  "answer": "令$u(t,x)=E_x\\exp(-\\lambda\\int_0^t B_s^2ds)$。Feynman–Kac给$$u_t=\\tfrac12u_{xx}-\\lambda x^2u,\\qquad u(0,x)=1.$$设$u=a(t)e^{-b(t)x^2}$，得到$$b'=\\lambda-2b^2,\\qquad a'/a=-b,\\qquad b(0)=0,a(0)=1.$$故$$b(t)=\\sqrt{\\lambda/2}\\tanh(\\sqrt{2\\lambda}t),\\quad a(t)=\\{\\cosh(\\sqrt{2\\lambda}t)\\}^{-1/2}.$$从$B_0=0$出发，所求为$$\\boxed{\\{\\cosh(\\sqrt{2\\lambda}T)\\}^{-1/2}}.$$",
+  "subject": "随机过程",
+  "source": "generated | standard"
 }

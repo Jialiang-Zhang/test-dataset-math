@@ -1,7 +1,7 @@
 {
   "idx": 51,
-  "problem": "设$(S_n)_{n\\ge0}$为简单对称随机游走，$S_0=i$，其中$0<i<N$，并令$\\tau=\\inf\\{n\\ge0:S_n\\in\\{0,N\\}\\}$。利用两个不同的鞅分别求$\\mathbb P_i(S_\\tau=N)$与$\\mathbb E_i\\tau$。要求说明为什么可对所用停时应用可选停止，而不能只形式地写$\\mathbb E M_\\tau=\\mathbb EM_0$。",
-  "answer": "第一，$S_n$为鞅。对$\\tau_m=\\tau\\wedge m$，可选停止给出$\\mathbb E_iS_{\\tau_m}=i$。由于$0\\le S_{\\tau_m}\\le N$，由支配收敛令$m\\to\\infty$得$\\mathbb E_iS_\\tau=i$。又$S_\\tau\\in\\{0,N\\}$，故$\\mathbb P_i(S_\\tau=N)=i/N$。第二，$M_n=S_n^2-n$为鞅。对$\\tau_m$有$\\mathbb E_i(S_{\\tau_m}^2-\\tau_m)=i^2$，所以$\\mathbb E_i\\tau_m\\le N^2-i^2$。单调收敛得$\\mathbb E_i\\tau<\\infty$；再由$S_{\\tau_m}^2\\to S_\\tau^2$且被$N^2$支配，得到$\\mathbb E_i\\tau=\\mathbb E_iS_\\tau^2-i^2=N^2(i/N)-i^2=i(N-i)$。关键是先对有界停时$\\tau_m$应用定理，再通过有界性与收敛定理取极限。",
-  "subject": "概率论",
+  "problem": "设定向正则曲面$M\\subset\\mathbb R^3$的形算子为$S=-dN$，主曲率为$k_1,k_2$，平均曲率$H=(k_1+k_2)/2$，Gauss曲率$K=k_1k_2$。考虑平行曲面$X_t=X+tN$。在$1-tk_i\\ne0$的区域推导$S_t$、$k_i(t)$、$H_t$、$K_t$及面积元$dA_t$。若$M$紧致且对给定$t$有$1-tk_i>0$处处成立，证明$\\int_{M_t}K_t\\,dA_t=\\int_MK\\,dA$，并解释当$t$跨过焦点$1-tk_i=0$时上述推导为何不能直接延续。",
+  "answer": "有$dX_t=(I-tS)dX$。在$I-tS$可逆处，$N$仍是$M_t$的单位法向，且$S_t=S(I-tS)^{-1}$。因此$k_i(t)=k_i/(1-tk_i)$，从而$K_t=K/[(1-tk_1)(1-tk_2)]=K/(1-2Ht+Kt^2)$，以及$H_t=(H-Kt)/(1-2Ht+Kt^2)$。面积元满足$dA_t=|(1-tk_1)(1-tk_2)|dA$。若两因子均正，则$K_t dA_t=K dA$，积分即得总曲率不变。若某处$1-tk_i=0$，则$dX_t$降秩，$X_t$不再是正则浸入；形算子公式需用$(I-tS)^{-1}$，在该处失效，面积Jacobian也退化，因此不能跨越焦点仍把同一公式当作正则曲面的恒等式。",
+  "subject": "微分几何",
   "source": "generated | standard"
 }

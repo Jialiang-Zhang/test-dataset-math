@@ -1,7 +1,7 @@
 {
   "idx": 24,
-  "problem": "设$M^n$为完备Riemann流形，Ricci曲率满足$\\mathrm{Ric}\\ge (n-1)k>0$。证明任意两点距离不超过$\\pi/\\sqrt{k}$，并由此推出$M$紧致且基本群有限。要求证明中明确使用极小测地线的第二变分，而不能直接引用Bonnet--Myers定理。",
-  "answer": "设$\\gamma:[0,L]\\to M$为两点间单位速极小测地线。取沿$\\gamma$平行的正交标架$E_1,\\dots,E_{n-1}$，令$V_i(t)=\\sin(\\pi t/L)E_i(t)$。极小性给出指标型$I(V_i,V_i)\\ge0$。求和得$0\\le\\int_0^L[(n-1)(\\pi/L)^2\\cos^2(\\pi t/L)-\\mathrm{Ric}(\\dot\\gamma,\\dot\\gamma)\\sin^2(\\pi t/L)]dt\\le (n-1)\\frac L2[(\\pi/L)^2-k]$。故$L\\le\\pi/\\sqrt k$。于是$M$有界；完备Riemann流形由Hopf--Rinow知闭有界集紧，故$M$紧。其万有覆盖带拉回度量仍完备且满足同一Ricci下界，故其直径也至多$\\pi/\\sqrt k$并紧致；紧致空间上的纤维$\\pi^{-1}(p)$是离散闭子集，因而有限，所以deck变换群即$\\pi_1(M)$有限。",
-  "subject": "微分几何",
+  "problem": "设$A\\in\\mathbb R^{n\\times n}$对称正定，其特征值位于$[m,M]$，条件数$\\kappa=M/m$。对方程$Ax=b$应用共轭梯度法。请利用Krylov子空间最优性与Chebyshev多项式极小极大性质证明能量范数误差估计$\\|x_k-x_*\\|_A\\le 2\\left(\\frac{\\sqrt\\kappa-1}{\\sqrt\\kappa+1}\\right)^k\\|x_0-x_*\\|_A$，并指出为何该界不能通过把最速下降法的单步收缩率简单连乘得到。",
+  "answer": "CG的Galerkin最优性给出$\\|e_k\\|_A=\\min_{p\\in\\Pi_k,\\,p(0)=1}\\|p(A)e_0\\|_A\\le \\min_p\\max_{\\lambda\\in[m,M]}|p(\\lambda)|\\,\\|e_0\\|_A$。把$[m,M]$仿射映射到$[-1,1]$，取$p_k(\\lambda)=T_k((M+m-2\\lambda)/(M-m))/T_k((M+m)/(M-m))$。分子在谱区间绝对值不超过1。设$c=(M+m)/(M-m)>1$，利用$T_k(c)=\\frac12[(c+\\sqrt{c^2-1})^k+(c-\\sqrt{c^2-1})^k]$得$1/|T_k(c)|\\le2(c-\\sqrt{c^2-1})^k=2((\\sqrt\\kappa-1)/(\\sqrt\\kappa+1))^k$，故结论成立。最速下降的单步因子来自每一步在当前梯度方向上的局部最优，而CG在整个Krylov子空间上作全局多项式最优，方向间具有$A$-共轭性；因此其界不是单步最速下降收缩率的机械乘积。",
+  "subject": "数值分析",
   "source": "generated | standard"
 }

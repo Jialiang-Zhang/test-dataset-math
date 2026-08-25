@@ -1,7 +1,7 @@
 {
   "idx": 5,
-  "problem": "设$G$是一个$d$-正则图，顶点数为$n$，邻接矩阵特征值满足$d=\lambda_1\ge \lambda_2\ge\cdots\ge\lambda_n$。设$S\subseteq V(G)$为独立集。请利用Rayleigh商与正交分解严格证明Hoffman界：若$\lambda_n<0$，则$|S|\le \frac{-\lambda_n}{d-\lambda_n}n$；并证明等号成立时，独立集示性向量在去掉常数分量后必属于$\lambda_n$对应特征子空间。",
-  "answer": "令$\mathbf 1_S$为$S$的示性向量，写$\mathbf 1_S=\frac{|S|}{n}\mathbf 1+z$，其中$z\perp\mathbf 1$。因$G$为$d$-正则，$A\mathbf 1=d\mathbf 1$；又$S$独立，故$\mathbf 1_S^TA\mathbf 1_S=0$。于是$0=d|S|^2/n+z^TAz\ge d|S|^2/n+\lambda_n\|z\|^2$。而$\|z\|^2=|S|-|S|^2/n$。代入得$0\ge d|S|^2/n+\lambda_n(|S|-|S|^2/n)=\frac{d-\lambda_n}{n}|S|^2+\lambda_n|S|$。因$|S|>0$，得到$|S|\le \frac{-\lambda_n}{d-\lambda_n}n$。若等号成立，则Rayleigh下界也必须取等，即$z^TAz=\lambda_n\|z\|^2$。对实对称矩阵这当且仅当$z$完全落在$\lambda_n$特征子空间中。",
+  "problem": "设完全多部图$K_{n_1,\\dots,n_k}$的第$i$个部大小为$n_i\\ge1$，总顶点数$n=\\sum_{i=1}^k n_i$，且$k\\ge2$。请利用拉普拉斯矩阵的谱分解与矩阵树定理，严格证明其生成树数为$$\\tau(K_{n_1,\\dots,n_k})=n^{k-2}\\prod_{i=1}^k (n-n_i)^{n_i-1}.$$要求明确给出拉普拉斯算子在“各部内和为零”的子空间与“各部常数”子空间上的作用，并说明零特征值与非零特征值的重数。",
+  "answer": "记$V_i$为第$i$部。对每个$i$，令$W_i$为仅支撑在$V_i$且坐标和为$0$的向量空间，$\\dim W_i=n_i-1$。若$x\\in W_i$，则对$v\\in V_i$有$(Lx)_v=(n-n_i)x_v$，而其他部坐标为$0$，故$n-n_i$是特征值，重数至少$n_i-1$。这些$W_i$直和维数为$n-k$。其正交补$U$由“每一部上取常数”的向量组成，维数$k$。若$x$在$V_i$上常值$c_i$，记$S=\\sum_j n_jc_j$，则对$v\\in V_i$有$(Lx)_v=(n-n_i)c_i-\\sum_{j\\ne i}n_jc_j=nc_i-S$。因此在$U$上，$L$对应映射$c\\mapsto nc-S\\mathbf1$。常数向量给出特征值$0$；若$\\sum_jn_jc_j=0$，则$Lc=nc$，故$n$为特征值，重数$k-1$。于是拉普拉斯谱为$0$一次、$n$重数$k-1$，以及$n-n_i$重数$n_i-1$。矩阵树定理的谱形式给出$\\tau=\\frac1n\\prod_{\\lambda\\ne0}\\lambda=\\frac1n\\,n^{k-1}\\prod_i(n-n_i)^{n_i-1}=n^{k-2}\\prod_i(n-n_i)^{n_i-1}$。维数总和$1+(k-1)+\\sum_i(n_i-1)=n$，故无遗漏。",
   "subject": "离散数学",
-  "source": "generated | trap: theorem-condition"
+  "source": "generated | standard"
 }

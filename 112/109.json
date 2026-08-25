@@ -1,7 +1,7 @@
 {
   "idx": 109,
-  "problem": "证明Bohr--Mollerup定理：若$f:(0,\\infty)\\to(0,\\infty)$满足$f(1)=1$、$f(x+1)=xf(x)$，且$\\log f$为凸函数，则$f(x)=\\Gamma(x)$。要求不能把结论当作已知唯一性定理直接引用；应从凸性给出对$f(x)$的上下夹逼并导出Euler极限。最后说明Gamma函数本身为何满足这些条件。",
-  "answer": "令$\\phi=\\log f$。先取$0<x\\le1$。对整数$n\\ge2$，凸性给相邻割线斜率夹逼$x[\\phi(n)-\\phi(n-1)]\\le\\phi(n+x)-\\phi(n)\\le x[\\phi(n+1)-\\phi(n)]$。由递推关系，两侧斜率分别为$\\log(n-1)$与$\\log n$。又$f(n+x)=x(x+1)\\cdots(x+n-1)f(x)$且$f(n)=(n-1)!$，故$\\frac{(n-1)!(n-1)^x}{x(x+1)\\cdots(x+n-1)}\\le f(x)\\le\\frac{(n-1)!n^x}{x(x+1)\\cdots(x+n-1)}$。两端之比$(n/(n-1))^x\\to1$，夹逼得到$f(x)=\\lim_{n\\to\\infty}\\frac{(n-1)!n^x}{x(x+1)\\cdots(x+n-1)}$，即Euler极限定义的$\\Gamma(x)$。任意$x>1$由递推反复降到$(0,1]$。反过来$\\Gamma(1)=1$，分部积分给$\\Gamma(x+1)=x\\Gamma(x)$；Hölder不等式给$\\Gamma(\\lambda x+(1-\\lambda)y)\\le\\Gamma(x)^\\lambda\\Gamma(y)^{1-\\lambda}$，故$\\log\\Gamma$凸。因此Gamma满足全部条件且唯一。",
-  "subject": "数学分析",
-  "source": "generated | standard"
+  "problem": "设$p,q\\ge2$互素，$K_{p,q}$为$S^3$中的$(p,q)$-torus knot。证明$\\pi_1(S^3\\setminus K_{p,q})\\cong\\langle a,b\\mid a^p=b^q\\rangle$。进一步计算其阿贝尔化，并证明中心包含由$a^p=b^q$生成的无限循环子群；说明为什么互素条件保证阿贝尔化为$\\mathbb Z$而不是带额外有限挠部分。",
+  "answer": "把$S^3$按包含结的公共环面分为两个实心环面并删去结的管状邻域，取两开集分别变形收缩到两侧核心圆。交集中的结方向在两侧基本群中分别映为$a^p,b^q$，Seifert--van Kampen给出$\\langle a,b\\mid a^p=b^q\\rangle$。阿贝尔化为$\\mathbb Z^2/\\langle(p,-q)\\rangle\\cong\\mathbb Z\\oplus\\mathbb Z/\\gcd(p,q)$，互素时即$\\mathbb Z$。令$z=a^p=b^q$，它与$a,b$均交换，故居于中心；其在阿贝尔化中的像为$pq$倍生成元，非零，故$z$有无限阶。",
+  "subject": "拓扑学",
+  "source": "generated | trap: coprimality"
 }

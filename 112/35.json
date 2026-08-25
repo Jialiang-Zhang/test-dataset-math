@@ -1,7 +1,7 @@
 {
   "idx": 35,
-  "problem": "设$(M_t)_{t\ge0}$是连续局部鞅，$M_0=0$，且二次变差满足$\langle M\rangle_t=t$。证明$M$是相对于其原滤过的标准Brownian运动。要求从指数鞅出发证明增量的条件特征函数，而不是直接引用Lévy刻画定理。",
-  "answer": "对任意$\theta\in\mathbb R$，Itô公式给出$Z_t=\exp(i\theta M_t+\frac12\theta^2\langle M\rangle_t)$为局部鞅。因在任意有限时间区间上$|Z_t|=\exp(\theta^2t/2)$有界，故它是真鞅。于是对$0\le s<t$，$E[Z_t\mid\mathcal F_s]=Z_s$。代入$\langle M\rangle_t=t$并整理得$E[\exp(i\theta(M_t-M_s))\mid\mathcal F_s]=\exp(-\frac12\theta^2(t-s))$。右端是$N(0,t-s)$的特征函数且与$\mathcal F_s$无关，所以$M_t-M_s$条件于$\mathcal F_s$仍服从$N(0,t-s)$，从而该增量独立于$\mathcal F_s$。因此$M$具有独立平稳Gaussian增量，$M_0=0$且路径连续，故$M$是标准Brownian运动。",
-  "subject": "概率论",
-  "source": "generated | trap: theorem-condition"
+  "problem": "用Crank--Nicolson格式离散一维热方程$u_t=u_{xx}$，空间步长$h$，时间步长$\\tau$，记$r=\\tau/h^2$，齐次Dirichlet边界。内部网格向量满足\\n\\[\\n(I-\\tfrac r2 L)U^{n+1}=(I+\\tfrac r2 L)U^n,\\n\\]\\n其中$L$为标准二阶差分矩阵，特征值位于$[-4,0]$。关于该格式，下列说法哪些正确？（多选）\\nA. 对任意$r>0$，离散$L^2$范数非增；\\nB. 对任意$r>0$，若$U^0\\ge0$逐分量成立，则所有$U^n\\ge0$；\\nC. 若$r\\le1$，一步矩阵$(I-\\frac r2L)^{-1}(I+\\frac r2L)$逐项非负，因此保持正性；\\nD. 当$r\\to\\infty$时，高频模态的放大因子趋于$-1$而非$0$，所以该方法不是L稳定的时间离散。",
+  "answer": "A,C,D",
+  "subject": "数值分析",
+  "source": "generated | standard"
 }

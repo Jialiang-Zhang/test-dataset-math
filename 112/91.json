@@ -1,7 +1,7 @@
 {
   "idx": 91,
-  "problem": "在线性模型$Y=X\beta+\varepsilon$中，$X\in\mathbb R^{n\times p}$满列秩，$\varepsilon\sim N(0,\sigma^2I_n)$，$n>p$。对满行秩$R\in\mathbb R^{q\times p}$检验$H_0:R\beta=r$。推导精确$F$统计量的分布，并给出固定备择下的非中心参数。要求用正交投影/Cochran定理说明分子与残差平方和的独立性。",
-  "answer": "令$\hat\beta=(X^TX)^{-1}X^TY$，$V=R(X^TX)^{-1}R^T$。则$Q=(R\hat\beta-r)^TV^{-1}(R\hat\beta-r)$。在$H_0$下$Q/\sigma^2\sim\chi_q^2$；残差平方和$\mathrm{SSE}=\|(I-P_X)Y\|^2$满足$\mathrm{SSE}/\sigma^2\sim\chi_{n-p}^2$。前者只依赖$P_X\varepsilon$在与约束对应的$q$维子空间上的投影，后者依赖$(I-P_X)\varepsilon$，两正交高斯投影独立，故$F=\frac{Q/q}{\mathrm{SSE}/(n-p)}\sim F_{q,n-p}$。在一般固定$\beta$下，分子为非中心$\chi_q^2(\lambda)$，其中$\lambda=(R\beta-r)^TV^{-1}(R\beta-r)/\sigma^2$，因此$F\sim F_{q,n-p}(\lambda)$。",
-  "subject": "线性回归",
-  "source": "generated | standard"
+  "problem": "考虑无阻尼单摆$\\theta''+\\sin\\theta=0$。对振荡能量$E\\in(0,2)$，令$T(E)$为最小正周期。严格推导$T(E)$的第一类完全椭圆积分表示，并求临界能量$E\\uparrow2$时的主导发散：给出$T(E)$关于$2-E$的精确对数主项。要求从能量守恒出发，而不能直接引用单摆周期公式。",
+  "answer": "能量守恒为$\\frac12\\theta'^2+1-\\cos\\theta=E$。令$k=\\sqrt{E/2}\\in(0,1)$，转折角$\\theta_m$满足$\\sin(\\theta_m/2)=k$。于是$\\theta'^2=4(k^2-\\sin^2(\\theta/2))$。四分之一周期为$T/4=\\int_0^{\\theta_m}\\frac{d\\theta}{2\\sqrt{k^2-\\sin^2(\\theta/2)}}$。令$\\sin(\\theta/2)=k\\sin\\phi$，则$T/4=\\int_0^{\\pi/2}(1-k^2\\sin^2\\phi)^{-1/2}d\\phi=K(k)$，故$T(E)=4K(\\sqrt{E/2})$。当$E\\uparrow2$，余模$k'=\\sqrt{1-k^2}=\\sqrt{(2-E)/2}$。端点渐近给$K(k)=\\log(4/k')+O(k'^2\\log(1/k'))$，因此$T(E)=4\\log\\left(4\\sqrt{\\frac2{2-E}}\\right)+O((2-E)\\log\\frac1{2-E})=2\\log\\frac{32}{2-E}+O((2-E)\\log\\frac1{2-E})$。",
+  "subject": "常微分方程",
+  "source": "generated | trap: boundary-case"
 }

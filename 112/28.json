@@ -1,7 +1,7 @@
 {
   "idx": 28,
-  "problem": "设$M\\subset\\mathbb R^3$是紧致、连通、可定向、无边界的光滑曲面，Gauss曲率$K>0$处处成立。证明Gauss映射$N:M\\to S^2$是覆盖映射，进而是微分同胚；由此推出$M$同胚于$S^2$且\\n\\[\\n\\int_M K\\,dA=4\\pi.\\n\\]\\n要求说明每一步中紧致性、$K>0$与$S^2$单连通分别在哪里使用；并解释若仅假设$K\\ge0$，哪一步可能失效。",
-  "answer": "因$dN_p=-S_p$且$\\det S_p=K(p)>0$，所以$dN_p$处处可逆，$N$是局部微分同胚。紧致性使$N$为proper映射；proper局部微分同胚的像既开又闭，而$S^2$连通，故$N$满射并成为覆盖映射。又$M$连通，所以得到连通覆盖$N:M\\to S^2$。由于$S^2$单连通，其任意连通覆盖都是一层覆盖，因此$N$为微分同胚，故$M\\cong S^2$。面积公式给$N^*(dA_{S^2})=K\\,dA_M$，于是$\\int_MK\\,dA=\\int_{S^2}dA=4\\pi$。各条件用途：$K>0$保证$dN$无奇点；紧致性保证proper并配合局部微分同胚得到覆盖；$S^2$单连通把覆盖强制为一层。若仅$K\\ge0$，可在$K=0$处出现$dN$退化，Gauss映射未必是局部微分同胚，因此覆盖论证首先失效。",
-  "subject": "微分几何",
+  "problem": "两阶段Gauss-Legendre Runge-Kutta方法的稳定函数为$$R(z)=\\frac{1+z/2+z^2/12}{1-z/2+z^2/12}.$$请不引用现成的A稳定性结论，直接从该有理函数证明：对所有$\\operatorname{Re}z\\le0$均有$|R(z)|\\le1$，从而该方法A稳定；并证明它不是L稳定。要求给出一个只依赖$z$及$\\bar z$的模平方恒等式，而不是只检查虚轴。",
+  "answer": "记$a=1+z^2/12$，$b=z/2$，则分母为$a-b$、分子为$a+b$。利用$$|a-b|^2-|a+b|^2=-4\\operatorname{Re}(a\\bar b),$$得到$$|1-z/2+z^2/12|^2-|1+z/2+z^2/12|^2=-2\\operatorname{Re}\\!\\left(\\bar z+\\frac{z^2\\bar z}{12}\\right).$$因$z^2\\bar z=z|z|^2$，右端化为$$-2(\\operatorname{Re}z)\\left(1+\\frac{|z|^2}{12}\\right).$$当$\\operatorname{Re}z\\le0$时该量非负，因此分母模不小于分子模。还需检查稳定函数在闭左半平面无极点：分母方程$1-z/2+z^2/12=0$等价于$z^2-6z+12=0$，两根为$3\\pm i\\sqrt3$，均位于右半平面。故对所有$\\operatorname{Re}z\\le0$确有$|R(z)|\\le1$，方法A稳定。另一方面，当$|z|\\to\\infty$时分子与分母最高次项同为$z^2/12$，故$R(z)\\to1\\ne0$。L稳定要求A稳定且沿左半平面无穷远处$R(z)\\to0$，所以该方法不是L稳定。",
+  "subject": "数值分析",
   "source": "generated | trap: theorem-condition"
 }

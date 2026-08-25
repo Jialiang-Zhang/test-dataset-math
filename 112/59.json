@@ -1,7 +1,7 @@
 {
   "idx": 59,
-  "problem": "设$M\subset\mathbb R^3$为光滑、紧致、无边界、可定向的嵌入环面。证明其高斯曲率$K$不可能处处为正；进一步证明$K$也不可能处处非负且在某点严格为正。要求明确使用Gauss--Bonnet定理，并解释第二个结论为何不是第一个结论的直接同义改写。",
-  "answer": "环面Euler示性数$\chi(M)=0$，故Gauss--Bonnet给出$\int_MK\,dA=2\pi\chi(M)=0$。若$K>0$处处，则积分严格为正，矛盾。若$K\ge0$处处且在某点$p$有$K(p)>0$，由连续性存在邻域$U$及$c>0$使$K\ge c$于$U$，于是$\int_MK\,dA\ge c\operatorname{Area}(U)>0$，仍矛盾。因此若$K\ge0$处处，只能$K\equiv0$。第二步额外使用连续性把一点严格正提升为正测度邻域上的正下界。",
-  "subject": "微分几何",
-  "source": "generated | trap: local-vs-global"
+  "problem": "设$X_t=B_t+\\mu t$，其中$B_t$为标准布朗运动，$\\mu\\in\\mathbb R$，并令$$\\tau=\\inf\\{t\\ge0:|X_t|=a\\},\\qquad a>0.$$从$X_0=0$出发，利用无穷小生成元与边值问题严格推导：(1) 对任意$\\lambda\\ge0$，$\\mathbb E_0[e^{-\\lambda\\tau}]$的精确解析式；(2) 当$\\mu\\ne0$时首先从$+a$端点退出的概率。要求说明边界条件与唯一性。",
+  "answer": "生成元为$\\mathcal L=\\frac12\\partial_{xx}+\\mu\\partial_x$。令$u(x)=\\mathbb E_x[e^{-\\lambda\\tau}]$，由Feynman-Kac/Dynkin公式，$u$在$(-a,a)$满足$$\\frac12u''+\\mu u'=\\lambda u,\\qquad u(\\pm a)=1.$$令$u=e^{-\\mu x}v$，得$v''=(\\mu^2+2\\lambda)v$。记$\\kappa=\\sqrt{\\mu^2+2\\lambda}$，则$v=A\\cosh(\\kappa x)+B\\sinh(\\kappa x)$。边界$v(a)=e^{\\mu a},v(-a)=e^{-\\mu a}$给出$$A=\\frac{\\cosh(\\mu a)}{\\cosh(\\kappa a)},$$故$$\\mathbb E_0[e^{-\\lambda\\tau}]=u(0)=\\frac{\\cosh(\\mu a)}{\\cosh(a\\sqrt{\\mu^2+2\\lambda})}.$$对退出概率$h(x)=\\mathbb P_x(X_\\tau=a)$，有$\\mathcal Lh=0$，$h(-a)=0,h(a)=1$。当$\\mu\\ne0$时$$h(x)=\\frac{1-e^{-2\\mu(x+a)}}{1-e^{-4\\mu a}},$$所以$$h(0)=\\frac{1-e^{-2\\mu a}}{1-e^{-4\\mu a}}=\\frac1{1+e^{-2\\mu a}}.$$两个二阶线性Dirichlet边值问题均由常微分方程唯一性（或最大值原理）唯一确定。",
+  "subject": "概率论",
+  "source": "generated | standard"
 }

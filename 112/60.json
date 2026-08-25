@@ -1,7 +1,7 @@
 {
   "idx": 60,
-  "problem": "设$X_t=\mu t+\sigma B_t$，$\sigma>0$，从$X_0=x\in(a,b)$出发，$\tau=\inf\{t\ge0:X_t\notin(a,b)\}$。当$\mu\ne0$时，利用指数鞅或生成元边值问题求$\mathbb P_x(X_\tau=b)$；并给出$\mu\to0$的极限，说明为什么直接把有漂移公式中的分子分母分别令$\mu=0$会形成$0/0$而必须取极限。",
-  "answer": "命中概率$u(x)$满足$(\sigma^2/2)u''+\mu u'=0$，$u(a)=0,u(b)=1$。积分得$u(x)=\frac{1-e^{-2\mu(x-a)/\sigma^2}}{1-e^{-2\mu(b-a)/\sigma^2}}$。亦可对适当指数鞅在$\tau\wedge n$停时后取极限得到同式。令$\mu\to0$，用$1-e^{-cy}\sim cy$，得到$u(x)=(x-a)/(b-a)$。漂移为零是可去奇点而非直接代入。",
+  "problem": "设$\\{B_t^{\\circ}:0\\le t\\le1\\}$为标准Brownian bridge，即可视为在条件$W_1=0$下的标准Brownian运动轨道。对$a>0$，严格推导$$\\mathbb P\\!\\left(\\max_{0\\le t\\le1}B_t^{\\circ}\\le a\\right),$$要求从Brownian运动吸收壁的反射原理或Dirichlet热核出发，而不是直接引用Brownian bridge最大值分布。",
+  "answer": "对标准Brownian运动$W$，记自由热核$p_t(x,y)=(2\\pi t)^{-1/2}e^{-(y-x)^2/(2t)}$。在上壁$a$处吸收且从$0<a$出发的Dirichlet热核由反射原理给出$$p_t^{(-\\infty,a)}(0,y)=p_t(0,y)-p_t(0,2a-y),\\qquad y<a.$$Brownian bridge可由条件密度极限定义，因此$$\\mathbb P\\!\\left(\\max_{0\\le s\\le1}B_s^{\\circ}<a\\right)=\\frac{p_1^{(-\\infty,a)}(0,0)}{p_1(0,0)}.$$代入$y=0$得$$p_1^{(-\\infty,a)}(0,0)=p_1(0,0)-p_1(0,2a)=\\frac1{\\sqrt{2\\pi}}\\left(1-e^{-2a^2}\\right).$$故$$\\mathbb P\\!\\left(\\max_{0\\le t\\le1}B_t^{\\circ}\\le a\\right)=1-e^{-2a^2}.$$由于最大值分布连续，$<$与$\\le$无差别。",
   "subject": "概率论",
-  "source": "generated | trap: boundary-case"
+  "source": "generated | standard"
 }
