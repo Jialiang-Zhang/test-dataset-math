@@ -35,9 +35,6 @@ jobs:
           assert len(set(selected_ids)) == 112
 
           def repair_json_text(raw: str) -> str:
-              # Historical source files contain a mixture of valid JSON escapes
-              # and raw LaTeX backslashes. Double every lone backslash inside
-              # strings while preserving escaped quotes and existing \\ pairs.
               out = []
               in_string = False
               i = 0
@@ -49,7 +46,6 @@ jobs:
                           in_string = True
                       i += 1
                       continue
-
                   if ch == '"':
                       out.append(ch)
                       in_string = False
@@ -76,19 +72,15 @@ jobs:
                   matches = list(Path('development').glob(f'*/{old_idx}.json'))
                   assert len(matches) == 1, (old_idx, matches)
                   raw = matches[0].read_text(encoding='utf-8')
-                  repaired = repair_json_text(raw)
-                  obj = json.loads(repaired)
-
+                  obj = json.loads(repair_json_text(raw))
                   assert set(obj.keys()) == set(required), (old_idx, obj.keys())
                   assert obj['subject'] == subject, (old_idx, obj['subject'], subject)
                   assert isinstance(obj['problem'], str) and obj['problem'].strip()
                   assert isinstance(obj['answer'], str) and obj['answer'].strip()
                   assert isinstance(obj['source'], str) and obj['source'].strip()
-
                   normalized = re.sub(r'\s+', ' ', obj['problem']).strip()
                   assert normalized not in seen_problems, f'duplicate problem at source idx {old_idx}'
                   seen_problems.add(normalized)
-
                   rows.append(obj)
                   actual_subjects[subject] += 1
 
@@ -114,7 +106,6 @@ jobs:
                   encoding='utf-8',
               )
 
-          # Parse every output again: valid JSON, exact fields, filename == idx.
           for i in range(112):
               p = tmp / f'{i}.json'
               obj = json.loads(p.read_text(encoding='utf-8'))
@@ -128,44 +119,43 @@ jobs:
               shutil.move(str(p), root / p.name)
           tmp.rmdir()
 
-          readme = '''# 112-question high-difficulty benchmark
-
-本目录已重新构建为 112 道高难度、高区分度数学题。文件名与内部 `idx` 完全一致，连续编号为 `0` 至 `111`。
-
-每条 JSON 严格且仅包含：
-
-`idx`、`problem`、`answer`、`subject`、`source`
-
-## 学科配额与编号范围
-
-- `0`–`23`：离散数学（24）
-- `24`–`36`：数值分析（13）
-- `37`–`47`：测度积分（11）
-- `48`–`56`：微分几何（9）
-- `57`–`64`：概率论（8）
-- `65`–`72`：抽象代数（8）
-- `73`–`79`：随机过程（7）
-- `80`–`86`：复分析（7）
-- `87`–`91`：常微分方程（5）
-- `92`–`95`：统计推断（4）
-- `96`–`99`：泛函分析（4）
-- `100`–`102`：线性回归（3）
-- `103`–`105`：偏微分方程（3）
-- `106`：高等代数（1）
-- `107`：运筹学（1）
-- `108`：数学分析（1）
-- `109`：拓扑学（1）
-- `110`–`111`：非基础及进阶课程（2）
-
-合计：112 道。
-
-## 质量约束
-
-- 题目主要选自 `development/` 中已经过多轮复核的高难题。
-- 排除基础定义回忆、一步套公式、机械计算和明显数字换皮题。
-- 输出阶段重新解析全部文件，验证 JSON 合法性、五字段约束以及 `文件名 = idx`。
-'''
-          (root / 'README.md').write_text(readme, encoding='utf-8')
+          readme_lines = [
+              '# 112-question high-difficulty benchmark',
+              '',
+              '本目录已重新构建为 112 道高难度、高区分度数学题。文件名与内部 `idx` 完全一致，连续编号为 `0` 至 `111`。',
+              '',
+              '每条 JSON 严格且仅包含：`idx`、`problem`、`answer`、`subject`、`source`。',
+              '',
+              '## 学科配额与编号范围',
+              '',
+              '- `0`–`23`：离散数学（24）',
+              '- `24`–`36`：数值分析（13）',
+              '- `37`–`47`：测度积分（11）',
+              '- `48`–`56`：微分几何（9）',
+              '- `57`–`64`：概率论（8）',
+              '- `65`–`72`：抽象代数（8）',
+              '- `73`–`79`：随机过程（7）',
+              '- `80`–`86`：复分析（7）',
+              '- `87`–`91`：常微分方程（5）',
+              '- `92`–`95`：统计推断（4）',
+              '- `96`–`99`：泛函分析（4）',
+              '- `100`–`102`：线性回归（3）',
+              '- `103`–`105`：偏微分方程（3）',
+              '- `106`：高等代数（1）',
+              '- `107`：运筹学（1）',
+              '- `108`：数学分析（1）',
+              '- `109`：拓扑学（1）',
+              '- `110`–`111`：非基础及进阶课程（2）',
+              '',
+              '合计：112 道。',
+              '',
+              '## 质量约束',
+              '',
+              '- 题目选自 `development/` 中已经过多轮复核的高难题。',
+              '- 排除基础定义回忆、一步套公式、机械计算和明显数字换皮题。',
+              '- 输出阶段重新解析全部文件，验证 JSON 合法性、五字段约束以及 `文件名 = idx`。',
+          ]
+          (root / 'README.md').write_text('\n'.join(readme_lines) + '\n', encoding='utf-8')
           PY
 
       - name: Commit rebuilt dataset
