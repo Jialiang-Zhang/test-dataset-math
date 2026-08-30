@@ -1,0 +1,4 @@
+run=2
+marker_scheme=pure_letter_base26
+beams=4
+renormalize_logits=true
