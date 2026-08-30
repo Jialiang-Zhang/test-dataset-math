@@ -1,7 +1,5 @@
-run=3
-marker_scheme=chinese_generic_ordered
-formula_marker=【数学公式占位】
-number_marker=【数值占位】
-term_marker=【数学术语占位】
+run=4
+marker_scheme=natural_chinese_entity_labels
+examples=公式甲_公式乙_数值甲_术语甲
 beams=4
 renormalize_logits=true
