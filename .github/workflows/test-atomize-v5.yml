@@ -1,0 +1,71 @@
+name: Audit atomization v5
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - build/open-zh-atomic-p3
+    paths:
+      - open_zh_atomic/ATOM_V5_TRIGGER
+      - .github/workflows/test-atomize-v5.yml
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Rebuild and atomize v5
+        run: |
+          rm -rf /tmp/atom-v5
+          mkdir -p /tmp/atom-v5/raw
+          python open_zh_atomic/build_sources.py --output-dir /tmp/atom-v5/raw
+          python open_zh_atomic/atomize_v5.py \
+            --input /tmp/atom-v5/raw/all_open_p3_exact_unique.jsonl \
+            --output /tmp/atom-v5/prepared.jsonl \
+            --report /tmp/atom-v5/report.json
+          cat /tmp/atom-v5/report.json
+      - name: Enforce list and structured-answer regressions
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          rows=[json.loads(x) for x in Path('/tmp/atom-v5/prepared.jsonl').read_text(encoding='utf-8').splitlines() if x.strip()]
+          report=json.loads(Path('/tmp/atom-v5/report.json').read_text())
+          assert report['source_rows']==16992 and report['coverage_source_rows']==16992, report
+          assert report['residual_multiquestion_rows']==0, report
+          def get(sid): return [r for r in rows if r.get('source_id')==sid]
+          # Numbered matching list: five independent statements.
+          assert len(get('UGMathBench-Algebra_0003-v1'))==5, get('UGMathBench-Algebra_0003-v1')
+          # T/F list: seven independent statements.
+          assert len(get('UGMathBench-Algebra_0005-v1'))==7, get('UGMathBench-Algebra_0005-v1')
+          # Inline a)/b) equations.
+          assert len(get('UGMathBench-Algebra_0072-v1'))==2, get('UGMathBench-Algebra_0072-v1')
+          # Repeated definitions.
+          assert len(get('UGMathBench-Algebra_0025-v1'))==6, get('UGMathBench-Algebra_0025-v1')
+          # Separate arithmetic expressions.
+          assert len(get('UGMathBench-Algebra_0051-v1'))==2, get('UGMathBench-Algebra_0051-v1')
+          # Five separate lines, but slope+intercept remain one structured answer per line.
+          slope=get('UGMathBench-Algebra_0126-v1')
+          assert len(slope)==5 and all(x['atomic_source_problem'].count('[ANS]')==2 for x in slope), slope
+          # One pair stays one task.
+          pair=get('UGMathBench-Abstract_algebra_0009-v1')
+          assert len(pair)==1 and pair[0]['atomic_source_problem'].count('[ANS]')==2, pair
+          # One piecewise function stays one task despite five fields.
+          piece=get('UGMathBench-Algebra_0164-v1')
+          assert len(piece)==1 and piece[0]['atomic_source_problem'].count('[ANS]')==5, piece
+          print({'atomic_rows':len(rows),'split_parents':report['split_parent_rows'],'reasons':report['recursive_split_node_reasons']})
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: atomization-v5-audit
+          path: /tmp/atom-v5/
+          retention-days: 7
