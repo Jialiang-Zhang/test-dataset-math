@@ -1,0 +1,70 @@
+name: Audit atomization v6
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - build/open-zh-atomic-p3
+    paths:
+      - open_zh_atomic/ATOM_V6_TRIGGER
+      - .github/workflows/test-atomize-v6.yml
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Rebuild and atomize v6
+        run: |
+          rm -rf /tmp/atom-v6
+          mkdir -p /tmp/atom-v6/raw
+          python open_zh_atomic/build_sources.py --output-dir /tmp/atom-v6/raw
+          python open_zh_atomic/atomize_v6.py \
+            --input /tmp/atom-v6/raw/all_open_p3_exact_unique.jsonl \
+            --output /tmp/atom-v6/prepared.jsonl \
+            --report /tmp/atom-v6/report.json
+          cat /tmp/atom-v6/report.json
+      - name: Enforce strict one-ask regressions
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          rows=[json.loads(x) for x in Path('/tmp/atom-v6/prepared.jsonl').read_text(encoding='utf-8').splitlines() if x.strip()]
+          report=json.loads(Path('/tmp/atom-v6/report.json').read_text())
+          assert report['source_rows']==16992 and report['coverage_source_rows']==16992, report
+          assert report['residual_multiquestion_rows']==0, report
+          def get(sid): return [r for r in rows if r.get('source_id')==sid]
+          assert len(get('UGMathBench-Algebra_0003-v1'))==5
+          assert len(get('UGMathBench-Algebra_0005-v1'))==7
+          assert len(get('UGMathBench-Algebra_0072-v1'))==2
+          assert len(get('UGMathBench-Algebra_0025-v1'))==6
+          assert len(get('UGMathBench-Algebra_0051-v1'))==2
+          # Five lines × two named targets = ten one-ask rows, each retaining its line equation.
+          slope=get('UGMathBench-Algebra_0126-v1')
+          assert len(slope)==10, slope
+          equations=['3 y-12x=6','y=8x+3','3 y-24x=-15','3 y+12x=6','y=5x+1']
+          for eq in equations:
+              children=[r for r in slope if eq in r['atomic_source_problem']]
+              assert len(children)==2, (eq,children)
+              assert all(x['atomic_source_problem'].count('[ANS]')==1 for x in children), children
+          # Structured single-object answers remain intact.
+          pair=get('UGMathBench-Abstract_algebra_0009-v1')
+          assert len(pair)==1 and pair[0]['atomic_source_problem'].count('[ANS]')==2, pair
+          piece=get('UGMathBench-Algebra_0164-v1')
+          assert len(piece)==1 and piece[0]['atomic_source_problem'].count('[ANS]')==5, piece
+          print({'atomic_rows':len(rows),'split_parents':report['split_parent_rows'],'reasons':report['recursive_split_node_reasons']})
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: atomization-v6-audit
+          path: /tmp/atom-v6/
+          retention-days: 7
