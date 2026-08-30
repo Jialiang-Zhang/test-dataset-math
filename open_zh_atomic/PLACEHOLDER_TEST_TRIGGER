@@ -1,4 +1,7 @@
-run=2
-marker_scheme=pure_letter_base26
+run=3
+marker_scheme=chinese_generic_ordered
+formula_marker=【数学公式占位】
+number_marker=【数值占位】
+term_marker=【数学术语占位】
 beams=4
 renormalize_logits=true
