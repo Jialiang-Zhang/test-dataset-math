@@ -1,0 +1,58 @@
+name: Audit remaining multi-answer slots
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - build/open-zh-atomic-p3
+    paths:
+      - open_zh_atomic/ANSWER_SLOT_AUDIT_TRIGGER
+      - .github/workflows/audit-remaining-answer-slots.yml
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Rebuild and atomize v4
+        run: |
+          rm -rf /tmp/answer-slot-audit
+          mkdir -p /tmp/answer-slot-audit/raw
+          python open_zh_atomic/build_sources.py --output-dir /tmp/answer-slot-audit/raw
+          python open_zh_atomic/atomize_v4.py \
+            --input /tmp/answer-slot-audit/raw/all_open_p3_exact_unique.jsonl \
+            --output /tmp/answer-slot-audit/prepared.jsonl \
+            --report /tmp/answer-slot-audit/atomization_report.json
+      - name: Classify remaining multi-slot leaves
+        run: |
+          python open_zh_atomic/audit_answer_slots.py \
+            --input /tmp/answer-slot-audit/prepared.jsonl \
+            --report /tmp/answer-slot-audit/answer_slot_report.json \
+            --suspects /tmp/answer-slot-audit/suspects.jsonl \
+            --ambiguous /tmp/answer-slot-audit/ambiguous.jsonl
+          cat /tmp/answer-slot-audit/atomization_report.json
+          cat /tmp/answer-slot-audit/answer_slot_report.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          atom=json.loads(Path('/tmp/answer-slot-audit/atomization_report.json').read_text())
+          slots=json.loads(Path('/tmp/answer-slot-audit/answer_slot_report.json').read_text())
+          assert atom['source_rows']==16992 and atom['atomic_rows_pretranslation']==32391, atom
+          assert atom['residual_multiquestion_rows']==0, atom
+          assert slots['total_atomic_rows']==32391, slots
+          print({'suspects':slots['high_confidence_suspect_rows'],'ambiguous':slots['ambiguous_rows']})
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: remaining-answer-slot-audit
+          path: /tmp/answer-slot-audit/
+          retention-days: 7
