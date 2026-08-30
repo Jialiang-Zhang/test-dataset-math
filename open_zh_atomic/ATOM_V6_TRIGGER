@@ -1,3 +1,4 @@
-run=2
+run=3
 priority=container_then_named_fields
 strict_one_ask=true
+self_test_real_newline=true
