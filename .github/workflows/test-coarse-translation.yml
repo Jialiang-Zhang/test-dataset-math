@@ -1,0 +1,32 @@
+name: Test coarse context-preserving translation
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - build/open-zh-atomic-p3
+    paths:
+      - open_zh_atomic/COARSE_TRANSLATION_TRIGGER
+      - .github/workflows/test-coarse-translation.yml
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      HF_HUB_DISABLE_XET: "1"
+      TOKENIZERS_PARALLELISM: "false"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: |
+          python -m pip install --disable-pip-version-check torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install --disable-pip-version-check transformers sentencepiece sacremoses
+      - run: python open_zh_atomic/test_coarse_translation.py
