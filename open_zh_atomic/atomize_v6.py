@@ -42,9 +42,6 @@ def split_named_fields(text: str):
 
 
 def split_atomic_problem_v6(text: str):
-    # First split container/list structure so named fields cannot capture fields from
-    # multiple objects at once. These functions are the conservative structural rules
-    # already validated in v4/v5.
     structural = (
         ('explicit_parts', core.split_explicit_parts),
         ('conjoined_tasks', core.split_conjoined_tasks),
@@ -62,14 +59,10 @@ def split_atomic_problem_v6(text: str):
         if parts:
             return parts, reason
 
-    # Once one object/item remains, split genuinely distinct named targets while
-    # preserving the complete object/equation context in each child.
     named = split_named_fields(text)
     if named:
         return named, 'named_answer_fields'
 
-    # Generic answer-sentence splitting is deliberately last because it is less
-    # semantically specific than the structural and named-field rules above.
     extra = atomize_v5.split_answer_sentences(text)
     if extra:
         return extra, 'answer_sentences'
@@ -81,9 +74,9 @@ core.split_atomic_problem = split_atomic_problem_v6
 
 def self_test() -> None:
     whole = (
-        r"Find the slope and $y$ intercept for each of the following lines.\n"
-        r"For $3y-12x=6$, slope=[ANS] and y intercept=[ANS]. "
-        r"For $y=8x+3$, slope=[ANS] and y intercept=[ANS]."
+        "Find the slope and $y$ intercept for each of the following lines.\n"
+        "For $3y-12x=6$, slope=[ANS] and y intercept=[ANS]. "
+        "For $y=8x+3$, slope=[ANS] and y intercept=[ANS]."
     )
     first, first_reason = core.split_atomic_problem(whole)
     assert len(first) == 2 and first_reason == 'repeated_for_items', (first_reason, first)
