@@ -1,0 +1,60 @@
+name: Audit answer-slot atomization
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - build/open-zh-atomic-p3
+    paths:
+      - open_zh_atomic/ANSWER_ATOM_TRIGGER
+      - .github/workflows/test-answer-slot-atomization.yml
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Rebuild licensed parents and atomize v4
+        run: |
+          rm -rf /tmp/open-atom-v4
+          mkdir -p /tmp/open-atom-v4/raw
+          python open_zh_atomic/build_sources.py --output-dir /tmp/open-atom-v4/raw
+          python open_zh_atomic/atomize_v4.py \
+            --input /tmp/open-atom-v4/raw/all_open_p3_exact_unique.jsonl \
+            --output /tmp/open-atom-v4/prepared.jsonl \
+            --report /tmp/open-atom-v4/report.json
+          cat /tmp/open-atom-v4/report.json
+      - name: Enforce one-request answer-slot regressions
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          rows=[json.loads(x) for x in Path('/tmp/open-atom-v4/prepared.jsonl').read_text(encoding='utf-8').splitlines() if x.strip()]
+          report=json.loads(Path('/tmp/open-atom-v4/report.json').read_text())
+          assert report['source_rows']==16992, report
+          assert report['coverage_source_rows']==16992, report
+          assert report['residual_multiquestion_rows']==0, report
+          # Four derivative blanks are four independent asks.
+          d=[r for r in rows if r.get('source_id')=='UGMathBench-Calculus_-_single_variable_0222-v3']
+          assert len(d)==4, d
+          assert all(x['atomic_source_problem'].count('[ANS]')==1 for x in d), d
+          # One ordered-pair answer remains one question with two component blanks.
+          pair=[r for r in rows if r.get('source_id')=='UGMathBench-Abstract_algebra_0013-v1']
+          assert len(pair)==1 and pair[0]['atomic_source_problem'].count('[ANS]')==2, pair
+          # Four u+wt expressions are four questions, each retaining two blanks as one answer.
+          u=[r for r in rows if r.get('source_id')=='UGMathBench-Abstract_algebra_0001-v1']
+          assert len(u)==4 and all(x['atomic_source_problem'].count('[ANS]')==2 for x in u), u
+          # Eight T/F statements become eight questions.
+          tf=[r for r in rows if r.get('source_id')=='UGMathBench-Algebra_0002-v1']
+          assert len(tf)==8 and all(x['atomic_source_problem'].count('[ANS]')==1 for x in tf), tf
+          print({'atomic_rows':len(rows),'split_parents':report['split_parent_rows']})
+          PY
